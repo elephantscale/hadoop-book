@@ -1,0 +1,15 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+<book xml:id="simple_book" xmlns="http://docbook.org/ns/docbook" version="5.0">
+    <title>Very simple book</title>
+    <chapter xml:id="chapter_1">
+        <title>Chapter 1</title>
+        <para>Hello world!</para>
+        <para>I hope that your day is proceeding 
+            <emphasis>splendidly</emphasis>!
+        </para>
+    </chapter>
+    <chapter xml:id="chapter_2">
+        <title>Chapter 2</title>
+        <para>Hello again, world!</para>
+    </chapter>
+</book>
