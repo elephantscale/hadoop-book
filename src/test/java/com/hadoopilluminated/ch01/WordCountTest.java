@@ -27,7 +27,7 @@ public class WordCountTest {
     @Test
     public void testMain() throws Exception {
         System.out.println("hadoop20.testMain");
-        String testData = "test-data/ch1/moby-dick.txt";
+        String testData = "test-data/ch01/moby-dick.txt";
         String[] args = new String[2];
         args[0] = testData;
         args[1] = outputPath;

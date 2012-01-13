@@ -12,7 +12,7 @@ import org.junit.Test;
  */
 public class WordCount21Test {
 
-    static private String outputPath = "test-output/ch1";
+    static private String outputPath = "test-output/ch01";
 
     @BeforeClass
     public static void setupBase() throws Exception {
@@ -27,7 +27,7 @@ public class WordCount21Test {
     @Test
     public void testMain() throws Exception {
         System.out.println("hadoop21.testMain");
-        String testData = "test-data/ch1/moby-dick.txt";
+        String testData = "test-data/ch01/moby-dick.txt";
         String[] args = new String[2];
         args[0] = testData;
         args[1] = outputPath;
