@@ -1,1 +1,3 @@
 This is the source code for the Hadoop Illuminated book, see http://www.hadoopilluminated.com
+
+The book itself is generated with docbook, using http://code.google.com/p/docbkx-tools/
