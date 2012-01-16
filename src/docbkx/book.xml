@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<book xml:id="simple_book" xmlns="http://docbook.org/ns/docbook" version="5.0">
+    <title>Hadoop Illuminated (work-in-progress)</title>
+    <info>        
+        <author>
+            <personname>
+                <firstname>Mark</firstname>
+                <surname>Kerzner</surname>          
+            </personname>
+        </author>
+    </info>        
+    <dedication>        
+        <para>To the open source community
+        </para>        
+    </dedication>   
+    <acknowledgements>
+        <para>This book started out as an attempt to write for a publishing house, 
+            but later it became clear that the maximum amount of fun could only be had
+            by writing an open source book about open source projects, for the open community.
+        </para>
+        <para>
+            I would like to express gratitude to my editors, co-authors, colleagues, and bosses
+            who shared the thorny path to working clusters - with the hope to make it less thorny for 
+            those who follow. Seriously, folks, Hadoop is hard, and Big Data is tough, and there are 
+            many related products and skills that you need to master. Therefore, have fun, provide your feedback, 
+            and I hope you will find the book entertaining. You might even find it useful.
+        </para>
+    </acknowledgements>
+    <chapter xml:id="chapter_1">
+        <title>Soft introduction to Hadoop</title>
+        <section>
+            <title>MapReduce or Hadoop?</title>
+            <para>The goal here is to present an intro to Hadoop so simple that any programmer who
+                reads it will be able to write simple Hadoop solutions and run them on a Hadoop
+                cluster.
+            </para>
+            <para>
+                First, however, let us have the two basic definitions - what is Hadoop and what
+                is MapReduce?
+            </para>
+            <para>
+                <emphasis>MapReduce</emphasis> is a programming framework, published by Google in 2004. Much
+                like other frameworks, such as Spring, Struts, or MFC, the MapReduce framework
+                does some things for you, and provides the place for you to fill in the blanks. What
+                MapReduce does for you is to organize your multiple computers in a cluster in
+                order to perform the calculations you need. It takes care of distributing the work
+                between computers and of putting together the results of each computer's
+                computation. Just as important, it takes care of hardware and network failures, so
+                that they do not affect the flow of your computation. You, in turn, have to break
+                your problem into separate pieces which can be processed in parallel by multiple
+                machines, and you provide the code to do the actual calculation.
+            </para>
+            <para>
+                <emphasis>Hadoop</emphasis> is an open-source implementation of the MapReduce framework. For
+                Google everything is MapReduce: both the way to write their applications, and the
+                actual implementation are called MapReduce. For the rest of the world, the
+                framework, the theory, and the way you spell out the computations are all called
+                MapReduce. However, the actual software that implements this is called Hadoop.
+                Let us agree for simplicity that MapReduce and Hadoop are just two names for
+                the same things. Note, however, that when Google teaches college students the
+                ideas of MapReduce programming, they, too, use Hadoop, because their actual        
+                implementation of MapReduce is proprietary code. To emphasize the difference,
+                we can note that the Hadoop engineers at Yahoo like to challenge the engineers at
+                Google to sorting competitions between Hadoop and MapReduce.
+            </para>
+        </section>
+        <section>
+            <title>Why Hadoop?</title>
+            <para>
+                We have already mentioned that the MapReduce framework is used at Google,
+                Yahoo, Facebook. It sees big uptake in finance, retail, telecom, and the
+                government. It is making inroads into life sciences. Why is this?
+            </para>
+            <figure>
+                <title>Will you join the Hadoop dance?</title>
+                <graphic fileref="images/hadoop-dance-resized.png"></graphic>
+            </figure>
+        </section>
+    </chapter>
+    <chapter xml:id="chapter_2">
+        <title>Questions of Sorting</title>
+        <para>Let's sort it out</para>
+    </chapter>
+</book>
