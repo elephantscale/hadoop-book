@@ -26,6 +26,12 @@
             <ulink url="http://groups.google.com/group/hadoop-illuminated">provide your feedback</ulink>, 
             and I hope you will find the book entertaining. You might even find it useful.
         </para>
+        <para>
+            "The author's opinions do not necessarily coincide with his point of view." -             
+            <ulink url="http://lib.udm.ru/lib/PELEWIN/pokolenie_engl.txt">
+                <emphasis>Victor Pelevin</emphasis>
+            </ulink>
+        </para>
     </acknowledgements>
     <chapter xml:id="chapter_1">
         <title>Soft introduction to Hadoop</title>
@@ -262,6 +268,199 @@
                 after that node that could not complete its task. It also knows how to combine the
                 results of the computation in one place.                
             </para>
+            <para>
+                <emphasis>
+                    HBase, the database for Big Data
+                </emphasis>
+            </para>
+            <para>
+                Not properly an animal, HBase is nevertheless very powerful. It is currently
+                denoted by the letter H with a base clef. If you think this is not so great, you are
+                right, and the HBase people are thinking of changing the logo. HBase is a database
+                for Big Data, up to millions of columns and billions of rows.
+            </para>
+            <para>
+                Another feature of HBase is that it is a key-value database, not a relational
+                database. We will get into the pros and cons of these two approaches to databases
+                later, but for now let's just note that key-value databases are considered as more
+                fitting for Big Data.
+            </para>
+            <para>
+                <emphasis>
+                    ZooKeeper
+                </emphasis>
+            </para>
+            <para>
+                Every zoo has ZooKeepper, and the Hadoop zoo is no exception. When all the
+                Hadoop animals want to do something together, it is the ZooKeeper who helps
+                them do it. They all know him and listen and obey his commands. Thus, the
+                ZooKeeper is a centralized service for maintaining configuration information,
+                naming, providing distributed synchronization, and providing group services.
+            </para>
+            <para>  
+                ZooKeeper is also fault-tolerant. In your environment development, you can put
+                the zookeeper on one node, but in production you usually run it on an odd number
+                of servers, such as 3 or 5.
+            </para>
+            <para>
+                <emphasis>
+                    Hive - data warehousing
+                </emphasis>
+            </para>
+            <para>
+                Hive is a way for you to get all the honey, and to leave all the work to the bees.
+                You can do a lot of data analysis with Hadoop, but you will also have to write
+                MapReduce tasks. Hive tasks it upon itself. Hive defines a simple SQL-like query
+                language, called QL, that enables users familiar with SQL to query the data.
+            </para>
+            <para>
+                At the same time, if your Hive program does almost what you need, but not
+                quite, you can call on your MapReduce skill. Hive allows you to write custom
+                mappers and reducers to extend the QL capabilities.
+            </para>
+            <para>
+                <emphasis>
+                    Pig - Big Data manipulation
+                </emphasis>
+            </para>
+            <para>
+                Pig is called this way not because it eats a lot, although you can imagine a pig
+                pushing around and consuming big volumes of information. Rather, it is called this
+                way because it speaks Pig Latin. Others who also speak this language are the kids -
+                or the programmers, who visit the Hadoop zoo.
+            </para>
+            <para>
+                So what is Pig Latin that Apache Pig speaks? As a rough analogy, if Hive is the
+                SQL of Big Data, then Pig Latin is the language of the stored procedures of Big
+                Data. It allows you to manipulate large volume of information, analyze them, and
+                create new derivative data sets. Internally it creates a sequence of MapReduce jobs,
+                and thus you, the programmer-kid, can use this simple language to solve pretty
+                sophisticated large-scale problems.
+            </para>
+        </section>
+        <section>
+            <para>
+                <emphasis>
+                    Hadoop alternatives
+                </emphasis>
+            </para>
+            <para>
+                Now that we have met the Hadoop zoo, we are ready to start our excursion. Only
+                one thing stops are at this point - and that is, a gnawing doubt, are we in the right
+                zoo? Let us look at some alternatives to dealing with Big Data. Granted, our
+                concentration here is Hadoop, and we may not give justice to all the other
+                approaches. But we will try.
+            </para>
+            <para>
+                <emphasis>
+                    Large data storage alternatives
+                </emphasis>
+            </para>
+            <para>
+                HDFS is not the only, and in fact, not the earliest or the latest distributed file
+                system. CEPH claims to be more flexible and to remove the limit on the number of
+                files. HDFS stored all of its file information in the memory of the server which is
+                called the NameNode. This is its strong point - speed - but it is also its Achilles'
+                heel. CEPH, on the other hand, makes the function of the NameNode completely
+                distributed.
+            </para>
+            <para>
+                Another possible contender is ZFS, an open-source file system from SUN, and
+                currently Oracle. Intended as a complete redesign of file system thinking, ZFS
+                holds a strong promise of unlimited size, robustness, encryption, and many other
+                desirable qualities built into the low-level file system. After all, Hadoop and its
+                model GFS both build on a conventional file system, creating their improvement
+                on top of it, and the premise of ZFS is that the underlying file system should be
+                redesigned to address the core issues.
+            </para>
+            <para>
+                I have seen production architectures built on ZFS, where the data storage
+                requirements were very clear and well-defined and where storing data from
+                multiple field sensors was considered better done with ZFS. The pros for ZFS in
+                this case were: built-in replication, low overhead, and - given the right structured
+                of records when written - build-in indexing for searching. Obviously, this was a
+                very specific, though very fitting solution.
+            </para>
+            <para>
+                While other file system start out with the goal of improving on HDFS/GFS
+                design, the advantage of HDFS is that it is very widely used. I think that in
+                evaluating other file systems, the reader can be guided by the same considerations
+                that led to the design of GFS: the designer of it analyzed prevalent file usage in the
+                majority of their applications, and created a file system that optimized reliability
+                for that particular type of usage. The reader may be well advised to compare the
+                assumption of GFS designers with his or her case, and decide if HDFS fits the
+                purpose, or if something else should be used in its place.
+            </para>
+            <para>
+                We should also note here that we compare Hadoop to other open-source storage
+                solutions. There are proprietary and commercial solutions, but such comparison
+                goes beyond the scope of this introduction.
+            </para>
+            <para>
+                <emphasis>
+                    Large database alternatives
+                </emphasis>
+            </para>
+            <para>
+                The closest to HBase is Cassandra. While HBase is a near-clone of Google’s
+                BigTable, Cassandra purports to being a “BigTable/Dynamo hybrid”. It can be said
+                that while Cassandra’s “writes-never-fail” emphasis has its advantages, HBase is
+                the more robust database for a majority of use-cases. HBase being more prevalent
+                in use, Cassandra faces an uphill battle - but it may be just what you need.
+            </para>
+            <para>
+                Hypertable is another database close to Google's BigTable in features, and it
+                claims to run 10 times faster than HBase. There is an ongoing discussion between
+                HBase and Hypertable proponents, and the authors do not want to take sides in it,
+                leaving the comparison to the reader. Like Cassandra, Hypertable has less users
+                than HBase, and here too, the reader needs to evaluate the speed of Hypertable for
+                his application, and weight it with other factors.
+            </para>
+            <para>
+                MongoDB (from "humongous") is a scalable, high-performance, open source,
+                document-oriented database. Written in C++, MongoDB features
+                document-oriented storage, full index on any attribute, replication and high
+                availability, rich, document-based queries, and it works with MapReduce. If you
+                are specifically processing documents and not arbitrary data, it is worth a look.
+            </para>
+            <para>
+                Other open-source and commercial databases that may be given consideration
+                include Vertica with its SQL support and visualization, Cloudran for OLTP, and
+                Spire.
+            </para>
+            <para>
+                In the end, before embarking on a development project, you will need to
+                compare alternatives. Below is an example of such comparison. Please keep in
+                mind that this is just possible point of view, and that the specifics of your project
+                and of your view will be different. Therefore, the table below is mainly to
+                encourage the reader to do a similar evaluation for his own needs.
+            </para>
+            <table frame='all'>
+                <title>Sample Table</title>
+                <tgroup cols='5' align='left' colsep='1' rowsep='1'>
+                    <colspec colname='c1'/>
+                    <colspec colname='c2'/>
+                    <colspec colname='c3'/>
+                    <colspec colnum='5' colname='c5'/>
+                    <thead>
+                        <row>
+                            <entry namest="c1" nameend="c2" align="center">Horizontal Span</entry>
+                            <entry>a3</entry>
+                            <entry>a4</entry>
+                            <entry>a5</entry>
+                        </row>
+                    </thead>
+                    <tbody>
+                        <row>
+                            <entry>b1</entry>
+                            <entry>b2</entry>
+                            <entry>b3</entry>
+                            <entry>b4</entry>
+                            <entry>b5</entry>
+                        </row>
+                    </tbody>
+                </tgroup>                
+            </table>
         </section>
     </chapter>
     <chapter xml:id="chapter_2">
