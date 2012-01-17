@@ -40,8 +40,9 @@
                 is MapReduce?
             </para>
             <para>
-                <emphasis>MapReduce</emphasis> is a programming framework, published by Google in 2004. Much
-                like other frameworks, such as Spring, Struts, or MFC, the MapReduce framework
+                <emphasis>MapReduce</emphasis> is a programming framework, 
+                <ulink url="http://research.google.com/archive/mapreduce.html">published by Google in 2004</ulink>. 
+                Much like other frameworks, such as Spring, Struts, or MFC, the MapReduce framework
                 does some things for you, and provides the place for you to fill in the blanks. What
                 MapReduce does for you is to organize your multiple computers in a cluster in
                 order to perform the calculations you need. It takes care of distributing the work
@@ -75,8 +76,192 @@
             <figure>
                 <title>Will you join the Hadoop dance?</title>
                 <graphic fileref="images/hadoop-dance-resized.png"></graphic>                
-                Artwork by <ulink url="https://picasaweb.google.com/110574221375288281850/RebeccaSArt">RK</ulink> 
+                Artwork by 
+                <ulink url="https://picasaweb.google.com/110574221375288281850/RebeccaSArt">RK</ulink> 
             </figure>
+            <para>
+                The short answer is that it simplifies dealing with Big Data. This answer
+                immediately resonates with people, it is clear and succinct, but it is not complete.
+                The Hadoop framework has built-in power and flexibility to do what you could not
+                do before. In fact, Cloudera presentations at the latest O'Reilly Strata conference
+                mentioned that MapReduce was initially used at Google and Facebook not
+                primarily for its scalability, but for what it allowed do with the data.                
+            </para>
+            <para>
+                In 2010, the average size of the Cloudera's customers' cluster was 30 machines.
+                In 2011 it was 70. When people start using Hadoop, they do it for many reasons,
+                all concentrated around the new ways of dealing with the data. What gives them
+                the security to go ahead is the knowledge that Hadoop solutions are massively
+                scalable, as has been proved by the Hadoop running in the world's largest computer
+                centers and at largest companies.                
+            </para>
+            <para>
+                As you will discover, the Hadoop framework organizes the data and the
+                computations, and then runs your code. At times, it makes sense to run your
+                solution, expressed in MapReduce paradigm, even on a single machine.                
+            </para>
+            <para>
+                But of course, Hadoop really shines when you have not one, but rather tens,
+                hundreds, or thousands of computers. If your data or computations are significant
+                enough (and whose aren't these days?), then you need more than one machine to do
+                the number crunching. If you try to organize the work yourself, you will soon
+                discover that you have to coordinate the work of many computers, handle failures,
+                retries, and collect the results together, and so on. Enter Hadoop to solve all these
+                problems for you. Now that you have a hammer, everything becomes a nail: people
+                will often reformulate their problem in MapReduce terms, rather than create a new
+                custom computation platform.                
+            </para>
+            <para>
+                No less important than Hadoop itself are its many friends. Hadoop Distributed
+                File System (HDFS) provides unlimited file space available from any Hadoop
+                node. HBase is a high-performance unlimited-size database working on top of
+                Hadoop. If you need the power of familiar SQL over your large datasets, Pig
+                provides you with an answer. While Hadoop can be used by programmers and
+                taught to students as an introduction to Big Data, its companion projects (including
+                the ZooKeeper, about which we will hear later on) will make possible and
+                simplify, by providing tried-and-proven frameworks, every aspect of dealing with
+                large datasets.                
+            </para>
+            <para>
+                As you learn the concepts, and perfect your skills with the techniques described
+                in this book, you will discover that there are many cases where Hadoop storage,
+                Hadoop computation, or Hadoop's friends can help you. Let's look at some of these
+                situations.                
+            </para>
+            <itemizedlist>
+                <listitem>
+                    <para>
+                        Do you find yourself often cleaning the limited hard drives in your company? Do you
+                        need to transfer data from one drive to another, as a backup? Many people are so used to
+                        this necessity, that they consider it an unpleasant but unavoidable part of life. Hadoop
+                        distrubuted file system, HDFS, grows by adding servers. To you it looks like one hard
+                        drive. It is self-replicating (you set the replication factor) and thus provides redundancy
+                        as a software alternative to RAID.
+                    </para>
+                </listitem>
+                <listitem>
+                    <para>
+                        Do your computations take an unacceptably long time? Are you forced to give up on
+                        projects because you don’t know how to easily distribute the computations between
+                        multiple computers? MapReduce helps you solve these problems. What if you don’t have
+                        the hardware to run the cluster? - Amazon EC2 can run MapReduce jobs for you, and you
+                        pay only for the time that it runs - the cluster is automatically formed for you and then
+                        disbanded.                        
+                    </para>
+                </listitem>
+                <listitem>
+                    <para>
+                        But say you are lucky, and instead of maintaining legacy software, you are charged with
+                        building new, progressive software for your company's workflow. Of course, you want to
+                        have unlimited storage, solving this problem once and for all, so as to concentrate on
+                        what's really important. The answer is: you can mount HDFS as FUSE file system, and
+                        you have your unlimited storage. In our cases studies we look at the successful use of the
+                        HDFS as as grid storage for the Large Hadron Collider.                        
+                    </para>
+                </listitem>
+                <listitem>
+                    <para>
+                        Imagine you have multiple clients using your online resources, computations, or data.
+                        Each single use is saved in a log, and you need to generate a summary of use of resources
+                        for each client by day or by hour. From this you will do your invoices, so it IS important.
+                        But the data set is large. You can write a quick MapReduce job for that. Better yet, you
+                        can use Hive, a data warehouse infrastructure built on top of Hadoop, with its ETL
+                        capabilities, to generate your invoices in no time. We'll talk about Hive later, but we hope
+                        that you already see that you can use Hadoop and friends for fun and profit.                        
+                    </para>
+                </listitem>
+            </itemizedlist>
+            <para>
+                Once you start thinking without the usual limitations, you can improve on what
+                you already do and come up with new and useful projects. In fact, this book
+                partially came about by asking people how they used Hadoop in their work. You,
+                the reader, are invited to submit your applications that became possible with
+                Hadoop, and I will put it into Case Studies, with attribution :). Of course.
+            </para>
+        </section>
+        <section>
+            <title>Meet the Hadoop Zoo</title>
+            <para>
+                QUINCE
+            </para>
+            <para>
+                Is all our company here?
+            </para>
+            <para>                
+                BOTTOM
+            </para>
+            <para>
+                You were best to call them generally, man by man, according to the scrip.
+            </para>
+            <para>
+                Shakespeare, "Midsummer Night's Dream"                
+            </para>
+            <para>
+                There are a number of animals in the Hadoop zoo, and each deals with a certain
+                aspect of Big Data. Let us illustrate this with a picture, and then introduce them
+                one by one.                
+            </para>
+            <figure>
+                <title>The Hadoop Zoo</title>
+                <graphic fileref="images/hadoop-zoo-resized.png"></graphic>                
+                Artwork by 
+                <ulink url="https://picasaweb.google.com/110574221375288281850/RebeccaSArt">RK</ulink> 
+            </figure>            
+            <para>
+                <emphasis>
+                    HDFS - Hadoop Distributed File System
+                </emphasis>
+            </para>
+            <para>
+                HDFS, or Hadoop Distributed File System, gives the programmer unlimited
+                storage. Unlimited storage is a programmers's dream, so you can skip the rest.
+                However, here are the additional advantages of HDFS.                
+            </para>
+            <itemizedlist>
+                <listitem>
+                    <para>
+                        Horizontal scalability. Thousands of servers holding petabytes of data. When you need
+                        more more storage, you don't switch to more expensive solutions, but add servers to it.                        
+                    </para>
+                </listitem>
+                <listitem>
+                    <para>
+                        Commodity hardware. The HDFS is designed with relatively cheap commodity hardware
+                        in mind. HDFS is self-healing and replicating.                      
+                    </para>
+                </listitem>
+                <listitem>
+                    <para>
+                        Fault tolerance. Every member of the Hadoop zoo knows how to deal with hardware
+                        failures. If you have 10 thousand servers, then you will see one server fail every day, on
+                        the average. HDFS foresees that by replicating the data, by default three times, on
+                        different data node servers. Thus, if one data node fails, the other two can be used to
+                        restore the third one in a different place.
+                    </para>
+                </listitem>                                    
+            </itemizedlist>
+            <para>
+                The HDFS implementation is modeled after GFS, Google Distributed File
+                system, thus you can read the first paper on this, to be found here:
+                http://labs.google.com/papers/gfs.html.                
+            </para>
+            <para>
+                <emphasis>
+                    Hadoop, the little elephant                    
+                </emphasis>
+            </para>
+            <para>
+                Hadoop organizes your computations. It reads the data, usually from HDFS, in
+                blocks. However, it can read the data from other places too, including mounted
+                local file systems, web, and databases. It divides the computations between
+                different computers (servers, or nodes). It is also fault-tolerant.
+            </para>
+            <para>
+                If some of your nodes fail, Hadoop knows how to continue with the
+                computation, by re-assigning the incomplete work to another node and cleaning up
+                after that node that could not complete its task. It also knows how to combine the
+                results of the computation in one place.                
+            </para>
         </section>
     </chapter>
     <chapter xml:id="chapter_2">
