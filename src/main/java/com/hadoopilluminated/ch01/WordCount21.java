@@ -12,6 +12,10 @@ import org.apache.hadoop.mapreduce.lib.output.TextOutputFormat;
 import org.apache.hadoop.util.Tool;
 import org.apache.hadoop.util.ToolRunner;
 
+/**
+ * This example uses Hadoop 0.21 API
+ * @author mark
+ */
 public class WordCount21 extends Configured implements Tool {
 
     @Override

@@ -200,7 +200,9 @@
                 You were best to call them generally, man by man, according to the scrip.
             </para>
             <para>
-                Shakespeare, "Midsummer Night's Dream"                
+                <ulink url="http://shakespeare.mit.edu/midsummer/full.html">
+                    Shakespeare, "Midsummer Night's Dream"
+                </ulink>
             </para>
             <para>
                 There are a number of animals in the Hadoop zoo, and each deals with a certain
@@ -212,138 +214,138 @@
                 <graphic fileref="images/hadoop-zoo-resized.png"></graphic>                
                 Artwork by 
                 <ulink url="https://picasaweb.google.com/110574221375288281850/RebeccaSArt">RK</ulink> 
-            </figure>            
-            <para>
-                <emphasis>
-                    HDFS - Hadoop Distributed File System
-                </emphasis>
-            </para>
-            <para>
-                HDFS, or Hadoop Distributed File System, gives the programmer unlimited
-                storage. Unlimited storage is a programmers's dream, so you can skip the rest.
-                However, here are the additional advantages of HDFS.                
-            </para>
-            <itemizedlist>
-                <listitem>
-                    <para>
-                        Horizontal scalability. Thousands of servers holding petabytes of data. When you need
-                        more more storage, you don't switch to more expensive solutions, but add servers to it.                        
-                    </para>
-                </listitem>
-                <listitem>
-                    <para>
-                        Commodity hardware. The HDFS is designed with relatively cheap commodity hardware
-                        in mind. HDFS is self-healing and replicating.                      
-                    </para>
-                </listitem>
-                <listitem>
-                    <para>
-                        Fault tolerance. Every member of the Hadoop zoo knows how to deal with hardware
-                        failures. If you have 10 thousand servers, then you will see one server fail every day, on
-                        the average. HDFS foresees that by replicating the data, by default three times, on
-                        different data node servers. Thus, if one data node fails, the other two can be used to
-                        restore the third one in a different place.
-                    </para>
-                </listitem>                                    
-            </itemizedlist>
-            <para>
-                The HDFS implementation is modeled after GFS, Google Distributed File
-                system, thus you can read the first paper on this, to be found here:
-                http://labs.google.com/papers/gfs.html.                
-            </para>
-            <para>
-                <emphasis>
-                    Hadoop, the little elephant                    
-                </emphasis>
-            </para>
-            <para>
-                Hadoop organizes your computations. It reads the data, usually from HDFS, in
-                blocks. However, it can read the data from other places too, including mounted
-                local file systems, web, and databases. It divides the computations between
-                different computers (servers, or nodes). It is also fault-tolerant.
-            </para>
-            <para>
-                If some of your nodes fail, Hadoop knows how to continue with the
-                computation, by re-assigning the incomplete work to another node and cleaning up
-                after that node that could not complete its task. It also knows how to combine the
-                results of the computation in one place.                
-            </para>
-            <para>
-                <emphasis>
-                    HBase, the database for Big Data
-                </emphasis>
-            </para>
-            <para>
-                Not properly an animal, HBase is nevertheless very powerful. It is currently
-                denoted by the letter H with a base clef. If you think this is not so great, you are
-                right, and the HBase people are thinking of changing the logo. HBase is a database
-                for Big Data, up to millions of columns and billions of rows.
-            </para>
-            <para>
-                Another feature of HBase is that it is a key-value database, not a relational
-                database. We will get into the pros and cons of these two approaches to databases
-                later, but for now let's just note that key-value databases are considered as more
-                fitting for Big Data.
-            </para>
-            <para>
-                <emphasis>
-                    ZooKeeper
-                </emphasis>
-            </para>
-            <para>
-                Every zoo has ZooKeepper, and the Hadoop zoo is no exception. When all the
-                Hadoop animals want to do something together, it is the ZooKeeper who helps
-                them do it. They all know him and listen and obey his commands. Thus, the
-                ZooKeeper is a centralized service for maintaining configuration information,
-                naming, providing distributed synchronization, and providing group services.
-            </para>
-            <para>  
-                ZooKeeper is also fault-tolerant. In your environment development, you can put
-                the zookeeper on one node, but in production you usually run it on an odd number
-                of servers, such as 3 or 5.
-            </para>
-            <para>
-                <emphasis>
-                    Hive - data warehousing
-                </emphasis>
-            </para>
-            <para>
-                Hive is a way for you to get all the honey, and to leave all the work to the bees.
-                You can do a lot of data analysis with Hadoop, but you will also have to write
-                MapReduce tasks. Hive tasks it upon itself. Hive defines a simple SQL-like query
-                language, called QL, that enables users familiar with SQL to query the data.
-            </para>
-            <para>
-                At the same time, if your Hive program does almost what you need, but not
-                quite, you can call on your MapReduce skill. Hive allows you to write custom
-                mappers and reducers to extend the QL capabilities.
-            </para>
-            <para>
-                <emphasis>
+            </figure>        
+            <section>
+                <title>HDFS - Hadoop Distributed File System</title>
+            
+                <para>
+                    HDFS, or Hadoop Distributed File System, gives the programmer unlimited
+                    storage. Unlimited storage is a programmers's dream, so you can skip the rest.
+                    However, here are the additional advantages of HDFS.                
+                </para>
+                <itemizedlist>
+                    <listitem>
+                        <para>
+                            Horizontal scalability. Thousands of servers holding petabytes of data. When you need
+                            more more storage, you don't switch to more expensive solutions, but add servers to it.                        
+                        </para>
+                    </listitem>
+                    <listitem>
+                        <para>
+                            Commodity hardware. The HDFS is designed with relatively cheap commodity hardware
+                            in mind. HDFS is self-healing and replicating.                      
+                        </para>
+                    </listitem>
+                    <listitem>
+                        <para>
+                            Fault tolerance. Every member of the Hadoop zoo knows how to deal with hardware
+                            failures. If you have 10 thousand servers, then you will see one server fail every day, on
+                            the average. HDFS foresees that by replicating the data, by default three times, on
+                            different data node servers. Thus, if one data node fails, the other two can be used to
+                            restore the third one in a different place.
+                        </para>
+                    </listitem>                                    
+                </itemizedlist>
+                <para>
+                    The HDFS implementation is modeled after GFS, Google Distributed File
+                    system, thus you can read the first paper on this, to be found here:
+                    http://labs.google.com/papers/gfs.html.                
+                </para>
+            </section>
+            <section>
+                <title>Hadoop, the little elephant</title>            
+                <para>
+                    Hadoop organizes your computations. It reads the data, usually from HDFS, in
+                    blocks. However, it can read the data from other places too, including mounted
+                    local file systems, web, and databases. It divides the computations between
+                    different computers (servers, or nodes). It is also fault-tolerant.
+                </para>
+                <para>
+                    If some of your nodes fail, Hadoop knows how to continue with the
+                    computation, by re-assigning the incomplete work to another node and cleaning up
+                    after that node that could not complete its task. It also knows how to combine the
+                    results of the computation in one place.                
+                </para>
+            </section>
+            <section>
+                <title>HBase, the database for Big Data</title>
+                <para>"Thirty spokes share the wheel's hub, it is the empty space that make it useful" 
+                    - Tao Te Ching (
+                    <ulink url = "http://terebess.hu/english/tao/gia.html">
+                        translated by Gia-Fu Feng and Jane English)
+                    </ulink>
+                </para>
+                <para>
+                    Not properly an animal, HBase is nevertheless very powerful. It is currently
+                    denoted by the letter H with a base clef. If you think this is not so great, you are
+                    right, and the HBase people are thinking of changing the logo. HBase is a database
+                    for Big Data, up to millions of columns and billions of rows.
+                </para>
+                <para>
+                    Another feature of HBase is that it is a key-value database, not a relational
+                    database. We will get into the pros and cons of these two approaches to databases
+                    later, but for now let's just note that key-value databases are considered as more
+                    fitting for Big Data. Why? Because they don't store nulls! This gives them the appellation 
+                    of "sparse," and as we saw above, Tao Te Chin says that they are useful for this reason.
+                </para>
+            </section>
+            <section>
+                <title>ZooKeeper</title>
+                <para>
+                    Every zoo has a zoo keeper, and the Hadoop zoo is no exception. When all the
+                    Hadoop animals want to do something together, it is the ZooKeeper who helps
+                    them do it. They all know him and listen and obey his commands. Thus, the
+                    ZooKeeper is a centralized service for maintaining configuration information,
+                    naming, providing distributed synchronization, and providing group services.
+                </para>
+                <para>  
+                    ZooKeeper is also fault-tolerant. In your environment development, you can put
+                    the zookeeper on one node, but in production you usually run it on an odd number
+                    of servers, such as 3 or 5.
+                </para>
+            </section>
+            <section>
+                <title>Hive - data warehousing</title>
+                <para>
+                    Hive: "I am Hive, I let you in and out of the HDFS cages, and you can talk SQL to me!"
+                </para>                
+                <para>
+                    Hive is a way for you to get all the honey, and to leave all the work to the bees.
+                    You can do a lot of data analysis with Hadoop, but you will also have to write
+                    MapReduce tasks. Hive tasks it upon itself. Hive defines a simple SQL-like query
+                    language, called QL, that enables users familiar with SQL to query the data.
+                </para>
+                <para>
+                    At the same time, if your Hive program does almost what you need, but not
+                    quite, you can call on your MapReduce skill. Hive allows you to write custom
+                    mappers and reducers to extend the QL capabilities.
+                </para>
+            </section>
+            <section>
+                <title>
                     Pig - Big Data manipulation
-                </emphasis>
-            </para>
-            <para>
-                Pig is called this way not because it eats a lot, although you can imagine a pig
-                pushing around and consuming big volumes of information. Rather, it is called this
-                way because it speaks Pig Latin. Others who also speak this language are the kids -
-                or the programmers, who visit the Hadoop zoo.
-            </para>
-            <para>
-                So what is Pig Latin that Apache Pig speaks? As a rough analogy, if Hive is the
-                SQL of Big Data, then Pig Latin is the language of the stored procedures of Big
-                Data. It allows you to manipulate large volume of information, analyze them, and
-                create new derivative data sets. Internally it creates a sequence of MapReduce jobs,
-                and thus you, the programmer-kid, can use this simple language to solve pretty
-                sophisticated large-scale problems.
-            </para>
+                </title>
+                <para>
+                    Pig: "I am Pig, and I let you move HDFS cages around, and I speak Pig Latin."
+                </para>
+                <para>
+                    Pig is called this way not because it eats a lot, although you can imagine a pig
+                    pushing around and consuming big volumes of information. Rather, it is called this
+                    way because it speaks Pig Latin. Others who also speak this language are the kids -
+                    or the programmers, who visit the Hadoop zoo.
+                </para>
+                <para>
+                    So what is Pig Latin that Apache Pig speaks? As a rough analogy, if Hive is the
+                    SQL of Big Data, then Pig Latin is the language of the stored procedures of Big
+                    Data. It allows you to manipulate large volume of information, analyze them, and
+                    create new derivative data sets. Internally it creates a sequence of MapReduce jobs,
+                    and thus you, the programmer-kid, can use this simple language to solve pretty
+                    sophisticated large-scale problems.
+                </para>
+            </section>
         </section>
         <section>
-            <para>
-                <emphasis>
-                    Hadoop alternatives
-                </emphasis>
-            </para>
+            <title>Hadoop alternatives</title>
             <para>
                 Now that we have met the Hadoop zoo, we are ready to start our excursion. Only
                 one thing stops are at this point - and that is, a gnawing doubt, are we in the right
@@ -351,90 +353,87 @@
                 concentration here is Hadoop, and we may not give justice to all the other
                 approaches. But we will try.
             </para>
-            <para>
-                <emphasis>
-                    Large data storage alternatives
-                </emphasis>
-            </para>
-            <para>
-                HDFS is not the only, and in fact, not the earliest or the latest distributed file
-                system. CEPH claims to be more flexible and to remove the limit on the number of
-                files. HDFS stored all of its file information in the memory of the server which is
-                called the NameNode. This is its strong point - speed - but it is also its Achilles'
-                heel. CEPH, on the other hand, makes the function of the NameNode completely
-                distributed.
-            </para>
-            <para>
-                Another possible contender is ZFS, an open-source file system from SUN, and
-                currently Oracle. Intended as a complete redesign of file system thinking, ZFS
-                holds a strong promise of unlimited size, robustness, encryption, and many other
-                desirable qualities built into the low-level file system. After all, Hadoop and its
-                model GFS both build on a conventional file system, creating their improvement
-                on top of it, and the premise of ZFS is that the underlying file system should be
-                redesigned to address the core issues.
-            </para>
-            <para>
-                I have seen production architectures built on ZFS, where the data storage
-                requirements were very clear and well-defined and where storing data from
-                multiple field sensors was considered better done with ZFS. The pros for ZFS in
-                this case were: built-in replication, low overhead, and - given the right structured
-                of records when written - build-in indexing for searching. Obviously, this was a
-                very specific, though very fitting solution.
-            </para>
-            <para>
-                While other file system start out with the goal of improving on HDFS/GFS
-                design, the advantage of HDFS is that it is very widely used. I think that in
-                evaluating other file systems, the reader can be guided by the same considerations
-                that led to the design of GFS: the designer of it analyzed prevalent file usage in the
-                majority of their applications, and created a file system that optimized reliability
-                for that particular type of usage. The reader may be well advised to compare the
-                assumption of GFS designers with his or her case, and decide if HDFS fits the
-                purpose, or if something else should be used in its place.
-            </para>
-            <para>
-                We should also note here that we compare Hadoop to other open-source storage
-                solutions. There are proprietary and commercial solutions, but such comparison
-                goes beyond the scope of this introduction.
-            </para>
-            <para>
-                <emphasis>
-                    Large database alternatives
-                </emphasis>
-            </para>
-            <para>
-                The closest to HBase is Cassandra. While HBase is a near-clone of Google’s
-                BigTable, Cassandra purports to being a “BigTable/Dynamo hybrid”. It can be said
-                that while Cassandra’s “writes-never-fail” emphasis has its advantages, HBase is
-                the more robust database for a majority of use-cases. HBase being more prevalent
-                in use, Cassandra faces an uphill battle - but it may be just what you need.
-            </para>
-            <para>
-                Hypertable is another database close to Google's BigTable in features, and it
-                claims to run 10 times faster than HBase. There is an ongoing discussion between
-                HBase and Hypertable proponents, and the authors do not want to take sides in it,
-                leaving the comparison to the reader. Like Cassandra, Hypertable has less users
-                than HBase, and here too, the reader needs to evaluate the speed of Hypertable for
-                his application, and weight it with other factors.
-            </para>
-            <para>
-                MongoDB (from "humongous") is a scalable, high-performance, open source,
-                document-oriented database. Written in C++, MongoDB features
-                document-oriented storage, full index on any attribute, replication and high
-                availability, rich, document-based queries, and it works with MapReduce. If you
-                are specifically processing documents and not arbitrary data, it is worth a look.
-            </para>
-            <para>
-                Other open-source and commercial databases that may be given consideration
-                include Vertica with its SQL support and visualization, Cloudran for OLTP, and
-                Spire.
-            </para>
-            <para>
-                In the end, before embarking on a development project, you will need to
-                compare alternatives. Below is an example of such comparison. Please keep in
-                mind that this is just possible point of view, and that the specifics of your project
-                and of your view will be different. Therefore, the table below is mainly to
-                encourage the reader to do a similar evaluation for his own needs.
-            </para>
+            <section>
+                <title>Large data storage alternatives</title>
+                <para>
+                    HDFS is not the only, and in fact, not the earliest or the latest distributed file
+                    system. CEPH claims to be more flexible and to remove the limit on the number of
+                    files. HDFS stored all of its file information in the memory of the server which is
+                    called the NameNode. This is its strong point - speed - but it is also its Achilles'
+                    heel. CEPH, on the other hand, makes the function of the NameNode completely
+                    distributed.
+                </para>
+                <para>
+                    Another possible contender is ZFS, an open-source file system from SUN, and
+                    currently Oracle. Intended as a complete redesign of file system thinking, ZFS
+                    holds a strong promise of unlimited size, robustness, encryption, and many other
+                    desirable qualities built into the low-level file system. After all, Hadoop and its
+                    model GFS both build on a conventional file system, creating their improvement
+                    on top of it, and the premise of ZFS is that the underlying file system should be
+                    redesigned to address the core issues.
+                </para>
+                <para>
+                    I have seen production architectures built on ZFS, where the data storage
+                    requirements were very clear and well-defined and where storing data from
+                    multiple field sensors was considered better done with ZFS. The pros for ZFS in
+                    this case were: built-in replication, low overhead, and - given the right structured
+                    of records when written - build-in indexing for searching. Obviously, this was a
+                    very specific, though very fitting solution.
+                </para>
+                <para>
+                    While other file system start out with the goal of improving on HDFS/GFS
+                    design, the advantage of HDFS is that it is very widely used. I think that in
+                    evaluating other file systems, the reader can be guided by the same considerations
+                    that led to the design of GFS: the designer of it analyzed prevalent file usage in the
+                    majority of their applications, and created a file system that optimized reliability
+                    for that particular type of usage. The reader may be well advised to compare the
+                    assumption of GFS designers with his or her case, and decide if HDFS fits the
+                    purpose, or if something else should be used in its place.
+                </para>
+                <para>
+                    We should also note here that we compare Hadoop to other open-source storage
+                    solutions. There are proprietary and commercial solutions, but such comparison
+                    goes beyond the scope of this introduction.
+                </para>
+            </section>
+            <section>
+                <title>Large database alternatives</title>
+                <para>
+                    The closest to HBase is Cassandra. While HBase is a near-clone of Google’s
+                    BigTable, Cassandra purports to being a “BigTable/Dynamo hybrid”. It can be said
+                    that while Cassandra’s “writes-never-fail” emphasis has its advantages, HBase is
+                    the more robust database for a majority of use-cases. HBase being more prevalent
+                    in use, Cassandra faces an uphill battle - but it may be just what you need.
+                </para>
+                <para>
+                    Hypertable is another database close to Google's BigTable in features, and it
+                    claims to run 10 times faster than HBase. There is an ongoing discussion between
+                    HBase and Hypertable proponents, and the authors do not want to take sides in it,
+                    leaving the comparison to the reader. Like Cassandra, Hypertable has less users
+                    than HBase, and here too, the reader needs to evaluate the speed of Hypertable for
+                    his application, and weight it with other factors.
+                </para>
+                <para>
+                    MongoDB (from "humongous") is a scalable, high-performance, open source,
+                    document-oriented database. Written in C++, MongoDB features
+                    document-oriented storage, full index on any attribute, replication and high
+                    availability, rich, document-based queries, and it works with MapReduce. If you
+                    are specifically processing documents and not arbitrary data, it is worth a look.
+                </para>
+                <para>
+                    Other open-source and commercial databases that may be given consideration
+                    include Vertica with its SQL support and visualization, Cloudran for OLTP, and
+                    Spire.
+                </para>
+                <para>
+                    In the end, before embarking on a development project, you will need to
+                    compare alternatives. Below is an example of such comparison. Please keep in
+                    mind that this is just possible point of view, and that the specifics of your project
+                    and of your view will be different. Therefore, the table below is mainly to
+                    encourage the reader to do a similar evaluation for his own needs.
+                </para>
+            </section>
+            <!--
             <table frame='all'>
                 <title>Sample Table</title>
                 <tgroup cols='5' align='left' colsep='1' rowsep='1'>
@@ -461,9 +460,53 @@
                     </tbody>
                 </tgroup>                
             </table>
+            -->
         </section>
     </chapter>
     <chapter xml:id="chapter_2">
+        <title>Get your hands dirty with code</title>
+        <para>
+            Programmers like playing around with the code. In the long-standing philosophical 
+            discussion of what is more important, theory or practice, it was concluded that 
+            theory (reading this book) is more important, because it leads to practice (coding). Besides, 
+            as 
+            <ulink url="http://www.textfiles.com/humor/JOKES/limerick.2">one limerick attests</ulink>:
+        </para>
+        <para>
+            There was a young woman in Dee
+        </para>
+        <para>
+            Who stayed with each man she did see.
+        </para>
+        <para>
+            When it came to a test
+        </para>
+        <para>
+            She wished to be best,
+        </para>
+        <para>
+            And practice makes perfect, you see.
+        </para>
+        <section>
+            <title>Hands-on: setting your development environment</title>  
+            <section>
+                <title>Setting your IDE</title>
+            </section>
+            <section>
+                <title>Setting Hadoop in local mode</title>
+            </section>
+            <section>
+                <title>Setting a Hadoop cluster on EC2</title>
+            </section>
+            <section>
+                <title>Using S3 instead of HDFS on EC2 Hadoop Clusters</title>
+            </section>
+            <section>
+                <title>Setting HBase on EC2</title>
+            </section>
+        </section>
+    </chapter>
+    <chapter xml:id="chapter_3">
         <title>Questions of Sorting</title>
         <para>Let's sort it out</para>
     </chapter>
