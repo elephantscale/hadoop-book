@@ -42,10 +42,9 @@
             <plugin>                
                 <artifactId>maven-assembly-plugin</artifactId>
                 <configuration>
-                    <archive>
+                    <archive>                        
                         <manifest>
                             <addClasspath>true</addClasspath>
-                            <mainClass>com.manning.hip.ch1.WordCount</mainClass>
                         </manifest>
                     </archive>
                     <descriptorRefs>
