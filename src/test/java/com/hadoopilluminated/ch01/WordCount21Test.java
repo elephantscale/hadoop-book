@@ -31,7 +31,7 @@ public class WordCount21Test {
         String[] args = new String[2];
         args[0] = testData;
         args[1] = outputPath;
-        WordCount21.main(args);
+        MRWordCount21.main(args);
         assert (new File(outputPath + "/_SUCCESS").exists());
         assert (Files.readLines(new File(outputPath + "/part-r-00000"),
                 Charset.defaultCharset()).

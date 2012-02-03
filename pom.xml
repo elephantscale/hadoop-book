@@ -44,8 +44,8 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <addClasspath>true</addClasspath>
-                            <mainClass>com.manning.hip.ch1.WordCount</mainClass>
+                            <addClasspath>false</addClasspath>
+                            <!--<mainClass>com.hadoopilluminated.ch01.MRWordCount</mainClass>-->
                         </manifest>
                     </archive>
                     <descriptorRefs>
