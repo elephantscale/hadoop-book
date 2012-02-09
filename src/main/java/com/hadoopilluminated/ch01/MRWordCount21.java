@@ -16,13 +16,14 @@ import org.apache.hadoop.util.ToolRunner;
  * This example uses Hadoop 0.21 API
  * @author mark
  */
-public class WordCount21 extends Configured implements Tool {
+public class MRWordCount21 extends Configured implements Tool {
 
     @Override
     public int run(String[] args) throws Exception {
+        System.out.println("Running MR: MRWordCount21");
         Job job = new Job(getConf());
-        job.setJarByClass(WordCount21.class);
-        job.setJobName("WordCount21");
+        job.setJarByClass(MRWordCount21.class);
+        job.setJobName("MRWordCount21");
 
         job.setOutputKeyClass(Text.class);
         job.setOutputValueClass(IntWritable.class);
@@ -34,6 +35,8 @@ public class WordCount21 extends Configured implements Tool {
         job.setInputFormatClass(TextInputFormat.class);
         job.setOutputFormatClass(TextOutputFormat.class);
 
+        System.out.println("Input path: " + args[0]);
+        System.out.println("Output path: " + args[1]);
         FileInputFormat.setInputPaths(job, new Path(args[0]));
         FileOutputFormat.setOutputPath(job, new Path(args[1]));
 
@@ -42,7 +45,7 @@ public class WordCount21 extends Configured implements Tool {
     }
 
     public static void main(String[] args) throws Exception {
-        int ret = ToolRunner.run(new WordCount21(), args);
+        int ret = ToolRunner.run(new MRWordCount21(), args);
         if (ret != 0) {
             System.exit(ret);
         }

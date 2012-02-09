@@ -12,16 +12,16 @@ import org.apache.hadoop.mapred.*;
 import org.apache.hadoop.util.Tool;
 import org.apache.hadoop.util.ToolRunner;
 
-public class WordCountFeatures extends Configured implements Tool {
+public class MRWordCountFeatures extends Configured implements Tool {
 
     public static void main(String[] args) throws Exception {
-        int res = ToolRunner.run(new Configuration(), new WordCountFeatures(), args);
+        int res = ToolRunner.run(new Configuration(), new MRWordCountFeatures(), args);
         System.exit(res);
     }
 
     @Override
     public int run(String[] args) throws Exception {
-        JobConf conf = new JobConf(getConf(), WordCount.class);
+        JobConf conf = new JobConf(getConf(), MRWordCount.class);
         conf.setJobName(
                 "WordCountFeatures");
 

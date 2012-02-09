@@ -31,7 +31,7 @@ public class WordCountTest {
         String[] args = new String[2];
         args[0] = testData;
         args[1] = outputPath;
-        WordCount.main(args);
+        MRWordCount.main(args);
         assert (new File("test-output/ch1/_SUCCESS").exists());
         assert (Files.readLines(new File("test-output/ch1/part-00000"),
                 Charset.defaultCharset()).

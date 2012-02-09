@@ -5,10 +5,11 @@ import org.apache.hadoop.io.IntWritable;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapred.*;
 
-public class WordCount {
+public class MRWordCount {
 
     public static void main(String[] args) throws Exception {
-        JobConf conf = new JobConf(WordCount.class);
+        System.out.println("Running MR: MRWordCount");
+        JobConf conf = new JobConf(MRWordCount.class);
         conf.setJobName("WordCount");
 
         conf.setOutputKeyClass(Text.class);
@@ -21,6 +22,8 @@ public class WordCount {
         conf.setInputFormat(TextInputFormat.class);
         conf.setOutputFormat(TextOutputFormat.class);
 
+        System.out.println("Input path: " + args[0]);
+        System.out.println("Output path: " + args[1]);
         FileInputFormat.setInputPaths(conf, new Path(args[0]));
         FileOutputFormat.setOutputPath(conf, new Path(args[1]));
 
