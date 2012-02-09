@@ -432,35 +432,144 @@
                     and of your view will be different. Therefore, the table below is mainly to
                     encourage the reader to do a similar evaluation for his own needs.
                 </para>
-            </section>
-            <!--
+            </section>            
             <table frame='all'>
-                <title>Sample Table</title>
-                <tgroup cols='5' align='left' colsep='1' rowsep='1'>
+                <title>Comparison of Big Data </title>
+                <tgroup cols='6' align='left' colsep='1' rowsep='1'>
                     <colspec colname='c1'/>
                     <colspec colname='c2'/>
                     <colspec colname='c3'/>
                     <colspec colnum='5' colname='c5'/>
                     <thead>
                         <row>
-                            <entry namest="c1" nameend="c2" align="center">Horizontal Span</entry>
-                            <entry>a3</entry>
-                            <entry>a4</entry>
-                            <entry>a5</entry>
+                            <entry>DB Pros/Cons</entry>
+                            <entry>HBase</entry>
+                            <entry>Cassandra</entry>
+                            <entry>Vertica</entry>
+                            <entry>CloudTran</entry>
+                            <entry>HyperTable</entry>
                         </row>
                     </thead>
                     <tbody>
                         <row>
-                            <entry>b1</entry>
-                            <entry>b2</entry>
-                            <entry>b3</entry>
-                            <entry>b4</entry>
-                            <entry>b5</entry>
+                            <entry>Pros</entry>
+                            <entry>Key-based NoSQL, active user community, Cloudera support </entry>
+                            <entry>Key-based NoSQL, active user community, Amazon's Dynamo on EC2</entry>
+                            <entry>Closed-source, SQL-standard, easy to use, visualization tools, complex queries </entry>
+                            <entry>Closed-source optimized online transaction processing </entry>
+                            <entry>Drop-in replacement for HBase, open-source, arguably much faster</entry>
                         </row>
+                        <row>
+                            <entry>Cons</entry>
+                            <entry>Steeper learning curve, less tools, simpler queries</entry>
+                            <entry>Steeper learning curve, less tools, simpler queries</entry>
+                            <entry>Vendor lock-in, price, RDMS/BI - may not fit every application </entry>
+                            <entry>Vendor lock-in, price, transaction-optimized, may not fit every application, needs wider adoption</entry>
+                            <entry>New, needs user adoption and more testing</entry>
+                        </row>
+                        <row>
+                            <entry>Notes</entry>
+                            <entry>Good for new, long-term development </entry>
+                            <entry>Easy to set up, no dependence on HDFS, fully distributed architecture</entry>
+                            <entry>Good for existing SQL-based applications that needs fast scaling </entry>
+                            <entry>Arguably the best OLTP </entry>
+                            <entry>To be kept in mind as a possible alternative </entry>
+                        </row>                        
                     </tbody>
                 </tgroup>                
-            </table>
-            -->
+            </table>            
+        </section>
+        <section>
+            <title>Alternatives for distributed massive computations</title>
+            <para>Here too, depending upon the type of application that the reader needs, other
+                approaches make prove more useful or more fitting to the purpose.
+            </para>
+            <para>
+                The first such example is the JavaSpaces paradigm. JavaSpaces is a giant hash
+                map container. It provides the framework for building large-scale systems with
+                multiple cooperating computational nodes. The framework is thread-safe and
+                fault-tolerant. Many computer working on the same problem can store their data in
+                a JavaSpaces container. When a node wants to do some work, it finds the data in
+                the container, check its out, works on it, and then returns it back. The framework
+                provides for atomicity. While the node is working on the data, other nodes cannot
+                see it. If it fails, its lease on the data expires, and the data is returned back to the
+                pool of data for processing.
+            </para>
+            <para>
+                The champion of JavaSpaces is a commercial company called GigaSpaces. The
+                license for a JavaSpaces container from GigaSpaces is free - provided that you can
+                fit into the memory of one computer. Beyond that, GigaSpaces has implemented
+                unlimited JavaSpaces container where multiple servers combine their memories
+                into a shared pool. GigaSpaces has created a big sets of additional functionality for
+                building large distributed systems. So again, everything depends on the reader's
+                particular situation.                
+            </para>
+            <para>
+                GridGain is another Hadoop alternative. The proponents of GridGain claim that
+                while Hadoop is a compute grid and a data grid, GridGain is just a compute grid,
+                so if your data requirements are not huge, why bother? They also say that seems to
+                be enormously simpler to use. Study of the tools and prototyping with them can
+                give one a good feel for the most fitting answer.                
+            </para>
+            <para>
+                Terracotta is a commercial open source company, and in the open source realm
+                it provides Java big cache and a number of other components for building large
+                distributed systems. One of its advantages is that it allows to scale existing
+                applications without a significant rewrite. By now we have gotten pretty far away
+                from Hadoop, which proves that we have achieved our goal - give a reader a quick
+                overview of various alternatives for building large distributed systems. Success in
+                whichever way you choose to go!                
+            </para>            
+        </section>
+        <section>
+            <title>Arguments for Hadoop</title>
+            <para>
+                We have given the pro arguments for the Hadoop alternatives, but now we can put
+                in a word for the little elephant and its zoo. It boasts wide adoption, has an active
+                community, and has been in production use in many large companies. I think that
+                before embarking on an exciting journey of building large distributed systems, the
+                reader will do well to view the presentation by Jeff Dean, a Google Fellow, on the
+                "Design, Lessons, and Advice from Building Large Distributed Systems"                                 
+                <ulink url = "http://www.slideshare.net/xlight/google-designs-lessons-and-advice-from-building-large-distributed-systems">
+                    found on SlideShare
+                </ulink>
+            </para>
+            <para>
+                Google has built multiple applications on GFS, MapReduce, and BigTable, which
+                are all implemented as open-source projects in the Hadoop zoo. According to Jeff,
+                the plan is continue with 1,000,000 to 10,000,000 machines spread at 100s to
+                1000s locations around the world, and as arguments go, that is pretty big.
+            </para>
+        </section>
+        <section>
+            <title>Say "Hi!" to Hadoop</title>
+            <para>Enough words, let’s look at some code! 
+                First, however, let us explain how MapReduce works in human terms.
+            </para>
+            <section>
+                <title>A dialog between you and Hadoop</title>
+                <para>
+                    Imagine you want to count word frequencies in a text. It may be a book or a
+                    document, and word frequencies may tell you something about its subject. Or it
+                    may be a web access log, and you may be looking for suspicious activity. It may be
+                    a log of any customer activity, and you might be looking for most frequent
+                    customers, and so on.                    
+                </para>
+                <para>
+                    In a straightforward approach, you would create an array or a hash table of
+                    words, and start counting the word's occurrences. You may run out of memory, or
+                    the process may be slow. If you try to use multiple computers all accessing shared
+                    memory, the system immediately gets complicated, with multi-threading, and we
+                    have not even thought of hardware failures. Anyone who has gone through similar
+                    exercises know how quickly a simple task can become a nightmare.                    
+                </para>
+                <para>
+                    Enter Hadoop and offers its services. The following dialog ensues.
+                </para>
+                <para><emphasis>Hadoop: </emphasis>How can I help?</para>   
+                <para><emphasis>You: </emphasis>I need to count words in a document.</para>
+            </section>
+
         </section>
     </chapter>
     <chapter xml:id="chapter_2">
@@ -468,24 +577,7 @@
         <para>
             Programmers like playing around with the code. In the long-standing philosophical 
             discussion of what is more important, theory or practice, it was concluded that 
-            theory (reading this book) is more important, because it leads to practice (coding). Besides, 
-            as 
-            <ulink url="http://www.textfiles.com/humor/JOKES/limerick.2">one limerick attests</ulink>:
-        </para>
-        <para>
-            There was a young woman in Dee
-        </para>
-        <para>
-            Who stayed with each man she did see.
-        </para>
-        <para>
-            When it came to a test
-        </para>
-        <para>
-            She wished to be best,
-        </para>
-        <para>
-            And practice makes perfect, you see.
+            theory (reading this book) is more important, because it leads to practice (coding). 
         </para>
         <section>
             <title>Hands-on: setting your development environment</title>  
