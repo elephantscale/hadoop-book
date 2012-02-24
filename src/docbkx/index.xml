@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <book xml:id="simple_book" xmlns="http://docbook.org/ns/docbook" version="5.0">
-    <title>Hadoop Illuminated (work-in-progress)</title>
+    <title>Hadoop Illuminated</title>
     <info>        
         <author>
             <personname>
@@ -13,11 +13,7 @@
         <para>To the open source community
         </para>        
     </dedication>   
-    <acknowledgements>
-        <para>This book started out as an attempt to write for a publishing house, 
-            but later it became clear that the maximum amount of fun could only be had
-            by writing an open source book about open source projects, for the open community.
-        </para>
+    <acknowledgements>        
         <para>
             I would like to express gratitude to my editors, co-authors, colleagues, and bosses
             who shared the thorny path to working clusters - with the hope to make it less thorny for 
@@ -33,6 +29,37 @@
             </ulink>
         </para>
     </acknowledgements>
+    <chapter xml:id="chapter_0">
+        <title>Who is this book for?</title>
+        <section>
+            <title>About "Hadoop Illuminated"</title>
+            <para>This book started out as an attempt to write for a publishing house, 
+                but later it became clear that the maximum amount of fun could only be had
+                by writing an open source book about open source projects, for the open community.
+            </para>
+            <para>
+                The book is intended as a working cookbook, where why can find answers to questions
+                on how to express a specific programming problem in MapReduce terms, or otherwise 
+                resolve it with Hadoop and other Big Data technologies.
+            </para>
+            <para>
+                "Hadoop Illuminated" is continuous work in progress. Techniques get added, chapters added 
+                and updated. Most importantly, the code is always current, and the tests are kept in working order.
+            </para>
+            <section>
+                <title>About the source code</title>
+                <para>
+                    The book's companion source code is hosted on GitHub 
+                    <ulink url="https://github.com/markkerzner/HadoopIlluminated">here.</ulink>
+                    Alternatively, the book can be viewed as a companion to the source code. The goal is 
+                    to make the the source code project as a set of templates, where one can go to and 
+                    copy a specific template, bringing it into one's own project and continuing to work 
+                    by modifying it accordingly. At least I use it this way all the time, keeping the project 
+                    open in my IDE for convenience.
+                </para>
+            </section>
+        </section>
+    </chapter>
     <chapter xml:id="chapter_1">
         <title>Soft introduction to Hadoop</title>
         <section>
@@ -566,8 +593,12 @@
                 <para>
                     Enter Hadoop and offers its services. The following dialog ensues.
                 </para>
-                <para><emphasis>Hadoop: </emphasis>How can I help?</para>   
-                <para><emphasis>You: </emphasis>I need to count words in a document.</para>
+                <para>
+                    <emphasis>Hadoop: </emphasis>How can I help?
+                </para>   
+                <para>
+                    <emphasis>You: </emphasis>I need to count words in a document.
+                </para>
             </section>
 
         </section>
