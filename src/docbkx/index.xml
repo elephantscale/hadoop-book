@@ -599,8 +599,32 @@
                 <para>
                     <emphasis>You: </emphasis>I need to count words in a document.
                 </para>
+                <para>
+                    <emphasis>Hadoop: </emphasis>I will read the words and give them to you, one at a time, can you
+                    count that?
+                </para>
+                <para>
+                    <emphasis>You: </emphasis>Yes, I will assign a count of 1 to each and give them back to you.
+                </para>
+                <para>
+                    <emphasis>Hadoop: </emphasis>Very good. I will sort them, and will give them back to you in groups,
+                    grouping the same words together. Can you count that?
+                </para>
+                <para>
+                    <emphasis>You: </emphasis>Yes, I will go through them and give you back each word and its count.
+                </para>
+                <para>
+                    <emphasis>Hadoop: </emphasis>I will record each word with its count, and we’ll be done.
+                    I am not pulling your leg: it is that simple. That is the essence of a MapReduce
+                    job. Hadoop uses the cluster of computers (nodes), where each node reads words in
+                    parallel with all others (Map), then the nodes collect the results (Reduce) and write
+                    them back. Notice that there is a sort step, which is essential to the solution, and is
+                    provided for you - regardless of the size of the data. It may take place all in
+                    memory, or it may spill to disk. If any of the computers go bad, their tasks are
+                    assigned to the remaining healthy ones.
+                    How does this dialog look in the code?
+                </para>
             </section>
-
         </section>
     </chapter>
     <chapter xml:id="chapter_3">
