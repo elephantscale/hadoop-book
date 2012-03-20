@@ -29,7 +29,7 @@
             </ulink>
         </para>
     </acknowledgements>
-    <chapter xml:id="chapter_0">
+    <chapter xml:id="chapter_1">
         <title>Who is this book for?</title>
         <section>
             <title>About "Hadoop Illuminated"</title>
@@ -60,7 +60,7 @@
             </section>
         </section>
     </chapter>
-    <chapter xml:id="chapter_1">
+    <chapter xml:id="chapter_2">
         <title>Soft introduction to Hadoop</title>
         <section>
             <title>MapReduce or Hadoop?</title>
@@ -603,7 +603,7 @@
 
         </section>
     </chapter>
-    <chapter xml:id="chapter_2">
+    <chapter xml:id="chapter_3">
         <title>Get your hands dirty with code</title>
         <para>
             Programmers like playing around with the code. In the long-standing philosophical 
@@ -629,7 +629,7 @@
             </section>
         </section>
     </chapter>
-    <chapter xml:id="chapter_3">
+    <chapter xml:id="chapter_4">
         <title>Questions of Sorting</title>
         <para>Let's sort it out</para>
     </chapter>
