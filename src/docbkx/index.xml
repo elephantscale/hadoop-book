@@ -215,16 +215,10 @@
         <section>
             <title>Meet the Hadoop Zoo</title>
             <para>
-                QUINCE
+                QUINCE: Is all our company here?
             </para>
             <para>
-                Is all our company here?
-            </para>
-            <para>                
-                BOTTOM
-            </para>
-            <para>
-                You were best to call them generally, man by man, according to the scrip.
+                BOTTOM: You were best to call them generally, man by man, according to the scrip.
             </para>
             <para>
                 <ulink url="http://shakespeare.mit.edu/midsummer/full.html">
@@ -681,19 +675,101 @@
             <para>
             </para>            
             <section>
-                <title></title>
-                <para>
+                <title>For Windows Programmers</title>
+                <para>We do realize that there are some programmers in the world who run Windows.
+                    You can still learn and use Hadoop. Here are a few possible roads that you can
+                    take: install Ubuntu alongside with Windows, install it as a double-boot, or install
+                    Fedora. Hadoop recommends Linux, and Cloudera provides packages for Debian
+                    and RedHat Linux. If you prefer to stay closer to Windows, use Cygwin, following
+                    the instructions on the Apache Hadoop site.
                 </para>
             </section>
             <section>
-                <title></title>
-                <para>
-                </para>
-            </section>
-            <section>
-                <title></title>
-                <para>
+                <title>Running WordCount in Your IDE</title>
+                <para>Discussion
+                
+                    Which Hadoop distribution should you use? The first two choices are Apache
+                    Hadoop and the Cloudera CDH. 
                     
+                    What are the pros and cons of each?
+                    
+                    Apache Hadoop is the home of the Hadoop project. You can get any version
+                    there. Of course, if you a real programmer and don't have a production
+                    environment to support, you will choose the latest. That's fine - you can download
+                    and install the latest, usually in your local account, and accept the default settings
+                    and permission. That is the easiest way to get up and running with Apache
+                    Hadoop. If you want to install for more than yourself on that system, you would
+                    have to follow the best installation practices and learn about the preferred groups
+                    and permission.
+                    
+                    You always deal with the latest and greatest code, and you can even try to build
+                    it yourself, if you adventurous enough you can make an improvement and suggest
+                    it to the committers, in the form of a HADOOP-PATH-XXX - you can learn about
+                    it here: http://wiki.apache.org/hadoop/HowToContribute
+                    
+                    Your other choice is Cloudera CDH distribution. It offers the same code, but
+                    already packaged and tested, for many Linux flavors. If you go this route, you
+                    automatically get introduced to the best deployment practices, everything gets put
+                    into the right directories, and your Hadoop commands work from the command
+                    line out of the box, because they are put on the path by the install process. You
+                    don't even have to set the environmental variable yourself.
+                    
+                    Cloudera CDH distribution offers other advantages: it puts in the patches that
+                    Cloudera tests, and it installs other Hadoop-related projects as packages. It may lag
+                    one version behind the current Apache Hadoop, so if you absolutely need the latest
+                    features, you will go with Apache.
+                    
+                    Which choice is the better one? It almost does not matter, it will work either
+                    way. Most of my friends consultants tell me that they recommend Cloudera CDH 
+                    distribution to the clients, and I guess for two reasons: they will have less
+                    installation questions from the clients, and many commercial companies may
+                    prefer to know that there is commercial support for the open source Hadoop.
+                    Compare this to RedHat, and Cloudera is not shying away from this comparison
+                    either.
+                    
+                    This covers the install issues. You need it before you are to go to the next
+                    exercise. Therefore, install Hadoop, download the code from GitHub, create the
+                    project in your IDE, and run it. You cannot do other labs before you do it.
+                    
+                    Note that running from the IDE, you essentially ran your job with the following
+                    command:
+                    
+                    java -jar dist/Chapter1.jar test-data/moby-dick.txt test-output
+                    
+                    The jar that you give on the command line is the jar that contains your main
+                    function, used to submit your Hadoop job. The other jar, which you set with the
+                    call to , is the one that contains job.setJarByClass() your mapper and
+                    reducer code. It is this this second jar that Hadoop will copy to every node and run
+                    it there, following the rule of "move computations close to the data, not the data
+                    close to the computations." In this lab, one jar contains all the code.
+                    
+                    Running inside of the IDE relies on the Hadoop jars being present. The
+                    command java -jar above worked, because the Hadoop jars were copied to
+                    dist/lib, and the Chapter1.jar pointed to them. In a more general case, you will
+                    need to be cognizant of packaging the required jars. This will be covered in a later
+                    chapter dealing with best practices.
+                </para>
+            </section>
+            <section>
+                <title>Technique 2: Run WordCount Outside of Your IDE</title>
+                <para>Problem
+                
+                    After you were successful in running a MapReduce job from the IDE, it is time
+                    to to launch it on a Hadoop cluster, even if it is configured only in
+                    pseudo-distributed mode.
+
+                    Solution
+
+                    Now that sounds pretty simple. Build the jar in your IDE, then run it from the
+                    command line which will looks something like this:
+
+                    hadoop jar your-jar parameters
+
+                    When you were running your WordCountExample from the IDE, the code
+                    picked up the data from the local file system. This is very useful for debugging, but
+                    it will not work when running under hadoop, even in local mode on one machine,
+                    because the data needs to reside in HDFS. Let's do it right from the beginning and
+                    copy the data to where it should be:
                     
                     hadoop fs -mkdir /chapter1
                     hadoop fs -copyFromLocal moby-dick.txt /chapter1
@@ -709,9 +785,11 @@
                     
                     After the program runs, it is instructive and pleasant to view the output in the
                     browser:
+
                     Figure 1.4 Output in HDFS viewed in the browser
                     
                     Discussion
+                    
                     What happened to the Hadoop jars that we needed in Lab 1? Since we are now
                     running relying on Hadoop, it takes care to provide your code with its library jars,
                     and we do not need to care about them explicitely. This is true, provided that
