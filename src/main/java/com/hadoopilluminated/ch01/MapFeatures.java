@@ -11,11 +11,7 @@ import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.io.IntWritable;
 import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.io.Text;
-import org.apache.hadoop.mapred.JobConf;
-import org.apache.hadoop.mapred.MapReduceBase;
-import org.apache.hadoop.mapred.Mapper;
-import org.apache.hadoop.mapred.OutputCollector;
-import org.apache.hadoop.mapred.Reporter;
+import org.apache.hadoop.mapred.*;
 import org.apache.hadoop.util.StringUtils;
 
 public class MapFeatures
@@ -29,10 +25,11 @@ public class MapFeatures
     private final static IntWritable one = new IntWritable(1);
     private Text word = new Text();
     private boolean caseSensitive = true;
-    private Set<String> patternsToSkip = new HashSet<>();
+    private Set<String> patternsToSkip = new HashSet<String>();
     private long numRecords = 0;
     private String inputFile;
 
+    @Override
     public void configure(JobConf job) {
         caseSensitive = job.getBoolean("wordcount.case.sensitive", true);
         inputFile = job.get("map.input.file");

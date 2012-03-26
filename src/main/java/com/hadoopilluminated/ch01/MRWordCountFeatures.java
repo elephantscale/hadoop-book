@@ -35,7 +35,7 @@ public class MRWordCountFeatures extends Configured implements Tool {
         conf.setInputFormat(TextInputFormat.class);
         conf.setOutputFormat(TextOutputFormat.class);
 
-        List<String> other_args = new ArrayList<>();
+        List<String> other_args = new ArrayList<String>();
 
         for (int i = 0; i < args.length; ++i) {
             if ("-skip".equals(args[i])) {

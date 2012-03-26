@@ -38,7 +38,7 @@
                 by writing an open source book about open source projects, for the open community.
             </para>
             <para>
-                The book is intended as a working cookbook, where why can find answers to questions
+                The book is intended as a working cookbook, where one can find answers to questions
                 on how to express a specific programming problem in MapReduce terms, or otherwise 
                 resolve it with Hadoop and other Big Data technologies.
             </para>
@@ -52,7 +52,7 @@
                     The book's companion source code is hosted on GitHub 
                     <ulink url="https://github.com/markkerzner/HadoopIlluminated">here.</ulink>
                     Alternatively, the book can be viewed as a companion to the source code. The goal is 
-                    to make the the source code project as a set of templates, where one can go to and 
+                    to make the source code project as a set of templates, where one can go to and 
                     copy a specific template, bringing it into one's own project and continuing to work 
                     by modifying it accordingly. At least I use it this way all the time, keeping the project 
                     open in my IDE for convenience.
@@ -61,7 +61,7 @@
         </section>
     </chapter>
     <chapter xml:id="chapter_2">
-        <title>Soft introduction to Hadoop</title>
+        <title>Soft Introduction to Hadoop</title>
         <section>
             <title>MapReduce or Hadoop?</title>
             <para>The goal here is to present an intro to Hadoop so simple that any programmer who
@@ -622,9 +622,198 @@
                     provided for you - regardless of the size of the data. It may take place all in
                     memory, or it may spill to disk. If any of the computers go bad, their tasks are
                     assigned to the remaining healthy ones.
+                </para>
+                <para>
                     How does this dialog look in the code?
                 </para>
             </section>
+            <section>
+                <title>Geek Talk</title>
+                <para>
+                </para>
+            </section>
+            <section>
+                <title>Let me see, who is Map and who is Reduce</title>
+                <para>
+                </para>            
+            </section>
+            <section>
+                <title>All of the Code</title>
+                <para>
+                </para>
+            </section>
+        </section>
+
+        <section>
+            <title>How Hadoop Works Inside</title>
+            <para>
+            </para>            
+            <section>
+                <title></title>
+                <para>
+                </para>
+            </section>
+            <section>
+                <title></title>
+                <para>
+                </para>
+            </section>
+            <section>
+                <title></title>
+                <para>
+                </para>
+            </section>
+            <section>
+                <title></title>
+                <para>
+                </para>
+            </section>
+        </section>
+
+        <section>
+            <title>Logging</title>
+            <para>
+            </para>            
+        </section>
+
+        <section>
+            <title>Rolling Up Your Sleeves</title>
+            <para>
+            </para>            
+            <section>
+                <title></title>
+                <para>
+                </para>
+            </section>
+            <section>
+                <title></title>
+                <para>
+                </para>
+            </section>
+            <section>
+                <title></title>
+                <para>
+                    
+                    
+                    hadoop fs -mkdir /chapter1
+                    hadoop fs -copyFromLocal moby-dick.txt /chapter1
+                    See it here: http://localhost:50070/
+                    
+                    Now we can run it with the following command:
+                    
+                    Listing 1.12 run_wordcount_local.sh
+                    
+                    hadoop jar ../dist/Chapter1.jar \
+                    hdfs://localhost/chapter1/test-data/moby-dick.txt \
+                    hdfs://localhost/chapter1/test-output
+                    
+                    After the program runs, it is instructive and pleasant to view the output in the
+                    browser:
+                    Figure 1.4 Output in HDFS viewed in the browser
+                    
+                    Discussion
+                    What happened to the Hadoop jars that we needed in Lab 1? Since we are now
+                    running relying on Hadoop, it takes care to provide your code with its library jars,
+                    and we do not need to care about them explicitely. This is true, provided that
+                    configured correctly, and usually this is HADOOP_CLASSPATH true if the install
+                    and run scripts are configured right. If not, you may need to adjust your
+                    installation.
+                </para>
+            </section>
+            <section>
+                <title>Lab 3: Configure Distributed Hadoop Cluster</title>
+                <para>Configure a minimal cluster of 2-3 nodes and run the WordCountExample there.
+                    Make sure that the tasks get distributed to different nodes. Verify this with Hadoop
+                    logging.
+                    When you follow the instructions, using Cloudera or Apache Hadoop
+                    distribution, you should be able to see the HFDS in the browser, like in this figure
+                    for a 2-node cluster.
+                    Figure 1.5 Browsing a 2-node HDFS
+                    
+                    You would then run it with the following command:
+                    Listing 1.13 run_wordcount_dist.sh
+                    hadoop jar ../dist/Chapter1.jar \
+                    hdfs://hadoop-master/chapter1/test-data/moby-dick.txt \
+                    hdfs://hadoop-master/chapter1/test-output
+                </para>
+            </section>
+            <section>
+                <title>Lab 4: Customer Billing (Advanced)</title>
+                <para>Each line of your input contains the timestamp for an instance of resource
+                    utilization, then a tab, and customer-related data: customer ID, resource ID, and
+                    resource unit price. Write a MapReduce job that will create, for each customer, a
+                    summary of resource utilization by the hour, and output the result into a text file.
+
+                    Sample input format:
+                    Wed Jan 5 11:07:00 CST 2011 (Tab) Cust89347281 Res382915 $0.0035
+
+                    Generate test data for the exercise 4 above. In keeping with the general Hadoop
+                    philosophy, manual testing is not enough. Write an MR task to generate arbitrary
+                    amount of random test data from pre-defined small invoice, then run your answer
+                    to the exercise 4 and see if you get the results you started out with.
+                </para>
+            </section>
+            <section>
+                <title>Lab 5: Deduplication (Advanced)</title>
+                <para>Often input files contain records that are the same. This may happen in web
+                    crawling, when individual crawlers may come to the same URL. Write a
+                    MapReduce task that will "dedupe" the records, and output each of the same
+                    records only once. Hint: in the Map stage compute the MD5 or SHA-1 hash of the
+                    record and output this as a key for the Reducer. In the reduce stage (since the
+                    records are sorted by keys) output only one of the records that are given to the
+                    Reducer with the same key value.
+                </para>
+            </section>
+            <section>
+                <title>Lab 6: Write a Distributed Grep</title>
+                <para>This lab is taken straight out of Google initial MapReduce paper.
+                </para>
+            </section>
+        </section>
+
+        <section>
+            <title>Exercises</title>
+            <para>This chapter, as well as all succeeding ones, contains exercises building on the
+                material in the chapter. Doing the labs with the help of the instructions in this must
+                have been useful, but going solo is a special event in the life of every pilot, and we,
+                the programmers, should imitate the best. Therefore, here are suggested exercises
+                for your own practice and enjoyment.
+            </para>            
+            <section>
+                <title>Exercise 1</title>
+                <para>Check out the Hadoop and HDFS project code from the Subversion repository on
+                    Apache. The process of doing so is described here:
+                    http://wiki.apache.org/hadoop/HowToContribute. Try to build
+                    the project, read the code, apply a patch, and build again. There are a few benefit in
+                    doing this. You will feel more comfortable with Hadoop by following the famous
+                    advice "Read the code, stupid!" You will also have a feeling of what would be
+                    involve if you want to submit a patch yourself.
+                </para>
+            </section>
+            <section>
+                <title>Exercise 2</title>
+                <para>Modify Lab 4 to output results to a relational database. Hint: using RDBS directly
+                    may be problematic because of the load, and the possibility of node failures, so use
+                    the output to text files instead, and load the text files into the database on a separate
+                    post-processing step.
+                </para>
+            </section>
+        </section>
+
+        <section>
+            <title>Chapter Summary</title>
+            <para>In this chapter we were introduced to the MapReduce/Hadoop framework and
+                wrote our first Hadoop program, which can actually accomplish quite a lot. We got
+                a first look at when Hadoop can be useful. If you did the labs and exercises, you
+                can now safely state that you are an intermediate Hadoop programmer, which is no
+                small thing.
+                <para></para>
+                In the next chapter we will go a little deeper into sorting. There are situations
+                where more control over sorting is required. It will also give you a better feeling
+                for Hadoop internals, so that after reading it you will feel closer to a seasoned
+                veteran than to a novice. Still, we will try to make it a breeze, keeping in line with
+                the motto of this book, "Who said Hadoop is hard?".
+            </para>            
         </section>
     </chapter>
     <chapter xml:id="chapter_3">
