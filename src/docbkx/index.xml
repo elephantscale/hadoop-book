@@ -12,6 +12,9 @@
     <dedication>        
         <para>To the open source community
         </para>        
+        <para>
+            <ulink url="https://github.com/markkerzner/HadoopIlluminated">Companion project on GitHub</ulink>            
+        </para>
     </dedication>   
     <acknowledgements>        
         <para>
@@ -28,6 +31,7 @@
                 <emphasis>Victor Pelevin</emphasis>
             </ulink>
         </para>
+
     </acknowledgements>
     <chapter xml:id="chapter_1">
         <title>Who is this book for?</title>
