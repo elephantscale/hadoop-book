@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <book xml:id="simple_book" xmlns="http://docbook.org/ns/docbook" version="5.0">
     <title>Hadoop Illuminated</title>
-    <info>        
+    <info>
         <author>
             <personname>
                 <firstname>Mark</firstname>
-                <surname>Kerzner</surname>          
+                <surname>Kerzner</surname>
             </personname>
         </author>
-    </info>        
-    <dedication>        
+    </info>
+    <dedication>
         <para>To the open source community
-        </para>        
-        <para>
-            <ulink url="https://github.com/markkerzner/HadoopIlluminated">Companion project on GitHub</ulink>            
         </para>
-    </dedication>   
-    <acknowledgements>        
+        <para>
+            <ulink url="https://github.com/markkerzner/HadoopIlluminated">Companion project on GitHub</ulink>
+        </para>
+    </dedication>
+    <acknowledgements>
         <para>
             I would like to express gratitude to my editors, co-authors, colleagues, and bosses
-            who shared the thorny path to working clusters - with the hope to make it less thorny for 
-            those who follow. Seriously, folks, Hadoop is hard, and Big Data is tough, and there are 
-            many related products and skills that you need to master. Therefore, have fun, 
-            <ulink url="http://groups.google.com/group/hadoop-illuminated">provide your feedback</ulink>, 
+            who shared the thorny path to working clusters - with the hope to make it less thorny for
+            those who follow. Seriously, folks, Hadoop is hard, and Big Data is tough, and there are
+            many related products and skills that you need to master. Therefore, have fun,
+            <ulink url="http://groups.google.com/group/hadoop-illuminated">provide your feedback</ulink>,
             and I hope you will find the book entertaining. You might even find it useful.
         </para>
         <para>
-            "The author's opinions do not necessarily coincide with his point of view." -             
+            "The author's opinions do not necessarily coincide with his point of view." -
             <ulink url="http://lib.udm.ru/lib/PELEWIN/pokolenie_engl.txt">
                 <emphasis>Victor Pelevin</emphasis>
             </ulink>
@@ -37,28 +37,28 @@
         <title>Who is this book for?</title>
         <section>
             <title>About "Hadoop Illuminated"</title>
-            <para>This book started out as an attempt to write for a publishing house, 
+            <para>This book started out as an attempt to write for a publishing house,
                 but later it became clear that the maximum amount of fun could only be had
                 by writing an open source book about open source projects, for the open community.
             </para>
             <para>
                 The book is intended as a working cookbook, where one can find answers to questions
-                on how to express a specific programming problem in MapReduce terms, or otherwise 
+                on how to express a specific programming problem in MapReduce terms, or otherwise
                 resolve it with Hadoop and other Big Data technologies.
             </para>
             <para>
-                "Hadoop Illuminated" is continuous work in progress. Techniques get added, chapters added 
+                "Hadoop Illuminated" is continuous work in progress. Techniques get added, chapters added
                 and updated. Most importantly, the code is always current, and the tests are kept in working order.
             </para>
             <section>
                 <title>About the source code</title>
                 <para>
-                    The book's companion source code is hosted on GitHub 
+                    The book's companion source code is hosted on GitHub
                     <ulink url="https://github.com/markkerzner/HadoopIlluminated">here.</ulink>
-                    Alternatively, the book can be viewed as a companion to the source code. The goal is 
-                    to make the source code project as a set of templates, where one can go to and 
-                    copy a specific template, bringing it into one's own project and continuing to work 
-                    by modifying it accordingly. At least I use it this way all the time, keeping the project 
+                    Alternatively, the book can be viewed as a companion to the source code. The goal is
+                    to make the source code project as a set of templates, where one can go to and
+                    copy a specific template, bringing it into one's own project and continuing to work
+                    by modifying it accordingly. At least I use it this way all the time, keeping the project
                     open in my IDE for convenience.
                 </para>
             </section>
@@ -77,8 +77,8 @@
                 is MapReduce?
             </para>
             <para>
-                <emphasis>MapReduce</emphasis> is a programming framework, 
-                <ulink url="http://research.google.com/archive/mapreduce.html">published by Google in 2004</ulink>. 
+                <emphasis>MapReduce</emphasis> is a programming framework,
+                <ulink url="http://research.google.com/archive/mapreduce.html">published by Google in 2004</ulink>.
                 Much like other frameworks, such as Spring, Struts, or MFC, the MapReduce framework
                 does some things for you, and provides the place for you to fill in the blanks. What
                 MapReduce does for you is to organize your multiple computers in a cluster in
@@ -97,7 +97,7 @@
                 MapReduce. However, the actual software that implements this is called Hadoop.
                 Let us agree for simplicity that MapReduce and Hadoop are just two names for
                 the same things. Note, however, that when Google teaches college students the
-                ideas of MapReduce programming, they, too, use Hadoop, because their actual        
+                ideas of MapReduce programming, they, too, use Hadoop, because their actual
                 implementation of MapReduce is proprietary code. To emphasize the difference,
                 we can note that the Hadoop engineers at Yahoo like to challenge the engineers at
                 Google to sorting competitions between Hadoop and MapReduce.
@@ -112,9 +112,9 @@
             </para>
             <figure>
                 <title>Will you join the Hadoop dance?</title>
-                <graphic fileref="images/hadoop-dance-resized.png"></graphic>                
-                Artwork by 
-                <ulink url="https://picasaweb.google.com/110574221375288281850/RebeccaSArt">RK</ulink> 
+                <graphic fileref="images/hadoop-dance-resized.png"></graphic>
+                Artwork by
+                <ulink url="https://picasaweb.google.com/110574221375288281850/RebeccaSArt">RK</ulink>
             </figure>
             <para>
                 The short answer is that it simplifies dealing with Big Data. This answer
@@ -122,7 +122,7 @@
                 The Hadoop framework has built-in power and flexibility to do what you could not
                 do before. In fact, Cloudera presentations at the latest O'Reilly Strata conference
                 mentioned that MapReduce was initially used at Google and Facebook not
-                primarily for its scalability, but for what it allowed do with the data.                
+                primarily for its scalability, but for what it allowed do with the data.
             </para>
             <para>
                 In 2010, the average size of the Cloudera's customers' cluster was 30 machines.
@@ -130,12 +130,12 @@
                 all concentrated around the new ways of dealing with the data. What gives them
                 the security to go ahead is the knowledge that Hadoop solutions are massively
                 scalable, as has been proved by the Hadoop running in the world's largest computer
-                centers and at largest companies.                
+                centers and at largest companies.
             </para>
             <para>
                 As you will discover, the Hadoop framework organizes the data and the
                 computations, and then runs your code. At times, it makes sense to run your
-                solution, expressed in MapReduce paradigm, even on a single machine.                
+                solution, expressed in MapReduce paradigm, even on a single machine.
             </para>
             <para>
                 But of course, Hadoop really shines when you have not one, but rather tens,
@@ -146,7 +146,7 @@
                 retries, and collect the results together, and so on. Enter Hadoop to solve all these
                 problems for you. Now that you have a hammer, everything becomes a nail: people
                 will often reformulate their problem in MapReduce terms, rather than create a new
-                custom computation platform.                
+                custom computation platform.
             </para>
             <para>
                 No less important than Hadoop itself are its many friends. Hadoop Distributed
@@ -157,13 +157,13 @@
                 taught to students as an introduction to Big Data, its companion projects (including
                 the ZooKeeper, about which we will hear later on) will make possible and
                 simplify, by providing tried-and-proven frameworks, every aspect of dealing with
-                large datasets.                
+                large datasets.
             </para>
             <para>
                 As you learn the concepts, and perfect your skills with the techniques described
                 in this book, you will discover that there are many cases where Hadoop storage,
                 Hadoop computation, or Hadoop's friends can help you. Let's look at some of these
-                situations.                
+                situations.
             </para>
             <itemizedlist>
                 <listitem>
@@ -183,7 +183,7 @@
                         multiple computers? MapReduce helps you solve these problems. What if you don’t have
                         the hardware to run the cluster? - Amazon EC2 can run MapReduce jobs for you, and you
                         pay only for the time that it runs - the cluster is automatically formed for you and then
-                        disbanded.                        
+                        disbanded.
                     </para>
                 </listitem>
                 <listitem>
@@ -193,7 +193,7 @@
                         have unlimited storage, solving this problem once and for all, so as to concentrate on
                         what's really important. The answer is: you can mount HDFS as FUSE file system, and
                         you have your unlimited storage. In our cases studies we look at the successful use of the
-                        HDFS as as grid storage for the Large Hadron Collider.                        
+                        HDFS as as grid storage for the Large Hadron Collider.
                     </para>
                 </listitem>
                 <listitem>
@@ -204,7 +204,7 @@
                         But the data set is large. You can write a quick MapReduce job for that. Better yet, you
                         can use Hive, a data warehouse infrastructure built on top of Hadoop, with its ETL
                         capabilities, to generate your invoices in no time. We'll talk about Hive later, but we hope
-                        that you already see that you can use Hadoop and friends for fun and profit.                        
+                        that you already see that you can use Hadoop and friends for fun and profit.
                     </para>
                 </listitem>
             </itemizedlist>
@@ -232,33 +232,33 @@
             <para>
                 There are a number of animals in the Hadoop zoo, and each deals with a certain
                 aspect of Big Data. Let us illustrate this with a picture, and then introduce them
-                one by one.                
+                one by one.
             </para>
             <figure>
                 <title>The Hadoop Zoo</title>
-                <graphic fileref="images/hadoop-zoo-resized.png"></graphic>                
-                Artwork by 
-                <ulink url="https://picasaweb.google.com/110574221375288281850/RebeccaSArt">RK</ulink> 
-            </figure>        
+                <graphic fileref="images/hadoop-zoo-resized.png"></graphic>
+                Artwork by
+                <ulink url="https://picasaweb.google.com/110574221375288281850/RebeccaSArt">RK</ulink>
+            </figure>
             <section>
                 <title>HDFS - Hadoop Distributed File System</title>
-            
+
                 <para>
                     HDFS, or Hadoop Distributed File System, gives the programmer unlimited
                     storage. Unlimited storage is a programmers's dream, so you can skip the rest.
-                    However, here are the additional advantages of HDFS.                
+                    However, here are the additional advantages of HDFS.
                 </para>
                 <itemizedlist>
                     <listitem>
                         <para>
                             Horizontal scalability. Thousands of servers holding petabytes of data. When you need
-                            more more storage, you don't switch to more expensive solutions, but add servers to it.                        
+                            more more storage, you don't switch to more expensive solutions, but add servers to it.
                         </para>
                     </listitem>
                     <listitem>
                         <para>
                             Commodity hardware. The HDFS is designed with relatively cheap commodity hardware
-                            in mind. HDFS is self-healing and replicating.                      
+                            in mind. HDFS is self-healing and replicating.
                         </para>
                     </listitem>
                     <listitem>
@@ -269,16 +269,16 @@
                             different data node servers. Thus, if one data node fails, the other two can be used to
                             restore the third one in a different place.
                         </para>
-                    </listitem>                                    
+                    </listitem>
                 </itemizedlist>
                 <para>
                     The HDFS implementation is modeled after GFS, Google Distributed File
                     system, thus you can read the first paper on this, to be found here:
-                    http://labs.google.com/papers/gfs.html.                
+                    http://labs.google.com/papers/gfs.html.
                 </para>
             </section>
             <section>
-                <title>Hadoop, the little elephant</title>            
+                <title>Hadoop, the little elephant</title>
                 <para>
                     Hadoop organizes your computations. It reads the data, usually from HDFS, in
                     blocks. However, it can read the data from other places too, including mounted
@@ -289,12 +289,12 @@
                     If some of your nodes fail, Hadoop knows how to continue with the
                     computation, by re-assigning the incomplete work to another node and cleaning up
                     after that node that could not complete its task. It also knows how to combine the
-                    results of the computation in one place.                
+                    results of the computation in one place.
                 </para>
             </section>
             <section>
                 <title>HBase, the database for Big Data</title>
-                <para>"Thirty spokes share the wheel's hub, it is the empty space that make it useful" 
+                <para>"Thirty spokes share the wheel's hub, it is the empty space that make it useful"
                     - Tao Te Ching (
                     <ulink url = "http://terebess.hu/english/tao/gia.html">
                         translated by Gia-Fu Feng and Jane English)
@@ -310,7 +310,7 @@
                     Another feature of HBase is that it is a key-value database, not a relational
                     database. We will get into the pros and cons of these two approaches to databases
                     later, but for now let's just note that key-value databases are considered as more
-                    fitting for Big Data. Why? Because they don't store nulls! This gives them the appellation 
+                    fitting for Big Data. Why? Because they don't store nulls! This gives them the appellation
                     of "sparse," and as we saw above, Tao Te Chin says that they are useful for this reason.
                 </para>
             </section>
@@ -323,7 +323,7 @@
                     ZooKeeper is a centralized service for maintaining configuration information,
                     naming, providing distributed synchronization, and providing group services.
                 </para>
-                <para>  
+                <para>
                     ZooKeeper is also fault-tolerant. In your environment development, you can put
                     the zookeeper on one node, but in production you usually run it on an odd number
                     of servers, such as 3 or 5.
@@ -333,7 +333,7 @@
                 <title>Hive - data warehousing</title>
                 <para>
                     Hive: "I am Hive, I let you in and out of the HDFS cages, and you can talk SQL to me!"
-                </para>                
+                </para>
                 <para>
                     Hive is a way for you to get all the honey, and to leave all the work to the bees.
                     You can do a lot of data analysis with Hadoop, but you will also have to write
@@ -457,7 +457,7 @@
                     and of your view will be different. Therefore, the table below is mainly to
                     encourage the reader to do a similar evaluation for his own needs.
                 </para>
-            </section>            
+            </section>
             <table frame='all'>
                 <title>Comparison of Big Data </title>
                 <tgroup cols='6' align='left' colsep='1' rowsep='1'>
@@ -499,10 +499,10 @@
                             <entry>Good for existing SQL-based applications that needs fast scaling </entry>
                             <entry>Arguably the best OLTP </entry>
                             <entry>To be kept in mind as a possible alternative </entry>
-                        </row>                        
+                        </row>
                     </tbody>
-                </tgroup>                
-            </table>            
+                </tgroup>
+            </table>
         </section>
         <section>
             <title>Alternatives for distributed massive computations</title>
@@ -527,14 +527,14 @@
                 unlimited JavaSpaces container where multiple servers combine their memories
                 into a shared pool. GigaSpaces has created a big sets of additional functionality for
                 building large distributed systems. So again, everything depends on the reader's
-                particular situation.                
+                particular situation.
             </para>
             <para>
                 GridGain is another Hadoop alternative. The proponents of GridGain claim that
                 while Hadoop is a compute grid and a data grid, GridGain is just a compute grid,
                 so if your data requirements are not huge, why bother? They also say that seems to
                 be enormously simpler to use. Study of the tools and prototyping with them can
-                give one a good feel for the most fitting answer.                
+                give one a good feel for the most fitting answer.
             </para>
             <para>
                 Terracotta is a commercial open source company, and in the open source realm
@@ -543,8 +543,8 @@
                 applications without a significant rewrite. By now we have gotten pretty far away
                 from Hadoop, which proves that we have achieved our goal - give a reader a quick
                 overview of various alternatives for building large distributed systems. Success in
-                whichever way you choose to go!                
-            </para>            
+                whichever way you choose to go!
+            </para>
         </section>
         <section>
             <title>Arguments for Hadoop</title>
@@ -554,7 +554,7 @@
                 community, and has been in production use in many large companies. I think that
                 before embarking on an exciting journey of building large distributed systems, the
                 reader will do well to view the presentation by Jeff Dean, a Google Fellow, on the
-                "Design, Lessons, and Advice from Building Large Distributed Systems"                                 
+                "Design, Lessons, and Advice from Building Large Distributed Systems"
                 <ulink url = "http://www.slideshare.net/xlight/google-designs-lessons-and-advice-from-building-large-distributed-systems">
                     found on SlideShare
                 </ulink>
@@ -568,7 +568,7 @@
         </section>
         <section>
             <title>Say "Hi!" to Hadoop</title>
-            <para>Enough words, let’s look at some code! 
+            <para>Enough words, let’s look at some code!
                 First, however, let us explain how MapReduce works in human terms.
             </para>
             <section>
@@ -578,7 +578,7 @@
                     document, and word frequencies may tell you something about its subject. Or it
                     may be a web access log, and you may be looking for suspicious activity. It may be
                     a log of any customer activity, and you might be looking for most frequent
-                    customers, and so on.                    
+                    customers, and so on.
                 </para>
                 <para>
                     In a straightforward approach, you would create an array or a hash table of
@@ -586,14 +586,14 @@
                     the process may be slow. If you try to use multiple computers all accessing shared
                     memory, the system immediately gets complicated, with multi-threading, and we
                     have not even thought of hardware failures. Anyone who has gone through similar
-                    exercises know how quickly a simple task can become a nightmare.                    
+                    exercises know how quickly a simple task can become a nightmare.
                 </para>
                 <para>
                     Enter Hadoop and offers its services. The following dialog ensues.
                 </para>
                 <para>
                     <emphasis>Hadoop: </emphasis>How can I help?
-                </para>   
+                </para>
                 <para>
                     <emphasis>You: </emphasis>I need to count words in a document.
                 </para>
@@ -613,7 +613,8 @@
                 </para>
                 <para>
                     <emphasis>Hadoop: </emphasis>I will record each word with its count, and we’ll be done.
-                    I am not pulling your leg: it is that simple. That is the essence of a MapReduce
+                </para>
+                <para>I am not pulling your leg: it is that simple. That is the essence of a MapReduce
                     job. Hadoop uses the cluster of computers (nodes), where each node reads words in
                     parallel with all others (Map), then the nodes collect the results (Reduce) and write
                     them back. Notice that there is a sort step, which is essential to the solution, and is
@@ -628,24 +629,264 @@
             <section>
                 <title>Geek Talk</title>
                 <para>
+                    <emphasis>Hadoop: </emphasis>How can I help?
+                </para>
+                <para>
+                Listing 1.1 Hadoop
+                public class WordCount extends Configured implements Tool {
+                    public int run(String[] args) throws Exception {
+                </para>
+                <para>
+                    <emphasis>You: </emphasis>I need to count words in a document.
+                </para>
+                <para>
+                Listing 1.2 You
+                Job job = new Job(getConf());
+                job.setJarByClass(WordCount.class);
+                job.setJobName("wordcount");
+                </para>
+                <para>
+                    <emphasis>Hadoop: </emphasis>I will read the words and give them to you, one at a time, can you
+                    count that?
+                </para>
+                <para>
+                Listing 1.3 Hadoop
+                <programlisting language="java">
+                    public static class Map extends Mapper &lt;LongWritable, Text, Text, IntWritable&gt; {
+                    public void map(LongWritable key, Text value, Context context)
+                    throws IOException, InterruptedException {
+                    String line = value.toString();
+                </programlisting>
+                </para>
+                <para>
+                    <emphasis>You: </emphasis>Yes, I will assign a count of 1 to each and give them back to you.
+                </para>
+                <para>
+                Listing 1.4 You
+                String [] tokens = line.split(" ,");
+                for (String token: tokens) {
+                    Text word = new Text();
+                    word.set(token);
+                    context.write(word, new IntWritable(1));
+                }
+                </para>
+                <para>
+                You have done more than you promised - you can process multiple words on
+                the same line, if Hadoop choses to give them to you. This follows the principles of
+                defensive programming. Then you immediately realize that each input line can be
+                as long as it wants. In fact, Hadoop is optimized to have the best overall throughput
+                on large datasets. Therefore, each input can be a complete document, and you are
+                counting word frequencies in documents. If the documents come from the Web, for
+                example, you already have the scale of computations needed for such tasks.
+                </para>
+                <para>
+                    <emphasis>Hadoop: </emphasis>Very good. I will sort them, and will give them back to you in groups,
+                    grouping the same words together. Can you count that?
+                </para>
+                <para>
+                Listing 1.5 Hadoop
+                public static class Reduce extends Reducer &lt;Text, IntWritable, Text, IntWritable&gt; {
+                    @Override public void reduce(Text key, Iterable&lt;IntWritable&gt; values, Context context)
+                        throws IOException, InterruptedException {
+                </para>
+                <para>
+                    <emphasis>You: </emphasis>Yes, I will go through them and give you back each word and its count.
+                </para>
+                <para>
+                Listing 1.6 You
+                int sum = 0;
+                for (IntWritable val : values) {
+                    sum += val.get();
+                }
+                context.write(key, new IntWritable(sum));
+                </para>
+                <para>
+                    <emphasis>Hadoop: </emphasis>I will record each word with its count, and we’ll be done.
+                </para>
+                <para>
+                Listing 1.7 Hadoop
+                // This is invisible - no code
+                // but you can trust that he does it
                 </para>
             </section>
             <section>
                 <title>Let me see, who is Map and who is Reduce</title>
                 <para>
-                </para>            
+                </para>
+                <para>MapReduce (or MR, if you want to impress your friends) has mappers and
+                reducers, as can be seen by their names. What are they?
+                </para>
+                <para>Mapper is the code that you supply to process one entry. This entry can be a
+                line from a book or from a log, a temperature or financial record, etc. In our
+                example it was counting to 1. In a different use case, it may be a name of an
+                archive file, which the Mapper will unpack and process.
+                </para>
+                <para>When the Mapper is done processing, it returns the results to the framework.
+                The return takes the form of a Map, which consists of a key and a value. In our
+                case, the key was the word. It can be a hash of a file, or any other important
+                characteristic of your value. The keys that are the same will be combined, so you
+                select them in such a way that elements that you want to be processed together will
+                have the same key.
+                </para>
+                <para>Finally, your Mapper code gives the Map to the framework. This is called
+                emitting the map. It is expressed by the following code line:
+                </para>
+                <para>Listing 1.8 Emitting the map
+                context.write(key, value);
+                </para>
+                <para>Now the framework sorts your maps. Sorting is an interesting process and it
+                occurs a lot in computer processing, so we will talk in more detail about it in the
+                next chapter. Having sorted the maps, the framework gives them back to you in
+                groups. You supply the code which tells it how to process each group. This is the
+                Reducer. The key that you gave to the framework is the same key that it returns to
+                your Reducer. In our case, it was the word found in a document.
+                </para>
+                <para>In the code, this is how we went through a group of values:
+                </para>
+                <para>Listing 1.9 Going through values in the reducer
+                int sum = 0;
+                for (IntWritable val : values) {
+                    sum += val.get();
+                }
+                </para>
+                <para>While the key was now the word, the value was count - which, as you may
+                remember, we have set to 1 for each word. These ones are being summed up.
+                </para>
+                <para>Finally, you return the reduced result to the framework, and it outputs results to
+                a file.
+                </para>
+                <para>Listing 1.10 Reducer emits the final map
+                context.write(key, new IntWritable(sum));
+                </para>
             </section>
             <section>
                 <title>All of the Code</title>
-                <para>
+                <para>Now let’s look at the complete code of your first MapReduce program. Although it
+                is the “Hello World” type of program, you can take it, adjust your Mapper and
+                Reducer to do real processing, and you have a real application. This is especially
+                true since we have prepared all the code that goes with the book as projects, both
+                for Eclipse and for NetBeans. The reader is thus free to download the projects for
+                his or her favorite IDE, and use it as a template. We have followed this approach
+                with every example in the book.
+                </para>
+                <para>Listing 1.11 Complete WordCount program
+                package com.shmsoft.hadoopinpractice;
+                import java.io.IOException;
+                import org.apache.hadoop.conf.Configured;
+                import org.apache.hadoop.fs.Path;
+                import org.apache.hadoop.io.IntWritable;
+                import org.apache.hadoop.io.LongWritable;
+                import org.apache.hadoop.io.Text;
+                import org.apache.hadoop.mapreduce.Job;
+                import org.apache.hadoop.mapreduce.Mapper;
+                import org.apache.hadoop.mapreduce.Reducer;
+                import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;
+                import org.apache.hadoop.mapreduce.lib.input.TextInputFormat;
+                import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
+                import org.apache.hadoop.mapreduce.lib.output.TextOutputFormat;
+                import org.apache.hadoop.util.Tool;
+                import org.apache.hadoop.util.ToolRunner;
+                public class WordCountExample extends Configured implements Tool {
+                private static IntWritable ONE = new IntWritable(1);
+                @Override
+                public int run(String[] args) throws Exception {
+                String testData = "test-data/moby-dick.txt";
+                String outputPath = "test-output";
+                Job job = new Job(getConf());
+                job.setJarByClass(WordCountExample.class);
+                job.setJobName("WordCountExample");
+                job.setOutputKeyClass(Text.class);
+                job.setOutputValueClass(IntWritable.class);
+                job.setMapperClass(Map.class);
+                job.setCombinerClass(Reduce.class);
+                job.setReducerClass(Reduce.class);
+                job.setInputFormatClass(TextInputFormat.class);
+                job.setOutputFormatClass(TextOutputFormat.class);
+Best practice -
+avoid unnecessary
+object creation in a
+loop
+The jar that
+contains your
+mapper and reduce
+code
+
+FileInputFormat.setInputPaths(job, new Path(testData));
+FileOutputFormat.setOutputPath(job, new Path(outputPath));
+boolean success = job.waitForCompletion(true);
+return success ? 0 : 1;
+}
+public static void main(String[] args) throws Exception {
+int ret = ToolRunner.run(new WordCountExample(), args);
+System.exit(ret);
+}
+public static class Map extends Mapper &lt;LongWritable, Text, Text, IntWritable&gt; {
+@Override
+public void map(LongWritable key, Text value, Context context)
+throws IOException, InterruptedException {
+String line = value.toString();
+String[] words = line.split("\W");
+for (String word : words) {
+if (word.trim().length() > 0) {
+Text text = new Text();
+text.set(word);
+context.write(text, ONE);
+}
+}
+}
+}
+public static class Reduce extends Reducer &lt;Text, IntWritable, Text, IntWritable&gt; {
+@Override
+public void reduce(Text key, Iterable&lt;IntWritable&gt; values, Context context)
+throws IOException, InterruptedException {
+int sum = 0;
+for (IntWritable val : values) {
+sum += val.get();
+}
+context.write(key, new IntWritable(sum));
+}
+}
+}
+                </para>
+                <para>After you run the program, and apply it to the complete text of Moby Dick's -
+                that is what we have used for testing and included in our sample project - your
+                output will look something like this segment:
+                </para>
+                <para>A 168
+                ABOUT 1
+                ACCOUNT 2
+                ACTUAL 1
+                ADDITIONAL 1
+                ADVANCING 2
+                ADVENTURES 1
+                AFFGHANISTAN 1
+                AFRICA 1
+                AFTER 1
+                AGAINST 1
+                AGREE 2
+                AGREEMENT 1
+                AHAB 10
+                AK 1
+                ALFRED 1
+                ALGERINE 1
+                </para>
+                <para>Running this example on your computer is the first lab at the end of the chapter,
+                where we will also give you practical advice on the setup.
                 </para>
             </section>
         </section>
 
         <section>
             <title>How Hadoop Works Inside</title>
-            <para>
-            </para>            
+            <para>Having successfully gone through the first example, and perhaps even having
+            compiled and run it, we can take a breather and look at some theory. Early on,
+            programmers had little use or respect for theory, but that approach can only take
+            you so far. For example, if a multi-threaded application is written without
+            knowledge and a good understanding of concurrency issues, the creation will fail at
+            random, unpredictable times, most often under load and on the verge of success.
+            </para>
+                <para>This is why we should welcome theory, and here it is.
+                </para>
             <section>
                 <title></title>
                 <para>
@@ -671,13 +912,13 @@
         <section>
             <title>Logging</title>
             <para>
-            </para>            
+            </para>
         </section>
 
         <section>
             <title>Rolling Up Your Sleeves</title>
             <para>
-            </para>            
+            </para>
             <section>
                 <title>For Windows Programmers</title>
                 <para>We do realize that there are some programmers in the world who run Windows.
@@ -691,12 +932,12 @@
             <section>
                 <title>Running WordCount in Your IDE</title>
                 <para>Discussion
-                
+
                     Which Hadoop distribution should you use? The first two choices are Apache
-                    Hadoop and the Cloudera CDH. 
-                    
+                    Hadoop and the Cloudera CDH.
+
                     What are the pros and cons of each?
-                    
+
                     Apache Hadoop is the home of the Hadoop project. You can get any version
                     there. Of course, if you a real programmer and don't have a production
                     environment to support, you will choose the latest. That's fine - you can download
@@ -705,48 +946,48 @@
                     Hadoop. If you want to install for more than yourself on that system, you would
                     have to follow the best installation practices and learn about the preferred groups
                     and permission.
-                    
+
                     You always deal with the latest and greatest code, and you can even try to build
                     it yourself, if you adventurous enough you can make an improvement and suggest
                     it to the committers, in the form of a HADOOP-PATH-XXX - you can learn about
                     it here: http://wiki.apache.org/hadoop/HowToContribute
-                    
+
                     Your other choice is Cloudera CDH distribution. It offers the same code, but
                     already packaged and tested, for many Linux flavors. If you go this route, you
                     automatically get introduced to the best deployment practices, everything gets put
                     into the right directories, and your Hadoop commands work from the command
                     line out of the box, because they are put on the path by the install process. You
                     don't even have to set the environmental variable yourself.
-                    
+
                     Cloudera CDH distribution offers other advantages: it puts in the patches that
                     Cloudera tests, and it installs other Hadoop-related projects as packages. It may lag
                     one version behind the current Apache Hadoop, so if you absolutely need the latest
                     features, you will go with Apache.
-                    
+
                     Which choice is the better one? It almost does not matter, it will work either
-                    way. Most of my friends consultants tell me that they recommend Cloudera CDH 
+                    way. Most of my friends consultants tell me that they recommend Cloudera CDH
                     distribution to the clients, and I guess for two reasons: they will have less
                     installation questions from the clients, and many commercial companies may
                     prefer to know that there is commercial support for the open source Hadoop.
                     Compare this to RedHat, and Cloudera is not shying away from this comparison
                     either.
-                    
+
                     This covers the install issues. You need it before you are to go to the next
                     exercise. Therefore, install Hadoop, download the code from GitHub, create the
                     project in your IDE, and run it. You cannot do other labs before you do it.
-                    
+
                     Note that running from the IDE, you essentially ran your job with the following
                     command:
-                    
+
                     java -jar dist/Chapter1.jar test-data/moby-dick.txt test-output
-                    
+
                     The jar that you give on the command line is the jar that contains your main
                     function, used to submit your Hadoop job. The other jar, which you set with the
                     call to , is the one that contains job.setJarByClass() your mapper and
                     reducer code. It is this this second jar that Hadoop will copy to every node and run
                     it there, following the rule of "move computations close to the data, not the data
                     close to the computations." In this lab, one jar contains all the code.
-                    
+
                     Running inside of the IDE relies on the Hadoop jars being present. The
                     command java -jar above worked, because the Hadoop jars were copied to
                     dist/lib, and the Chapter1.jar pointed to them. In a more general case, you will
@@ -757,7 +998,7 @@
             <section>
                 <title>Technique 2: Run WordCount Outside of Your IDE</title>
                 <para>Problem
-                
+
                     After you were successful in running a MapReduce job from the IDE, it is time
                     to to launch it on a Hadoop cluster, even if it is configured only in
                     pseudo-distributed mode.
@@ -774,26 +1015,26 @@
                     it will not work when running under hadoop, even in local mode on one machine,
                     because the data needs to reside in HDFS. Let's do it right from the beginning and
                     copy the data to where it should be:
-                    
+
                     hadoop fs -mkdir /chapter1
                     hadoop fs -copyFromLocal moby-dick.txt /chapter1
                     See it here: http://localhost:50070/
-                    
+
                     Now we can run it with the following command:
-                    
+
                     Listing 1.12 run_wordcount_local.sh
-                    
+
                     hadoop jar ../dist/Chapter1.jar \
                     hdfs://localhost/chapter1/test-data/moby-dick.txt \
                     hdfs://localhost/chapter1/test-output
-                    
+
                     After the program runs, it is instructive and pleasant to view the output in the
                     browser:
 
                     Figure 1.4 Output in HDFS viewed in the browser
-                    
+
                     Discussion
-                    
+
                     What happened to the Hadoop jars that we needed in Lab 1? Since we are now
                     running relying on Hadoop, it takes care to provide your code with its library jars,
                     and we do not need to care about them explicitely. This is true, provided that
@@ -811,7 +1052,7 @@
                     distribution, you should be able to see the HFDS in the browser, like in this figure
                     for a 2-node cluster.
                     Figure 1.5 Browsing a 2-node HDFS
-                    
+
                     You would then run it with the following command:
                     Listing 1.13 run_wordcount_dist.sh
                     hadoop jar ../dist/Chapter1.jar \
@@ -860,7 +1101,7 @@
                 have been useful, but going solo is a special event in the life of every pilot, and we,
                 the programmers, should imitate the best. Therefore, here are suggested exercises
                 for your own practice and enjoyment.
-            </para>            
+            </para>
             <section>
                 <title>Exercise 1</title>
                 <para>Check out the Hadoop and HDFS project code from the Subversion repository on
@@ -895,18 +1136,18 @@
                 for Hadoop internals, so that after reading it you will feel closer to a seasoned
                 veteran than to a novice. Still, we will try to make it a breeze, keeping in line with
                 the motto of this book, "Who said Hadoop is hard?".
-            </para>            
+            </para>
         </section>
     </chapter>
     <chapter xml:id="chapter_3">
         <title>Get your hands dirty with code</title>
         <para>
-            Programmers like playing around with the code. In the long-standing philosophical 
-            discussion of what is more important, theory or practice, it was concluded that 
-            theory (reading this book) is more important, because it leads to practice (coding). 
+            Programmers like playing around with the code. In the long-standing philosophical
+            discussion of what is more important, theory or practice, it was concluded that
+            theory (reading this book) is more important, because it leads to practice (coding).
         </para>
         <section>
-            <title>Hands-on: setting your development environment</title>  
+            <title>Hands-on: setting your development environment</title>
             <section>
                 <title>Setting your IDE</title>
             </section>
