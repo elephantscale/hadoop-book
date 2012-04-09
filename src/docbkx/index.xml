@@ -874,23 +874,26 @@
                     that is what we have used for testing and included in our sample project - your
                     output will look something like this segment:
                 </para>
-                <para>A 168
-                    ABOUT 1
-                    ACCOUNT 2
-                    ACTUAL 1
-                    ADDITIONAL 1
-                    ADVANCING 2
-                    ADVENTURES 1
-                    AFFGHANISTAN 1
-                    AFRICA 1
-                    AFTER 1
-                    AGAINST 1
-                    AGREE 2
-                    AGREEMENT 1
-                    AHAB 10
-                    AK 1
-                    ALFRED 1
-                    ALGERINE 1
+                <para>
+                    <programlisting language="java">
+                        A 168
+                        ABOUT 1
+                        ACCOUNT 2
+                        ACTUAL 1
+                        ADDITIONAL 1
+                        ADVANCING 2
+                        ADVENTURES 1
+                        AFFGHANISTAN 1
+                        AFRICA 1
+                        AFTER 1
+                        AGAINST 1
+                        AGREE 2
+                        AGREEMENT 1
+                        AHAB 10
+                        AK 1
+                        ALFRED 1
+                        ALGERINE 1
+                    </programlisting>
                 </para>
                 <para>Running this example on your computer is the first lab at the end of the chapter,
                     where we will also give you practical advice on the setup.
