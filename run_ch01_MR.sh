@@ -1,4 +1,5 @@
 #!/bin/sh
+# HadoopIlluminated script
 mvn assembly:single
 
 hadoop fs -rmr /hadoopilluminated/test-data/ch01

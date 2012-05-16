@@ -1,4 +1,5 @@
 #!/bin/sh
+# HadoopIlluminated script
 mvn assembly:single
 hadoop jar \
 /usr/lib/hadoop-0.20/contrib/streaming/hadoop-streaming-0.20.2-cdh3u3.jar \
