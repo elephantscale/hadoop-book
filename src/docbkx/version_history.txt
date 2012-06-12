@@ -1,3 +1,7 @@
+To generate book text, do this:
+
+mvn docbkx:generate-html
+
 0.3 Urgently add existing chapters to the project
 0.2 Michael Hergert joins the book project
 0.1 (Mark) Set up docbook tools with Maven, start transferring the first chapter

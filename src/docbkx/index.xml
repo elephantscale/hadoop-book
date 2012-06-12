@@ -37,9 +37,10 @@
         <title>Who is this book for?</title>
         <section>
             <title>About "Hadoop Illuminated"</title>
-            <para>This book started out as an attempt to write for a publishing house,
-                but later it became clear that the maximum amount of fun could only be had
-                by writing an open source book about open source projects, for the open community.
+            <para>The right away to write about open source is by using open source,
+            for the open community, and this book embodies the idea. It is open, its
+            source code is open source, and it draws extensively on other open source
+            projects for ideas and examples.
             </para>
             <para>
                 The book is intended as a working cookbook, where one can find answers to questions
