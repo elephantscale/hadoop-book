@@ -38,9 +38,9 @@
         <section>
             <title>About "Hadoop Illuminated"</title>
             <para>The right away to write about open source is by using open source,
-            for the open community, and this book embodies the idea. It is open, its
-            source code is open source, and it draws extensively on other open source
-            projects for ideas and examples.
+                for the open community, and this book embodies the idea. It is open, its
+                source code is open source, and it draws extensively on other open source
+                projects for ideas and examples.
             </para>
             <para>
                 The book is intended as a working cookbook, where one can find answers to questions
@@ -633,49 +633,48 @@
                     <emphasis>Hadoop: </emphasis>How can I help?
                 </para>
                 <para>
-                    Listing 1.1 Hadoop
+                    Hadoop:
                     <programlisting language="java">
-                        public class WordCount extends Configured implements Tool {
-                        public int run(String[] args) throws Exception {
+public class WordCount extends Configured implements Tool {
+    public int run(String[] args) throws Exception {
                     </programlisting>
                 </para>
                 <para>
                     <emphasis>You: </emphasis>I need to count words in a document.
                 </para>
                 <para>
-                    Listing 1.2 You
+                    You:
                     <programlisting language="java">
-                        Job job = new Job(getConf());
-                        job.setJarByClass(WordCount.class);
-                        job.setJobName("wordcount");
+    Job job = new Job(getConf());
+    job.setJarByClass(WordCount.class);
+    job.setJobName("wordcount");
                     </programlisting>
-
                 </para>
                 <para>
                     <emphasis>Hadoop: </emphasis>I will read the words and give them to you, one at a time, can you
                     count that?
                 </para>
                 <para>
-                    Listing 1.3 Hadoop
+                    Hadoop
                     <programlisting language="java">
-                        public static class Map extends Mapper &lt;LongWritable, Text, Text, IntWritable&gt; {
-                        public void map(LongWritable key, Text value, Context context)
-                        throws IOException, InterruptedException {
-                        String line = value.toString();
+    public static class Map extends Mapper &lt;LongWritable, Text, Text, IntWritable&gt; {
+    public void map(LongWritable key, Text value, Context context)
+    throws IOException, InterruptedException {
+    String line = value.toString();
                     </programlisting>
                 </para>
                 <para>
                     <emphasis>You: </emphasis>Yes, I will assign a count of 1 to each and give them back to you.
                 </para>
                 <para>
-                    Listing 1.4 You
+                    You
                     <programlisting language="java">
-                        String [] tokens = line.split(" ,");
-                        for (String token: tokens) {
-                        Text word = new Text();
-                        word.set(token);
-                        context.write(word, new IntWritable(1));
-                        }
+    String [] tokens = line.split(" ,");
+    for (String token: tokens) {
+    Text word = new Text();
+    word.set(token);
+    context.write(word, new IntWritable(1));
+}
                     </programlisting>
                 </para>
                 <para>
@@ -694,32 +693,33 @@
                 <para>
                     Listing 1.5 Hadoop
                     <programlisting language="java">
-                        public static class Reduce extends Reducer &lt;Text, IntWritable, Text, IntWritable&gt; {
-                        @Override public void reduce(Text key, Iterable&lt;IntWritable&gt; values, Context context)
-                        throws IOException, InterruptedException {
+public static class Reduce extends Reducer &lt;Text, IntWritable, Text, IntWritable&gt; {
+    @Override public void reduce(Text key, Iterable&lt;IntWritable&gt; values, Context context)
+    throws IOException, InterruptedException {
                     </programlisting>
                 </para>
                 <para>
                     <emphasis>You: </emphasis>Yes, I will go through them and give you back each word and its count.
                 </para>
                 <para>
-                    Listing 1.6 You
+                    You
                     <programlisting language="java">
-                        int sum = 0;
-                        for (IntWritable val : values) {
-                        sum += val.get();
-                        }
-                        context.write(key, new IntWritable(sum));
+    int sum = 0;
+    for (IntWritable val : values) {
+        sum += val.get();
+    }
+    context.write(key, new IntWritable(sum));
                     </programlisting>
                 </para>
                 <para>
                     <emphasis>Hadoop: </emphasis>I will record each word with its count, and we’ll be done.
                 </para>
                 <para>
-                    Listing 1.7 Hadoop
+                    Hadoop:
                     <programlisting language="java">
-                        // This is invisible - no code
-                        // but you can trust that he does it
+    // This is invisible - no code
+    // but you can trust that he does it
+}
                     </programlisting>
                 </para>
             </section>
@@ -759,12 +759,12 @@
                 </para>
                 <para>In the code, this is how we went through a group of values:
                 </para>
-                <para>Listing 1.9 Going through values in the reducer
+                <para>Going through values in the reducer
                     <programlisting language="java">
-                        int sum = 0;
-                        for (IntWritable val : values) {
-                        sum += val.get();
-                        }
+    int sum = 0;
+    for (IntWritable val : values) {
+        sum += val.get();
+    }
                     </programlisting>
                 </para>
                 <para>While the key was now the word, the value was count - which, as you may
@@ -773,9 +773,9 @@
                 <para>Finally, you return the reduced result to the framework, and it outputs results to
                     a file.
                 </para>
-                <para>Listing 1.10 Reducer emits the final map
+                <para>Reducer emits the final map
                     <programlisting language="java">
-                        context.write(key, new IntWritable(sum));
+    context.write(key, new IntWritable(sum));
                     </programlisting>
                 </para>
             </section>
@@ -789,40 +789,42 @@
                     his or her favorite IDE, and use it as a template. We have followed this approach
                     with every example in the book.
                 </para>
-                <para>Listing 1.11 Complete WordCount program
+                <para>Complete WordCount program
                     <programlisting language="java">
-                        package com.shmsoft.hadoopinpractice;
-                        import java.io.IOException;
-                        import org.apache.hadoop.conf.Configured;
-                        import org.apache.hadoop.fs.Path;
-                        import org.apache.hadoop.io.IntWritable;
-                        import org.apache.hadoop.io.LongWritable;
-                        import org.apache.hadoop.io.Text;
-                        import org.apache.hadoop.mapreduce.Job;
-                        import org.apache.hadoop.mapreduce.Mapper;
-                        import org.apache.hadoop.mapreduce.Reducer;
-                        import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;
-                        import org.apache.hadoop.mapreduce.lib.input.TextInputFormat;
-                        import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
-                        import org.apache.hadoop.mapreduce.lib.output.TextOutputFormat;
-                        import org.apache.hadoop.util.Tool;
-                        import org.apache.hadoop.util.ToolRunner;
-                        public class WordCountExample extends Configured implements Tool {
-                        private static IntWritable ONE = new IntWritable(1);
-                        @Override
-                        public int run(String[] args) throws Exception {
-                        String testData = "test-data/moby-dick.txt";
-                        String outputPath = "test-output";
-                        Job job = new Job(getConf());
-                        job.setJarByClass(WordCountExample.class);
-                        job.setJobName("WordCountExample");
-                        job.setOutputKeyClass(Text.class);
-                        job.setOutputValueClass(IntWritable.class);
-                        job.setMapperClass(Map.class);
-                        job.setCombinerClass(Reduce.class);
-                        job.setReducerClass(Reduce.class);
-                        job.setInputFormatClass(TextInputFormat.class);
-                        job.setOutputFormatClass(TextOutputFormat.class);
+package com.shmsoft.hadoopinpractice;
+import java.io.IOException;
+import org.apache.hadoop.conf.Configured;
+import org.apache.hadoop.fs.Path;
+import org.apache.hadoop.io.IntWritable;
+import org.apache.hadoop.io.LongWritable;
+import org.apache.hadoop.io.Text;
+import org.apache.hadoop.mapreduce.Job;
+import org.apache.hadoop.mapreduce.Mapper;
+import org.apache.hadoop.mapreduce.Reducer;
+import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;
+import org.apache.hadoop.mapreduce.lib.input.TextInputFormat;
+import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
+import org.apache.hadoop.mapreduce.lib.output.TextOutputFormat;
+import org.apache.hadoop.util.Tool;
+import org.apache.hadoop.util.ToolRunner;
+    public class WordCountExample extends Configured implements Tool {
+    
+    private static IntWritable ONE = new IntWritable(1);
+    
+    @Override
+    public int run(String[] args) throws Exception {
+        String testData = "test-data/moby-dick.txt";
+        String outputPath = "test-output";
+        Job job = new Job(getConf());
+        job.setJarByClass(WordCountExample.class);
+        job.setJobName("WordCountExample");
+        job.setOutputKeyClass(Text.class);
+        job.setOutputValueClass(IntWritable.class);
+        job.setMapperClass(Map.class);
+        job.setCombinerClass(Reduce.class);
+        job.setReducerClass(Reduce.class);
+        job.setInputFormatClass(TextInputFormat.class);
+        job.setOutputFormatClass(TextOutputFormat.class);
                     </programlisting>
                     Best practice -
                     avoid unnecessary
