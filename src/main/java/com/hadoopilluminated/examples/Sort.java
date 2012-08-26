@@ -24,12 +24,11 @@ package com.hadoopilluminated.examples;
  * limitations under the License.
  */
 
-package org.apache.hadoop.examples;
-
 import java.io.IOException;
 import java.net.URI;
-import java.util.*;
-
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.conf.Configured;
 import org.apache.hadoop.filecache.DistributedCache;

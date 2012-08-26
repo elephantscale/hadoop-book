@@ -22,9 +22,11 @@ package com.hadoopilluminated.examples.dancing;
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-package org.apache.hadoop.examples.dancing;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+import java.util.StringTokenizer;
 
 public class Pentomino {
 

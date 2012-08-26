@@ -4,8 +4,6 @@ package com.hadoopilluminated.examples;
  * The example below is taken from org.apache.hadoop.examples It is then
  * commented and modified for the purposes of the book
  */
-
-
 /**
  * Licensed to the Apache Software Foundation (ASF) under one or more
  * contributor license agreements. See the NOTICE file distributed with this
@@ -22,10 +20,10 @@ package com.hadoopilluminated.examples;
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-
 import java.io.IOException;
-import java.util.*;
-
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.conf.Configured;
 import org.apache.hadoop.fs.Path;
@@ -33,7 +31,8 @@ import org.apache.hadoop.io.BytesWritable;
 import org.apache.hadoop.io.Writable;
 import org.apache.hadoop.io.WritableComparable;
 import org.apache.hadoop.mapred.*;
-import org.apache.hadoop.mapred.join.*;
+import org.apache.hadoop.mapred.join.CompositeInputFormat;
+import org.apache.hadoop.mapred.join.TupleWritable;
 import org.apache.hadoop.mapred.lib.IdentityMapper;
 import org.apache.hadoop.mapred.lib.IdentityReducer;
 import org.apache.hadoop.util.Tool;
@@ -70,6 +69,7 @@ public class Join extends Configured implements Tool {
      * @throws IOException When there is communication problems with the job
      * tracker.
      */
+    @Override
     public int run(String[] args) throws Exception {
         JobConf jobConf = new JobConf(getConf(), Sort.class);
         jobConf.setJobName("join");

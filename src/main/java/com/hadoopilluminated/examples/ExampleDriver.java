@@ -1,7 +1,7 @@
 package com.hadoopilluminated.examples;
 
 /**
- * The example below is taken from org.apache.hadoop.examples It is then
+ * The example below is taken from org.apache.hadoop.examples. It is then
  * commented and modified for the purposes of the book
  */
 
@@ -24,13 +24,11 @@ package com.hadoopilluminated.examples;
  * limitations under the License.
  */
 
-// TODO This needs work with other packages
-
-import org.apache.hadoop.examples.dancing.DistributedPentomino;
-import org.apache.hadoop.examples.dancing.Sudoku;
-import org.apache.hadoop.examples.terasort.TeraGen;
-import org.apache.hadoop.examples.terasort.TeraSort;
-import org.apache.hadoop.examples.terasort.TeraValidate;
+import com.hadoopilluminated.examples.dancing.DistributedPentomino;
+import com.hadoopilluminated.examples.dancing.Sudoku;
+import com.hadoopilluminated.examples.terasort.TeraGen;
+import com.hadoopilluminated.examples.terasort.TeraSort;
+import com.hadoopilluminated.examples.terasort.TeraValidate;
 import org.apache.hadoop.util.ProgramDriver;
 
 /**

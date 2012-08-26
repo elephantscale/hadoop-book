@@ -4,8 +4,6 @@ package com.hadoopilluminated.examples;
  * The example below is taken from org.apache.hadoop.examples It is then
  * commented and modified for the purposes of the book
  */
-
-
 /**
  * Licensed to the Apache Software Foundation (ASF) under one or more
  * contributor license agreements. See the NOTICE file distributed with this
@@ -22,28 +20,16 @@ package com.hadoopilluminated.examples;
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-package org.apache.hadoop.examples;
-
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Random;
-
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.conf.Configured;
 import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.io.Text;
-import org.apache.hadoop.mapred.ClusterStatus;
-import org.apache.hadoop.mapred.FileOutputFormat;
-import org.apache.hadoop.mapred.JobClient;
-import org.apache.hadoop.mapred.JobConf;
-import org.apache.hadoop.mapred.MapReduceBase;
-import org.apache.hadoop.mapred.Mapper;
-import org.apache.hadoop.mapred.OutputCollector;
-import org.apache.hadoop.mapred.OutputFormat;
-import org.apache.hadoop.mapred.Reporter;
-import org.apache.hadoop.mapred.SequenceFileOutputFormat;
+import org.apache.hadoop.mapred.*;
 import org.apache.hadoop.util.Tool;
 import org.apache.hadoop.util.ToolRunner;
 
@@ -99,6 +85,7 @@ public class RandomTextWriter extends Configured implements Tool {
         /**
          * Save the configuration value that we need to write the data.
          */
+        @Override
         public void configure(JobConf job) {
             numBytesToWrite = job.getLong("test.randomtextwrite.bytes_per_map",
                     1 * 1024 * 1024 * 1024);
@@ -117,6 +104,7 @@ public class RandomTextWriter extends Configured implements Tool {
         /**
          * Given an output filename, write a bunch of random records to it.
          */
+        @Override
         public void map(Text key, Text value,
                 OutputCollector<Text, Text> output,
                 Reporter reporter) throws IOException {
@@ -148,7 +136,7 @@ public class RandomTextWriter extends Configured implements Tool {
         }
 
         private Text generateSentence(int noWords) {
-            StringBuffer sentence = new StringBuffer();
+            StringBuilder sentence = new StringBuilder();
             String space = " ";
             for (int i = 0; i < noWords; ++i) {
                 sentence.append(words[random.nextInt(words.length)]);
