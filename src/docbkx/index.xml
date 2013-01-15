@@ -52,6 +52,15 @@
                 and updated. Most importantly, the code is always current, and the tests are kept in working order.
             </para>
             <section>
+                <title>But who are the authors?</title>
+                <para>In the words of <ulink url="http://www.gutenberg.org/files/1666/1666-h/1666-h.htm">
+                    Lucius Apuleius, the author of the Golden Ass</ulink>, I will tell it to you in a few words.
+                    Both Mark and Sujee learned English in the early years, and later applied themselves with assiduity
+                    to the study of it through newspapers, TV shows, and high literature  while on the hospitable shores of America.
+                    This gives them the accent so popular with the geeks nowadays. Therefore, the reader, have fun!
+                </para>
+            </section>
+            <section>
                 <title>About the source code</title>
                 <para>
                     The book's companion source code is hosted on GitHub
@@ -635,8 +644,8 @@
                 <para>
                     Hadoop:
                     <programlisting language="java">
-public class WordCount extends Configured implements Tool {
-    public int run(String[] args) throws Exception {
+                        public class WordCount extends Configured implements Tool {
+                        public int run(String[] args) throws Exception {
                     </programlisting>
                 </para>
                 <para>
@@ -645,9 +654,9 @@ public class WordCount extends Configured implements Tool {
                 <para>
                     You:
                     <programlisting language="java">
-    Job job = new Job(getConf());
-    job.setJarByClass(WordCount.class);
-    job.setJobName("wordcount");
+                        Job job = new Job(getConf());
+                        job.setJarByClass(WordCount.class);
+                        job.setJobName("wordcount");
                     </programlisting>
                 </para>
                 <para>
@@ -657,10 +666,10 @@ public class WordCount extends Configured implements Tool {
                 <para>
                     Hadoop
                     <programlisting language="java">
-    public static class Map extends Mapper &lt;LongWritable, Text, Text, IntWritable&gt; {
-    public void map(LongWritable key, Text value, Context context)
-    throws IOException, InterruptedException {
-    String line = value.toString();
+                        public static class Map extends Mapper &lt;LongWritable, Text, Text, IntWritable&gt; {
+                        public void map(LongWritable key, Text value, Context context)
+                        throws IOException, InterruptedException {
+                        String line = value.toString();
                     </programlisting>
                 </para>
                 <para>
@@ -669,12 +678,12 @@ public class WordCount extends Configured implements Tool {
                 <para>
                     You
                     <programlisting language="java">
-    String [] tokens = line.split(" ,");
-    for (String token: tokens) {
-    Text word = new Text();
-    word.set(token);
-    context.write(word, new IntWritable(1));
-}
+                        String [] tokens = line.split(" ,");
+                        for (String token: tokens) {
+                        Text word = new Text();
+                        word.set(token);
+                        context.write(word, new IntWritable(1));
+                        }
                     </programlisting>
                 </para>
                 <para>
@@ -693,9 +702,9 @@ public class WordCount extends Configured implements Tool {
                 <para>
                     Listing 1.5 Hadoop
                     <programlisting language="java">
-public static class Reduce extends Reducer &lt;Text, IntWritable, Text, IntWritable&gt; {
-    @Override public void reduce(Text key, Iterable&lt;IntWritable&gt; values, Context context)
-    throws IOException, InterruptedException {
+                        public static class Reduce extends Reducer &lt;Text, IntWritable, Text, IntWritable&gt; {
+                        @Override public void reduce(Text key, Iterable&lt;IntWritable&gt; values, Context context)
+                        throws IOException, InterruptedException {
                     </programlisting>
                 </para>
                 <para>
@@ -704,11 +713,11 @@ public static class Reduce extends Reducer &lt;Text, IntWritable, Text, IntWrita
                 <para>
                     You
                     <programlisting language="java">
-    int sum = 0;
-    for (IntWritable val : values) {
-        sum += val.get();
-    }
-    context.write(key, new IntWritable(sum));
+                        int sum = 0;
+                        for (IntWritable val : values) {
+                        sum += val.get();
+                        }
+                        context.write(key, new IntWritable(sum));
                     </programlisting>
                 </para>
                 <para>
@@ -717,9 +726,9 @@ public static class Reduce extends Reducer &lt;Text, IntWritable, Text, IntWrita
                 <para>
                     Hadoop:
                     <programlisting language="java">
-    // This is invisible - no code
-    // but you can trust that he does it
-}
+                        // This is invisible - no code
+                        // but you can trust that he does it
+                        }
                     </programlisting>
                 </para>
             </section>
@@ -761,10 +770,10 @@ public static class Reduce extends Reducer &lt;Text, IntWritable, Text, IntWrita
                 </para>
                 <para>Going through values in the reducer
                     <programlisting language="java">
-    int sum = 0;
-    for (IntWritable val : values) {
-        sum += val.get();
-    }
+                        int sum = 0;
+                        for (IntWritable val : values) {
+                        sum += val.get();
+                        }
                     </programlisting>
                 </para>
                 <para>While the key was now the word, the value was count - which, as you may
@@ -775,7 +784,7 @@ public static class Reduce extends Reducer &lt;Text, IntWritable, Text, IntWrita
                 </para>
                 <para>Reducer emits the final map
                     <programlisting language="java">
-    context.write(key, new IntWritable(sum));
+                        context.write(key, new IntWritable(sum));
                     </programlisting>
                 </para>
             </section>
@@ -791,40 +800,40 @@ public static class Reduce extends Reducer &lt;Text, IntWritable, Text, IntWrita
                 </para>
                 <para>Complete WordCount program
                     <programlisting language="java">
-package com.shmsoft.hadoopinpractice;
-import java.io.IOException;
-import org.apache.hadoop.conf.Configured;
-import org.apache.hadoop.fs.Path;
-import org.apache.hadoop.io.IntWritable;
-import org.apache.hadoop.io.LongWritable;
-import org.apache.hadoop.io.Text;
-import org.apache.hadoop.mapreduce.Job;
-import org.apache.hadoop.mapreduce.Mapper;
-import org.apache.hadoop.mapreduce.Reducer;
-import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;
-import org.apache.hadoop.mapreduce.lib.input.TextInputFormat;
-import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
-import org.apache.hadoop.mapreduce.lib.output.TextOutputFormat;
-import org.apache.hadoop.util.Tool;
-import org.apache.hadoop.util.ToolRunner;
-    public class WordCountExample extends Configured implements Tool {
+                        package com.shmsoft.hadoopinpractice;
+                        import java.io.IOException;
+                        import org.apache.hadoop.conf.Configured;
+                        import org.apache.hadoop.fs.Path;
+                        import org.apache.hadoop.io.IntWritable;
+                        import org.apache.hadoop.io.LongWritable;
+                        import org.apache.hadoop.io.Text;
+                        import org.apache.hadoop.mapreduce.Job;
+                        import org.apache.hadoop.mapreduce.Mapper;
+                        import org.apache.hadoop.mapreduce.Reducer;
+                        import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;
+                        import org.apache.hadoop.mapreduce.lib.input.TextInputFormat;
+                        import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
+                        import org.apache.hadoop.mapreduce.lib.output.TextOutputFormat;
+                        import org.apache.hadoop.util.Tool;
+                        import org.apache.hadoop.util.ToolRunner;
+                        public class WordCountExample extends Configured implements Tool {
     
-    private static IntWritable ONE = new IntWritable(1);
+                        private static IntWritable ONE = new IntWritable(1);
     
-    @Override
-    public int run(String[] args) throws Exception {
-        String testData = "test-data/moby-dick.txt";
-        String outputPath = "test-output";
-        Job job = new Job(getConf());
-        job.setJarByClass(WordCountExample.class);
-        job.setJobName("WordCountExample");
-        job.setOutputKeyClass(Text.class);
-        job.setOutputValueClass(IntWritable.class);
-        job.setMapperClass(Map.class);
-        job.setCombinerClass(Reduce.class);
-        job.setReducerClass(Reduce.class);
-        job.setInputFormatClass(TextInputFormat.class);
-        job.setOutputFormatClass(TextOutputFormat.class);
+                        @Override
+                        public int run(String[] args) throws Exception {
+                        String testData = "test-data/moby-dick.txt";
+                        String outputPath = "test-output";
+                        Job job = new Job(getConf());
+                        job.setJarByClass(WordCountExample.class);
+                        job.setJobName("WordCountExample");
+                        job.setOutputKeyClass(Text.class);
+                        job.setOutputValueClass(IntWritable.class);
+                        job.setMapperClass(Map.class);
+                        job.setCombinerClass(Reduce.class);
+                        job.setReducerClass(Reduce.class);
+                        job.setInputFormatClass(TextInputFormat.class);
+                        job.setOutputFormatClass(TextOutputFormat.class);
                     </programlisting>
                     Best practice -
                     avoid unnecessary
