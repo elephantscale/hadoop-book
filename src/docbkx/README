@@ -1,0 +1,4 @@
+To generate book text, do this:
+
+mvn docbkx:generate-html
+

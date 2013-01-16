@@ -1212,4 +1212,8 @@
         <title>Questions of Sorting</title>
         <para>Let's sort it out</para>
     </chapter>
+        <chapter xml:id="chapter_5">
+        <title>Sujee first</title>
+        <para>do it separate</para>
+    </chapter>
 </book>
