@@ -53,8 +53,10 @@
             </para>
             <section>
                 <title>But who are the authors?</title>
-                <para>In the words of <ulink url="http://www.gutenberg.org/files/1666/1666-h/1666-h.htm">
-                    Lucius Apuleius, the author of the Golden Ass</ulink>, I will tell it to you in a few words.
+                <para>In the words of 
+                    <ulink url="http://www.gutenberg.org/files/1666/1666-h/1666-h.htm">
+                        Lucius Apuleius, the author of the Golden Ass
+                    </ulink>, I will tell it to you in a few words.
                     Both Mark and Sujee learned English in the early years, and later applied themselves with assiduity
                     to the study of it through newspapers, TV shows, and high literature  while on the hospitable shores of America.
                     This gives them the accent so popular with the geeks nowadays. Therefore, the reader, have fun!
@@ -1212,7 +1214,7 @@
         <title>Questions of Sorting</title>
         <para>Let's sort it out</para>
     </chapter>
-        <chapter xml:id="chapter_5">
+    <chapter xml:id="chapter_5">
         <title>Sujee first</title>
         <para>do it separate</para>
     </chapter>
