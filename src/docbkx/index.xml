@@ -32,7 +32,7 @@
             </ulink>
         </para>
 
-    </acknowledgements>
+    </acknowledgements>     
     <chapter xml:id="chapter_1">
         <title>Who is this book for?</title>
         <section>
@@ -1218,4 +1218,5 @@
         <title>Sujee first</title>
         <para>do it separate</para>
     </chapter>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"  href="intro.xml" />
 </book>
