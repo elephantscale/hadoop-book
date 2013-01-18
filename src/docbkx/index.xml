@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<book xml:id="simple_book" xmlns="http://docbook.org/ns/docbook" version="5.0">
+<book version="5.0" xmlns="http://docbook.org/ns/docbook"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      xmlns:xi="http://www.w3.org/2001/XInclude"
+      xmlns:svg="http://www.w3.org/2000/svg"
+      xmlns:m="http://www.w3.org/1998/Math/MathML"
+      xmlns:html="http://www.w3.org/1999/xhtml"
+      xmlns:db="http://docbook.org/ns/docbook" xml:id="book">
     <title>Hadoop Illuminated</title>
     <info>
         <author>
@@ -9,6 +15,10 @@
             </personname>
         </author>
     </info>
+
+ <!--XInclude some chapters-->
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="about_authors.xml" />
+
     <dedication>
         <para>To the open source community
         </para>
@@ -32,7 +42,9 @@
             </ulink>
         </para>
 
-    </acknowledgements>     
+    </acknowledgements>
+
+
     <chapter xml:id="chapter_1">
         <title>Who is this book for?</title>
         <section>
@@ -53,7 +65,7 @@
             </para>
             <section>
                 <title>But who are the authors?</title>
-                <para>In the words of 
+                <para>In the words of
                     <ulink url="http://www.gutenberg.org/files/1666/1666-h/1666-h.htm">
                         Lucius Apuleius, the author of the Golden Ass
                     </ulink>, I will tell it to you in a few words.
@@ -819,9 +831,9 @@
                         import org.apache.hadoop.util.Tool;
                         import org.apache.hadoop.util.ToolRunner;
                         public class WordCountExample extends Configured implements Tool {
-    
+
                         private static IntWritable ONE = new IntWritable(1);
-    
+
                         @Override
                         public int run(String[] args) throws Exception {
                         String testData = "test-data/moby-dick.txt";
@@ -1218,5 +1230,5 @@
         <title>Sujee first</title>
         <para>do it separate</para>
     </chapter>
-    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"  href="intro.xml" />
+    <!-- <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"  href="intro.xml" /> -->
 </book>

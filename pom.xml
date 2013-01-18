@@ -24,7 +24,7 @@
                 </repository>
             </repositories>
         </profile>
-        
+
     </profiles>
     <name>HadoopIlluminated</name>
     <url>http://maven.apache.org</url>
@@ -39,10 +39,10 @@
                     <target>1.6</target>
                 </configuration>
             </plugin>
-            <plugin>                
+            <plugin>
                 <artifactId>maven-assembly-plugin</artifactId>
                 <configuration>
-                    <archive>                        
+                    <archive>
                         <manifest>
                             <addClasspath>true</addClasspath>
                         </manifest>
@@ -52,7 +52,7 @@
                     </descriptorRefs>
                 </configuration>
             </plugin>
-            <plugin> 
+            <plugin>
                 <groupId>com.github.maven-hadoop.plugin</groupId>
                 <artifactId>maven-hadoop-plugin</artifactId>
                 <version>0.20.1</version>
@@ -74,8 +74,11 @@
                     </execution>
                 </executions>
                 <version>2.0.13</version>
-            </plugin>             
-        </plugins>               
+                <configuration>
+                   <xincludeSupported>true</xincludeSupported>
+                 </configuration>
+            </plugin>
+        </plugins>
     </build>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -92,7 +95,7 @@
             <groupId>org.apache.avro</groupId>
             <artifactId>avro-mapred</artifactId>
             <version>1.5.4</version>
-        </dependency>                      
+        </dependency>
         <dependency>
             <groupId>org.apache.hadoop</groupId>
             <artifactId>hadoop-core</artifactId>
