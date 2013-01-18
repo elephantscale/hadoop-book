@@ -1,14 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<about_authors version="5.0" xml:id="about_authors" xmlns="http://docbook.org/ns/docbook"
+<chapter version="5.0" xml:id="about_authors" xmlns="http://docbook.org/ns/docbook"
          xmlns:xlink="http://www.w3.org/1999/xlink"
          xmlns:xi="http://www.w3.org/2001/XInclude"
          xmlns:svg="http://www.w3.org/2000/svg"
          xmlns:m="http://www.w3.org/1998/Math/MathML"
          xmlns:html="http://www.w3.org/1999/xhtml"
          xmlns:db="http://docbook.org/ns/docbook">
-  <title>About The Authors</title>
-  <para>
-      Hiya
-  </para>
 
-</about_authors>
+  <title>About Authors</title>
+  Hello from Mark and Sujee :-)
+
+  <para>
+      About Mark
+  </para>
+  <para>
+      About Sujee
+  </para>
+</chapter>
