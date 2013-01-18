@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<about_authors version="5.0" xml:id="about_authors" xmlns="http://docbook.org/ns/docbook">
+  <title>Hadoop Versions</title>
+  <para>
+      Hiya
+  </para>
+
+  <section>
+      <title>section title</title>
+      <para>another para</para>
+  </section>
+
+</about_authors>

@@ -16,8 +16,6 @@
         </author>
     </info>
 
- <!--XInclude some chapters-->
-   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="about_authors.xml" />
 
     <dedication>
         <para>To the open source community
@@ -44,6 +42,9 @@
 
     </acknowledgements>
 
+ <!--XInclude some chapters-->
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="about_authors.xml" />
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="hadoop_versions.xml" />
 
     <chapter xml:id="chapter_1">
         <title>Who is this book for?</title>
