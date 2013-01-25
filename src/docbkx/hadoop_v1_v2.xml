@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter version="5.0" xml:id="hadoop_v1_v2" xmlns="http://docbook.org/ns/docbook">
+  <title>How Hadoop version 2 'looks' different from version 1</title>
+  <para>
+      This chapter details how Hadoop version 2 'looks and feels' different from version 1.  To learn about functional differences between version 1 and 2, look at chapters see <xref linkend="hadoop_versions" />.
+  </para>
+
+  <section>
+      <title>start/stop  scripts</title>
+      <para>
+          These are files used to start/stop hadoop daemons.
+          start-dfs.sh, stop-dfs.sh, start-mapred.sh, stop-mapred.sh, start-all.sh, stop-all.sh,  hadoop-daemon.sh,  hadoop-daemons.sh
+      </para>
+      <para>
+          In Hadoop v1 the start/stop scripts are in HADOOP_HOME/<emphasis>bin</emphasis> dir.  In Hadoop2 they are in HADOOP_HOME/<emphasis>sbin</emphasis> dir
+          <sbr/>
+          (in the following commands HH means hadoop install dir)
+      </para>
+      <para>
+          to start HDFS
+          <sbr/>
+          in V1 :
+          <command>$ HH/bin/start-dfs.sh</command>
+          <sbr/>
+          in V2 :
+          <command>$ HH/sbin/start-dfs.sh</command>
+      </para>
+      <para>
+          to start mapreduce
+          <sbr/>
+          in V1 :
+          <command>$ HH/bin/start-mapred.sh</command>
+          <sbr/>
+          in V2 :
+          <command>$ HH/sbin/start-yarn.sh</command>
+      </para>
+      <para>
+          to start every thing
+          <sbr/>
+          in V1 :
+          <command>$ HH/bin/start-all.sh</command>
+          <sbr/>
+          in V2 :
+          <command>$ HH/sbin/start-all.sh</command>
+      </para>
+  </section>
+
+  <section>
+      <title>hadoop command split</title>
+      <para>
+          before we had bin/hadoop executable used for file system operations, administration and map reduce operations.  In v2 these are handled by seperate binaries.
+      </para>
+      <para>
+          file system operations are handled by HDFS command.
+          <sbr/>
+          (in the following commands HH means hadoop install dir)
+          <sbr/>
+          in V1 :
+          <command>$ HH/bin/hadoop dfs -ls</command>
+          <sbr/>
+          in V2 :
+          <command>$ HH/bin/hdfs dfs -ls</command>
+      </para>
+      <para>
+          namenode operations are now handled by HDFS command
+          <sbr/>
+          in V1 :
+          <command>$ HH/bin/hadoop namenode -format</command>
+          <sbr/>
+          in V2 :
+          <command>$ HH/bin/hdfs namenode -format</command>
+          <sbr/>
+      </para>
+      <para>
+          file system admin operations are now handled by HDFS command
+          <sbr/>
+          in V1 :
+          <command>$ HH/bin/hadoop dfsadmin -refreshNodes</command>
+          <sbr/>
+          in V2 :
+          <command>$ HH/bin/hdfs dfsadmin -refreshNodes</command>
+          <sbr/>
+      </para>
+  </section>
+
+  <section>
+      <title>Config files</title>
+      <para>
+          sample files : core-site.xml, hdfs-site.xml, mapred-site.xml
+      </para>
+      <para>
+          In Hadoop v1 the config files are in HADOOP_HOME/<emphasis>conf</emphasis> dir.  In Hadoop v2 they are in HADOOP_HOME/<emphasis>etc/hadoop</emphasis> dir.  The files are all intact at their new location.
+      </para>
+  </section>
+
+  <section>
+      <title>lib dir split</title>
+      <para>
+          In Hadoop V1 all dependency jars are under lib dir.  In V2 they are all split input sub directories.
+          <sbr/>
+          HH/share/hadoop/common
+          <sbr/>
+          HH/share/hadoop/hdfs
+          <sbr/>
+          HH/share/hadoop/mapreduce
+          <sbr/>
+          HH/share/hadoop/tools
+          <sbr/>
+          HH/share/hadoop/yarn
+          <sbr/>
+
+          Each of these directories also have a lib sub folder for their own dependencies.  This means there may be duplicate copies of some jars.  For example
+          <sbr/>
+          find hadoop-2  -name "log4j*.jar" yields
+          <sbr/>
+            hadoop-2/share/hadoop/common/lib/log4j-1.2.17.jar
+          <sbr/>
+            hadoop-2/share/hadoop/hdfs/lib/log4j-1.2.17.jar
+          <sbr/>
+            hadoop-2/share/hadoop/httpfs/tomcat/webapps/webhdfs/WEB-INF/lib/log4j-1.2.17.jar
+          <sbr/>
+            hadoop-2/share/hadoop/mapreduce/lib/log4j-1.2.17.jar
+          <sbr/>
+            hadoop-2/share/hadoop/yarn/lib/log4j-1.2.17.jar
+          <sbr/>
+          This is okay, as now each component (hdfs, mapreduce, yarn) can have it dependencies in a clean way.
+      </para>
+      <para>
+          Split of jar files means, we have to change run scripts also.  Here is an example of a java program that connects with HDFS
+          <sbr/>
+          <code>
+          java -cp my.jar:$hadoop_home/share/hadoop/hdfs/*:$hadoop_home/share/hadoop/hdfs/lib/*:$hadoop_home/share/hadoop/common/*:$hadoop_home/share/hadoop/common/lib/*  MyClass
+        </code>
+      </para>
+  </section>
+
+  <section>
+      <title>Running TestDFSIO</title>
+      <para>
+          in V1
+          <sbr/>
+          <code>
+          $  hadoop jar HH/hadoop-tests.jar TestDFSIO  -write -nrFiles 10  -fileSize 1000
+      </code>
+      </para>
+      <para>
+          in V2
+          <sbr/>
+          <code>
+            $ hadoop jar HH/share/hadoop/mapreduce/hadoop-mapreduce-client-jobclient-*-tests.jar TestDFSIO  -write -nrFiles 4 -fileSize 1GB
+        </code>
+      </para>
+  </section>
+
+</chapter>

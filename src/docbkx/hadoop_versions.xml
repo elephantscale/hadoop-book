@@ -54,10 +54,9 @@
   </section>
   <section>
       <title>History of Hadoop</title>
-      <para>another para</para>
+      <para>
+        <graphic fileref="images/hadoop-history.png"></graphic>
+      </para>
   </section>
-  <para>
-      Hiya
-  </para>
 
 </chapter>
