@@ -65,18 +65,37 @@
                 <artifactId>docbkx-maven-plugin</artifactId>
                 <executions>
                     <execution>
-                        <goals>
-                            <goal>generate-html</goal>
-                            <goal>generate-pdf</goal>
-                            <goal>generate-manpages</goal>
-                        </goals>
-                        <phase>generate-sources</phase>
-                    </execution>
+                    <id>multipage</id>
+                    <goals>
+                        <goal>generate-html</goal>
+                    </goals>
+                    <!-- <phase>pre-site</phase> -->
+                    <configuration>
+                        <navigShowtitles>true</navigShowtitles>
+                        <chunkedOutput>true</chunkedOutput>
+                        <imgSrcPath>../images/</imgSrcPath>
+                    </configuration>
+                </execution>
+                <!--
+                <execution>
+                    <id>onepage</id>
+                    <goals>
+                        <goal>generate-html</goal>
+                    </goals>
+                    <configuration>
+                        <imgSrcPath>images/</imgSrcPath>
+                        <htmlStylesheet>css/freebsd_docbook.css</htmlStylesheet>
+                    </configuration>
+                </execution>
+                -->
+                <execution>
+                    <phase>generate-sources</phase>
+                </execution>
                 </executions>
                 <version>2.0.13</version>
                 <configuration>
                    <xincludeSupported>true</xincludeSupported>
-                   <!-- <imgSrcPath>../images/</imgSrcPath> -->
+                   <chunkedOutput>true</chunkedOutput>
                  </configuration>
             </plugin>
         </plugins>
