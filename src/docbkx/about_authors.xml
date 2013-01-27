@@ -7,13 +7,17 @@
          xmlns:html="http://www.w3.org/1999/xhtml"
          xmlns:db="http://docbook.org/ns/docbook">
 
-  <title>About Authors</title>
-  Hello from Mark and Sujee :-)
-
-  <para>
-      About Mark
-  </para>
-  <para>
-      About Sujee
-  </para>
+    <title>About Authors</title>    
+    <figure>
+        <title>Hello from Mark and Sujee</title>
+        <graphic fileref="images/mark_and_sujee.jpg"></graphic>
+        Artwork by
+        <ulink url="https://picasaweb.google.com/110574221375288281850/RebeccaSArt">RK</ulink>
+    </figure>
+    <para>
+        About Mark
+    </para>
+    <para>
+        About Sujee
+    </para>
 </chapter>
