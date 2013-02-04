@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter version="5.0" xml:id="code" xmlns="http://docbook.org/ns/docbook"
+         xmlns:xlink="http://www.w3.org/1999/xlink"
+         xmlns:xi="http://www.w3.org/2001/XInclude"
+         xmlns:svg="http://www.w3.org/2000/svg"
+         xmlns:m="http://www.w3.org/1998/Math/MathML"
+         xmlns:html="http://www.w3.org/1999/xhtml"
+         xmlns:db="http://docbook.org/ns/docbook">
+
+        <title>Get your hands dirty with code</title>
+        <para>
+            Programmers like playing around with the code. In the long-standing philosophical
+            discussion of what is more important, theory or practice, it was concluded that
+            theory (reading this book) is more important, because it leads to practice (coding).
+        </para>
+        <section>
+            <title>Hands-on: setting your development environment</title>
+            <section>
+                <title>Setting your IDE</title>
+            </section>
+            <section>
+                <title>Setting Hadoop in local mode</title>
+            </section>
+            <section>
+                <title>Setting a Hadoop cluster on EC2</title>
+            </section>
+            <section>
+                <title>Using S3 instead of HDFS on EC2 Hadoop Clusters</title>
+            </section>
+            <section>
+                <title>Setting HBase on EC2</title>
+            </section>
+        </section>
+
+</chapter>
