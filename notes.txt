@@ -1,0 +1,11 @@
+Docbook guides:
+---
+- practial : http://www.ibiblio.org/oswg/oswg-nightly/oswg/en_US.ISO_8859-1/articles/DocBook-Intro/docbook-intro.html
+
+
+Notes for the book:
+---
+
+- running DistCP
+
+- connecting to two different hadoop clusters (config)
