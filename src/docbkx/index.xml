@@ -50,6 +50,9 @@
    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="sorting1.xml" />
    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="hadoop_versions.xml" />
    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="hadoop_v1_v2.xml" />
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ha.xml" />
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="benchmarking_hadoop.xml" />
    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="handy_classes.xml" />
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="handy_classes_hbase.xml" />
 
 </book>
