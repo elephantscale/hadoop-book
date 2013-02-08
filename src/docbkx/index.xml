@@ -38,11 +38,12 @@
             <ulink url="http://lib.udm.ru/lib/PELEWIN/pokolenie_engl.txt">
                 <emphasis>Victor Pelevin</emphasis>
             </ulink>
+            Hold on, we are re-organizing the book...
         </para>
 
     </acknowledgements>
 
- <!--XInclude some chapters-->
+ <!--XInclude some chapters
    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="about_authors.xml" />
    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="audience.xml" />
    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="intro1.xml" />
@@ -54,5 +55,5 @@
    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="benchmarking_hadoop.xml" />
    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="handy_classes.xml" />
    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="handy_classes_hbase.xml" />
-
+-->
 </book>
