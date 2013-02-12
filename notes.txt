@@ -9,3 +9,5 @@ Notes for the book:
 - running DistCP
 
 - connecting to two different hadoop clusters (config)
+
+- hadoop versions : http://drcos.boudnik.org/2013/02/one-more-hadoop-in-family.html

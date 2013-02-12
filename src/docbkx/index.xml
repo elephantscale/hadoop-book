@@ -50,6 +50,7 @@
    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="about_authors.xml" />
    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="audience.xml" />
    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="intro1.xml" />
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="hdfs1.xml" />
    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="code.xml" />
    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="sorting1.xml" />
    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="hadoop_versions.xml" />
