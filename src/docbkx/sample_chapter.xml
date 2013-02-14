@@ -15,13 +15,17 @@
       </para>
   </section>
 
-  <section>
-      <title>section 2</title>
+  <!-- nested section -->
+  <sect1>
+      <title>sect1</title>
       <para>
           para2
       </para>
-      <para>
-          para3
-      </para>
-  </section>
+      <sect2>
+          <title>sect1.1</title>
+          <para>
+              para3
+          </para>
+      </sect2>
+  </sect1>
 </chapter>

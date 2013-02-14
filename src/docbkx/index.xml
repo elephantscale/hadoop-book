@@ -13,6 +13,10 @@
                 <firstname>Mark</firstname>
                 <surname>Kerzner (mark.kerzner-at-shmsoft.com)</surname>
             </personname>
+            <personname>
+                <firstname>Sujee</firstname>
+                <surname>Maniyam(sujee-at-sujee.net)</surname>
+            </personname>
         </author>
     </info>
 
@@ -45,10 +49,11 @@
 
     </acknowledgements>
 
- <!--XInclude some chapters
    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="about_authors.xml" />
    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="audience.xml" />
    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="intro1.xml" />
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="hdfs1.xml" />
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="hdfs2.xml" />
    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="code.xml" />
    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="sorting1.xml" />
    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="hadoop_versions.xml" />
@@ -57,5 +62,4 @@
    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="benchmarking_hadoop.xml" />
    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="handy_classes.xml" />
    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="handy_classes_hbase.xml" />
--->
 </book>
