@@ -12,6 +12,7 @@
       <title>section 1</title>
       <para>
           para1
+         <graphic fileref="some_image.jpg"></graphic>
       </para>
   </section>
 

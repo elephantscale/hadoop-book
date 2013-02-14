@@ -64,7 +64,7 @@
 
       <para>
           So right now, our 'architecture' looks some thing like this
-         <graphic fileref="images/hdfs1.jpg"></graphic>
+         <graphic fileref="hdfs1.jpg"></graphic>
       </para>
 
       <sect2>
@@ -84,7 +84,7 @@
           </para>
           <para>
               So here is an updated diagram:
-                <graphic fileref="images/hdfs2.jpg"></graphic>
+                <graphic fileref="hdfs2.jpg"></graphic>
           </para>
       </sect2>
 
@@ -95,7 +95,7 @@
           </para>
           <para>
               so now our architecture looks like this.  We have a single master node and multiple worker nodes.
-              <graphic fileref="images/hdfs3.jpg"></graphic>
+              <graphic fileref="hdfs3.jpg"></graphic>
           </para>
       </sect2>
 
@@ -110,7 +110,7 @@
           Thanks for playing the game; we have pretty much arrived at the archiecture of HDFS by playing our 'design game'.  HDFS looks very similar architecturally.
       </para>
 
-      <graphic fileref="images/hdfs4.jpg"></graphic>
+      <graphic fileref="hdfs4.jpg"></graphic>
       <para>
           lets go over some principles of HDFS.  First lets consider the parallels between 'our design' and actual HDFS design.
       </para>
@@ -160,7 +160,7 @@
           </para>
           <para>
               HDFS is built to work with mechanical disks.  With the disk drives, the capacity has gone up in recent years.  How ever, the seek times haven't improved all that much.  So hadoop tries to minimize the disk seeks.  
-         <graphic fileref="images/disk_seek.png"></graphic>
+         <graphic fileref="disk_seek.png"></graphic>
           </para>
       </sect2>
 
@@ -171,7 +171,7 @@
           </para>
           <para>
               How ever appending to a file is supported.  Appending is supported to enable applications like HBase
-         <graphic fileref="images/file_append.jpg"></graphic>
+         <graphic fileref="file_append.jpg"></graphic>
           </para>
         </sect2>
 
@@ -190,7 +190,7 @@
             </sidebar>
             <para>
                 So a 1G file is split into 8 blocks,  The last one being a 'partial' block
-         <graphic fileref="images/blocks.jpg"></graphic>
+         <graphic fileref="blocks.jpg"></graphic>
             </para>
             <para>
                 And a 100M file consists of only one block.  And files smaller than a block only takes up that much space on disk, HDFS doesn't pad files.

@@ -63,110 +63,145 @@
             <plugin>
                 <groupId>com.agilejava.docbkx</groupId>
                 <artifactId>docbkx-maven-plugin</artifactId>
+                <version>2.0.14</version>
+                <inherited>false</inherited>
+                <!--
+                <dependencies>
+                    <dependency>
+                        <groupId>org.docbook</groupId>
+                        <artifactId>docbook-xml</artifactId>
+                        <version>5.0</version>
+                        <scope>runtime</scope>
+                    </dependency>
+                </dependencies>
+                -->
+                <configuration>
+                    <xincludeSupported>true</xincludeSupported>
+                    <useIdAsFilename>true</useIdAsFilename>
+                    <sectionAutolabelMaxDepth>100</sectionAutolabelMaxDepth>
+                    <sectionAutolabel>true</sectionAutolabel>
+                    <sectionLabelIncludesComponentLabel>true</sectionLabelIncludesComponentLabel>
+                    <tocMaxDepth>2</tocMaxDepth>
+                    <insertXrefPageNumber>yes</insertXrefPageNumber>
+                    <!-- <targetDirectory>${basedir}/target/docbkx</targetDirectory> -->
+                    <chunkerOutputEncoding>UTF-8</chunkerOutputEncoding>
+                </configuration>
                 <executions>
                     <execution>
                         <id>multipage</id>
                         <goals>
                             <goal>generate-html</goal>
                         </goals>
-                        <!-- <phase>pre-site</phase> -->
+                        <phase>pre-site</phase>
                         <configuration>
+                            <targetDirectory>${basedir}/target/docbkx/multipage</targetDirectory>
                             <navigShowtitles>true</navigShowtitles>
                             <chunkedOutput>true</chunkedOutput>
-                            <!-- <imgSrcPath>../images/</imgSrcPath> -->
-                            <htmlStylesheet>freebsd_docbook.css</htmlStylesheet>
+                            <imgSrcPath>images/</imgSrcPath>
+                            <htmlStylesheet>css/freebsd_docbook.css</htmlStylesheet>
                         </configuration>
                     </execution>
-                    <!--
-                <execution>
-                    <id>onepage</id>
-                    <goals>
-                        <goal>generate-html</goal>
-                    </goals>
-                    <configuration>
-                        <imgSrcPath>images/</imgSrcPath>
-                        <htmlStylesheet>css/freebsd_docbook.css</htmlStylesheet>
-                    </configuration>
-                </execution>
-                -->
-                <!--
-                <execution>
-                    <phase>generate-sources</phase>
-                </execution>
-                <execution>
-                    <id>copy-images</id>
-                    <goals>
-                        <goal>generate-sources</goal>
-                    </goals>
-                    <configuration>
-                        <outputDirectory>target/html</outputDirectory>
-                        <resources>
-                            <resource>
-                                <directory>${basedir}/src/docbkx/images</directory>
-                            </resource>
-                        </resources>
-                    </configuration>
-                </execution>
-                <execution>
-                    <id>copy-css</id>
-                    <goals>
-                        <goal>generate-sources</goal>
-                    </goals>
-                    <configuration>
-                        <outputDirectory>target/html</outputDirectory>
-                        <resources>
-                            <resource>
-                                <file>${basedir}/src/docbkx/freebsd_docbook.css</file>
-                            </resource>
-                        </resources>
-                    </configuration>
-                </execution>
-                -->
+                    <execution>
+                        <id>onepage</id>
+                        <goals>
+                            <goal>generate-html</goal>
+                        </goals>
+                        <phase>pre-site</phase>
+                        <configuration>
+                            <targetDirectory>${basedir}/target/docbkx/singlepage</targetDirectory>
+                            <imgSrcPath>../images/</imgSrcPath>
+                            <htmlStylesheet>../css/freebsd_docbook.css</htmlStylesheet>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
 
-            </executions>
-            <version>2.0.13</version>
-            <configuration>
-                <xincludeSupported>true</xincludeSupported>
-                <chunkedOutput>false</chunkedOutput>
-            </configuration>
-        </plugin>
-    </plugins>
-</build>
-<properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-</properties>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <!-- <version></version> -->
+                <inherited>false</inherited>
+                <executions>
+                    <execution>
+                        <id>copy-docbkx</id>
+                        <goals>
+                            <goal>copy-resources</goal>
+                        </goals>
+                        <phase>pre-site</phase>
+                        <configuration>
+                            <outputDirectory>target/site</outputDirectory>
+                            <resources>
+                                <resource>
+                                    <directory>${basedir}/target/docbkx/multipage/index</directory>
+                                    <includes>
+                                        <include>**/**</include>
+                                    </includes>
+                                </resource>
+                                <resource>
+                                    <directory>${basedir}/target/docbkx</directory>
+                                    <includes>
+                                        <include>singlepage/**</include>
+                                    </includes>
+                                </resource>
+                                <resource>
+                                    <directory>${basedir}/src/docbkx</directory>
+                                    <includes>
+                                        <include>css/**</include>
+                                    </includes>
+                                </resource>
+                                <resource>
+                                    <directory>${basedir}/src/docbkx</directory>
+                                    <includes>
+                                        <include>images/**</include>
+                                    </includes>
+                                </resource>
+                            </resources>
+                        </configuration>
+                    </execution>
+                </executions>
+                <configuration>
+                    <escapeString>\</escapeString>
+                </configuration>
+            </plugin>
 
-<dependencies>
-    <dependency>
-        <groupId>junit</groupId>
-        <artifactId>junit</artifactId>
-        <version>4.9</version>
-        <scope>test</scope>
-    </dependency>
-    <dependency>
-        <groupId>org.apache.avro</groupId>
-        <artifactId>avro-mapred</artifactId>
-        <version>1.5.4</version>
-    </dependency>
-    <dependency>
-        <groupId>org.apache.hadoop</groupId>
-        <artifactId>hadoop-core</artifactId>
-        <version>0.20.205.0</version>
-    </dependency>
-    <dependency>
-        <groupId>com.googlecode.json-simple</groupId>
-        <artifactId>json-simple</artifactId>
-        <version>1.1</version>
-    </dependency>
-    <dependency>
-        <groupId>com.google.guava</groupId>
-        <artifactId>guava</artifactId>
-        <version>r09</version>
-    </dependency>
-    <dependency>
-        <groupId>org.apache.commons</groupId>
-        <artifactId>commons-io</artifactId>
-        <version>1.3.2</version>
-    </dependency>
-</dependencies>
+
+        </plugins>
+    </build>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.9</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.avro</groupId>
+            <artifactId>avro-mapred</artifactId>
+            <version>1.5.4</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.hadoop</groupId>
+            <artifactId>hadoop-core</artifactId>
+            <version>0.20.205.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.googlecode.json-simple</groupId>
+            <artifactId>json-simple</artifactId>
+            <version>1.1</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>r09</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>1.3.2</version>
+        </dependency>
+    </dependencies>
 </project>
