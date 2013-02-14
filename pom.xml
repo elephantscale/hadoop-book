@@ -98,7 +98,7 @@
                             <navigShowtitles>true</navigShowtitles>
                             <chunkedOutput>true</chunkedOutput>
                             <imgSrcPath>images/</imgSrcPath>
-                            <htmlStylesheet>css/freebsd_docbook.css</htmlStylesheet>
+                            <htmlStylesheet>css/jbossorg.css</htmlStylesheet>
                         </configuration>
                     </execution>
                     <execution>
@@ -110,7 +110,7 @@
                         <configuration>
                             <targetDirectory>${basedir}/target/docbkx/singlepage</targetDirectory>
                             <imgSrcPath>../images/</imgSrcPath>
-                            <htmlStylesheet>../css/freebsd_docbook.css</htmlStylesheet>
+                            <htmlStylesheet>../css/jbossorg.css</htmlStylesheet>
                         </configuration>
                     </execution>
                 </executions>

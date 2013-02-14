@@ -13,3 +13,9 @@ Notes for the book:
 - hadoop versions : http://drcos.boudnik.org/2013/02/one-more-hadoop-in-family.html
 
 - slive : http://blogs.wandisco.com/2013/02/12/running-slive-test-on-wdd/
+
+
+Docbooks
+---
+- http://stackoverflow.com/questions/1277132/impressive-docbook-example
+- http://www.jboss.org/pressgang/jdg.html
