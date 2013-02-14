@@ -18,4 +18,4 @@ Notes for the book:
 Docbooks
 ---
 - http://stackoverflow.com/questions/1277132/impressive-docbook-example
-- http://www.jboss.org/pressgang/jdg.html
+- docbooks best practices from jboss docs team : http://www.jboss.org/pressgang/jdg.html

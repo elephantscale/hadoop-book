@@ -65,16 +65,16 @@
                 <artifactId>docbkx-maven-plugin</artifactId>
                 <version>2.0.14</version>
                 <inherited>false</inherited>
-                <!--
                 <dependencies>
                     <dependency>
-                        <groupId>org.docbook</groupId>
+                        <groupId>net.sf.docbook</groupId>
                         <artifactId>docbook-xml</artifactId>
-                        <version>5.0</version>
+                        <version>5.0-all</version>
+                        <classifier>resources</classifier>
+                        <type>zip</type>
                         <scope>runtime</scope>
                     </dependency>
                 </dependencies>
-                -->
                 <configuration>
                     <xincludeSupported>true</xincludeSupported>
                     <useIdAsFilename>true</useIdAsFilename>
@@ -119,7 +119,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-resources-plugin</artifactId>
-                <!-- <version></version> -->
+                <version>2.6</version>
                 <inherited>false</inherited>
                 <executions>
                     <execution>

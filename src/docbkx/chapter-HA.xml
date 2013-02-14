@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<chapter version="5.0" xml:id="sample_chapter" xmlns="http://docbook.org/ns/docbook"
+<chapter version="5.0" xml:id="chapter-HA" xmlns="http://docbook.org/ns/docbook"
          xmlns:xlink="http://www.w3.org/1999/xlink"
          xmlns:xi="http://www.w3.org/2001/XInclude"
          xmlns:svg="http://www.w3.org/2000/svg"
@@ -7,26 +7,21 @@
          xmlns:html="http://www.w3.org/1999/xhtml"
          xmlns:db="http://docbook.org/ns/docbook">
 
-  <title>Sample Chapter</title>
+  <title>Hadoop High Availability</title>
   <section>
       <title>section 1</title>
       <para>
           para1
-         <graphic fileref="some_image.jpg"></graphic>
       </para>
   </section>
 
-  <!-- nested section -->
-  <sect1>
-      <title>sect1</title>
+  <section>
+      <title>section 2</title>
       <para>
           para2
       </para>
-      <sect2>
-          <title>sect1.1</title>
-          <para>
-              para3
-          </para>
-      </sect2>
-  </sect1>
+      <para>
+          para3
+      </para>
+  </section>
 </chapter>

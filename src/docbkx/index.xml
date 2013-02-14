@@ -1,23 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <book version="5.0" xmlns="http://docbook.org/ns/docbook"
-      xmlns:xlink="http://www.w3.org/1999/xlink"
-      xmlns:xi="http://www.w3.org/2001/XInclude"
-      xmlns:svg="http://www.w3.org/2000/svg"
-      xmlns:m="http://www.w3.org/1998/Math/MathML"
-      xmlns:html="http://www.w3.org/1999/xhtml"
-      xmlns:db="http://docbook.org/ns/docbook" xml:id="book">
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xi="http://www.w3.org/2001/XInclude"
+    xmlns:svg="http://www.w3.org/2000/svg"
+    xmlns:m="http://www.w3.org/1998/Math/MathML"
+    xmlns:html="http://www.w3.org/1999/xhtml"
+    xmlns:db="http://docbook.org/ns/docbook" xml:id="book">
     <title>Hadoop Illuminated</title>
     <info>
-        <author>
-            <personname>
+        <authorgroup>
+            <author>
                 <firstname>Mark</firstname>
-                <surname>Kerzner (mark.kerzner-at-shmsoft.com)</surname>
-            </personname>
-            <personname>
+                <surname>Kerzner</surname>
+                <contrib>Co-Author</contrib>
+                <email>mark@HadoopIlluminated.com</email>
+            </author>
+            <author>
                 <firstname>Sujee</firstname>
-                <surname>Maniyam(sujee-at-sujee.net)</surname>
-            </personname>
-        </author>
+                <surname>Maniyam</surname>
+                <contrib>Co-Author</contrib>
+                <email>sujee@HadoopIlluminated.com</email>
+            </author>
+        </authorgroup>
     </info>
 
 
@@ -44,22 +48,22 @@
             </ulink>           
         </para>
         <para>
-             Hold on, we are re-organizing the book...
+            Hold on, we are re-organizing the book...
         </para>
 
     </acknowledgements>
 
-   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="about_authors.xml" />
-   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="audience.xml" />
-   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="intro1.xml" />
-   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="hdfs1.xml" />
-   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="hdfs2.xml" />
-   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="code.xml" />
-   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="sorting1.xml" />
-   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="hadoop_versions.xml" />
-   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="hadoop_v1_v2.xml" />
-   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ha.xml" />
-   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="benchmarking_hadoop.xml" />
-   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="handy_classes.xml" />
-   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="handy_classes_hbase.xml" />
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-About_Authors.xml" />
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-Audience.xml" />
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-Intro.xml" />
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-HDFS_Intro.xml" />
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-HDFS_Namenode.xml" />
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-Code.xml" />
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-Sorting1.xml" />
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-Hadoop_Versions.xml" />
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-Hadoop_V1_V2.xml" />
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-HA.xml" />
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-Benchmarking_Hadoop.xml" />
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-Handy_Classes.xml" />
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-Handy_Classes_HBase.xml" />
 </book>

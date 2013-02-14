@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<chapter version="5.0" xml:id="hadoop_v1_v2" xmlns="http://docbook.org/ns/docbook">
+<chapter version="5.0" xml:id="chapter-Hadoop_V1_V2" xmlns="http://docbook.org/ns/docbook">
   <title>How Hadoop version 2 'looks' different from version 1</title>
   <para>
       This chapter details how Hadoop version 2 'looks and feels' different from version 1.  To learn about functional differences between version 1 and 2, look at chapters see <xref linkend="hadoop_versions" />.

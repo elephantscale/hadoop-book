@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<chapter version="5.0" xml:id="hadoop_versions" xmlns="http://docbook.org/ns/docbook">
+<chapter version="5.0" xml:id="chapter-Hadoop_Versions" xmlns="http://docbook.org/ns/docbook">
   <title>Hadoop Versions</title>
   <para>
       Let's take a moment to explore the different versions of Hadoop.  The following are/were the most known versions.
