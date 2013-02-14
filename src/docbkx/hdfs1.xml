@@ -171,7 +171,7 @@
           </para>
           <para>
               How ever appending to a file is supported.  Appending is supported to enable applications like HBase
-         <graphic fileref="images/file_append.png"></graphic>
+         <graphic fileref="images/file_append.jpg"></graphic>
           </para>
         </sect2>
 
@@ -190,7 +190,7 @@
             </sidebar>
             <para>
                 So a 1G file is split into 8 blocks,  The last one being a 'partial' block
-         <graphic fileref="images/blocks.png"></graphic>
+         <graphic fileref="images/blocks.jpg"></graphic>
             </para>
             <para>
                 And a 100M file consists of only one block.  And files smaller than a block only takes up that much space on disk, HDFS doesn't pad files.
