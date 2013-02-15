@@ -45,7 +45,7 @@
             "The author's opinions do not necessarily coincide with his point of view." -
             <ulink url="http://lib.udm.ru/lib/PELEWIN/pokolenie_engl.txt">
                 <emphasis>Victor Pelevin</emphasis>
-            </ulink>           
+            </ulink>
         </para>
         <para>
             Hold on, we are re-organizing the book...
@@ -58,6 +58,7 @@
     <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-Intro.xml" />
     <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-HDFS_Intro.xml" />
     <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-HDFS_Namenode.xml" />
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-Hardware_Software.xml" />
     <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-Code.xml" />
     <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-Sorting1.xml" />
     <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-Hadoop_Versions.xml" />

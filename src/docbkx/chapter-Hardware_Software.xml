@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter version="5.0" xml:id="chapter-Hardware_Software" xmlns="http://docbook.org/ns/docbook"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xi="http://www.w3.org/2001/XInclude"
+    xmlns:svg="http://www.w3.org/2000/svg"
+    xmlns:m="http://www.w3.org/1998/Math/MathML"
+    xmlns:html="http://www.w3.org/1999/xhtml"
+    xmlns:db="http://docbook.org/ns/docbook">
+
+    <title>Hardware and Software for Hadoop</title>
+
+
+    <sect1>
+        <title>Hardware</title>
+        <para>
+            Hadoop runs on commodity hardware.  That doesnn't mean it runs on a cheapo hardware.  Hadoop runs on decent server class machines.
+            <mediaobject> <imageobject>
+                    <imagedata fileref="macintosh_classic1.jpg" format="JPG" scale="50" /> </imageobject>
+            </mediaobject>
+        </para>
+
+        <para>
+            Here are some ideas of hardware for hadoop nodes.
+        </para>
+
+        <table id="table-hardware">
+            <title>Hardware Specs</title>
+            <tgroup cols='3' align='left' colsep='1' rowsep='1'>
+                <thead>
+                    <row>
+                        <entry></entry>
+                        <entry>Medium</entry>
+                        <entry>High End</entry>
+                    </row>
+                </thead>
+                <tbody>
+                    <row>
+                        <entry>
+                            CPU
+                        </entry>
+                        <entry>
+                            8 physical cores
+                        </entry>
+                        <entry>
+                            12 physical cores
+                        </entry>
+                    </row>
+                    <row>
+                        <entry>
+                            Memory
+                        </entry>
+                        <entry>
+                            16 G
+                        </entry>
+                        <entry>
+                            48 G
+                        </entry>
+                    </row>
+                    <row>
+                        <entry>
+                            Disk
+                        </entry>
+                        <entry>
+                            4 disks x 1TB = 4 TB
+                        </entry>
+                        <entry>
+                            12 disks x 3TB = 36 TB
+                        </entry>
+                    </row>
+                    <row>
+                        <entry>
+                            Network
+                        </entry>
+                        <entry>
+                            1 Gb Ethernet
+                        </entry>
+                        <entry>
+                            10 Gb Ethernet or Infiniband
+                        </entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+
+        <para>
+            So the high end machines have more memory.  Plus newer machines are packed with lot more disks (36 TB) -- high storage density.
+        </para>
+
+    </sect1>
+
+
+    <sect1>
+        <title>Software</title>
+        <sect2>
+            <title>Operating System</title>
+            <para>
+                Hadoop runs well on Linux.  The operating systems of choice are:
+                <glosslist>
+                    <glossentry>
+                        <glossterm>RedHat Enterprise Linux (RHEL)</glossterm>
+                        <glossdef>
+                            <para>
+                                This is a well tested Linux distro  that is geared for Enterprise.  Comes with Redhat support
+                            </para>
+                        </glossdef>
+                    </glossentry>
+
+                    <glossentry>
+                        <glossterm>CentOS</glossterm>
+                        <glossdef>
+                            <para>
+                                Source compatible distro with RHEL.  Free.  Very popular for running hadoop.  Go to the reasonably later version, version 6.x
+                            </para>
+                        </glossdef>
+                    </glossentry>
+
+                    <glossentry>
+                        <glossterm>Ubuntu</glossterm>
+                        <glossdef>
+                            <para>
+                                The Server edition of Ubuntu is a good fit -- not the Desktop edition.  Long Term Support (LTS) releases are recommended.  Because they get updates for atleast 2 years.
+                            </para>
+                        </glossdef>
+                    </glossentry>
+                </glosslist>
+            </para>
+        </sect2>
+
+
+        <sect2>
+            <title>Java</title>
+            <para>
+                Hadoop is written in Java.  Recommended Java version is Oracle JDK 1.6 releases; recommended minimum revision is 31 (v 1.6.31)
+            </para>
+        </sect2>
+    </sect1>
+
+</chapter>
