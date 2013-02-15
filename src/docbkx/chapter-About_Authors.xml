@@ -7,7 +7,7 @@
          xmlns:html="http://www.w3.org/1999/xhtml"
          xmlns:db="http://docbook.org/ns/docbook">
 
-    <title>About Authors</title>    
+    <title>About Authors</title>
     <figure>
         <title>Hello from Mark and Sujee</title>
         <graphic fileref="mark_and_sujee.jpg"></graphic>

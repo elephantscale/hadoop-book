@@ -47,21 +47,66 @@
                 <emphasis>Victor Pelevin</emphasis>
             </ulink>
         </para>
-
     </acknowledgements>
 
-    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-About_Authors.xml" />
-    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-Audience.xml" />
-    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-Intro.xml" />
-    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-HDFS_Intro.xml" />
-    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-HDFS_Namenode.xml" />
-    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-Hardware_Software.xml" />
-    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-Code.xml" />
+    <part label="I">
+        <title>About this book</title>
+        <partintro>
+            <para>
+                Hi
+            </para>
+            <literallayout>
+                <!-- <xref linkend="chapter-About_Authors">foo</xref> -->
+            </literallayout>
+        </partintro>
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-Audience.xml" />
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-About_Authors.xml" />
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-Code.xml" />
+    </part>
+
+    <part label="II">
+        <title>High level introduction to Hadoop</title>
+        <partintro>
+            <para>
+                Learn about Hadoop
+            </para>
+            <literallayout>
+            </literallayout>
+        </partintro>
+    </part>
+
+    <part label="III">
+        <title>Hadoop InDepth</title>
+        <partintro>
+            <para>
+                In depth discussion of hadoop
+            </para>
+            <literallayout>
+            </literallayout>
+        </partintro>
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-HDFS_Intro.xml" />
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-HDFS_Namenode.xml" />
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-Hardware_Software.xml" />
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-Hadoop_Versions.xml" />
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-Hadoop_V1_V2.xml" />
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-HA.xml" />
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-Benchmarking_Hadoop.xml" />
+    </part>
+
+    <part label="IV">
+        <title>Hadoop Cookbook</title>
+        <partintro>
+            <para>
+                This section has specific guides and howtos.
+            </para>
+            <literallayout>
+            </literallayout>
+        </partintro>
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-Handy_Classes.xml" />
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-Handy_Classes_HBase.xml" />
+    </part>
+
+    <!--
     <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-Sorting1.xml" />
-    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-Hadoop_Versions.xml" />
-    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-Hadoop_V1_V2.xml" />
-    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-HA.xml" />
-    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-Benchmarking_Hadoop.xml" />
-    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-Handy_Classes.xml" />
-    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-Handy_Classes_HBase.xml" />
+    -->
 </book>
