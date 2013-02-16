@@ -74,17 +74,32 @@
                         <type>zip</type>
                         <scope>runtime</scope>
                     </dependency>
+                    <dependency>
+                        <groupId>net.sf.xslthl</groupId>
+                        <artifactId>xslthl</artifactId>
+                        <version>2.0.1</version>
+                        <scope>runtime</scope>
+                    </dependency>
+                    <dependency>
+                        <groupId>net.sf.offo</groupId>
+                        <artifactId>fop-hyph</artifactId>
+                        <version>1.2</version>
+                        <scope>runtime</scope>
+                    </dependency>
                 </dependencies>
                 <configuration>
                     <xincludeSupported>true</xincludeSupported>
                     <useIdAsFilename>true</useIdAsFilename>
                     <sectionAutolabelMaxDepth>100</sectionAutolabelMaxDepth>
+                    <chunkFirstSections>0</chunkFirstSections>
+                    <chunkSectionDepth>0</chunkSectionDepth>
                     <sectionAutolabel>true</sectionAutolabel>
                     <sectionLabelIncludesComponentLabel>true</sectionLabelIncludesComponentLabel>
                     <tocMaxDepth>2</tocMaxDepth>
                     <insertXrefPageNumber>yes</insertXrefPageNumber>
                     <!-- <targetDirectory>${basedir}/target/docbkx</targetDirectory> -->
                     <chunkerOutputEncoding>UTF-8</chunkerOutputEncoding>
+                    <highlightSource>1</highlightSource>
                 </configuration>
                 <executions>
                     <execution>
