@@ -46,7 +46,7 @@
               We want our system to be cost-effective.  So we are not going to use these 'expensive' machines.  Instead we will opt to use commodity hardware.  By that we don't mean cheapo desktop class machines.  We will use performant server class machines -- but these will be commodity servers that you can order from any of the vendors (Dell, HP ...etc)
           </para>
           <para>
-              So what do these server machines look like?  Look at the <xref linkend="hardware"/> guide.
+              So what do these server machines look like?  Look at the <xref linkend="chapter-Hardware_Software"/> guide.
           </para>
       </sect2>
       <sect2>
@@ -64,7 +64,11 @@
 
       <para>
           So right now, our 'architecture' looks some thing like this
-         <graphic fileref="hdfs1.jpg"></graphic>
+            <mediaobject>
+                <imageobject>
+                    <imagedata fileref="hdfs1.jpg" format="JPG" scale="100" />
+                </imageobject>
+            </mediaobject>
       </para>
 
       <sect2>
@@ -84,7 +88,11 @@
           </para>
           <para>
               So here is an updated diagram:
-                <graphic fileref="hdfs2.jpg"></graphic>
+            <mediaobject>
+                <imageobject>
+                    <imagedata fileref="hdfs2.jpg" format="JPG" scale="100" />
+                </imageobject>
+            </mediaobject>
           </para>
       </sect2>
 
@@ -95,7 +103,11 @@
           </para>
           <para>
               so now our architecture looks like this.  We have a single master node and multiple worker nodes.
-              <graphic fileref="hdfs3.jpg"></graphic>
+            <mediaobject>
+                <imageobject>
+                    <imagedata fileref="hdfs3.jpg" format="JPG" scale="100" />
+                </imageobject>
+            </mediaobject>
           </para>
       </sect2>
 
@@ -110,7 +122,11 @@
           Thanks for playing the game; we have pretty much arrived at the archiecture of HDFS by playing our 'design game'.  HDFS looks very similar architecturally.
       </para>
 
-      <graphic fileref="hdfs4.jpg"></graphic>
+            <mediaobject>
+                <imageobject>
+                    <imagedata fileref="hdfs4.jpg" format="JPG" scale="100" />
+                </imageobject>
+            </mediaobject>
       <para>
           lets go over some principles of HDFS.  First lets consider the parallels between 'our design' and actual HDFS design.
       </para>
@@ -159,8 +175,12 @@
               why is this?
           </para>
           <para>
-              HDFS is built to work with mechanical disks.  With the disk drives, the capacity has gone up in recent years.  How ever, the seek times haven't improved all that much.  So hadoop tries to minimize the disk seeks.  
-         <graphic fileref="disk_seek.png"></graphic>
+              HDFS is built to work with mechanical disks.  With the disk drives, the capacity has gone up in recent years.  How ever, the seek times haven't improved all that much.  So hadoop tries to minimize the disk seeks.
+            <mediaobject>
+                <imageobject>
+                    <imagedata fileref="disk_seek.png" format="PNG" scale="100" />
+                </imageobject>
+            </mediaobject>
           </para>
       </sect2>
 
@@ -171,7 +191,11 @@
           </para>
           <para>
               How ever appending to a file is supported.  Appending is supported to enable applications like HBase
-         <graphic fileref="file_append.jpg"></graphic>
+            <mediaobject>
+                <imageobject>
+                    <imagedata fileref="file_append.jpg" format="JPG" scale="100" />
+                </imageobject>
+            </mediaobject>
           </para>
         </sect2>
 
@@ -190,7 +214,11 @@
             </sidebar>
             <para>
                 So a 1G file is split into 8 blocks,  The last one being a 'partial' block
-         <graphic fileref="blocks.jpg"></graphic>
+            <mediaobject>
+                <imageobject>
+                    <imagedata fileref="blocks.jpg" format="JPG" scale="100" />
+                </imageobject>
+            </mediaobject>
             </para>
             <para>
                 And a 100M file consists of only one block.  And files smaller than a block only takes up that much space on disk, HDFS doesn't pad files.
