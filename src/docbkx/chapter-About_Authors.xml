@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter version="5.0" xml:id="chapter-About_Authors" xmlns="http://docbook.org/ns/docbook"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xi="http://www.w3.org/2001/XInclude"
+    xmlns:svg="http://www.w3.org/2000/svg"
+    xmlns:m="http://www.w3.org/1998/Math/MathML"
+    xmlns:html="http://www.w3.org/1999/xhtml"
+    xmlns:db="http://docbook.org/ns/docbook">
+
+    <title>About Authors</title>
+    <para>
+        <mediaobject> <imageobject>
+                <imagedata fileref="mark_and_sujee.jpg" format="JPG" scale="50" /> </imageobject>
+        </mediaobject>
+    </para>
+
+    <simplesect>
+        <title>Hello from Mark and Sujee</title>
+        <para>
+            HI there!<sbr/>
+            Welcome to Hadoop Illuminated.  This book is brought to you by two authors -- Mark Kerzner and Sujee Maniyam.  Both of us have been working in Hadoop eco system for a number of years.  We have implemented hadoop solutions and taught training courses in hadoop.  We both benefited from Hadoop and Open Source community tremendously.  So when we thought about writing a book on Hadoop, we choose to do it in the open, fully Open Source way !  It is a miniscule token of thank you from both of us to the Hadoop community.
+        </para>
+    </simplesect>
+
+
+    <simplesect>
+        <title>Mark Kerzner (Author)</title>
+        <para>
+            About Mark
+        </para>
+    </simplesect>
+
+    <simplesect>
+        <title>Rebecca Kerzner (Illustrator)</title>
+        <para>
+            The delightful artwork appearing in this book has been created by talented Rebecca Kerzner.  Rebecca is Mark's youngest daughter.  She attends school at XXX.   Her collection of artwork can be seen <link xlink:href="https://picasaweb.google.com/110574221375288281850/RebeccaSArt">here</link>
+        </para>
+    </simplesect>
+
+    <simplesect>
+        <title>Sujee Maniyam (Author)</title>
+        <para>
+            Sujee Maniyam is an experienced/hands-on BigData architect.  He has been developing software for the past 12 years in a variety of technologies (enterprise, web and mobile). He currently focuses on Hadoop, BigData and NOSQL and Amazon Cloud Services.  His clients include early stage startups and enterprise companies.
+        </para>
+
+        <para>
+            Sujee stays active in Hadoop / Open Source community.  He runs a developer focused meetup called <link xlink:href="http://www.meetup.com/BigDataGurus/">'Big Data Gurus'</link>.   And he has presented at variety of meetups         </para>
+        <para>
+
+            Sujee contributes to Hadoop project and his open source projects can be found on GitHub.  He writes about Hadoop and other technologies on his website.
+        </para>
+
+        <para>
+            Sujee has been doing Hadoop training for individuals and corporations; his classes are hands-on and draws heavily on his industry experience
+        </para>
+        Links: <sbr/>
+        <link xlink:href="http://www.linkedin.com/in/sujeemaniyam">LinkedIn</link>  || 
+        <link xlink:href="https://github.com/sujee">GitHub</link> || 
+        <link xlink:href="http://sujee.net/tech/articles/">Tech writings</link>  || 
+        <link xlink:href="http://sujee.net/tech/talks/">Tech talks</link>  ||
+        <link xlink:href="http://www.meetup.com/BigDataGurus/">BigDataGuru meetup</link>
+
+    </simplesect>
+</chapter>

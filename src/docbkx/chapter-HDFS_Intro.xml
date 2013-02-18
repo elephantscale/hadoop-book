@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter version="5.0" xml:id="chapter-HDFS_Intro" xmlns="http://docbook.org/ns/docbook"
+         xmlns:xlink="http://www.w3.org/1999/xlink"
+         xmlns:xi="http://www.w3.org/2001/XInclude"
+         xmlns:svg="http://www.w3.org/2000/svg"
+         xmlns:m="http://www.w3.org/1998/Math/MathML"
+         xmlns:html="http://www.w3.org/1999/xhtml"
+         xmlns:db="http://docbook.org/ns/docbook">
+
+  <title>Hadoop Distributed File System (HDFS) -- Concept and Design</title>
+  <para>
+      In this chapter we will learn about Hadoop Distributed File System, also known as HDFS.   When people say 'hadoop' it usually includes two core components : HDFS and MapReduce
+  </para>
+  <para>
+      HDFS is the 'file system' or 'storage layer' of hadoop.  It takes care of storing data -- and it can handle very large amount of data (in PetaBytes scale).
+  </para>
+  <para>
+      Usually at this point, many books will rattle off the charecteristics of HDFS.  We will take a different approach.  We will 'arrive' at these design priciples on our own :-)
+  </para>
+
+  <sect1>
+      <title>The game : Let's design HDFS from scratch</title>
+      <para>
+          So lets say our boss walks into our office (or cubicle more likely -- or just my desk in case of open layout offices) and says "I would like you to design a clustered file system that can handle peta bytes of data, runs on commodity servers and can with stand hardware failures"
+      </para>
+      <para>
+          Ok, so lets begin!
+      </para>
+
+      <sect2>
+          <title>Must run on cluster of networked computers</title>
+          <para>
+              Today's big data is 'too big' to store in ONE single computer -- no matter how powerful it is and how much storage it has.  This eliminates lot of storage system and databases that were built for single machines.  So we are going to build the system to run on multiple networked computers.  The file system will look unified single file system to the 'outside' world
+          </para>
+          <para>
+              So our cluster of machines will communicate with each other.
+          </para>
+      </sect2>
+
+      <sect2>
+          <title>Commodity Hardware</title>
+          <para>
+              Now that we have decided that we need a cluster of computers, what kind of machines are they?  Tradionally storage machines are expensive with top-end components, sometimes with 'exotic' components (e.g. fiber channel for disk arrays ..etc).  Obviously these computers cost a pretty penny.
+          </para>
+          <para>
+              We want our system to be cost-effective.  So we are not going to use these 'expensive' machines.  Instead we will opt to use commodity hardware.  By that we don't mean cheapo desktop class machines.  We will use performant server class machines -- but these will be commodity servers that you can order from any of the vendors (Dell, HP ...etc)
+          </para>
+          <para>
+              So what do these server machines look like?  Look at the <xref linkend="chapter-Hardware_Software"/> guide.
+          </para>
+      </sect2>
+      <sect2>
+          <title>Hardware failure is not only common, but expected</title>
+          <para>
+              In the old days of distributed computing, failure was an exception, an error as in not tolerated.  So companies providing gear for distributed computing made sure their hardware seldom failed.  This is achieved by using high quality components, and having backup systems (in come cases backup to backup systems!).  So the machines are engineered to withstand component failures, but still keep functioning.  This line of thinking created hardware that is impressive, but EXPENSIVE!
+          </para>
+          <para>
+              On the other hand we are going with commodity hardware.  These don't have high end whizz bang components like the main frames mentioned above.  So they are going to fail -- and fail often.  We need to prepared for this.  How?
+          </para>
+          <para>
+              The approach we will take is we build the 'intelligence' into the software.  So the cluster software will be smart enough to handle hardware failure.  The software detects hardware failures and takes corrective actions automatically -- without human intervention.  Our software will be smarter!
+          </para>
+      </sect2>
+
+      <para>
+          So right now, our 'architecture' looks some thing like this
+            <mediaobject>
+                <imageobject>
+                    <imagedata fileref="hdfs1.jpg" format="JPG" scale="100" />
+                </imageobject>
+            </mediaobject>
+      </para>
+
+      <sect2>
+          <title>Preventing data loss in case of node failure</title>
+          <para>
+              So now we have a network of machines serving as a storage layer.  Data is spread out all over the nodes.  What happens when a node fails (and remember, we EXPECT nodes to fail).  All the data on that node will become unavailable (or lost).  So how do we prevent it?
+          </para>
+          <para>
+              One approach is to make multiple copies of this data and store them on different machines.  So even if one node goes down, other nodes will have the data.  This is called 'replication'.  Standard replica is 3.
+          </para>
+      </sect2>
+
+      <sect2>
+          <title>Each machine will run a storage 'layer'</title>
+          <para>
+            Since each machine is part of the 'storage', we will have a 'daemon' running on each machine to manage storage for that machine.  These deamons will talk to each other to exchange data.
+          </para>
+          <para>
+              So here is an updated diagram:
+            <mediaobject>
+                <imageobject>
+                    <imagedata fileref="hdfs2.jpg" format="JPG" scale="100" />
+                </imageobject>
+            </mediaobject>
+          </para>
+      </sect2>
+
+      <sect2>
+          <title>One NODE to rule them all</title>
+          <para>
+              Ok, now we have all these nodes storing data, how do we co-ordinate among them?  One approach is to have a MASTER to be co-ordinator.  While building distributed systems with centralized co-ordinator may seem like an odd idea, it is not a bad choice.  It simplifies architecture, design and implementation of the system
+          </para>
+          <para>
+              so now our architecture looks like this.  We have a single master node and multiple worker nodes.
+            <mediaobject>
+                <imageobject>
+                    <imagedata fileref="hdfs3.jpg" format="JPG" scale="100" />
+                </imageobject>
+            </mediaobject>
+          </para>
+      </sect2>
+
+
+  </sect1>
+
+  <sect1>
+      <title>
+          HDFS Architecture
+      </title>
+      <para>
+          Thanks for playing the game; we have pretty much arrived at the archiecture of HDFS by playing our 'design game'.  HDFS looks very similar architecturally.
+      </para>
+
+            <mediaobject>
+                <imageobject>
+                    <imagedata fileref="hdfs4.jpg" format="JPG" scale="100" />
+                </imageobject>
+            </mediaobject>
+      <para>
+          lets go over some principles of HDFS.  First lets consider the parallels between 'our design' and actual HDFS design.
+      </para>
+
+      <sect2>
+          <title>Master / worker design</title>
+          <para>
+              In HDFS cluster, there is ONE master node  and many worker nodes.  The master node is called Name Node (NN), the workers are called Data Nodes (DN).  Data nodes actually store the data.   They are the work horses.
+          </para>
+          <para>
+              Name Node is in charge of file system operations (like creating files, user permissions ...etc).   Without it, the cluster will be in-operable.  No one can write data or read data. <sbr/>
+              This is called Single Point of Failure.  We will look more into this later.
+          </para>
+      </sect2>
+
+      <sect2>
+          <title>Runs on commodity hardware</title>
+          <para>
+              As we saw hadoop doesn't need fancy, high end hardware.  It is designed to run on commodity hardware. Hadoop stack is built to deal with hardware failure.  The file system will continue to function if even nodes fail.
+          </para>
+      </sect2>
+
+      <sect2>
+          <title>HDFS is resilient (even in case of node failure)</title>
+          <para>
+              As we saw hadoop doesn't need fancy, high end hardware.  It is designed to run on commodity hardware. Hadoop stack is built to deal with hardware failure.  The file system will continue to function if even nodes fail.  Hadoop does this by duplicating data across nodes
+          </para>
+      </sect2>
+
+      <sect2>
+          <title>Data is replicated</title>
+          <para>
+              So how does hadoop data safe and resilient in case of node failure?  Simple, it keeps multiple copies of data around the cluster.
+          </para>
+          <para>
+              To understand how replication works, lets look at the following scenario.  Data segment #2 is replicated 3 times on data nodes A, B and D.  Lets say data node A fails.  The data is still accessible from nodes B and D.
+          </para>
+      </sect2>
+
+      <sect2>
+          <title>HDFS is better suited for large files</title>
+          <para>
+              Generic file systems, say like Linux EXT file systems, will store files of varying size... from few bytes to few giga bytes.  HDFS is how ever is designed to store large files.  Large as in few hundred megabytes to few giga bytes
+          </para>
+          <para>
+              why is this?
+          </para>
+          <para>
+              HDFS is built to work with mechanical disks.  With the disk drives, the capacity has gone up in recent years.  How ever, the seek times haven't improved all that much.  So hadoop tries to minimize the disk seeks.
+            <mediaobject>
+                <imageobject>
+                    <imagedata fileref="disk_seek.png" format="PNG" scale="100" />
+                </imageobject>
+            </mediaobject>
+          </para>
+      </sect2>
+
+      <sect2>
+          <title>Files are write-once only (not updateable)</title>
+          <para>
+              HDFS supports writing files once, but they can not be updated.  This is a stark difference between HDFS and a generic file system (like a Linux file system).  Generic file systems allows files to be modified.
+          </para>
+          <para>
+              How ever appending to a file is supported.  Appending is supported to enable applications like HBase
+            <mediaobject>
+                <imageobject>
+                    <imagedata fileref="file_append.jpg" format="JPG" scale="100" />
+                </imageobject>
+            </mediaobject>
+          </para>
+        </sect2>
+
+        <sect2>
+            <title>
+                HDFS Files are split into blocks
+            </title>
+            <para>
+                Just like most file systems, HDFS splits files into blocks.  How ever the block sizes are very large.  A linux file system block size is about 4 Kilo bytes (KB).  Typial HDFS block size is about 128 MBytes.  This is about 32,000 bigger than linux.  Again this goes to the point of supporting large files.
+            </para>
+            <sidebar>
+                <title> Different block sizes:</title>
+                disk block size : usually 512 bytes <sbr/>
+                Linux file size : around 4KB <sbr/>
+                Hadoop block size : 128 MB <sbr/>
+            </sidebar>
+            <para>
+                So a 1G file is split into 8 blocks,  The last one being a 'partial' block
+            <mediaobject>
+                <imageobject>
+                    <imagedata fileref="blocks.jpg" format="JPG" scale="100" />
+                </imageobject>
+            </mediaobject>
+            </para>
+            <para>
+                And a 100M file consists of only one block.  And files smaller than a block only takes up that much space on disk, HDFS doesn't pad files.
+            </para>
+            <para>
+                HDFS actually replicates the blocks (not the files).
+            </para>
+            <para>
+                Block size can be configured for each file.
+            </para>
+        </sect2>
+  </sect1>
+
+</chapter>

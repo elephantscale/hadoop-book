@@ -9,3 +9,13 @@ Notes for the book:
 - running DistCP
 
 - connecting to two different hadoop clusters (config)
+
+- hadoop versions : http://drcos.boudnik.org/2013/02/one-more-hadoop-in-family.html
+
+- slive : http://blogs.wandisco.com/2013/02/12/running-slive-test-on-wdd/
+
+
+Docbooks
+---
+- http://stackoverflow.com/questions/1277132/impressive-docbook-example
+- docbooks best practices from jboss docs team : http://www.jboss.org/pressgang/jdg.html

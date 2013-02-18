@@ -1,0 +1,85 @@
+Hadoop Illuminated Outline
+--------------------------
+
+Part 1:  Hadoop 101
+    - About
+        . about the book
+        . about the authors
+
+    - Big Data
+        . what is big data
+        . where does big data comes from
+        . examples of big data in the world
+        . challenges with big data
+        . how hadoop can solve big data problems
+
+    - Hadoop
+        . introduction
+        . history
+        . concepts
+        . hadoop eco system
+
+    - HDFS intro
+        . concepts
+        . architecture
+
+    - MapReduce intro
+        . concepts
+        . architecture
+
+    - Ecosystem
+        . pig, hive, hbase, zookeeper, avro
+
+    - hadoop distributions
+
+    - Hadoop use cases
+
+    - hadoop road map
+
+    - Hadoop in real world
+        . who is using hadoop
+
+
+Part II : In Depth
+
+    - HDFS -- in depth
+        . deeper concepts
+        . excercise : command line interface,  java interface
+
+
+    - Map REduce -- indepth
+        . excercises throughout
+        . sorting
+        . joins
+        . counters
+        . distributed cache
+        . spec execution
+
+    - Hadoop HA
+
+    - Hadoop benchmarking
+
+    - hadoop hardware / software
+
+    - hadoop version history
+
+    - hadoop 2 vs hadoop 1
+
+    - hadoop reference architectures
+        . loading data into hdfs (flume, scribe, sqoop)
+
+    - indepth ecosystem (flume, scribe, avro, zookeeper, pig, hive, hbase, mahout)
+
+    - handy classes
+
+
+part III : HBase
+
+
+Part IV:  Cook book
+    - how to install single node hadoop
+
+    - how to setup multi node cluster
+
+    - hadoop pitfalls (DNS, networking ...etc)
+

@@ -1,6 +1,6 @@
-
+<?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.hadoopilluminated</groupId>
@@ -63,41 +63,123 @@
             <plugin>
                 <groupId>com.agilejava.docbkx</groupId>
                 <artifactId>docbkx-maven-plugin</artifactId>
+                <version>2.0.14</version>
+                <inherited>false</inherited>
+                <dependencies>
+                    <dependency>
+                        <groupId>net.sf.docbook</groupId>
+                        <artifactId>docbook-xml</artifactId>
+                        <version>5.0-all</version>
+                        <classifier>resources</classifier>
+                        <type>zip</type>
+                        <scope>runtime</scope>
+                    </dependency>
+                    <dependency>
+                        <groupId>net.sf.xslthl</groupId>
+                        <artifactId>xslthl</artifactId>
+                        <version>2.0.1</version>
+                        <scope>runtime</scope>
+                    </dependency>
+                    <dependency>
+                        <groupId>net.sf.offo</groupId>
+                        <artifactId>fop-hyph</artifactId>
+                        <version>1.2</version>
+                        <scope>runtime</scope>
+                    </dependency>
+                </dependencies>
+                <configuration>
+                    <xincludeSupported>true</xincludeSupported>
+                    <useIdAsFilename>true</useIdAsFilename>
+                    <sectionAutolabelMaxDepth>100</sectionAutolabelMaxDepth>
+                    <chunkFirstSections>0</chunkFirstSections>
+                    <chunkSectionDepth>0</chunkSectionDepth>
+                    <sectionAutolabel>true</sectionAutolabel>
+                    <sectionLabelIncludesComponentLabel>true</sectionLabelIncludesComponentLabel>
+                    <tocMaxDepth>2</tocMaxDepth>
+                    <insertXrefPageNumber>yes</insertXrefPageNumber>
+                    <!-- <targetDirectory>${basedir}/target/docbkx</targetDirectory> -->
+                    <chunkerOutputEncoding>UTF-8</chunkerOutputEncoding>
+                    <highlightSource>1</highlightSource>
+                </configuration>
                 <executions>
                     <execution>
-                    <id>multipage</id>
-                    <goals>
-                        <goal>generate-html</goal>
-                    </goals>
-                    <!-- <phase>pre-site</phase> -->
-                    <configuration>
-                        <navigShowtitles>true</navigShowtitles>
-                        <chunkedOutput>true</chunkedOutput>
-                        <imgSrcPath>../images/</imgSrcPath>
-                    </configuration>
-                </execution>
-                <!--
-                <execution>
-                    <id>onepage</id>
-                    <goals>
-                        <goal>generate-html</goal>
-                    </goals>
-                    <configuration>
-                        <imgSrcPath>images/</imgSrcPath>
-                        <htmlStylesheet>css/freebsd_docbook.css</htmlStylesheet>
-                    </configuration>
-                </execution>
-                -->
-                <execution>
-                    <phase>generate-sources</phase>
-                </execution>
+                        <id>multipage</id>
+                        <goals>
+                            <goal>generate-html</goal>
+                        </goals>
+                        <phase>pre-site</phase>
+                        <configuration>
+                            <targetDirectory>${basedir}/target/docbkx/multipage</targetDirectory>
+                            <navigShowtitles>true</navigShowtitles>
+                            <chunkedOutput>true</chunkedOutput>
+                            <imgSrcPath>images/</imgSrcPath>
+                            <htmlStylesheet>css/jbossorg.css</htmlStylesheet>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>onepage</id>
+                        <goals>
+                            <goal>generate-html</goal>
+                        </goals>
+                        <phase>pre-site</phase>
+                        <configuration>
+                            <targetDirectory>${basedir}/target/docbkx/singlepage</targetDirectory>
+                            <imgSrcPath>../images/</imgSrcPath>
+                            <htmlStylesheet>../css/jbossorg.css</htmlStylesheet>
+                        </configuration>
+                    </execution>
                 </executions>
-                <version>2.0.13</version>
-                <configuration>
-                   <xincludeSupported>true</xincludeSupported>
-                   <chunkedOutput>false</chunkedOutput>
-                 </configuration>
             </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>2.6</version>
+                <inherited>false</inherited>
+                <executions>
+                    <execution>
+                        <id>copy-docbkx</id>
+                        <goals>
+                            <goal>copy-resources</goal>
+                        </goals>
+                        <phase>pre-site</phase>
+                        <configuration>
+                            <outputDirectory>target/site</outputDirectory>
+                            <resources>
+                                <resource>
+                                    <directory>${basedir}/target/docbkx/multipage/index</directory>
+                                    <includes>
+                                        <include>**/**</include>
+                                    </includes>
+                                </resource>
+                                <resource>
+                                    <directory>${basedir}/target/docbkx</directory>
+                                    <includes>
+                                        <include>singlepage/**</include>
+                                    </includes>
+                                </resource>
+                                <resource>
+                                    <directory>${basedir}/src/docbkx</directory>
+                                    <includes>
+                                        <include>css/**</include>
+                                    </includes>
+                                </resource>
+                                <resource>
+                                    <directory>${basedir}/src/docbkx</directory>
+                                    <includes>
+                                        <include>images/**</include>
+                                    </includes>
+                                </resource>
+                            </resources>
+                        </configuration>
+                    </execution>
+                </executions>
+                <configuration>
+                    <escapeString>\</escapeString>
+                </configuration>
+            </plugin>
+
+
         </plugins>
     </build>
     <properties>
