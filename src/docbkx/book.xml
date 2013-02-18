@@ -89,12 +89,18 @@
             <literallayout>
             </literallayout>
         </partintro>
+        <para>
+            Coming sooner
+        </para>
+        <!--
         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-HDFS_Namenode.xml" />
         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-Hardware_Software.xml" />
         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-Hadoop_Versions.xml" />
         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-Hadoop_V1_V2.xml" />
         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-HA.xml" />
         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-Benchmarking_Hadoop.xml" />
+        -->
+        
     </part>
 
     <part label="IV">

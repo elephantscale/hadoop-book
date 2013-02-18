@@ -147,7 +147,7 @@
                             <outputDirectory>target/site</outputDirectory>
                             <resources>
                                 <resource>
-                                    <directory>${basedir}/target/docbkx/multipage/index</directory>
+                                    <directory>${basedir}/target/docbkx/multipage/book</directory>
                                     <includes>
                                         <include>**/**</include>
                                     </includes>
