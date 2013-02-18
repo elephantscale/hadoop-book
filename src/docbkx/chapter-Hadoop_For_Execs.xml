@@ -7,25 +7,89 @@
          xmlns:html="http://www.w3.org/1999/xhtml"
          xmlns:db="http://docbook.org/ns/docbook">
 
-  <title>Hadoop for Executives (TODO - Sujee)</title>
+  <title>Hadoop for Executives</title>
+  <para>
+      This section is a quick 'fact sheet' in a Q&amp;A format.
+  </para>
   <section>
-      <title>section 1</title>
+      <title>What is Hadoop?</title>
       <para>
-          para1
+          Hadoop is an open source software stack that runs on a cluster of machines.  Hadoop provides distributed storage and distributed processing for very large data sets.
       </para>
   </section>
 
-  <!-- nested section -->
-  <sect1>
-      <title>sect1</title>
+  <section>
+      <title>What is the license  of Hadoop?</title>
       <para>
-          para2
+          Hadoop is open source software.  It is an Apache project and released under Apache Open Source License v2.0.  This license is very commercial friendly.
       </para>
-      <sect2>
-          <title>sect1.1</title>
-          <para>
-              para3
-          </para>
-      </sect2>
-  </sect1>
+  </section>
+
+  <section>
+      <title>Who contributes to Hadoop?</title>
+      <para>
+          Original Hadoop was developed and open sourced by Yahoo.  Now Hadoop is developed as an Apache Software Foundation project and has numerous contributors from Cloudera, Horton Works, Facebook ..etc
+      </para>
+  </section>
+
+  <section>
+      <title>Isn't Hadoop used by foo-foo social media companies and not by enterprises</title>
+      <para>
+          Hadoop had its start in a Web company.  It is adopted pretty early in social media companies.  The reason was these companies had the Big Data problem and Hadoop offered a solution.
+      </para>
+      <para>
+          How ever, Hadoop is now making in roads into Enterprises.
+      </para>
+  </section>
+
+  <section>
+      <title>I am not sure my company has a big data problem</title>
+      <para>
+          Hadoop is designed to deal with Big Data.  So if you don't have a 'Big Data Problem', then Hadoop probably isn't the best fit for your company.  But before you stop reading right here, pleaes read on :-)
+      </para>
+      <para>
+          How much data is considered Big Data, differs from company to company.  For some companies, 10 TB of data would be considered Big Data;  for others 1 PB would be 'Big Data'.  So only you can determine how much Big Data.
+      </para>
+      <para>
+          Also, if you don't have a 'Big Data problem' now, is that because you are not capturing some data?  In some scenarios, companies forgo capturing data, because there wasn't a feasible way to store and process it.  Now that Hadoop can help with Big Data, it may be possible to start capturing data that wasn't captured before.
+      </para>
+  </section>
+
+
+  <section>
+      <title>How much does it cost to adopt Hadoop?</title>
+      <para>
+          Hadoop is open source.  The software is essentially free.  How ever running Hadoop does have other cost components.
+      </para>
+      <itemizedlist>
+          <listitem>
+              Cost of hardware : Hadoop runs on a cluster of machines.  The cluster size can be any where from 10 nodes to 1000s of nodes.  For a large cluster, the hardware costs will be significant.
+          </listitem>
+          <listitem>
+              cost of IT / OPS for standing up a large Hadoop cluster and supporting it will need to be factored in
+          </listitem>
+          <listitem>
+              Since Hadoop is a newer technology, finding people to work on this eco system is not easy.
+          </listitem>
+      </itemizedlist>
+      <para>
+          See this here for complete list of <xref linkend="chapter-Challenges"/>
+      </para>
+  </section>
+
+
+  <section>
+      <title>What distributions to use?</title>
+      <para>
+          Please see <xref linkend="chapter-Distributions"/>
+      </para>
+  </section>
+
+  <section>
+      <title>What are the some of the use cases for Hadoop?</title>
+      <para>
+          Please see <xref linkend="chapter-Hadoop_Use_Cases"/>
+      </para>
+  </section>
+
 </chapter>

@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter version="5.0" xml:id="chapter-Distributions" xmlns="http://docbook.org/ns/docbook"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xi="http://www.w3.org/2001/XInclude"
+    xmlns:svg="http://www.w3.org/2000/svg"
+    xmlns:m="http://www.w3.org/1998/Math/MathML"
+    xmlns:html="http://www.w3.org/1999/xhtml"
+    xmlns:db="http://docbook.org/ns/docbook">
+
+    <title>Hadoop Distributions</title>
+    <section>
+        <title>Why distributions?</title>
+        <para>
+            Hadoop is an Apache software.  So it is freely available for download and use.   So why do we need distributions at all?
+        </para>
+        <para>
+            This is very akin to Linux a few years back and Linux distributions like RedHat, Suse and Ubuntu.  Surely the software is free to download and use.  But distributions offer a easier to use bundle.
+        </para>
+        <para>
+            So what do Hadoop distros offer?
+        </para>
+        <glosslist>
+            <glossentry>
+                <glossterm>Distributions provide easy to install mediums like RPMs</glossterm>
+                <glossdef>
+                    <para>
+                        Apache version of Hadoop is just TAR balls.   Lot of distros actually package it nicely into easy to install packages.  Install packages make it easy for system administrators to manage software effectively.
+                    </para>
+                </glossdef>
+            </glossentry>
+
+            <glossentry>
+                <glossterm>Distros package multiple components that work well together</glossterm>
+                <glossdef>
+                    <para>
+                        Hadoop ecosystem contains a lot of components (Hbase, pig, hive, zookeeper ..etc).   These components are developed independently and have their own release schedules.  And there are version dependencies among thse components.  For example version 0.92 of HBase needs a particular version of HDFS.
+                    </para>
+                    <para>
+                        Distros bundle versions of components that work well together. This provides a working hadoop installation right out of the box.
+                    </para>
+                </glossdef>
+            </glossentry>
+
+            <glossentry>
+                <glossterm>Tested</glossterm>
+                <glossdef>
+                    <para>
+                        Distro makers strive to ensure good quality components.
+                    </para>
+                </glossdef>
+            </glossentry>
+
+            <glossentry>
+                <glossterm>Performance patches</glossterm>
+                <glossdef>
+                    <para>
+                        Some times, distros lead the way of including performance patches to the 'vanilla' versions.
+                    </para>
+                </glossdef>
+            </glossentry>
+
+            <glossentry>
+                <glossterm>Predictiable upgrade path</glossterm>
+                <glossdef>
+                    <para>
+                        Distros have predictable, product release road maps.  This ensures they keep up with developments and bug fixes.
+                    </para>
+                </glossdef>
+            </glossentry>
+
+            <glossentry>
+                <glossterm>Predictiable upgrade path</glossterm>
+                <glossdef>
+                    <para>
+                        Distros have predictable, product release road maps.  This ensures they keep up with developments and bug fixes.
+                    </para>
+                </glossdef>
+            </glossentry>
+
+            <glossentry>
+                <glossterm>And most importantly.. SUPPORT</glossterm>
+                <glossdef>
+                    <para>
+                        Lot of distros will come with support, which could be very valuable for a production critical cluster.
+                    </para>
+                </glossdef>
+            </glossentry>
+        </glosslist>
+    </section>
+
+    <section>
+        <title>Overview of Hadoop Distributions</title>
+
+        <table id="table-hadoop-distros" frame="all">
+            <title>Hadoop Distributions</title>
+            <tgroup cols='3' align='left' colsep='1' rowsep='1'>
+                <thead>
+                    <row>
+                        <entry>Distro</entry>
+                        <entry>Remarks</entry>
+                        <entry>Free / Premium</entry>
+                    </row>
+                </thead>
+                <tbody>
+                    <row>
+                        <entry>
+                            Apache <sbr/>
+                            <link xlink:href="http://hadoop.apache.org">hadoop.apache.org</link>
+                        </entry>
+                        <entry>
+                            <itemizedlist>
+                                <listitem>The Hadoop Source</listitem>
+                                <listitem>No packaging except tar balls</listitem>
+                                <listitem>No extra tools</listitem>
+                            </itemizedlist>
+                        </entry>
+                        <entry>
+                            Completely free and open source
+                        </entry>
+                    </row>
+                    <row>
+                        <entry>
+                            Cloudera <sbr/>
+                            <link xlink:href="http://www.cloudera.com">www.cloudera.com</link>
+                        </entry>
+                        <entry>
+                            <itemizedlist>
+                                <listitem>Oldest distro in the block</listitem>
+                                <listitem>Very polished</listitem>
+                                <listitem>Comes with good tools to install and manage a Hadoop cluster</listitem>
+                            </itemizedlist>
+                        </entry>
+                        <entry>
+                            Free / Premium model for depending on cluster size
+                        </entry>
+                    </row>
+                    <row>
+                        <entry>
+                            HortonWorks <sbr/>
+                            <link xlink:href="http://www.hortonworks.com">www.hortonworks.com</link>
+                        </entry>
+                        <entry>
+                            <itemizedlist>
+                                <listitem>Newer distro</listitem>
+                                <listitem>Tracks Apache Hadoop closely</listitem>
+                                <listitem>Comes with tools to manage and administer a cluster</listitem>
+                            </itemizedlist>
+                        </entry>
+                        <entry>
+                            Completely open source
+                        </entry>
+                    </row>
+                    <row>
+                        <entry>
+                            MapR <sbr/>
+                            <link xlink:href="http://www.mapr.com">www.mapr.com</link>
+                        </entry>
+                        <entry>
+                            <itemizedlist>
+                                <listitem>MapR has their own file system (alternative to HDFS)</listitem>
+                                <listitem>Boasts higher performance</listitem>
+                                <listitem>nice set of tools to manage and administer a cluster</listitem>
+                                <listitem>Does not suffer from Single Point of Failure</listitem>
+                                <listitem>Offer some cool features like : mirroring, snapshots ..etc</listitem>
+                            </itemizedlist>
+                        </entry>
+                        <entry>
+                            Free / Premium model
+                        </entry>
+                    </row>
+                    <row>
+                        <entry>
+                            WANdisco <sbr/>
+                            <link xlink:href="http://www.wandisco.com">www.wandisco.com</link>
+                        </entry>
+                        <entry>
+                            <itemizedlist>
+                                <listitem>Newer distro</listitem>
+                                <listitem>hadoop version 2</listitem>
+                                <listitem>Comes with tools to manage and administer a cluster</listitem>
+                            </itemizedlist>
+                        </entry>
+                        <entry>
+                            Free / Premium model
+                        </entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+    </section>
+</chapter>
