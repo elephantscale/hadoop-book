@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <book version="5.0" xmlns="http://docbook.org/ns/docbook"
-    xmlns:xlink="http://www.w3.org/1999/xlink"
-    xmlns:xi="http://www.w3.org/2001/XInclude"
-    xmlns:svg="http://www.w3.org/2000/svg"
-    xmlns:m="http://www.w3.org/1998/Math/MathML"
-    xmlns:html="http://www.w3.org/1999/xhtml"
-    xmlns:db="http://docbook.org/ns/docbook" xml:id="book">
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      xmlns:xi="http://www.w3.org/2001/XInclude"
+      xmlns:svg="http://www.w3.org/2000/svg"
+      xmlns:m="http://www.w3.org/1998/Math/MathML"
+      xmlns:html="http://www.w3.org/1999/xhtml"
+      xmlns:db="http://docbook.org/ns/docbook" xml:id="book">
+
     <title>Hadoop Illuminated</title>
     <info>
         <authorgroup>
@@ -24,6 +25,9 @@
         </authorgroup>
     </info>
 
+    <para>
+        Copyright © 2013 Hadoop Illuminated LLC. All Rights Reserved. 
+    </para>
 
     <dedication>
         <para>To the open source community
@@ -33,6 +37,9 @@
         </para>
     </dedication>
     <acknowledgements>
+        <para>
+            From Mark
+        </para>
         <para>
             I would like to express gratitude to my editors, co-authors, colleagues, and bosses
             who shared the thorny path to working clusters - with the hope to make it less thorny for
@@ -47,6 +54,13 @@
                 <emphasis>Victor Pelevin</emphasis>
             </ulink>
         </para>
+        <para>
+            From Sujee
+        </para>
+        <para>
+            ...
+        </para>
+
     </acknowledgements>
 
     <part label="I">
