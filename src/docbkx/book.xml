@@ -25,10 +25,6 @@
         </authorgroup>
     </info>
 
-    <para>
-        Copyright © 2013 Hadoop Illuminated LLC. All Rights Reserved. 
-    </para>
-
     <dedication>
         <para>To the open source community
         </para>
@@ -60,7 +56,9 @@
         <para>
             ...
         </para>
-
+        <para>
+            Copyright © 2013 Hadoop Illuminated LLC. All Rights Reserved. 
+        </para>
     </acknowledgements>
 
     <part label="I">
