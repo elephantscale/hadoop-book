@@ -188,4 +188,52 @@
             </tgroup>
         </table>
     </section>
+
+
+    <section>
+        <title>Hadoop in the Cloud</title>
+        <mediaobject>
+            <info>
+                <othercredit>
+                    <orgname>O'Reilly Media</orgname>
+                </othercredit>
+            </info>
+            <imageobject>
+                <imagedata fileref="hadoop_in_cloud.png" format="PNG" scale="100" />
+            </imageobject>
+        </mediaobject>
+
+
+        <para>
+            Elephants can really fly in the clouds!  Most cloud providers offer Hadoop.
+        </para>
+
+        <sect2>
+            <title>Hadoop clusters in the Cloud</title>
+            <para>
+                Hadoop clusters can be setup in any cloud service that offers suitable machines.
+            </para>
+            <para>
+                How ever, keeping up with the cloud mantra 'only pay for what you use' Hadoop can be run 'on demand' in the cloud.
+            </para>
+        </sect2>
+        <sect2>
+            <title>Amazon Elastic Map Reduce</title>
+            <para>
+                Amazon offers 'On Demand Hadoop'. This means, there is no permananent Hadoop cluster.  A cluster is spun up to do a job and after that it is shut down.  Pay for usage.
+            </para>
+            <para>
+                Amazon offers a slightly customized version of Apache Hadoop.  And also offers MapR's distribution.
+            </para>
+        </sect2>
+
+
+        <sect2>
+            <title>Google's Compute Engine</title>
+            <para>
+                Google offers MapR's Hadoop distribution in their Compute Engine Cloud.
+            </para>
+        </sect2>
+    </section>
+
 </chapter>

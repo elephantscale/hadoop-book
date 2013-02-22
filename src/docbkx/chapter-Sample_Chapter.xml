@@ -11,7 +11,17 @@
     <section>
         <title>section 1</title>
         <para>
-            para1
+            Figure
+            <figure id="sample-figure">
+                <title>Old Mac</title>
+                <mediaobject>
+                    <imageobject>
+                        <imagedata fileref="macintosh_classic1.jpg" format="JPG" scale="100" />
+                    </imageobject>
+                </mediaobject>
+            </figure>
+
+            Just an image
             <mediaobject>
                 <imageobject>
                     <imagedata fileref="macintosh_classic1.jpg" format="JPG" scale="100" />
