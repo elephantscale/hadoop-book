@@ -32,41 +32,12 @@
             <ulink url="https://github.com/markkerzner/HadoopIlluminated">Companion project on GitHub</ulink>
         </para>
     </dedication>
-    <acknowledgements>
-        <para>
-            From Mark
-        </para>
-        <para>
-            I would like to express gratitude to my editors, co-authors, colleagues, and bosses
-            who shared the thorny path to working clusters - with the hope to make it less thorny for
-            those who follow. Seriously, folks, Hadoop is hard, and Big Data is tough, and there are
-            many related products and skills that you need to master. Therefore, have fun,
-            <ulink url="http://groups.google.com/group/hadoop-illuminated">provide your feedback</ulink>,
-            and I hope you will find the book entertaining. You might even find it useful.
-        </para>
-        <para>
-            "The author's opinions do not necessarily coincide with his point of view." -
-            <ulink url="http://lib.udm.ru/lib/PELEWIN/pokolenie_engl.txt">
-                <emphasis>Victor Pelevin</emphasis>
-            </ulink>
-        </para>
-        <para>
-            From Sujee
-        </para>
-        <para>
-            ...
-        </para>
-        <para>
-            Copyright © 2013 Hadoop Illuminated LLC. All Rights Reserved. 
-        </para>
-    </acknowledgements>
 
-    <part label="I">
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="acknowledgements.xml" />
+
+    <part >
         <title>About this book</title>
         <partintro>
-            <para>
-                Hi
-            </para>
             <literallayout>
             </literallayout>
         </partintro>
@@ -75,7 +46,7 @@
         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-Code.xml" />
     </part>
 
-    <part label="II">
+    <part>
         <title>High level introduction to Hadoop</title>
         <partintro>
             <para>
@@ -91,12 +62,13 @@
         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-MapReduce_Intro.xml" />
         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-Hadoop_Use_Cases.xml" />
         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-Distributions.xml" />
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-Hardware_Software.xml" />
         <!--
              <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-Challenges.xml" />
              -->
     </part>
 
-    <part label="III">
+    <part>
         <title>Hadoop InDepth</title>
         <partintro>
             <para>
@@ -105,21 +77,34 @@
             <literallayout>
             </literallayout>
         </partintro>
+        <!--
         <para>
             Coming sooner
         </para>
-        <!--
+        -->
         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-HDFS_Namenode.xml" />
-        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-Hardware_Software.xml" />
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-MapReduce_Hello_World.xml" />
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-MapReduce_Configuration.xml" />
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-MapReduce_Counters.xml" />
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-MapReduce_Distributed_Cache.xml" />
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-MapReduce_Types.xml" />
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-MapReduce_Joins.xml" />
         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-Hadoop_Versions.xml" />
         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-Hadoop_V1_V2.xml" />
         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-HA.xml" />
         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-Benchmarking_Hadoop.xml" />
-        
-        -->
+
     </part>
 
-    <part label="IV">
+    <part>
+        <title>Hadoop Administration</title>
+        <partintro>
+            <literallayout>
+            </literallayout>
+        </partintro>
+    </part>
+
+    <part>
         <title>Hadoop Cookbook</title>
         <partintro>
             <para>

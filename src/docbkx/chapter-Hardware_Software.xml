@@ -142,6 +142,9 @@
             <para>
                 Hadoop is written in Java.  Recommended Java version is Oracle JDK 1.6 releases; recommended minimum revision is 31 (v 1.6.31)
             </para>
+            <para>
+                So what about OpenJDK?  At this point, Sun JDK is the 'official' supported JDK.  You can still run Hadoop on OpenJDK, it runs reasonably ok.  But you are on your own for support :-)
+            </para>
         </sect2>
     </sect1>
 
