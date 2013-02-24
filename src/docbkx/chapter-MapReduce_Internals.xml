@@ -7,10 +7,53 @@
     xmlns:html="http://www.w3.org/1999/xhtml"
     xmlns:db="http://docbook.org/ns/docbook">
 
-    <title>MapReduce Internals (TODO Mark)</title>
+    <title>How MapReduce Works -- The Internals (TODO Sujee)</title>
     <section>
-        <title>section 1</title>
+        <title>Job Submission Process</title>
         <para>
+            We already did a map reduce job.  Now lets look under what happens when we run a job.  There is actually quite a bit going on behind the scenes.  Lets start with a overal submission process diagram.  Note that this covers classic Map Reduce or MRV1.
+        </para>
+        <figure id="mapreduce-job-submission">
+            <title>Map Reduce Job Submission Process - Hadoop 1</title>
+            <mediaobject>
+                <imageobject>
+                    <imagedata fileref="mr_job_submission.png" format="PNG" scale="100" />
+                </imageobject>
+            </mediaobject>
+        </figure>
+
+
+        <para>
+            Whoa, that is quite a lot; let's take it in stride
         </para>
     </section>
+
+
+    <sect1>
+        <title>Client Side : Job Submission </title>
+        <para>
+            Map Reduce jobs are submitted by a client.
+            <note>
+                You don't need to login to Hadoop cluster to submit a job.  Actually in most cases Hadoop admins won't allow users to login to the cluster.  gateway machines would be setup, that have access to the Hadoop cluster.  Users will login to gateway machines and submit thier jobs.
+            </note>
+        </para>
+
+        <sect2>
+            <title>Getting JobID</title>
+            <para>
+                Each Map Reduce job gets assigned a unique id. Client contacts JobTracker to grab a new jobID.
+            </para>
+        </sect2>
+
+
+        <sect2>
+            <title>Copying job resources to HDFS</title>
+            <para>
+                Before running MR jobs on cluster nodes, we need to distribute a bunch of stuff the nodes themselves  (Remeber code to data concept?).  So what kind of things needed to be distributed?
+            </para>
+        </sect2>
+
+
+
+    </sect1>
 </chapter>

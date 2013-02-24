@@ -84,6 +84,7 @@
         -->
         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-HDFS_Namenode.xml" />
         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-MapReduce_Hello_World.xml" />
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-MapReduce_Internals.xml" />
         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-MapReduce_Configuration.xml" />
         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-MapReduce_Counters.xml" />
         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-MapReduce_Distributed_Cache.xml" />
