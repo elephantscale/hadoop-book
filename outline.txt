@@ -1,4 +1,4 @@
-Hadoop Illuminated Outline
+Hadoop illuminated Outline
 --------------------------
 
 Part 1:  Hadoop 101
