@@ -7,8 +7,11 @@
     xmlns:html="http://www.w3.org/1999/xhtml"
     xmlns:db="http://docbook.org/ns/docbook">
 
-    <title>How MapReduce Works -- The Internals (TODO Sujee)</title>
-    <section>
+    <title>How MapReduce Works -- The Internals</title>
+    <para>
+        This chapter looks 'under the hood' of Map Reduce and explains how things work.
+    </para>
+    <sect1>
         <title>Job Submission Process</title>
         <para>
             We already did a map reduce job.  Now lets look under what happens when we run a job.  There is actually quite a bit going on behind the scenes.  Lets start with a overal submission process diagram.  Note that this covers classic Map Reduce or MRV1.
@@ -26,34 +29,202 @@
         <para>
             Whoa, that is quite a lot; let's take it in stride
         </para>
+        <sect2>
+            <title>Client Side : step 1) Job Submission </title>
+            <para>
+                Map Reduce jobs are submitted by a client.
+                <note>
+                    You don't need to login to Hadoop cluster to submit a job.  Actually in most cases Hadoop admins won't allow users to login to the cluster.  Gateway machines would be setup, that have access to the Hadoop cluster.  Users will login to gateway machines and submit thier jobs.
+                </note>
+            </para>
+
+            <sect2>
+                <title>Step 2) Getting JobID</title>
+                <para>
+                    Each Map Reduce job gets assigned a unique id. Client contacts JobTracker to grab a new jobID.
+                </para>
+            </sect2>
+
+
+            <sect2>
+                <title>Step 3) Copying job resources to HDFS</title>
+                <para>
+                    Before running MR jobs on cluster nodes, we need to distribute a bunch of stuff the nodes themselves  (Remeber code to data concept?).  Following are some artifacts that get distributed.
+                </para>
+                <itemizedlist>
+                    <listitem>
+                        The Map  Reduce program jar file.  This one contains the compiled Java code.
+                    </listitem>
+                    <listitem>
+                        any other dependent jar files that is used by MR job
+                    </listitem>
+                    <listitem>
+                        any other files
+                    </listitem>
+                </itemizedlist>
+            </sect2>
+
+            <sect2>
+                <title>Step 4) Submit the job</title>
+                <para>
+                    now client submits the job to Job Tracker
+                </para>
+            </sect2>
+        </sect2>
+
+        <sect2>
+            <title>Job Tracker side : Getting the Job going</title>
+
+            <sect2>
+                <title>Step 6) Job Splits</title>
+                <para>
+                    One important concept of Map Reduce is parallilsm.  The input is divided up and processed on across the cluster.   Inputs are chopped up into what is called 'input splits'.  Job Tracker now calculates input splits.
+                </para>
+            </sect2>
+
+            <sect2>
+                <title>Step 7) job is kicked off</title>
+                <para>
+                    Job Tracker starts the job and task trackers will start executing the job
+                </para>
+            </sect2>
+        </sect2>
+
+        <sect2>
+            <title>Task Tracker side : Executing the job</title>
+            <para>
+                Job Tracker doesn't run any jobs.  Task trackers actually execute the job.
+            </para>
+            <sect2>
+                <title>Step 8) Getting Job Resources locally</title>
+                <para>
+                    Remember the job resources were copied to HDFS by client?  The Task Tracker nodes now need to copy these resources locally.  These files are copied from HDFS to local storage.  A 'local run directory' is created and the contents are copied there and 'un jarred'.
+                </para>
+            </sect2>
+
+            <sect2>
+                <title>Step 9) Spinning up the map or reduce job</title>
+                <para>
+                    Now that all job resources are locally available, the actual job is ready to be run.  Task Tracker will spin up a seperate Java virtual machine (JVM) and runs map or reduce programs.   So why map/reduce is run in a seperate VM?  This way any errors in map/reduce code doesn't kill the Task Tracker.
+                </para>
+            </sect2>
+
+            <sect2>
+                <title>Step 10) Heart beats -- reporting back to Job Tracker</title>
+                <para>
+                    Task Tracker periodically sends updates to Job Tracker.  This is called 'heart beat'.  The heart beat contains information like,  job status, resource usage ..etc.  Job Tracker collects all reports from Task Trackers and figures out how job is progressing.
+                </para>
+            </sect2>
+        </sect2>
+    </sect1>
+
+    <section>
+        <title>Measuring Progress of Tasks</title>
+        <para>
+            Map Reduce tasks report their progress.  Tasks that doesn't report in progress for a while can be marked as 'hung' and killed off.  So it is important for a task to keep updating its progress.  Progress is reported by the following activities.
+            <itemizedlist>
+                <listitem>
+                    Reading a input record (progress updated automatically, no user intervention required)
+                </listitem>
+                <listitem>
+                    Writing an output record (automatic)
+                </listitem>
+                <listitem>
+                    incrementing counters (manual, user has to do this explicitly in map reduce code)
+                </listitem>
+                <listitem>
+                    setting status message (manual)
+                </listitem>
+                <listitem>
+                    explicitly setting progress status (manual)
+                </listitem>
+            </itemizedlist>
+        </para>
     </section>
 
 
-    <sect1>
-        <title>Client Side : Job Submission </title>
+    <section>
+        <title>Dealing With Task Failures</title>
         <para>
-            Map Reduce jobs are submitted by a client.
-            <note>
-                You don't need to login to Hadoop cluster to submit a job.  Actually in most cases Hadoop admins won't allow users to login to the cluster.  gateway machines would be setup, that have access to the Hadoop cluster.  Users will login to gateway machines and submit thier jobs.
-            </note>
+            While running tasks on a cluster of commodity machines, some things are bound fail.  Machines go bad,  disks go bad ...etc.   Luckily Map Reduce is built to handle failures.
         </para>
+        <para>
+            How is a task failure detected?
+        </para>
+        <itemizedlist>
+            <listitem>
+                An exception thrown by map or reduce program.  The child JVM notifies Task Tracker of this failure.  The exception is then propagated up the chain to Job Tracker.
+            </listitem>
+            <listitem>
+                The child JVM exits abnormally.  Say it runs out of memory ..etc.
+            </listitem>
+            <listitem>
+                <para>
 
-        <sect2>
-            <title>Getting JobID</title>
-            <para>
-                Each Map Reduce job gets assigned a unique id. Client contacts JobTracker to grab a new jobID.
-            </para>
-        </sect2>
+                Hanging tasks : At times map or reduce tasks go un-responsive.  It could be a long running task (crawling web sites) or stuck on loop.  If a task hasn't updated it's progress in a while (10 minutes), then that task is marked as non-responsive and noted as failed.
+                </para>
+                <para>
+                    This timeout interval can be set by mapred.task.timeout configuration parameter.  IF this is set to zero, then the timeouts are disabled; as in Map Reduce doesn't mark the tasks as failed.
+                </para>
+            </listitem>
+        </itemizedlist>
+        <para>
+            So what happens when a task fails?  The task tracker first detects the failure.  And sends the failure up the chain to Job Tracker.  Job Tracker will re-try this task.  The task is re-tried on another node other than where it failed once.  The reasoning is the node may be failing (hardware failure ..etc) and Job Tracker wants to try the task some where else.
+        </para>
+        <para>
+            A failed task is re-tried 3 times.  IF it keeps failing, then the entire JOB is marked failed.  A coding error (Null Pointer Exception) can make the task fail consistantly, eventually the failing the job.
+        </para>
+        <para>
+            The maximum number of retries is controlled by 'mapred.map.max.attempts' and 'mapred.reduce.max.attempts' properties.
+        </para>
+    </section>
 
-
-        <sect2>
-            <title>Copying job resources to HDFS</title>
-            <para>
-                Before running MR jobs on cluster nodes, we need to distribute a bunch of stuff the nodes themselves  (Remeber code to data concept?).  So what kind of things needed to be distributed?
-            </para>
-        </sect2>
-
-
-
+    <sect1>
+        <title>Job Scheduling</title>
+        <para>
+            A large cluster may be shared with many users.  Users submit jobs and these jobs could be running at the cluster at the same time.  They will compete for resources, open map/reduce slots ..etc.  Map Reduce schedulers will manage how this is orchestrated.  There are three schedulers that can be used.
+        </para>
+        <glosslist>
+            <glossentry>
+                <glossterm>
+                    FIFO (First In First Out) Schedulder :
+                </glossterm>
+                <glossdef>
+                    <para>
+                        This is the default scheduler for Hadoop 1.  The concept is pretty simple.  Jobs from all users are slotted in to a queue.  And they are executed in the order they arrive.
+                    </para>
+                    <para>
+                    FIFO has a serious problem in multi user environment.  Imagine a long running job that will be running for 10 hours is currently running on the cluster.  And another user submits a quick job that would be done in 10 minutes.  If we stick to 'first come first served' the short job will be stuck behind the long running job, for a very long time.
+                    </para>
+                </glossdef>
+            </glossentry>
+            <glossentry>
+                <glossterm>
+                    Fair Schedulder :
+                </glossterm>
+                <glossdef>
+                    <para>
+                        Fair scheduler is developed by Facebook.   It is designed to effectively share the cluster across varoius users.
+                    </para>
+                    <para>
+                        This scheduler allocates cluster time 'fairly' between mutiple users.  So in our previous example a short job will make progress along with the long-running job.
+                    </para>
+                    <para>
+                        Fair Scheduler manages this by creating 'work pools' for each user.  Each users task is queued in their own pool.  And the scheduler makes sure each pool receives enough execution time.  If there is exces capacity (open map slots or reduce slots) they are shared among the pools.
+                    </para>
+                </glossdef>
+            </glossentry>
+            <glossentry>
+                <glossterm>
+                    Capacity Scheulder :
+                </glossterm>
+                <glossdef>
+                    <para>
+                        Capacity scheduler was developed by Yahoo.  It shares lot of qualities with Fair Scheduler.   It provisions the cluster across multiple users.  This one uses 'queues' instead of pools used by Fair Scheduler.
+                    </para>
+                </glossdef>
+            </glossentry>
+        </glosslist>
     </sect1>
+
 </chapter>
