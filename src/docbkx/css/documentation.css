@@ -8,12 +8,12 @@ ol li, ul li {
 
 ul {
     padding-left:1.6em;
-    list-style-image:url(../images/community/dot.png);
+    list-style-image:url(../images/docbook/dot.png);
     list-style-type:circle;
 }
 
 ul ul {
-    list-style-image:url(../images/community/dot2.png);
+    list-style-image:url(../images/docbook/dot2.png);
     list-style-type:circle;
 }
 
@@ -231,11 +231,11 @@ div.warning pre {
 
 div.note, div.tip, div.important, div.caution, div.warning {margin-top:.5em;}
 
-div.note {background-image:url(../images/community/docbook/note.png);}
-div.tip {background-image:url(../images/community/docbook/tip.png);}
-div.important {background-image:url(../images/community/docbook/important.png);}
-div.caution {background-image:url(../images/community/docbook/caution.png);}
-div.warning {background-image:url(../images/community/docbook/warning.png);}
+div.note {background-image:url(../images/docbook/note.png);}
+div.tip {background-image:url(../images/docbook/tip.png);}
+div.important {background-image:url(../images/docbook/important.png);}
+div.caution {background-image:url(../images/docbook/caution.png);}
+div.warning {background-image:url(../images/docbook/warning.png);}
 
 div.note .replaceable, div.tip .replaceable, div.important .replaceable, div.caution .replaceable, div.warning .replaceable {color:#e3dcc0;}
 
@@ -294,13 +294,13 @@ div.note h2, div.note p, div.tip h2, div.tip p, div.caution h2, div.caution p, d
     height:89px;
     width:310px;
     float:left;
-    background:url(../images/community/jbossorglogo.png) top left no-repeat;
+    background:url(../images/docbook/jbossorglogo.png) top left no-repeat;
 }
 
 #title a.doc_href {
     display:block;
     height:89px;
-    background:transparent url(../images/community/community_doc.png) top right no-repeat;
+    background:transparent url(../images/docbook_doc.png) top right no-repeat;
 }
 
 /* Table */
@@ -423,12 +423,12 @@ span.chapter {
 
 /* Status */
 
-.alpha1 {background:white url(../images/community/watermark-alpha1.png) top left repeat;}
-.alpha2 {background:white url(../images/community/watermark-alpha2.png) top left repeat;}
-.beta1 {background:white url(../images/community/watermark-beta1.png) top left repeat;}
-.beta2 {background:white url(../images/community/watermark-beta2.png) top left repeat;}
-.pre-release-candidate {background:white url(../images/community/watermark-pre-release-candidate.png) top left repeat;}
-.release-candidate {background:white url(../images/community/watermark-release-candidate.png) top left repeat;}
+.alpha1 {background:white url(../images/docbook/watermark-alpha1.png) top left repeat;}
+.alpha2 {background:white url(../images/docbook/watermark-alpha2.png) top left repeat;}
+.beta1 {background:white url(../images/docbook/watermark-beta1.png) top left repeat;}
+.beta2 {background:white url(../images/docbook/watermark-beta2.png) top left repeat;}
+.pre-release-candidate {background:white url(../images/docbook/watermark-pre-release-candidate.png) top left repeat;}
+.release-candidate {background:white url(../images/docbook/watermark-release-candidate.png) top left repeat;}
 
 /* Index */
 

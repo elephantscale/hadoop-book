@@ -86,7 +86,7 @@ div.progress {
     display:block;
     float:left;
     width:16em;
-    background:#c00 url(../images/community/shine.png) top left repeat-x;
+    background:#c00 url(../images/docbook/shine.png) top left repeat-x;
     height:1em;
 }
 
@@ -95,8 +95,8 @@ div.progress span {
     float:left;
 }
 
-div.progress span.translated {background:#6c3 url(../images/community/shine.png) top left repeat-x;}
-div.progress span.fuzzy {background:#ff9f00 url(../images/community/shine.png) top left repeat-x;}
+div.progress span.translated {background:#6c3 url(../images/docbook/shine.png) top left repeat-x;}
+div.progress span.fuzzy {background:#ff9f00 url(../images/docbook/shine.png) top left repeat-x;}
 
 /* Results */
 
@@ -135,7 +135,7 @@ div.progress span.fuzzy {background:#ff9f00 url(../images/community/shine.png) t
     display:block;
     margin:0 auto;
     width:5em;
-    background:url(../images/community/docbook/home.png) top left no-repeat;
+    background:url(../images/docbook/home.png) top left no-repeat;
     padding:5px;
     padding-left:28px;
     font-size:1.2em;

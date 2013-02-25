@@ -5,7 +5,7 @@
 @import url("codehighlight.css");
 
 body {
-    background-image:url(../images/community/bkg_gradient.gif);
+    background-image:url(../images/docbook/bkg_gradient.gif);
     background-repeat:repeat-x;
     margin:0 auto;
     font-family:'Lucida Grande', Geneva, Verdana, Arial, sans-serif;
@@ -40,7 +40,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-    background-image:url(../images/community/title_hdr.png);
+    background-image:url(../images/docbook/title_hdr.png);
     background-repeat:no-repeat;
     border-top:1px dotted #CCCCCC;
     line-height:1.2em;
