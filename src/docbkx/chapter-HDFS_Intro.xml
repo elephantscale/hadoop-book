@@ -178,7 +178,7 @@
               HDFS is built to work with mechanical disks.  With the disk drives, the capacity has gone up in recent years.  How ever, the seek times haven't improved all that much.  So hadoop tries to minimize the disk seeks.
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="disk_seek.png" format="PNG" scale="100" />
+                    <imagedata fileref="disk_seek.jpg" format="JPG" scale="100" />
                 </imageobject>
             </mediaobject>
           </para>
