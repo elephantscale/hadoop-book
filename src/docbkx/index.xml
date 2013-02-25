@@ -72,34 +72,41 @@
         <title>Hadoop InDepth</title>
         <partintro>
             <para>
-                In depth discussion of hadoop
+                This section will take a closer look at Hadoop internals.
             </para>
-            <literallayout>
-            </literallayout>
+            <para>
+                Coming Soon:
+                <itemizedlist>
+                    <listitem>'Hello world' in Map Reduce</listitem>
+                    <listitem>Configurations</listitem>
+                    <listitem>Counters</listitem>
+                    <listitem>Distributed Cache</listitem>
+                </itemizedlist>
+            </para>
         </partintro>
-        <!--
-        <para>
-            Coming sooner
-        </para>
-        -->
         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-HDFS_Namenode.xml" />
-        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-MapReduce_Hello_World.xml" />
         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-MapReduce_Internals.xml" />
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-Hadoop_Versions.xml" />
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-Hadoop_V1_V2.xml" />
+        <!--
         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-MapReduce_Configuration.xml" />
-        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-MapReduce_Counters.xml" />
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-MapReduce_Hello_World.xml" />
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-MapReduce_Counters.xml" />
         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-MapReduce_Distributed_Cache.xml" />
         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-MapReduce_Types.xml" />
         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-MapReduce_Joins.xml" />
-        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-Hadoop_Versions.xml" />
-        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-Hadoop_V1_V2.xml" />
         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-HA.xml" />
         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-Benchmarking_Hadoop.xml" />
+        -->
 
     </part>
 
     <part>
         <title>Hadoop Administration</title>
         <partintro>
+            <para>
+                Coming Soon:
+            </para>
             <literallayout>
             </literallayout>
         </partintro>
