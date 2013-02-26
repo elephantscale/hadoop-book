@@ -14,13 +14,13 @@
     <sect1>
         <title>Job Submission Process</title>
         <para>
-            We already did a map reduce job.  Now lets look under what happens when we run a job.  There is actually quite a bit going on behind the scenes.  Lets start with a overal submission process diagram.  Note that this covers classic Map Reduce or MRV1.
+            We already did a map reduce job.  Now let's look under what happens when we run a job.  There is actually quite a bit going on behind the scenes.  Lets start with a overal submission process diagram.  Note that this covers classic Map Reduce or MRV1.
         </para>
         <figure id="mapreduce-job-submission">
             <title>Map Reduce Job Submission Process - Hadoop 1</title>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="mr_job_submission.png" format="PNG" scale="100" />
+                    <imagedata fileref="mr_job_submission.jpg" format="JPG" scale="100" />
                 </imageobject>
             </mediaobject>
         </figure>
