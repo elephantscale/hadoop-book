@@ -21,16 +21,13 @@
         <para>
             HI there!
             <sbr/>
-            Welcome to Hadoop Illuminated.  This book is brought to you by two authors -- Mark Kerzner and Sujee Maniyam.  Both of us have been working in Hadoop eco system for a number of years.  We have implemented hadoop solutions and taught training courses in hadoop.  We both benefited from Hadoop and Open Source community tremendously.  So when we thought about writing a book on Hadoop, we choose to do it in the open, fully Open Source way !  It is a miniscule token of thank you from both of us to the Hadoop community.
+            Welcome to Hadoop illuminated.  This book is brought to you by two authors -- Mark Kerzner and Sujee Maniyam.  Both of us have been working in Hadoop eco system for a number of years.  We have implemented hadoop solutions and taught training courses in hadoop.  We both benefited from Hadoop and Open Source community tremendously.  So when we thought about writing a book on Hadoop, we choose to do it in the open, fully Open Source way !  It is a miniscule token of thank you from both of us to the Hadoop community.
         </para>
     </simplesect>
 
 
     <simplesect>
         <title>Mark Kerzner (Author)</title>
-        <para>
-            About Mark
-        </para>
         <para>
             Mark Kerzner is an experienced/hands-on BigData architect.  He has been developing software for over 20 years in a variety of technologies (enterprise, web, HPC) and for a variety of verticals (Oil and Gas, legal, trading). He currently focuses on Hadoop, BigData, NOSQL and Amazon Cloud Services.  His clients include Bay Area startups, T-Mobile, GHX, Cision, and lately Intel, where he created and delivered Big Data training.
         </para>
@@ -74,6 +71,7 @@
         <para>
             Sujee has been doing Hadoop training for individuals and corporations; his classes are hands-on and draws heavily on his industry experience
         </para>
+        <para>
         Links: 
         <sbr/>
         <link xlink:href="http://www.linkedin.com/in/sujeemaniyam">LinkedIn</link>  || 
@@ -81,8 +79,9 @@
         <link xlink:href="http://sujee.net/tech/articles/">Tech writings</link>  || 
         <link xlink:href="http://sujee.net/tech/talks/">Tech talks</link>  ||
         <link xlink:href="http://www.meetup.com/BigDataGurus/">BigDataGuru meetup</link>
-
+        </para>
     </simplesect>
+
     <simplesect>
         <title>Rebecca Kerzner (Illustrator)</title>
         <para>
