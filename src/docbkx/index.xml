@@ -86,6 +86,7 @@
         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-MapReduce_Internals.xml" />
         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-Hadoop_Versions.xml" />
         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-Hadoop_V1_V2.xml" />
+        <!--
         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-MapReduce_Configuration.xml" />
          <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-MapReduce_Hello_World.xml" />
          <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-MapReduce_Counters.xml" />
@@ -94,6 +95,7 @@
         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-MapReduce_Joins.xml" />
         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-HA.xml" />
         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-Benchmarking_Hadoop.xml" />
+        -->
 
     </part>
 
