@@ -35,7 +35,7 @@
           <para>
               This 'block map' is not persisted by namenode.  It dynamically builds this map, from 'block reports' sent by Datanodes.  Each Datanode reports in with what blocks it has  when it joins the cluster.  Also Datanodes periodically send updated block reports to Namenode.  So Namenode has latest accurate block information across the cluster
           </para>
-         <graphic fileref="hdfs_block_map.png"></graphic>
+         <graphic fileref="hdfs_block_map.jpg"></graphic>
       </sect2>
 
       <sect2>
@@ -117,7 +117,7 @@
                   </listitem>
               </orderedlist>
               Why is data on disk persisted before in-memory data structure?  This way, even if Namenode goes down in between writes, the meta data will be in consistant state
-              <graphic fileref="nn_1.png"></graphic>
+              <graphic fileref="nn_1.jpg"></graphic>
           </para>
       </sect2>
       <sect2>
@@ -149,7 +149,7 @@
 
           <para>
               As you can imagine, the edit logs can add up.  And replaying them each time Namenode boots up can take longer and longer.  It makes sense to create new snapshots out of editlogs.
-            <graphic fileref="nn_editlogs.png"></graphic>
+            <graphic fileref="nn_editlogs.jpg"></graphic>
             This is where secondary namenode comes into play.
           </para>
       </sect2>
@@ -181,7 +181,7 @@
                       This process repeats
                   </listitem>
               </orderedlist>
-         <graphic fileref="snn.png"></graphic>
+         <graphic fileref="snn.jpg"></graphic>
           </para>
 
           <para>

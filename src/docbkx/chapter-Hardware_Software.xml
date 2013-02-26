@@ -13,7 +13,7 @@
     <sect1>
         <title>Hardware</title>
         <para>
-            Hadoop runs on commodity hardware.  That doesnn't mean it runs on a cheapo hardware.  Hadoop runs on decent server class machines.
+            Hadoop runs on commodity hardware.  That doesn't mean it runs on a cheapo hardware.  Hadoop runs on decent server class machines.
             <mediaobject> <imageobject>
                     <imagedata fileref="macintosh_classic1.jpg" format="JPG" scale="50" /> </imageobject>
             </mediaobject>
