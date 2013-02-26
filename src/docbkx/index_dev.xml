@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<book version="5.0" xmlns="http://docbook.org/ns/docbook"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      xmlns:xi="http://www.w3.org/2001/XInclude"
+      xmlns:svg="http://www.w3.org/2000/svg"
+      xmlns:m="http://www.w3.org/1998/Math/MathML"
+      xmlns:html="http://www.w3.org/1999/xhtml"
+      xmlns:db="http://docbook.org/ns/docbook" xml:id="book">
+
+    <title>Hadoop Illuminated</title>
+    <info>
+        <authorgroup>
+            <author>
+                <firstname>Mark</firstname>
+                <surname>Kerzner</surname>
+                <contrib>Co-Author</contrib>
+                <email>mark@hadoopilluminated.com</email>
+            </author>
+            <author>
+                <firstname>Sujee</firstname>
+                <surname>Maniyam</surname>
+                <contrib>Co-Author</contrib>
+                <email>sujee@hadoopilluminated.com</email>
+            </author>
+        </authorgroup>
+    </info>
+
+    <dedication>
+        <para>To the open source community
+        </para>
+        <para>
+            <ulink url="https://github.com/markkerzner/HadoopIlluminated">Companion project on GitHub</ulink>
+        </para>
+    </dedication>
+
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="acknowledgements.xml" />
+
+    <part >
+        <title>About this book</title>
+        <partintro>
+            <literallayout>
+            </literallayout>
+        </partintro>
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-Audience.xml" />
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-About_Authors.xml" />
+        <!-- <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-Code.xml" />  -->
+    </part>
+
+    <part>
+        <title>High level introduction to Hadoop</title>
+        <partintro>
+            <para>
+                Learn about Hadoop
+            </para>
+            <literallayout>
+            </literallayout>
+        </partintro>
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-Big_Data.xml" />
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-Intro.xml" />
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-Hadoop_For_Execs.xml" />
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-HDFS_Intro.xml" />
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-MapReduce_Intro.xml" />
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-Hadoop_Use_Cases.xml" />
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-Distributions.xml" />
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-Hardware_Software.xml" />
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-Challenges.xml" />
+    </part>
+
+    <part>
+        <title>Hadoop In Depth</title>
+        <partintro>
+            <para>
+                This section will take a closer look at Hadoop internals.
+            </para>
+            <para>
+                Coming Soon:
+                <itemizedlist>
+                    <listitem>'Hello world' in Map Reduce</listitem>
+                    <listitem>Configurations</listitem>
+                    <listitem>Counters</listitem>
+                    <listitem>Distributed Cache</listitem>
+                </itemizedlist>
+            </para>
+        </partintro>
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-HDFS_Namenode.xml" />
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-MapReduce_Internals.xml" />
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-Hadoop_Versions.xml" />
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-Hadoop_V1_V2.xml" />
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-MapReduce_Configuration.xml" />
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-MapReduce_Hello_World.xml" />
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-MapReduce_Counters.xml" />
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-MapReduce_Distributed_Cache.xml" />
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-MapReduce_Types.xml" />
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-MapReduce_Joins.xml" />
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-HA.xml" />
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-Benchmarking_Hadoop.xml" />
+
+    </part>
+
+    <part>
+        <title>Hadoop Administration</title>
+        <partintro>
+            <para>
+                Coming Soon:
+            </para>
+            <literallayout>
+            </literallayout>
+        </partintro>
+    </part>
+
+    <part>
+        <title>Hadoop Cookbook</title>
+        <partintro>
+            <para>
+                This section has specific guides and .
+            </para>
+            <literallayout>
+            </literallayout>
+        </partintro>
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-Handy_Classes.xml" />
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-Handy_Classes_HBase.xml" />
+    </part>
+
+    <!--
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-Sorting1.xml" />
+    -->
+</book>
