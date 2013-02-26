@@ -9,9 +9,9 @@
 
   <title>Hadoop High Availability</title>
   <section>
-      <title>section 1</title>
+      <title>The Problem</title>
       <para>
-          para1
+          Lets look at the Hadoop HDFS's architecture.  There are many data nodes and only ONE Namenode.  Namenode is critical to the cluster operation.  Without the Name node, the cluster is in-operable.
       </para>
   </section>
 
