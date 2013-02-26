@@ -15,7 +15,7 @@
       HDFS is the 'file system' or 'storage layer' of hadoop.  It takes care of storing data -- and it can handle very large amount of data (in PetaBytes scale).
   </para>
   <para>
-      Usually at this point, many books will rattle off the charecteristics of HDFS.  We will take a different approach.  We will 'arrive' at these design priciples on our own :-)
+      Usually at this point, many books will rattle off the characteristics of HDFS.  We will take a different approach.  We will 'arrive' at these design principles on our own :-)
   </para>
 
   <sect1>
@@ -40,7 +40,7 @@
       <sect2>
           <title>Commodity Hardware</title>
           <para>
-              Now that we have decided that we need a cluster of computers, what kind of machines are they?  Tradionally storage machines are expensive with top-end components, sometimes with 'exotic' components (e.g. fiber channel for disk arrays ..etc).  Obviously these computers cost a pretty penny.
+              Now that we have decided that we need a cluster of computers, what kind of machines are they?  traditionally storage machines are expensive with top-end components, sometimes with 'exotic' components (e.g. fiber channel for disk arrays ..etc).  Obviously these computers cost a pretty penny.
           </para>
           <para>
               We want our system to be cost-effective.  So we are not going to use these 'expensive' machines.  Instead we will opt to use commodity hardware.  By that we don't mean cheapo desktop class machines.  We will use performant server class machines -- but these will be commodity servers that you can order from any of the vendors (Dell, HP ...etc)
@@ -84,7 +84,7 @@
       <sect2>
           <title>Each machine will run a storage 'layer'</title>
           <para>
-            Since each machine is part of the 'storage', we will have a 'daemon' running on each machine to manage storage for that machine.  These deamons will talk to each other to exchange data.
+            Since each machine is part of the 'storage', we will have a 'daemon' running on each machine to manage storage for that machine.  These daemons will talk to each other to exchange data.
           </para>
           <para>
               So here is an updated diagram:
@@ -119,7 +119,7 @@
           HDFS Architecture
       </title>
       <para>
-          Thanks for playing the game; we have pretty much arrived at the archiecture of HDFS by playing our 'design game'.  HDFS looks very similar architecturally.
+          Thanks for playing the game; we have pretty much arrived at the architecture of HDFS by playing our 'design game'.  HDFS looks very similar architecturally.
       </para>
 
             <mediaobject>
@@ -204,7 +204,7 @@
                 HDFS Files are split into blocks
             </title>
             <para>
-                Just like most file systems, HDFS splits files into blocks.  How ever the block sizes are very large.  A linux file system block size is about 4 Kilo bytes (KB).  Typial HDFS block size is about 128 MBytes.  This is about 32,000 bigger than linux.  Again this goes to the point of supporting large files.
+                Just like most file systems, HDFS splits files into blocks.  How ever the block sizes are very large.  A linux file system block size is about 4 Kilo bytes (KB).  Typical HDFS block size is about 128 MBytes.  This is about 32,000 bigger than linux.  Again this goes to the point of supporting large files.
             </para>
             <sidebar>
                 <title> Different block sizes:</title>

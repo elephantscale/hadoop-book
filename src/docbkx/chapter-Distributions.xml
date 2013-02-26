@@ -33,7 +33,7 @@
                 <glossterm>Distros package multiple components that work well together</glossterm>
                 <glossdef>
                     <para>
-                        Hadoop ecosystem contains a lot of components (Hbase, pig, hive, zookeeper ..etc).   These components are developed independently and have their own release schedules.  And there are version dependencies among thse components.  For example version 0.92 of HBase needs a particular version of HDFS.
+                        Hadoop ecosystem contains a lot of components (Hbase, pig, hive, zookeeper ..etc).   These components are developed independently and have their own release schedules.  And there are version dependencies among the components.  For example version 0.92 of HBase needs a particular version of HDFS.
                     </para>
                     <para>
                         Distros bundle versions of components that work well together. This provides a working hadoop installation right out of the box.
@@ -60,7 +60,7 @@
             </glossentry>
 
             <glossentry>
-                <glossterm>Predictiable upgrade path</glossterm>
+                <glossterm>Predictable upgrade path</glossterm>
                 <glossdef>
                     <para>
                         Distros have predictable, product release road maps.  This ensures they keep up with developments and bug fixes.
@@ -69,7 +69,7 @@
             </glossentry>
 
             <glossentry>
-                <glossterm>Predictiable upgrade path</glossterm>
+                <glossterm>Predictable upgrade path</glossterm>
                 <glossdef>
                     <para>
                         Distros have predictable, product release road maps.  This ensures they keep up with developments and bug fixes.
@@ -220,7 +220,7 @@
         <sect2>
             <title>Amazon Elastic Map Reduce</title>
             <para>
-                Amazon offers 'On Demand Hadoop'. This means, there is no permananent Hadoop cluster.  A cluster is spun up to do a job and after that it is shut down.  Pay for usage.
+                Amazon offers 'On Demand Hadoop'. This means, there is no permanent Hadoop cluster.  A cluster is spun up to do a job and after that it is shut down.  Pay for usage.
             </para>
             <para>
                 Amazon offers a slightly customized version of Apache Hadoop.  And also offers MapR's distribution.

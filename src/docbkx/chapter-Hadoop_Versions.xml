@@ -9,7 +9,7 @@
               0.21  - Aug 2010 -- another widely used release.  This eventually became hadoop 1.0 release
           </listitem>
           <listitem>
-              0.23 - Feb 2012 -- 0.23 was the branch created to add new features .  THis branch eventually became Hadoop 2.0
+              0.23 - Feb 2012 -- 0.23 was the branch created to add new features .  This branch eventually became Hadoop 2.0
           </listitem>
           <listitem>
               1.0 -- current production version of Hadoop

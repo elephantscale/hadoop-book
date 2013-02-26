@@ -50,14 +50,14 @@
           Distributed Computing, then you are in for
           some interesting times.  First off, distributed systems are
           hard; making a distributed system hum requires a disparate
-          skillset that spans systems (hardware and software) and
+          skill set that spans systems (hardware and software) and
           networking.  Your cluster' operation can hiccup because of any
-          of a myriad set of reasons from bugs in HBase itself through misconfigurations
+          of a myriad set of reasons from bugs in HBase itself through mis configurations
           -- misconfiguration of HBase but also operating system misconfigurations --
           through to hardware problems whether it be a bug in your network card
-          drivers or an underprovisioned RAM bus (to mention two recent
+          drivers or an under provisioned RAM bus (to mention two recent
           examples of hardware issues that manifested as "HBase is slow").
-          You will also need to do a recalibration if up to this your
+          You will also need to do a re calibration if up to this your
           computing has been bound to a single box.  Here is one good
           starting point:
           <link xlink:href="http://en.wikipedia.org/wiki/Fallacies_of_Distributed_Computing">Fallacies of Distributed Computing</link>.

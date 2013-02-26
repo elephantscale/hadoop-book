@@ -19,9 +19,9 @@
       <sect2>
           <title>Namenode Maintains the file-system meta data</title>
           <para>
-              Namenode contains all metadata about the file system.  For example, the file system hiearchy,  file permisisons ...etc.   This information is vital for navigating the file system and accessing data.
+              Namenode contains all meta data about the file system.  For example, the file system hierarchy,  file permissions ...etc.   This information is vital for navigating the file system and accessing data.
               <note>
-                  Namenode does not store actuall data of file system.  All file data is stored by Datanodes.
+                  Namenode does not store actual data of file system.  All file data is stored by Datanodes.
               </note>
           </para>
       </sect2>
@@ -57,7 +57,7 @@
       <sect2>
           <title>What data does Namenode store?</title>
           <para>
-              We said Namenode has file system meta data.  What exacatly is it?  There are two parts to it.  One, it keeps information about the file system (meta data) such as file system hierarchy, permissions ...etc.   Second, it keeps the location info of where the files are.
+              We said Namenode has file system meta data.  What exactly is it?  There are two parts to it.  One, it keeps information about the file system (meta data) such as file system hierarchy, permissions ...etc.   Second, it keeps the location info of where the files are.
           </para>
           <para>
               So where is this information stored?  Namenode stores this data in memory.  So Namenode can access this information very quickly.  But how does this information survives a Namenode restart?  Namenode persists this information on disk as well.
@@ -116,14 +116,14 @@
                       after all this is done, it returns SUCCESS code to the client
                   </listitem>
               </orderedlist>
-              Why is data on disk persisted before in-memory data structure?  This way, even if Namenode goes down in between writes, the meta data will be in consistant state
+              Why is data on disk persisted before in-memory data structure?  This way, even if Namenode goes down in between writes, the meta data will be in consistent state
               <graphic fileref="nn_1.jpg"></graphic>
           </para>
       </sect2>
       <sect2>
           <title>How is the meta data stored?</title>
           <para>
-              So we learned Namenode saves the meta data on disk.  On a busy clusters there could be thousands of file system operations (create, delete, move) per minute.  And a big cluster, the meta-data size could approach gigabytes.  Updating such a large file would be slow and unweildly.  So how does NN solves this?
+              So we learned Namenode saves the meta data on disk.  On a busy clusters there could be thousands of file system operations (create, delete, move) per minute.  And a big cluster, the meta-data size could approach gigabytes.  Updating such a large file would be slow and un unwieldy.  So how does NN solves this?
           </para>
           <para>
               The approach consists of SNAPSHOTS and EDITLOGS.  The process is like this:
@@ -133,16 +133,16 @@
                       When Namenode boots up, it loads the latest snapshot of the meta data
                   </listitem>
                   <listitem>
-                      As it handles file system changes, it writes to a seperate file called EDITLOG.  As editlog exceeds a certain size, a new edit log file is created
+                      As it handles file system changes, it writes to a separate file called EDITLOG.  As editlog exceeds a certain size, a new edit log file is created
                   </listitem>
                   <listitem>
-                      Next time Namenode boots, it loads the latest snapshot and replays the editlogs to it is upto date on file system status.
+                      Next time Namenode boots, it loads the latest snapshot and replays the editlogs to it is up to date on file system status.
                   </listitem>
                   <listitem>
                       Once all editlogs are replayed, then Namenode is ready to accept file systems operations.  They will be recorded in editlogs as well.
                   </listitem>
                   <listitem>
-                      This process repeats many times during Namenode's lifecycle
+                      This process repeats many times during Namenode's life cycle
                   </listitem>
               </orderedlist>
           </para>
@@ -157,7 +157,7 @@
       <sect2>
           <title>Secondary Namenode</title>
           <para>
-              Secondary Namenode is another deamon that is responsible for merging edit logs into snapshots.   The name 'seconday' can mislead people into thinking this is a 'backup' Namenode, and can take over when Namenode goes down.  That is not what Secondary Namenode does.  It is actually a 'side kick' for Namenode. 
+              Secondary Namenode is another daemon that is responsible for merging edit logs into snapshots.   The name 'secondary' can mislead people into thinking this is a 'backup' Namenode, and can take over when Namenode goes down.  That is not what Secondary Namenode does.  It is actually a 'side kick' for Namenode. 
           </para>
           <para>
               Here is what secondary namenode does:
@@ -172,7 +172,7 @@
                       Loads both snapshots and edit logs into memory, applies editlogs to the snapshot, creates another snapshot.
                   </listitem>
                   <listitem>
-                      uploades the newly minted snapshot back to Namenode
+                      uploads the newly minted snapshot back to Namenode
                   </listitem>
                   <listitem>
                       Namenode accepts the new snapshot and replaces its current one
@@ -193,12 +193,12 @@
                   </listitem>
 
                   <listitem>
-                      Also on a large, busy cluster the edit logs can be large and merging them can be very resource consuming.  By off loading to another host, Namenode is not over laoded
+                      Also on a large, busy cluster the edit logs can be large and merging them can be very resource consuming.  By off loading to another host, Namenode is not over loaded
                   </listitem>
               </itemizedlist>
           </para>
           <para>
-              On a large cluster (more than 25 nodes) it is advisable to run Secondary Namenode on a seperate host.  For smaller clusters, Secondary can be ran at the same node as Namenode
+              On a large cluster (more than 25 nodes) it is advisable to run Secondary Namenode on a separate host.  For smaller clusters, Secondary can be ran at the same node as Namenode
           </para>
       </sect2>
 

@@ -14,7 +14,7 @@
     <sect1>
         <title>Job Submission Process</title>
         <para>
-            We already did a map reduce job.  Now let's look under what happens when we run a job.  There is actually quite a bit going on behind the scenes.  Lets start with a overal submission process diagram.  Note that this covers classic Map Reduce or MRV1.
+            We already did a map reduce job.  Now let's look under what happens when we run a job.  There is actually quite a bit going on behind the scenes.  Lets start with a overall submission process diagram.  Note that this covers classic Map Reduce or MRV1.
         </para>
         <figure id="mapreduce-job-submission">
             <title>Map Reduce Job Submission Process - Hadoop 1</title>
@@ -34,7 +34,7 @@
             <para>
                 Map Reduce jobs are submitted by a client.
                 <note>
-                    You don't need to login to Hadoop cluster to submit a job.  Actually in most cases Hadoop admins won't allow users to login to the cluster.  Gateway machines would be setup, that have access to the Hadoop cluster.  Users will login to gateway machines and submit thier jobs.
+                    You don't need to login to Hadoop cluster to submit a job.  Actually in most cases Hadoop admins won't allow users to login to the cluster.  Gateway machines would be setup, that have access to the Hadoop cluster.  Users will login to gateway machines and submit their jobs.
                 </note>
             </para>
 
@@ -49,7 +49,7 @@
             <sect2>
                 <title>Step 3) Copying job resources to HDFS</title>
                 <para>
-                    Before running MR jobs on cluster nodes, we need to distribute a bunch of stuff the nodes themselves  (Remeber code to data concept?).  Following are some artifacts that get distributed.
+                    Before running MR jobs on cluster nodes, we need to distribute a bunch of stuff the nodes themselves  (Remember code to data concept?).  Following are some artifacts that get distributed.
                 </para>
                 <itemizedlist>
                     <listitem>
@@ -78,7 +78,7 @@
             <sect2>
                 <title>Step 6) Job Splits</title>
                 <para>
-                    One important concept of Map Reduce is parallilsm.  The input is divided up and processed on across the cluster.   Inputs are chopped up into what is called 'input splits'.  Job Tracker now calculates input splits.
+                    One important concept of Map Reduce is parallelism.  The input is divided up and processed on across the cluster.   Inputs are chopped up into what is called 'input splits'.  Job Tracker now calculates input splits.
                 </para>
             </sect2>
 
@@ -105,7 +105,7 @@
             <sect2>
                 <title>Step 9) Spinning up the map or reduce job</title>
                 <para>
-                    Now that all job resources are locally available, the actual job is ready to be run.  Task Tracker will spin up a seperate Java virtual machine (JVM) and runs map or reduce programs.   So why map/reduce is run in a seperate VM?  This way any errors in map/reduce code doesn't kill the Task Tracker.
+                    Now that all job resources are locally available, the actual job is ready to be run.  Task Tracker will spin up a separate Java virtual machine (JVM) and runs map or reduce programs.   So why map/reduce is run in a separate VM?  This way any errors in map/reduce code doesn't kill the Task Tracker.
                 </para>
             </sect2>
 
@@ -172,7 +172,7 @@
             So what happens when a task fails?  The task tracker first detects the failure.  And sends the failure up the chain to Job Tracker.  Job Tracker will re-try this task.  The task is re-tried on another node other than where it failed once.  The reasoning is the node may be failing (hardware failure ..etc) and Job Tracker wants to try the task some where else.
         </para>
         <para>
-            A failed task is re-tried 3 times.  IF it keeps failing, then the entire JOB is marked failed.  A coding error (Null Pointer Exception) can make the task fail consistantly, eventually the failing the job.
+            A failed task is re-tried 3 times.  IF it keeps failing, then the entire JOB is marked failed.  A coding error (Null Pointer Exception) can make the task fail consistently, eventually the failing the job.
         </para>
         <para>
             The maximum number of retries is controlled by 'mapred.map.max.attempts' and 'mapred.reduce.max.attempts' properties.
@@ -187,7 +187,7 @@
         <glosslist>
             <glossentry>
                 <glossterm>
-                    FIFO (First In First Out) Schedulder :
+                    FIFO (First In First Out) Scheduler :
                 </glossterm>
                 <glossdef>
                     <para>
@@ -200,23 +200,23 @@
             </glossentry>
             <glossentry>
                 <glossterm>
-                    Fair Schedulder :
+                    Fair Scheduler :
                 </glossterm>
                 <glossdef>
                     <para>
-                        Fair scheduler is developed by Facebook.   It is designed to effectively share the cluster across varoius users.
+                        Fair scheduler is developed by Facebook.   It is designed to effectively share the cluster across various users.
                     </para>
                     <para>
-                        This scheduler allocates cluster time 'fairly' between mutiple users.  So in our previous example a short job will make progress along with the long-running job.
+                        This scheduler allocates cluster time 'fairly' between multiple users.  So in our previous example a short job will make progress along with the long-running job.
                     </para>
                     <para>
-                        Fair Scheduler manages this by creating 'work pools' for each user.  Each users task is queued in their own pool.  And the scheduler makes sure each pool receives enough execution time.  If there is exces capacity (open map slots or reduce slots) they are shared among the pools.
+                        Fair Scheduler manages this by creating 'work pools' for each user.  Each users task is queued in their own pool.  And the scheduler makes sure each pool receives enough execution time.  If there is excess capacity (open map slots or reduce slots) they are shared among the pools.
                     </para>
                 </glossdef>
             </glossentry>
             <glossentry>
                 <glossterm>
-                    Capacity Scheulder :
+                    Capacity Scheduler :
                 </glossterm>
                 <glossdef>
                     <para>

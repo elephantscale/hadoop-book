@@ -67,7 +67,7 @@
     <section>
         <title>Hadoop and High Availability</title>
         <para>
-            Hadoop version 1 had a Single-Point-Of-Failure problem because of Namenode.  There was only one namenode for the cluster, and if it goes down, the whole Hadoop cluster would be in-operable.  This has prevented using Hadoop for mission-critical, always-on applications.
+            Hadoop version 1 had a Single-Point-Of-Failure problem because of Namenode.  There was only one Namenode for the cluster, and if it goes down, the whole Hadoop cluster would be in-operable.  This has prevented using Hadoop for mission-critical, always-on applications.
         </para>
         <para>
             This problem is more pronounced on paper than in reality.  Yahoo did a study that analyzed their Hadoop cluster failures.  And the study found only a tiny fraction of failures were caused by NameNode failure.<sbr/>

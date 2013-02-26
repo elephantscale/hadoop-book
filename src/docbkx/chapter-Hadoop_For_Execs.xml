@@ -45,7 +45,7 @@
   <section>
       <title>I am not sure my company has a big data problem</title>
       <para>
-          Hadoop is designed to deal with Big Data.  So if you don't have a 'Big Data Problem', then Hadoop probably isn't the best fit for your company.  But before you stop reading right here, pleaes read on :-)
+          Hadoop is designed to deal with Big Data.  So if you don't have a 'Big Data Problem', then Hadoop probably isn't the best fit for your company.  But before you stop reading right here, please read on :-)
       </para>
       <para>
           How much data is considered Big Data, differs from company to company.  For some companies, 10 TB of data would be considered Big Data;  for others 1 PB would be 'Big Data'.  So only you can determine how much Big Data.

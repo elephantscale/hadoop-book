@@ -172,7 +172,7 @@
     <section>
         <title>hadoop command split</title>
         <para>
-            before we had bin/hadoop executable used for file system operations, administration and map reduce operations.  In v2 these are handled by seperate binaries.
+            before we had bin/hadoop executable used for file system operations, administration and map reduce operations.  In v2 these are handled by separate binaries.
         </para>
             <table id="hadoop-v1-v2-hadoop-command-split" grid="all">
                 <title>Hadoop Command Split</title>

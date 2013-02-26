@@ -14,7 +14,7 @@
           Usually after a new hadoop cluster is setup, benchmarking is a good way to 'kick the tires' of the cluster.  Running a benchmark gives an idea that the cluster is up and running properly.
       </para>
       <para>
-          When tweaking and optimizing a hadoop cluster, benchmarks provide a baseline and provide feedback on improvments.
+          When tweaking and optimizing a hadoop cluster, benchmarks provide a baseline and provide feedback on improvements.
       </para>
       <para>
           It is plain fun!  Playing with a hadoop cluster, tweaking it and running benchmarks is pretty good fun!
@@ -32,7 +32,7 @@
           </listitem>
 
           <listitem>
-              TerraSort : very widely used benchmark.  Stresses both HDFS and MapReduce components
+              Terasort : very widely used benchmark.  Stresses both HDFS and Map Reduce components
           </listitem>
           <listitem>
            SLive

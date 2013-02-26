@@ -67,7 +67,7 @@
     </part>
 
     <part>
-        <title>Hadoop InDepth</title>
+        <title>Hadoop In Depth</title>
         <partintro>
             <para>
                 This section will take a closer look at Hadoop internals.
@@ -112,7 +112,7 @@
         <title>Hadoop Cookbook</title>
         <partintro>
             <para>
-                This section has specific guides and howtos.
+                This section has specific guides and .
             </para>
             <literallayout>
             </literallayout>

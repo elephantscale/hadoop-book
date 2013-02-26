@@ -62,7 +62,7 @@
         </glossentry>
 
         <glossentry>
-            <glossterm>Serving advertisements and optimizing advertizing</glossterm>
+            <glossterm>Serving advertisements and optimizing advertising</glossterm>
             <glossdef>
                 <para>
                     Hadoop is used for storing ad logs and click logs, analyze it and tweak ad campaigns
@@ -131,7 +131,7 @@
             <glossterm>E-Commerce</glossterm>
             <glossdef>
                 <para>
-                    Buying patterns and recommendatations
+                    Buying patterns and recommendations
                 </para>
                 <para>
                     Companies : EBay, Amazon
@@ -154,7 +154,7 @@
             <glossterm>Sensor Data</glossterm>
             <glossdef>
                 <para>
-                    Traffic Sensors, weather seonsors
+                    Traffic Sensors, weather sensors
                 </para>
                 <para>
                 </para>

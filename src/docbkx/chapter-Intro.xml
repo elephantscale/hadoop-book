@@ -111,7 +111,7 @@
                         Do you find yourself often cleaning the limited hard drives in your company? Do you
                         need to transfer data from one drive to another, as a backup? Many people are so used to
                         this necessity, that they consider it an unpleasant but unavoidable part of life. Hadoop
-                        distrubuted file system, HDFS, grows by adding servers. To you it looks like one hard
+                        distributed file system, HDFS, grows by adding servers. To you it looks like one hard
                         drive. It is self-replicating (you set the replication factor) and thus provides redundancy
                         as a software alternative to RAID.
                     </para>
@@ -129,7 +129,7 @@
                 <listitem>
                     <para>
                         But say you are lucky, and instead of maintaining legacy software, you are charged with
-                        building new, progressive software for your company's workflow. Of course, you want to
+                        building new, progressive software for your company's work flow. Of course, you want to
                         have unlimited storage, solving this problem once and for all, so as to concentrate on
                         what's really important. The answer is: you can mount HDFS as FUSE file system, and
                         you have your unlimited storage. In our cases studies we look at the successful use of the
@@ -187,7 +187,7 @@
 
                 <para>
                     HDFS, or Hadoop Distributed File System, gives the programmer unlimited
-                    storage. Unlimited storage is a programmers's dream, so you can skip the rest.
+                    storage. Unlimited storage is a programmer's dream, so you can skip the rest.
                     However, here are the additional advantages of HDFS.
                 </para>
                 <itemizedlist>
@@ -620,7 +620,7 @@
                 </para>
                 <para>
                     You have done more than you promised - you can process multiple words on
-                    the same line, if Hadoop choses to give them to you. This follows the principles of
+                    the same line, if Hadoop chooses to give them to you. This follows the principles of
                     defensive programming. Then you immediately realize that each input line can be
                     as long as it wants. In fact, Hadoop is optimized to have the best overall throughput
                     on large datasets. Therefore, each input can be a complete document, and you are
@@ -827,7 +827,7 @@
                         ADDITIONAL 1
                         ADVANCING 2
                         ADVENTURES 1
-                        AFFGHANISTAN 1
+                        AFGHANISTAN 1
                         AFRICA 1
                         AFTER 1
                         AGAINST 1
@@ -918,7 +918,7 @@
 
                     You always deal with the latest and greatest code, and you can even try to build
                     it yourself, if you adventurous enough you can make an improvement and suggest
-                    it to the committers, in the form of a HADOOP-PATH-XXX - you can learn about
+                    it to the committees, in the form of a HADOOP-PATH-XXX - you can learn about
                     it here: http://wiki.apache.org/hadoop/HowToContribute
 
                     Your other choice is Cloudera CDH distribution. It offers the same code, but
@@ -1010,7 +1010,7 @@
 
                     What happened to the Hadoop jars that we needed in Lab 1? Since we are now
                     running relying on Hadoop, it takes care to provide your code with its library jars,
-                    and we do not need to care about them explicitely. This is true, provided that
+                    and we do not need to care about them explicitly. This is true, provided that
                     configured correctly, and usually this is HADOOP_CLASSPATH true if the install
                     and run scripts are configured right. If not, you may need to adjust your
                     installation.
@@ -1090,7 +1090,7 @@
             </section>
             <section>
                 <title>Exercise 2</title>
-                <para>Modify Lab 4 to output results to a relational database. Hint: using RDBS directly
+                <para>Modify Lab 4 to output results to a relational database. Hint: using RDBMS directly
                     may be problematic because of the load, and the possibility of node failures, so use
                     the output to text files instead, and load the text files into the database on a separate
                     post-processing step.

@@ -17,7 +17,7 @@
       </para>
 
       <para>
-          why would we want to execute a outside executable from within hadoop client or map reduce?  May be we have a program that converts image into another format (jpg --> png).  Rather than re-writting this in Java, we can use Shell to invoke the command
+          why would we want to execute a outside executable from within hadoop client or map reduce?  May be we have a program that converts image into another format (jpg --> png).  Rather than re-writing this in Java, we can use Shell to invoke the command
       </para>
 
       <programlisting language="java">
@@ -43,7 +43,7 @@ llvm-gcc-4.2
 local
 sbin
 share
-standalone
+stand alone
 */
 
       </programlisting>
