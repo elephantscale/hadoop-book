@@ -173,6 +173,42 @@
                             </resources>
                         </configuration>
                     </execution>
+                    <execution>
+                        <id>copy-docbkx-dev</id>
+                        <goals>
+                            <goal>copy-resources</goal>
+                        </goals>
+                        <phase>pre-site</phase>
+                        <configuration>
+                            <outputDirectory>target/site-dev</outputDirectory>
+                            <resources>
+                                <resource>
+                                    <directory>${basedir}/target/docbkx/multipage/index_dev</directory>
+                                    <includes>
+                                        <include>**/**</include>
+                                    </includes>
+                                </resource>
+                                <resource>
+                                    <directory>${basedir}/target/docbkx</directory>
+                                    <includes>
+                                        <include>singlepage/**</include>
+                                    </includes>
+                                </resource>
+                                <resource>
+                                    <directory>${basedir}/src/docbkx</directory>
+                                    <includes>
+                                        <include>css/**</include>
+                                    </includes>
+                                </resource>
+                                <resource>
+                                    <directory>${basedir}/src/docbkx</directory>
+                                    <includes>
+                                        <include>images/**</include>
+                                    </includes>
+                                </resource>
+                            </resources>
+                        </configuration>
+                    </execution>
                 </executions>
                 <configuration>
                     <escapeString>\</escapeString>
