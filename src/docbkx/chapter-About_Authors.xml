@@ -9,9 +9,9 @@
 
     <title>About Authors</title>
     <para>
-        <mediaobject> 
+        <mediaobject>
             <imageobject>
-                <imagedata fileref="mark_and_sujee.jpg" format="JPG" scale="50" /> 
+                <imagedata fileref="mark_and_sujee.png" format="PNG" scale="100" />
             </imageobject>
         </mediaobject>
     </para>
@@ -36,9 +36,9 @@
         </para>
         <para>
             Mark contributes to a number of Hadoop-based projects and his open source projects can
-            be found on 
+            be found on
             <link xlink:href="http://github.com/markkerzner">GitHub</link>. He writes about Hadoop
-            and other technologies on his 
+            and other technologies on his
             <link xlink:href="http://shmsoft.blogspot.com/">blog</link>.
         </para>
         <para>
@@ -61,8 +61,8 @@
         </para>
 
         <para>
-            Sujee stays active in Hadoop / Open Source community.  He runs a developer focused meetup called 
-            <link xlink:href="http://www.meetup.com/BigDataGurus/">'Big Data Gurus'</link>.   And he has presented at variety of meetups         
+            Sujee stays active in Hadoop / Open Source community.  He runs a developer focused meetup called
+            <link xlink:href="http://www.meetup.com/BigDataGurus/">'Big Data Gurus'</link>.   And he has presented at variety of meetups
         </para>
         <para>
             Sujee contributes to Hadoop project and his open source projects can be found on GitHub.  He writes about Hadoop and other technologies on his website.
@@ -72,11 +72,11 @@
             Sujee has been doing Hadoop training for individuals and corporations; his classes are hands-on and draws heavily on his industry experience
         </para>
         <para>
-        Links: 
+        Links:
         <sbr/>
-        <link xlink:href="http://www.linkedin.com/in/sujeemaniyam">LinkedIn</link>  || 
-        <link xlink:href="https://github.com/sujee">GitHub</link> || 
-        <link xlink:href="http://sujee.net/tech/articles/">Tech writings</link>  || 
+        <link xlink:href="http://www.linkedin.com/in/sujeemaniyam">LinkedIn</link>  ||
+        <link xlink:href="https://github.com/sujee">GitHub</link> ||
+        <link xlink:href="http://sujee.net/tech/articles/">Tech writings</link>  ||
         <link xlink:href="http://sujee.net/tech/talks/">Tech talks</link>  ||
         <link xlink:href="http://www.meetup.com/BigDataGurus/">BigDataGuru meetup</link>
         </para>
@@ -85,10 +85,21 @@
     <simplesect>
         <title>Rebecca Kerzner (Illustrator)</title>
         <para>
-            The delightful artwork appearing in this book has been created by Rebecca Kerzner.  
-            She is seventeen and studies at Beren Academy in Houston, TX. She has attended the 
-            Glassell school of art for many summers. Her collection of artwork can be seen 
+            The delightful artwork appearing in this book has been created by Rebecca Kerzner.
+            She is seventeen and studies at Beren Academy in Houston, TX. She has attended the
+            Glassell school of art for many summers. Her collection of artwork can be seen
             <link xlink:href="https://picasaweb.google.com/110574221375288281850/RebeccaSArt">here</link>
+        </para>
+    </simplesect>
+
+
+    <simplesect>
+        <title>And our thanks go to...</title>
+        <para>
+            We would like to thanks the following people that helped us make this book a reality.
+            <itemizedlist>
+                
+            </itemizedlist>
         </para>
     </simplesect>
 </chapter>
