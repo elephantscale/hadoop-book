@@ -8,8 +8,25 @@
     xmlns:db="http://docbook.org/ns/docbook">
 
     <title>Introduction To MapReduce</title>
+    <para>
+        Once, while working on an eDiscovery system, before Hadoop was born,
+        I had to scale up my computations: whatever I have done on one computer
+        had to work on thirty computers which we had on our racks. I chose to 
+        install JBoss on every machine, only to use its JMS messaging, and my computers
+        were talking to each other through that. It was working, but had its drawbacks:
+        <ul>
+            <li>
+                I had a concept of master and slaves, and the master was dividing the
+                job into tasks for the slaves, but this preparation, which happened at the start of the job,
+                took a long time.
+            </li>
+            <li>
+                
+            </li>
+        </ul>
+    </para>
     <section>
-        <title>section 1</title>
+        <title>Another game: parallel computing design</title>
         <para>
             para1
             <mediaobject>
