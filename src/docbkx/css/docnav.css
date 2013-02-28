@@ -109,9 +109,24 @@
 
 /* Eclipse Help Navigation */
 
+/*
 .navheader {padding-top:35px}
 
 .navheader table {border-style:none}
+*/
+
+.navheader {
+    padding-top:35px;
+    background: url(../images/logo-alpha.png);
+    background-repeat:no-repeat;
+    margin: 18px 0 0;
+}
+
+.navheader table {
+    border-style:none;
+    margin: 27px 0 0;
+}
+
 
 .navheader a {
     text-decoration:none;
