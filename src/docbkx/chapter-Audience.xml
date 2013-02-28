@@ -10,18 +10,32 @@
     <title>Who is this book for?</title>
     <section>
         <title>About "Hadoop illuminated"</title>
-        <para>This book is our experiment in making Hadoop knowledge available 
-            to the open source community. The book is freely available, and its code is open source.            
+        <para>This book is our experiment in making Hadoop knowledge available
+            to the open source community. The book is freely available, and its code is open source.
         </para>
         <para>
             We want this book to serve as an introduction, as a cookbook, and in later parts
-            as an advanced manual.            
+            as an advanced manual.
         </para>
         <para>
             "Hadoop illuminated" is work in progress. Techniques get added, chapters added
-            and updated. We appreciate your feedback. You can follow it on Twitter, 
-            discuss it in on Google Groups, or send your feedback to our emails. 
+            and updated. We appreciate your feedback. You can follow it on Twitter,
+            discuss it in on Google Groups, or send your feedback to our emails.
         </para>
+        <itemizedlist>
+            <listitem>
+                Twitter : <link xlink:href="https://twitter.com/HadoopIlluminat">@HadoopIllumint</link>
+            </listitem>
+            <listitem>
+                Google Group : <link xlink:href="http://groups.google.com/group/hadoop-illuminated">Hadoop Illuminated google group</link>
+            </listitem>
+            <listitem>
+                Email Authors Directly : authors @ HadoopIlluminated.com
+            </listitem>
+            <listitem>
+                GitHub : <link xlink:href="https://github.com/markkerzner/HadoopIlluminated">github.com/markkerzner/HadoopIlluminated</link>
+            </listitem>
+        </itemizedlist>
     </section>
 
     <section>
