@@ -57,10 +57,6 @@
             <graphic fileref="hadoop-dance-resized.png"></graphic>
         </figure>
         <para>
-            Artwork by 
-            <link xlink:href="https://picasaweb.google.com/110574221375288281850/RebeccaSArt">RK</link>
-        </para>
-        <para>
             The short answer is that it simplifies dealing with Big Data. This answer
             immediately resonates with people, it is clear and succinct, but it is not complete.
             The Hadoop framework has built-in power and flexibility to do what you could not
@@ -182,12 +178,7 @@
             <figure>
                 <title>The Hadoop Zoo</title>
                 <graphic fileref="hadoop-zoo-resized.png"></graphic>
-                Artwork by
-                <ulink url="https://picasaweb.google.com/110574221375288281850/RebeccaSArt">RK</ulink>
             </figure>
-            <para>
-                Artwork by <link xlink:href="https://picasaweb.google.com/110574221375288281850/RebeccaSArt">RK</link>
-            </para>
             -->
         <section>
             <title>HDFS - Hadoop Distributed File System</title>
