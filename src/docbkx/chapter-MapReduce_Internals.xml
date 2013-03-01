@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <chapter version="5.0" xml:id="chapter-MapReduce_Internals" xmlns="http://docbook.org/ns/docbook"
-    xmlns:xlink="http://www.w3.org/1999/xlink"
-    xmlns:xi="http://www.w3.org/2001/XInclude"
-    xmlns:svg="http://www.w3.org/2000/svg"
-    xmlns:m="http://www.w3.org/1998/Math/MathML"
-    xmlns:html="http://www.w3.org/1999/xhtml"
-    xmlns:db="http://docbook.org/ns/docbook">
+         xmlns:xlink="http://www.w3.org/1999/xlink"
+         xmlns:xi="http://www.w3.org/2001/XInclude"
+         xmlns:svg="http://www.w3.org/2000/svg"
+         xmlns:m="http://www.w3.org/1998/Math/MathML"
+         xmlns:html="http://www.w3.org/1999/xhtml"
+         xmlns:db="http://docbook.org/ns/docbook">
 
     <title>How MapReduce Works -- The Internals</title>
     <para>
@@ -24,7 +24,10 @@
                 </imageobject>
             </mediaobject>
         </figure>
-
+        <para>
+            Artwork by 
+            <link xlink:href="https://picasaweb.google.com/110574221375288281850/RebeccaSArt">RK</link>
+        </para>
 
         <para>
             Whoa, that is quite a lot; let's take it in stride
@@ -161,7 +164,7 @@
             <listitem>
                 <para>
 
-                Hanging tasks : At times map or reduce tasks go un-responsive.  It could be a long running task (crawling web sites) or stuck on loop.  If a task hasn't updated it's progress in a while (10 minutes), then that task is marked as non-responsive and noted as failed.
+                    Hanging tasks : At times map or reduce tasks go un-responsive.  It could be a long running task (crawling web sites) or stuck on loop.  If a task hasn't updated it's progress in a while (10 minutes), then that task is marked as non-responsive and noted as failed.
                 </para>
                 <para>
                     This timeout interval can be set by mapred.task.timeout configuration parameter.  IF this is set to zero, then the timeouts are disabled; as in Map Reduce doesn't mark the tasks as failed.
@@ -194,7 +197,7 @@
                         This is the default scheduler for Hadoop 1.  The concept is pretty simple.  Jobs from all users are slotted in to a queue.  And they are executed in the order they arrive.
                     </para>
                     <para>
-                    FIFO has a serious problem in multi user environment.  Imagine a long running job that will be running for 10 hours is currently running on the cluster.  And another user submits a quick job that would be done in 10 minutes.  If we stick to 'first come first served' the short job will be stuck behind the long running job, for a very long time.
+                        FIFO has a serious problem in multi user environment.  Imagine a long running job that will be running for 10 hours is currently running on the cluster.  And another user submits a quick job that would be done in 10 minutes.  If we stick to 'first come first served' the short job will be stuck behind the long running job, for a very long time.
                     </para>
                 </glossdef>
             </glossentry>
