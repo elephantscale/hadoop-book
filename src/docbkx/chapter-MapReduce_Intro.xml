@@ -1,53 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <chapter version="5.0" xml:id="chapter-MapReduce_Intro" xmlns="http://docbook.org/ns/docbook"
-    xmlns:xlink="http://www.w3.org/1999/xlink"
-    xmlns:xi="http://www.w3.org/2001/XInclude"
-    xmlns:svg="http://www.w3.org/2000/svg"
-    xmlns:m="http://www.w3.org/1998/Math/MathML"
-    xmlns:html="http://www.w3.org/1999/xhtml"
-    xmlns:db="http://docbook.org/ns/docbook">
+         xmlns:xlink="http://www.w3.org/1999/xlink"
+         xmlns:xi="http://www.w3.org/2001/XInclude"
+         xmlns:svg="http://www.w3.org/2000/svg"
+         xmlns:m="http://www.w3.org/1998/Math/MathML"
+         xmlns:html="http://www.w3.org/1999/xhtml"
+         xmlns:db="http://docbook.org/ns/docbook">
 
-    <title>Introduction To MapReduce</title>
-    <para>
-        Once, while working on an eDiscovery system, before Hadoop was born,
-        I had to scale up my computations: whatever I have done on one computer
-        had to work on thirty computers which we had on our racks. I chose to 
-        install JBoss on every machine, only to use its JMS messaging, and my computers
-        were talking to each other through that. It was working, but had its drawbacks:
-        <ul>
-            <li>
-                I had a concept of master and slaves, and the master was dividing the
-                job into tasks for the slaves, but this preparation, which happened at the start of the job,
-                took a long time.
-            </li>
-            <li>
-                
-            </li>
-        </ul>
-    </para>
+    <title>Introduction To MapReduce</title>    
     <section>
-        <title>Another game: parallel computing design</title>
+        <title>How I failed in designing distributed processing</title>
         <para>
-            para1
-            <mediaobject>
-                <imageobject>
-                    <imagedata fileref="macintosh_classic1.jpg" format="JPG" scale="100" />
-                </imageobject>
-            </mediaobject>
+            Once, while working on an eDiscovery system, before Hadoop was born,
+            I had to scale up my computations: whatever I have done on one computer
+            had to work on thirty computers which we had on our racks. I chose to 
+            install JBoss on every machine, only to use its JMS messaging, and my computers
+            were talking to each other through that. It was working, but had its drawbacks:
+            <orderedlist>
+                <listitem>
+                    It had a concept of master and workers, and the master was dividing the
+                    job into tasks for the workers, but this preparation, which happened at the start of the job,
+                    took a long time.                 
+                </listitem>
+                <listitem>
+                    The system was not stable: some tasks were forgotten and somehow never performed.
+                </listitem>
+                <listitem>
+                    If a worker went down, he stopped working, that is, he did not pick up more work, but the work left
+                    undone was in an unknown stage.
+                </listitem>
+                <listitem>
+                    All of the data resided on a central file server. When 30 PC's were trying to read and write
+                    this data at the same time, the system gave random errors and reported file status incorrectly.
+                </listitem>
+            </orderedlist>
+        </para>
+        <para>
+            That was quite upsetting. I started having dreams about stacks of Linux servers, one upon another
+            (picture here), and then I read about the Fallacies of network computing,     
+            http://en.wikipedia.org/wiki/Fallacies_of_Distributed_Computing
+            and realized that I have violated all of them.
+
+
         </para>
     </section>
 
-    <!-- nested section -->
-    <sect1>
-        <title>sect1</title>
-        <para>
-            para2
-        </para>
-        <sect2>
-            <title>sect1.1</title>
-            <para>
-                para3
-            </para>
-        </sect2>
-    </sect1>
+    <section>
+        <title>
+            How MapReduce does it
+        </title>
+    </section>
 </chapter>
