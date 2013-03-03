@@ -9,7 +9,7 @@
 
     <title>Introduction To MapReduce</title>    
     <section>
-        <title>How I failed in designing distributed processing</title>
+        <title>How I failed at designing distributed processing</title>
         <para>
             Once, while working on an eDiscovery system, before Hadoop was born,
             I had to scale up my computations: whatever I have done on one computer
@@ -36,12 +36,10 @@
             </orderedlist>
         </para>
         <para>
-            That was quite upsetting. I started having dreams about stacks of Linux servers, one upon another
+            That was quite upsetting. I started having dreams about stacks of Linux servers, piled one upon another
             (picture here), and then I read about the Fallacies of network computing,     
             http://en.wikipedia.org/wiki/Fallacies_of_Distributed_Computing
             and realized that I have violated all of them.
-
-
         </para>
     </section>
 
