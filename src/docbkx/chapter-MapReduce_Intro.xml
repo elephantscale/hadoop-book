@@ -186,7 +186,8 @@
                 MapReduce has Mappers and Reducers
             </title>
             <para>
-                This may sound like a <link xlink:href="http://en.wikipedia.org/wiki/Tautology">tautology</link>, 
+                This may sound like a 
+                <link xlink:href="http://en.wikipedia.org/wiki/Tautology">tautology</link>, 
                 but without Mappers and Reducers what we have described so far can only help us produce one line 
                 of output per one line of input. To go any further, we need to introduce the computational 
                 capability of MapReduce. Let me give an example. Suppose you want to output only unique values from your 
@@ -220,6 +221,63 @@
             <para>
                 This concludes our introduction to the MapReduce part of Hadoop, where our goal was to explain how it works 
                 without one line of code.
+            </para>
+        </sect2>
+        <sect2>
+            <title>
+                A practical example
+            </title>
+            <para>
+                Let me give you a practical example. In one ancient book I read that get around through the chambers 
+                of Heaven, you had a give a key to the angel who was guarding each door. The key was to be created 
+                in your own thought: you concentrate on the mystical name until it becomes a real physical seal. 
+                You then hand this seal to the angel, and he lets you in.
+            </para>
+            <para>
+                To calculate the meaning of the seal, the angel had to take the numerical value assigned to each letter, and 
+                add them up.
+            </para>
+            <para>
+                This then becomes the perfect analogy of the MapReduce calculation. Your value is the mystical name, 
+                represented by the seal. It may be a simple string or a multi-dimensional object. From this value, you 
+                calculate the key, or the sum total of each letter. This is the Mapper.
+            </para>
+            <para>
+                With this &lt;key, value&gt; combination you begin your travels. All the people who have the same key 
+                are collected by the same angel in a certain chamber. This is your Reducer. The computation is parallel 
+                (each person does his own travels) and scalable (there is not limit on the number of people traveling 
+                at the same time). This is the MapReduce calculation. If one angel fails, the other can take its place, 
+                because angels too are defined by their names. Thus you have fault tolerance.
+            </para>
+            <para>                
+                This concludes our introduction to the MapReduce part of Hadoop, where our goal was to explain how it works 
+                without one line of code.
+            </para>
+        </sect2>
+        <sect2>
+            <title>
+                Who invented this?
+            </title>
+            <para>
+                According to the article from the "Wired" magazine, 
+                entitled <link xlink:href="http://www.wired.com/wiredenterprise/2012/08/google-as-xerox-parc/all/">                    
+                "If Xerox PARC Invented the PC, Google Invented the Internet</link>, all of the modern computer science 
+                was invented at Google. Definitely the MapReduce technology was invented there, by Jeff Dean and
+                Sanjay Ghemawat. To prove the point, here are some "facts" about Jeff:
+            </para>
+            <para>
+                Jeff Dean once failed a Turing test when he correctly identified the 203rd Fibonacci number in less than a second.
+            </para>
+            <para>
+                Jeff Dean compiles and runs his code before submitting, but only to check for compiler and CPU bugs.
+            </para>
+            <para>
+                The speed of light in a vacuum used to be about 35 mph. Then Jeff Dean spent a weekend optimizing physics.
+            </para>
+            <para>
+                You can read the complete article by the two Google engineers, entitled
+                <link xlink:href="http://research.google.com/archive/mapreduce.html">MapReduce: Simplified Data Processing on Large Clusters</link>
+                and decide for yourself.
             </para>
         </sect2>
         <sect2>
