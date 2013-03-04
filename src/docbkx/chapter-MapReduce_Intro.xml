@@ -228,8 +228,8 @@
                 A practical example
             </title>
             <para>
-                Let me give you a practical example. In one ancient book I read that get around through the chambers 
-                of Heaven, you had a give a key to the angel who was guarding each door. The key was to be created 
+                Let me give you a practical example. In one ancient book I read that to get around through the chambers 
+                of Heaven, you had to give a seal to the angel who was guarding each door. The seal was to be created 
                 in your own thought: you concentrate on the mystical name until it becomes a real physical seal. 
                 You then hand this seal to the angel, and he lets you in.
             </para>
@@ -245,57 +245,59 @@
             <para>
                 With this &lt;key, value&gt; combination you begin your travels. All the people who have the same key 
                 are collected by the same angel in a certain chamber. This is your Reducer. The computation is parallel 
-                (each person does his own travels) and scalable (there is not limit on the number of people traveling 
+                (each person does his own travels) and scalable (there is no limit on the number of people traveling 
                 at the same time). This is the MapReduce calculation. If one angel fails, the other can take its place, 
                 because angels too are defined by their names. Thus you have fault tolerance.
             </para>
             <para>                
-                This concludes our introduction to the MapReduce part of Hadoop, where our goal was to explain how it works 
+                This concludes our introduction to the MapReduce part of Hadoop, where our goal was to explain how it works, 
                 without one line of code.
             </para>
         </sect2>
-        <sect2>
-            <title>
-                Who invented this?
-            </title>
-            <para>
-                According to the article from the "Wired" magazine, 
-                entitled <link xlink:href="http://www.wired.com/wiredenterprise/2012/08/google-as-xerox-parc/all/">                    
-                "If Xerox PARC Invented the PC, Google Invented the Internet</link>, all of the modern computer science 
-                was invented at Google. Definitely the MapReduce technology was invented there, by Jeff Dean and
-                Sanjay Ghemawat. To prove the point, here are some "facts" about Jeff:
-            </para>
-            <para>
-                Jeff Dean once failed a Turing test when he correctly identified the 203rd Fibonacci number in less than a second.
-            </para>
-            <para>
-                Jeff Dean compiles and runs his code before submitting, but only to check for compiler and CPU bugs.
-            </para>
-            <para>
-                The speed of light in a vacuum used to be about 35 mph. Then Jeff Dean spent a weekend optimizing physics.
-            </para>
-            <para>
-                You can read the complete article by the two Google engineers, entitled
-                <link xlink:href="http://research.google.com/archive/mapreduce.html">MapReduce: Simplified Data Processing on Large Clusters</link>
-                and decide for yourself.
-            </para>
-        </sect2>
-        <sect2>
-            <title>The benefits of MapReduce programming</title>
-            <para>
-                So what are the benefits of the MapReduce programming? As you can see, it summarizes a lot of the 
-                experience of the scientists and practitioners in the design of distributed processing systems. It resolves 
-                or avoids the multiple fallacies of distributed computing. It allows unlimited computations on the 
-                unlimited amount of data. It actually simplifies the developer's life. And, although it looks 
-                deceptively simple, it is very powerful, with a great number of sophisticated (and profitable) 
-                applications written in this framework.
-            </para>
-            <para>
-                In the other sections of this book we will introduce you to the practical aspects of MapReduce implementation. 
-                We will also show you how to avoid it, by using higher-level tools, 'cause not everybody likes 
-                to write Java code. Then you will be able to see whether or not Hadoop is for you, or even invent a new 
-                framework. Keep in mind though that other developers are also busy inventing new frameworks, so hurry to read more.
-            </para>
-        </sect2>
-    </sect1>    
+    </sect1>
+    <sect1>
+        <title>
+            Who invented this?
+        </title>
+        <para>
+            According to the article from the "Wired" magazine, 
+            entitled 
+            <link xlink:href="http://www.wired.com/wiredenterprise/2012/08/google-as-xerox-parc/all/">                    
+                "If Xerox PARC Invented the PC, Google Invented the Internet
+            </link>, all of the modern computer science 
+            was invented at Google. Definitely the MapReduce technology was invented there, by Jeff Dean and
+            Sanjay Ghemawat. To prove the point, here are some "facts" about Jeff:
+        </para>
+        <para>
+            Jeff Dean once failed a Turing test when he correctly identified the 203rd Fibonacci number in less than a second.
+        </para>
+        <para>
+            Jeff Dean compiles and runs his code before submitting, but only to check for compiler and CPU bugs.
+        </para>
+        <para>
+            The speed of light in a vacuum used to be about 35 mph. Then Jeff Dean spent a weekend optimizing physics.
+        </para>
+        <para>
+            You can read the complete article by the two Google engineers, entitled
+            <link xlink:href="http://research.google.com/archive/mapreduce.html">MapReduce: Simplified Data Processing on Large Clusters</link>
+            and decide for yourself.
+        </para>
+    </sect1>
+    <sect1>
+        <title>The benefits of MapReduce programming</title>
+        <para>
+            So what are the benefits of the MapReduce programming? As you can see, it summarizes a lot of the 
+            experience of the scientists and practitioners in the design of distributed processing systems. It resolves 
+            or avoids the multiple fallacies of distributed computing. It allows unlimited computations on the 
+            unlimited amount of data. It actually simplifies the developer's life. And, although it looks 
+            deceptively simple, it is very powerful, with a great number of sophisticated (and profitable) 
+            applications written in this framework.
+        </para>
+        <para>
+            In the other sections of this book we will introduce you to the practical aspects of MapReduce implementation. 
+            We will also show you how to avoid it, by using higher-level tools, 'cause not everybody likes 
+            to write Java code. Then you will be able to see whether or not Hadoop is for you, or even invent a new 
+            framework. Keep in mind though that other developers are also busy inventing new frameworks, so hurry to read more.
+        </para>
+    </sect1>     
 </chapter>
