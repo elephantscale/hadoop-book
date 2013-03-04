@@ -37,8 +37,42 @@ user.footer.navigation : 	Called after the standard navigational footer.
   <xsl:import href="urn:docbkx:stylesheet"/>
   <xsl:output method="html" encoding="UTF-8" indent="no"/>
 
+  <xsl:template name="breadcrumbs">
+      <xsl:param name="this.node" select="."/>
+      <div class="breadcrumbs">
+          <xsl:for-each select="$this.node/ancestor::*">
+              <span class="breadcrumb-link">
+                  <a>
+                      <xsl:attribute name="href">
+                          <xsl:call-template name="href.target">
+                              <xsl:with-param name="object" select="."/>
+                              <xsl:with-param name="context" select="$this.node"/>
+                          </xsl:call-template>
+                      </xsl:attribute>
+                      <xsl:apply-templates select="." mode="title.markup"/>
+                  </a>
+              </span>
+              <xsl:text> &gt; </xsl:text>
+          </xsl:for-each>
+          <!-- And display the current node, but not as a link -->
+          <span class="breadcrumb-node">
+              <xsl:apply-templates select="$this.node" mode="title.markup"/>
+          </span>
+      </div>
+  </xsl:template>
+
+<!--
+  <xsl:template name="header.navigation">
+    hello
+  </xsl:template>
+-->
+
   <xsl:template name="user.header.navigation">
     <a href="/"><div class="logo"></div></a>
+  </xsl:template>
+
+  <xsl:template name="user.header.content">
+    <xsl:call-template name="breadcrumbs"/>
   </xsl:template>
 
   <xsl:template name="user.footer.content">
