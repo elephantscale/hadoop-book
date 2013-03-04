@@ -1,5 +1,17 @@
 /* Document Navigation */
 
+/* TODO : style this please */
+.logo{
+        background: url(../images/logo-alpha.png);
+        background-repeat:no-repeat;
+        cursor:pointer;
+        width:258px;
+        height:45px;
+        float:left;
+        margin:5px 0 10px 0;
+}
+
+
 .docnav a, .docnav strong {
     text-decoration:none;
     font-weight:normal;
@@ -109,12 +121,11 @@
 
 /* Eclipse Help Navigation */
 
-/*
 .navheader {padding-top:35px}
 
 .navheader table {border-style:none}
-*/
 
+/*
 .navheader {
     padding-top:35px;
     background: url(../images/logo-alpha.png);
@@ -126,6 +137,7 @@
     border-style:none;
     margin: 27px 0 0;
 }
+*/
 
 
 .navheader a {

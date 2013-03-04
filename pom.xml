@@ -100,7 +100,8 @@
                     <!-- <targetDirectory>${basedir}/target/docbkx</targetDirectory> -->
                     <chunkerOutputEncoding>UTF-8</chunkerOutputEncoding>
                     <highlightSource>1</highlightSource>
-					<navigGraphics>1</navigGraphics>
+		    <navigGraphics>1</navigGraphics>
+                    <htmlCustomization>${basedir}/src/docbkx/customization.xsl</htmlCustomization>
                 </configuration>
                 <executions>
                     <execution>
