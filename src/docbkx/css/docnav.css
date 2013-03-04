@@ -6,7 +6,16 @@
         background-repeat:no-repeat;
         cursor:pointer;
         width:258px;
-        height:45px;
+        height:51px;
+        float:left;
+        margin:30px 0 10px 0;
+}
+.logo-alpha{
+        background: url(../images/logo-alpha.png);
+        background-repeat:no-repeat;
+        cursor:pointer;
+        width:258px;
+        height:51px;
         float:left;
         margin:5px 0 10px 0;
 }
@@ -121,9 +130,12 @@
 
 /* Eclipse Help Navigation */
 
-.navheader {padding-top:35px}
+.navheader {padding-top:35px;}
 
-.navheader table {border-style:none}
+.navheader table {
+	background: url(../images/nav_header.png);
+	border-style:none;
+	height:88px;}
 
 /*
 .navheader {
@@ -148,10 +160,11 @@
 
 .navheader table th {
     text-align:left;
-    background-color: #01A4E0;
+    /*background-color: #01A4E0;*/
     /* background:url(../images/docbook/next.png) top right no-repeat; */
     padding:.3em .5em;
     color:white;
+    background-color: transparent;
 }
 
 .navheader td.next a {
@@ -183,12 +196,28 @@
 
 .navheader a:link {text-decoration:none;}
 
-.navfooter table {border-style:none}
+.navfooter table {border-style:none;
+    background: url("../images/nav_header.png") repeat scroll 0 0 transparent;
+    border-style: none;
+    height: 88px;
+}
 
+.breadcrumb-link a{
+	font-weight:bold;
+	color:#009FDA !important;
+	text-decoration:none;
+	font-size:14px;
+}
+.breadcrumb-link a:hover{
+	text-decoration:underline;
+	
+}
 .navfooter a {
     text-decoration:none;
-    font-weight:normal;
-    font-size:.8em;
+    font-size:12px;
+	overflow:hidden;
+	color:#FFF;
+	margin:4px 0 0 0;
 }
 
 .navfooter td.next a {
@@ -227,13 +256,9 @@
     font-size:0.9em;
 }
 
-.navfooter a:link, .navfooter a:visited {color:#666 !important;}
+.navfooter a:link, .navfooter a:visited {color:#FFF !important;}
 
-.navfooter a:hover, .navfooter a:focus, .navfooter a:active {color:black !important;}
-
-.navfooter a {
-    max-width:10em;
-    overflow:hidden;
-}
+.navfooter a:focus, .navfooter a:active {color:#FFF !important;}
 
 .navfooter a:link {text-decoration:none;}
+.navfooter a:hover{text-decoration:underline;}

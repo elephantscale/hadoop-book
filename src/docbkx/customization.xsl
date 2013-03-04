@@ -32,10 +32,86 @@ user.footer.content : 	Called after the chunk content but before the standard na
 footer.navigation : 	The standard navigational footer.
 user.footer.navigation : 	Called after the standard navigational footer.
 -->
-
+	
 
   <xsl:import href="urn:docbkx:stylesheet"/>
   <xsl:output method="html" encoding="UTF-8" indent="no"/>
+ 
+
+	<xsl:template name="header.navigation">
+	  <xsl:param name="prev" select="/foo"/>
+	  <xsl:param name="next" select="/foo"/>
+	  <xsl:param name="nav.context"/>
+
+	  <xsl:variable name="home" select="/*[1]"/>
+	  <xsl:variable name="up" select="parent::*"/>
+
+	  <xsl:variable name="row1" select="$navig.showtitles != 0"/>
+	  <xsl:variable name="row2" select="count($prev) &gt; 0
+										or (count($up) &gt; 0 
+											and generate-id($up) != generate-id($home)
+											and $navig.showtitles != 0)
+										or count($next) &gt; 0"/>
+
+	  <xsl:if test="$suppress.navigation = '0' and $suppress.header.navigation = '0'">
+		<div class="navheader">
+			<table width="100%" summary="Navigation header">
+			  <xsl:if test="$row1">
+				<tr>
+				  <th colspan="3" align="center">
+				    <xsl:call-template name="breadcrumbs"/>
+				  </th>
+				</tr>
+			  </xsl:if>
+
+			  <xsl:if test="$row2">
+				<tr>
+				  <td width="20%" align="{$direction.align.start}">
+					<xsl:if test="count($prev)>0">
+					  <a accesskey="p">
+						<xsl:attribute name="href">
+						  <xsl:call-template name="href.target">
+							<xsl:with-param name="object" select="$prev"/>
+						  </xsl:call-template>
+						</xsl:attribute>
+						<img alt="Prev" src="images/prev.gif"/>
+					  </a>
+					</xsl:if>
+					<xsl:text>&#160;</xsl:text>
+				  </td>
+				  <th width="60%" align="center">
+					<xsl:choose>
+					  <xsl:when test="count($up) > 0
+									  and generate-id($up) != generate-id($home)
+									  and $navig.showtitles != 0">
+						<xsl:apply-templates select="$up" mode="object.title.markup"/>
+					  </xsl:when>
+					  <xsl:otherwise>&#160;</xsl:otherwise>
+					</xsl:choose>
+				  </th>
+				  <td width="20%" align="{$direction.align.end}">
+					<xsl:text>&#160;</xsl:text>
+					<xsl:if test="count($next)>0">
+					  <a accesskey="n">
+						<xsl:attribute name="href">
+						  <xsl:call-template name="href.target">
+							<xsl:with-param name="object" select="$next"/>
+						  </xsl:call-template>
+						</xsl:attribute>
+						<img alt="Next" src="images/next.gif"/>
+					  </a>
+					</xsl:if>
+				  </td>
+				</tr>
+			  </xsl:if>
+			</table>
+
+		  <xsl:if test="$header.rule != 0">
+			<hr/>
+		  </xsl:if>
+		</div>
+	  </xsl:if>
+	</xsl:template>
 
   <xsl:template name="breadcrumbs">
       <xsl:param name="this.node" select="."/>
@@ -69,10 +145,6 @@ user.footer.navigation : 	Called after the standard navigational footer.
 
   <xsl:template name="user.header.navigation">
     <a href="/"><div class="logo"></div></a>
-  </xsl:template>
-
-  <xsl:template name="user.header.content">
-    <xsl:call-template name="breadcrumbs"/>
   </xsl:template>
 
   <xsl:template name="user.footer.content">
