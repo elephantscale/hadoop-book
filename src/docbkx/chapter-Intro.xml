@@ -192,7 +192,7 @@
                 <listitem>
                     <para>
                         Horizontal scalability. Thousands of servers holding petabytes of data. When you need
-                        more more storage, you don't switch to more expensive solutions, but add servers to it.
+                        even more storage, you don't switch to more expensive solutions, but add servers to instead.
                     </para>
                 </listitem>
                 <listitem>
@@ -332,8 +332,8 @@
                 Another possible contender is ZFS, an open-source file system from SUN, and
                 currently Oracle. Intended as a complete redesign of file system thinking, ZFS
                 holds a strong promise of unlimited size, robustness, encryption, and many other
-                desirable qualities built into the low-level file system. After all, Hadoop and its
-                model GFS both build on a conventional file system, creating their improvement
+                desirable qualities built into the low-level file system. After all, HDFS and its
+                role model GFS both build on a conventional file system, creating their improvement
                 on top of it, and the premise of ZFS is that the underlying file system should be
                 redesigned to address the core issues.
             </para>
@@ -349,7 +349,7 @@
                 While other file system start out with the goal of improving on HDFS/GFS
                 design, the advantage of HDFS is that it is very widely used. I think that in
                 evaluating other file systems, the reader can be guided by the same considerations
-                that led to the design of GFS: the designer of it analyzed prevalent file usage in the
+                that led to the design of GFS: the designers of it analyzed prevalent file usage in the
                 majority of their applications, and created a file system that optimized reliability
                 for that particular type of usage. The reader may be well advised to compare the
                 assumption of GFS designers with his or her case, and decide if HDFS fits the
