@@ -11,7 +11,7 @@
     <section>
         <title>MapReduce or Hadoop?</title>
         <para>The goal here is to present an intro to Hadoop so simple that any programmer who
-            reads it will be able to write simple Hadoop solutions and run them on a Hadoop
+            reads it will be able to write basic Hadoop solutions and run them on a Hadoop
             cluster.
         </para>
         <para>
@@ -19,8 +19,8 @@
             is MapReduce?
         </para>
         <para>
-            <emphasis>MapReduce</emphasis> is a programming framework,
-            <ulink url="http://research.google.com/archive/mapreduce.html">published by Google in 2004</ulink>.
+            <emphasis>MapReduce</emphasis> is a programming framework.
+            <ulink url="http://research.google.com/archive/mapreduce.html">Its description of which was published by Google in 2004</ulink>.
             Much like other frameworks, such as Spring, Struts, or MFC, the MapReduce framework
             does some things for you, and provides the place for you to fill in the blanks. What
             MapReduce does for you is to organize your multiple computers in a cluster in
@@ -32,15 +32,12 @@
             machines, and you provide the code to do the actual calculation.
         </para>
         <para>
-            <emphasis>Hadoop</emphasis> is an open-source implementation of the MapReduce framework. For
-            Google everything is MapReduce: both the way to write their applications, and the
-            actual implementation are called MapReduce. For the rest of the world, the
-            framework, the theory, and the way you spell out the computations are all called
-            MapReduce. However, the actual software that implements this is called Hadoop.
-            Let us agree for simplicity that MapReduce and Hadoop are just two names for
-            the same things. Note, however, that when Google teaches college students the
-            ideas of MapReduce programming, they, too, use Hadoop, because their actual
-            implementation of MapReduce is proprietary code. To emphasize the difference,
+            <emphasis>Hadoop</emphasis> is an open-source implementation of Google's distributed computing. 
+            It consists of two parts: Hadoop Distributed File System (HDFS), which is modeled after 
+            Google's GFS, and of Hadoop MapReduce, which is modeled after Google's MapReduce.
+            Google's system is proprietary code, so when Google teaches college students the
+            ideas of MapReduce programming, they, too, use Hadoop. 
+            To further emphasize the difference 
             we can note that the Hadoop engineers at Yahoo like to challenge the engineers at
             Google to sorting competitions between Hadoop and MapReduce.
         </para>
