@@ -373,6 +373,14 @@
                             Recommendation engine on top of Hadoop
                         </entry>
                     </row>
+                    <row>
+                        <entry>
+                            <link xlink:href="http://incubator.apache.org/giraph/">Giraph</link>
+                        </entry>
+                        <entry>
+                            Fast graph processing on top of Hadoop
+                        </entry>
+                    </row>
                 </tbody>
             </tgroup>
         </table>
