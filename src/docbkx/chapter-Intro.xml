@@ -20,7 +20,7 @@
         </para>
         <para>
             <emphasis>MapReduce</emphasis> is a programming framework.
-            <ulink url="http://research.google.com/archive/mapreduce.html">Its description of which was published by Google in 2004</ulink>.
+            Its description was <ulink url="http://research.google.com/archive/mapreduce.html">published by Google in 2004</ulink>.
             Much like other frameworks, such as Spring, Struts, or MFC, the MapReduce framework
             does some things for you, and provides the place for you to fill in the blanks. What
             MapReduce does for you is to organize your multiple computers in a cluster in

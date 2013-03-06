@@ -63,6 +63,7 @@
         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-MapReduce_Intro.xml" />
         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-Hadoop_Use_Cases.xml" />
         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-Distributions.xml" />
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-Hadoop_Ecosystem.xml" />
         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-Hardware_Software.xml" />
         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-Challenges.xml" />
     </part>

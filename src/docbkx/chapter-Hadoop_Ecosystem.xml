@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter version="5.0" xml:id="chapter-Hadoop_Ecosystem" xmlns="http://docbook.org/ns/docbook"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xi="http://www.w3.org/2001/XInclude"
+    xmlns:svg="http://www.w3.org/2000/svg"
+    xmlns:m="http://www.w3.org/1998/Math/MathML"
+    xmlns:html="http://www.w3.org/1999/xhtml"
+    xmlns:db="http://docbook.org/ns/docbook">
+
+    <title>Hadoop Ecosystem ++</title>
+    <para>
+        We met a few members of Hadoop eco system in <xref linkend="chapter-Intro"/>.  How ever hadoop eco system is much bigger than that, and it is growing at a rapid pace.  Keeping track of Hadoop components / products is now a full time job :-)
+    </para>
+    <para>
+        In this chapter we are going to meet a few more members.  Some of them may not be Hadoop off shoots.  But they are often used along side Hadoop implementations.
+    </para>
+
+    <section>
+        <title>Getting Data into HDFS</title>
+        <para>
+            Most of the big data originates outside Hadoop cluster.  These tools will help you get data into HDFS
+        </para>
+
+        <table id="table-hadoop-ecosystem-data-funnels">
+            <title>Tools for Getting Data into HDFS</title>
+            <tgroup cols='2' align='left' colsep='1' rowsep='1'>
+                <thead>
+                    <row>
+                        <entry>Tool</entry>
+                        <entry>Remarks</entry>
+                    </row>
+                </thead>
+                <tbody>
+                    <row>
+                        <entry>
+                            <link xlink:href="http://flume.apache.org/">Flume</link>
+                        </entry>
+                        <entry>
+                            Gathers data from multiple sources and gets into HDFS
+                        </entry>
+                    </row>
+                    <row>
+                        <entry>
+                            <link xlink:href="https://github.com/facebook/scribe">Scribe</link>
+                        </entry>
+                        <entry>
+                            Distributed log gatherer.  Originally developed by Facebook.  Hasn't been updated recently.
+                        </entry>
+                    </row>
+                    <row>
+                        <entry>
+                            <link xlink:href="http://incubator.apache.org/chukwa/">Chukwa</link>
+                        </entry>
+                        <entry>
+                            Data collection system
+                        </entry>
+                    </row>
+                    <row>
+                        <entry>
+                            <link xlink:href="http://sqoop.apache.org">Sqoop</link>
+                        </entry>
+                        <entry>
+                            Transfer data between Hadoop and Relational Databases (RDBMS)
+                        </entry>
+                    </row>
+                    <row>
+                        <entry>
+                            <link xlink:href="http://kafka.apache.org/">Kafka</link>
+                        </entry>
+                        <entry>
+                            Distributed publish-subscribe system
+                        </entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+
+
+    </section>
+    <section>
+        <title>Querying data in HDFS</title>
+        <table id="table-hadoop-ecosystem-querying">
+            <title>Querying Data in HDFS</title>
+            <tgroup cols='2' align='left' colsep='1' rowsep='1'>
+                <thead>
+                    <row>
+                        <entry>Tool</entry>
+                        <entry>Remarks</entry>
+                    </row>
+                </thead>
+                <tbody>
+                    <row>
+                        <entry>
+                            <link xlink:href="http://pig.apache.org/">Pig</link>
+                        </entry>
+                        <entry>
+                            Pig provides a higher level data flow language to process data.  Pig scripts are much more compact than Java Map Reduce
+                        </entry>
+                    </row>
+                    <row>
+                        <entry>
+                            <link xlink:href="http://hive.apache.org">Hive</link>
+                        </entry>
+                        <entry>
+                            Hive provides a SQL layer on top of HDFS.  So we can query the data using SQL, rather than writing Java Map Reduce code.
+                        </entry>
+                    </row>
+                    <row>
+                        <entry>
+                            <link xlink:href="http://www.cascading.org/lingual/">Cascading Lingual</link>
+                        </entry>
+                        <entry>
+                            executes ANSI SQL queries as Cascading applications on Apache Hadoop clusters
+                        </entry>
+                    </row>
+                    <row>
+                        <entry>
+                            <link xlink:href="http://hortonworks.com/blog/100x-faster-hive/">Stinger</link>  / <link xlink:href="http://hortonworks.com/blog/introducing-tez-faster-hadoop-processing/">Tez</link>
+                        </entry>
+                        <entry>
+                            Next gen Hive
+                        </entry>
+                    </row>
+                    <row>
+                        <entry>
+                            <link xlink:href="http://hadapt.com/">Hadapt</link>
+                        </entry>
+                        <entry>
+                            Provides SQL support for Hadoop. <sbr/>
+                            (commercial product)
+                        </entry>
+                    </row>
+                    <row>
+                        <entry>
+                            <link xlink:href="http://www.greenplum.com/blog/topics/hadoop/introducing-pivotal-hd">Greenplum HAWQ</link>
+                        </entry>
+                        <entry>
+                            Relational database with SQL support on top of Hadoop HDFS. <sbr/>
+                            (Commercial product)
+                        </entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+    </section>
+
+
+    <section>
+        <title>Real time data access</title>
+        <table id="table-hadoop-ecosystem-real-time">
+            <title>Real time access to data</title>
+            <tgroup cols='2' align='left' colsep='1' rowsep='1'>
+                <thead>
+                    <row>
+                        <entry>Tool</entry>
+                        <entry>Remarks</entry>
+                    </row>
+                </thead>
+                <tbody>
+                    <row>
+                        <entry>
+                            <link xlink:href="http://hbase.apache.org/">HBase</link>
+                        </entry>
+                        <entry>
+                            A NOSQL data store built on top of Hadoop.  Provides real time access to data
+                        </entry>
+                    </row>
+                    <row>
+                        <entry>
+                            <link xlink:href="http://incubator.apache.org/drill/">Apache Drill</link>
+                        </entry>
+                        <entry>
+                            Interactive analysis of large scale data sets
+                        </entry>
+                    </row>
+                    <row>
+                        <entry>
+                            <link xlink:href="http://www.citusdata.com/">Citus Data</link>
+                        </entry>
+                        <entry>
+                            Relational database with SQL support on top of Hadoop HDFS. <sbr/>
+                            (Commercial product)
+                        </entry>
+                    </row>
+                    <row>
+                        <entry>
+                            <link xlink:href="http://blog.cloudera.com/blog/2012/10/cloudera-impala-real-time-queries-in-apache-hadoop-for-real/">Impala</link>
+                        </entry>
+                        <entry>
+                            Provides real time queries over Big Data.  Developed by Cloduera
+                        </entry>
+                    </row>
+                    <row>
+                        <entry>
+                            <link xlink:href="http://phoenix-hbase.blogspot.com/">Phoenix</link>
+                        </entry>
+                        <entry>
+                            SQL layer over Hbase.  Developed by SalesForce.com
+                        </entry>
+                    </row>
+                    <row>
+                        <entry>
+                            <link xlink:href="http://drawntoscale.com/why-spire/">Spire</link>
+                        </entry>
+                        <entry>
+                            SQL layer over Hbase.  Developed by DrawnToScale.com
+                        </entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+    </section>
+
+
+    <section>
+        <title>Workflow Tools</title>
+        <table id="table-hadoop-ecosystem-workflow-tools">
+            <title>Workflow tools</title>
+            <tgroup cols='2' align='left' colsep='1' rowsep='1'>
+                <thead>
+                    <row>
+                        <entry>Tool</entry>
+                        <entry>Remarks</entry>
+                    </row>
+                </thead>
+                <tbody>
+                    <row>
+                        <entry>
+                            <link xlink:href="http://oozie.apache.org/">Oozie</link>
+                        </entry>
+                        <entry>
+                            Orchestrate map reduce jobs
+                        </entry>
+                    </row>
+                    <row>
+                        <entry>
+                            <link xlink:href="http://www.cascading.org/">Cascading</link>
+                        </entry>
+                        <entry>
+                             Application framework for Java developers to develop robust Data Analytics and Data Management applications on Apache Hadoop
+                        </entry>
+                    </row>
+                    <row>
+                        <entry>
+                            <link xlink:href="https://github.com/twitter/scalding">Scalding</link>
+                        </entry>
+                        <entry>
+                             Scala library that makes it easy to specify Hadoop MapReduce jobs. Scalding is built on top of Cascading.
+                        </entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+    </section>
+
+
+    <section>
+        <title>Serialization Frameworks</title>
+        <table id="table-hadoop-ecosystem-serialization-frameworks">
+            <title>Serialization Frameworks</title>
+            <tgroup cols='2' align='left' colsep='1' rowsep='1'>
+                <thead>
+                    <row>
+                        <entry>Tool</entry>
+                        <entry>Remarks</entry>
+                    </row>
+                </thead>
+                <tbody>
+                    <row>
+                        <entry>
+                            <link xlink:href="http://avro.apache.org/">Avro</link>
+                        </entry>
+                        <entry>
+                            Data serialization system
+                        </entry>
+                    </row>
+                    <row>
+                        <entry>
+                            <link xlink:href="https://github.com/cutting/trevni">Trevni</link>
+                        </entry>
+                        <entry>
+                            Column file format
+                        </entry>
+                    </row>
+                    <row>
+                        <entry>
+                            <link xlink:href="https://code.google.com/p/protobuf/">Protobuf</link>
+                        </entry>
+                        <entry>
+                            Popular serialization library (not a Hadoop project)
+                        </entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+    </section>
+
+
+    <section>
+        <title>Monitoring Systems</title>
+        <table id="table-hadoop-ecosystem-monitoring-systems">
+            <title>Tools for Monitoring Hadoop</title>
+            <tgroup cols='2' align='left' colsep='1' rowsep='1'>
+                <thead>
+                    <row>
+                        <entry>Tool</entry>
+                        <entry>Remarks</entry>
+                    </row>
+                </thead>
+                <tbody>
+                    <row>
+                        <entry>
+                            <link xlink:href="http://cloudera.github.com/hue/">Hue</link>
+                        </entry>
+                        <entry>
+                            Developed by Cloudera
+                        </entry>
+                    </row>
+                    <row>
+                        <entry>
+                            <link xlink:href="http://ganglia.sourceforge.net/">Ganglia</link>
+                        </entry>
+                        <entry>
+                            Overall host monitoring system;  Hadoop can publish metrics to Ganglia.
+                        </entry>
+                    </row>
+                    <row>
+                        <entry>
+                            <link xlink:href="http://opentsdb.net/">Open TSDB</link>
+                        </entry>
+                        <entry>
+                            Metrics collector and visualizer
+                        </entry>
+                    </row>
+                    <row>
+                        <entry>
+                            <link xlink:href="http://www.nagios.org/">Nagios</link>
+                        </entry>
+                        <entry>
+                            IT infrastructure monitoring
+                        </entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+    </section>
+
+    <section>
+        <title>Applications</title>
+        <table id="table-hadoop-ecosystem-applications">
+            <title>Applications run on top of Hadoop</title>
+            <tgroup cols='2' align='left' colsep='1' rowsep='1'>
+                <thead>
+                    <row>
+                        <entry>Tool</entry>
+                        <entry>Remarks</entry>
+                    </row>
+                </thead>
+                <tbody>
+                    <row>
+                        <entry>
+                            <link xlink:href="http://mahout.apache.org/">Mahout</link>
+                        </entry>
+                        <entry>
+                            Recommendation engine on top of Hadoop
+                        </entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+    </section>
+
+    <section>
+        <title>Data Analytics Tools</title>
+        <table id="table-hadoop-ecosystem-data-analytics">
+            <title>Data Analytics on Hadoop</title>
+            <tgroup cols='2' align='left' colsep='1' rowsep='1'>
+                <thead>
+                    <row>
+                        <entry>Tool</entry>
+                        <entry>Remarks</entry>
+                    </row>
+                </thead>
+                <tbody>
+                    <row>
+                        <entry>
+                            <link xlink:href="http://www.r-project.org/">R language</link>
+                        </entry>
+                        <entry>
+                            software environment for statistical computing and graphics
+                        </entry>
+                    </row>
+                    <row>
+                        <entry>
+                            <link xlink:href="http://www.datadr.org/">RHIPE</link>
+                        </entry>
+                        <entry>
+                            Integrates R and Hadoop
+                        </entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+    </section>
+
+</chapter>
