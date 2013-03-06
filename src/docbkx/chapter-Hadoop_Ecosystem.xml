@@ -167,6 +167,14 @@
                     </row>
                     <row>
                         <entry>
+                            <link xlink:href="http://accumulo.apache.org/">Accumulo</link>
+                        </entry>
+                        <entry>
+                            A NOSQL store developed by NSA (yes, that agency!)
+                        </entry>
+                    </row>
+                    <row>
+                        <entry>
                             <link xlink:href="http://incubator.apache.org/drill/">Apache Drill</link>
                         </entry>
                         <entry>
@@ -396,6 +404,71 @@
                         </entry>
                         <entry>
                             Integrates R and Hadoop
+                        </entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+    </section>
+
+    <section>
+        <title>Realtime Stream Processing</title>
+        <table id="table-hadoop-ecosystem-stream-processing">
+            <title>Stream Processing Tools</title>
+            <tgroup cols='2' align='left' colsep='1' rowsep='1'>
+                <thead>
+                    <row>
+                        <entry>Tool</entry>
+                        <entry>Remarks</entry>
+                    </row>
+                </thead>
+                <tbody>
+                    <row>
+                        <entry>
+                            <link xlink:href="http://storm-project.net/">Storm</link>
+                        </entry>
+                        <entry>
+                            Fast stream processing developed by Twitter
+                        </entry> </row>
+                </tbody>
+            </tgroup>
+        </table>
+    </section>
+
+    <section>
+        <title>Misc</title>
+        <table id="table-hadoop-ecosystem-misc">
+            <title>Misc. Stuff</title>
+            <tgroup cols='2' align='left' colsep='1' rowsep='1'>
+                <thead>
+                    <row>
+                        <entry>Tool</entry>
+                        <entry>Remarks</entry>
+                    </row>
+                </thead>
+                <tbody>
+                    <row>
+                        <entry>
+                            <link xlink:href="http://spark-project.org/">Spark</link>
+                        </entry>
+                        <entry>
+                            In memory analytics engine developed by Berkeley AMP labs.
+                        </entry>
+                    </row>
+                    <row>
+                        <entry>
+                            <link xlink:href="http://shark.cs.berkeley.edu/">Shark (Hive on Spark)</link>
+                        </entry>
+                        <entry>
+                            Hive compatible data ware house system developed at Berkeley.  Claims to be much faster than Hive
+                        </entry>
+                    </row>
+                    <row>
+                        <entry>
+                            <link xlink:href="https://github.com/kevinweil/elephant-bird">Elephant Bird</link>
+                        </entry>
+                        <entry>
+                            compression codes and serializers for Hadoop
                         </entry>
                     </row>
                 </tbody>
