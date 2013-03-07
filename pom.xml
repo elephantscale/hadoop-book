@@ -101,6 +101,7 @@
                     <chunkerOutputEncoding>UTF-8</chunkerOutputEncoding>
                     <highlightSource>1</highlightSource>
 		    <navigGraphics>1</navigGraphics>
+                    <navigGraphicsExtension>.png</navigGraphicsExtension>
                     <htmlCustomization>${basedir}/src/docbkx/customization.xsl</htmlCustomization>
                     <foCustomization>src/docbkx/docbook-fo.xsl</foCustomization>
                 </configuration>

@@ -59,7 +59,7 @@ user.footer.navigation : 	Called after the standard navigational footer.
 							<xsl:with-param name="object" select="$prev"/>
 						  </xsl:call-template>
 						</xsl:attribute>
-						<img alt="Prev" src="images/prev.gif"/>
+						<img alt="Prev" src="images/prev.png"/>
 					  </a>
 					</xsl:if>
 					<xsl:text>&#160;</xsl:text>
@@ -76,7 +76,7 @@ user.footer.navigation : 	Called after the standard navigational footer.
 							<xsl:with-param name="object" select="$next"/>
 						  </xsl:call-template>
 						</xsl:attribute>
-						<img alt="Next" src="images/next.gif"/>
+						<img alt="Next" src="images/next.png"/>
 					  </a>
 					</xsl:if>
 				  </td>
