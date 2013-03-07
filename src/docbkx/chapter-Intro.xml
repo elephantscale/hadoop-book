@@ -215,8 +215,9 @@
         <section>
             <title>Hadoop, the little elephant</title>
             <para>
-                Hadoop organizes your computations. It reads the data, usually from HDFS, in
-                blocks. However, it can read the data from other places too, including mounted
+                Hadoop organizes your computations using its MapReduce part. 
+                It reads the data, usually from the its storage, Hadoop Distributed File System (HDFS), in an optimal way.
+                However, it can read the data from other places too, including mounted
                 local file systems, web, and databases. It divides the computations between
                 different computers (servers, or nodes). It is also fault-tolerant.
             </para>
