@@ -170,13 +170,11 @@
             There are a number of animals in the Hadoop zoo, and each deals with a certain
             aspect of Big Data. Let us illustrate this with a picture, and then introduce them
             one by one.
-        </para>
-            <!--
+        </para>            
             <figure>
                 <title>The Hadoop Zoo</title>
-                <graphic fileref="hadoop-zoo-resized.png"></graphic>
-            </figure>
-            -->
+                <graphic fileref="chapter-intro-01.png"></graphic>
+            </figure>            
         <section>
             <title>HDFS - Hadoop Distributed File System</title>
 
