@@ -100,11 +100,27 @@
                     <!-- <targetDirectory>${basedir}/target/docbkx</targetDirectory> -->
                     <chunkerOutputEncoding>UTF-8</chunkerOutputEncoding>
                     <highlightSource>1</highlightSource>
+		    <navigGraphics>1</navigGraphics>
+                    <navigGraphicsExtension>.png</navigGraphicsExtension>
                     <htmlCustomization>${basedir}/src/docbkx/customization.xsl</htmlCustomization>
+                    <foCustomization>src/docbkx/docbook-fo.xsl</foCustomization>
                 </configuration>
                 <executions>
+                    <!--
                     <execution>
-                        <id>multipage</id>
+                        <id>pdf</id>
+                        <goals>
+                            <goal>generate-pdf</goal>
+                        </goals>
+                        <phase>pre-site</phase>
+                        <configuration>
+                            <targetDirectory>${basedir}/target/docbkx/pdf</targetDirectory>
+                            <imgSrcPath>images/</imgSrcPath>
+                        </configuration>
+                    </execution>
+                    -->
+                    <execution>
+                        <id>multipage-html</id>
                         <goals>
                             <goal>generate-html</goal>
                         </goals>
@@ -118,7 +134,7 @@
                         </configuration>
                     </execution>
                     <execution>
-                        <id>onepage</id>
+                        <id>singlepage-html</id>
                         <goals>
                             <goal>generate-html</goal>
                         </goals>

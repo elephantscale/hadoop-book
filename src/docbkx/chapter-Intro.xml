@@ -170,13 +170,11 @@
             There are a number of animals in the Hadoop zoo, and each deals with a certain
             aspect of Big Data. Let us illustrate this with a picture, and then introduce them
             one by one.
-        </para>
-            <!--
+        </para>            
             <figure>
                 <title>The Hadoop Zoo</title>
-                <graphic fileref="hadoop-zoo-resized.png"></graphic>
-            </figure>
-            -->
+                <graphic fileref="chapter-intro-01.png"></graphic>
+            </figure>            
         <section>
             <title>HDFS - Hadoop Distributed File System</title>
 
@@ -715,6 +713,7 @@
                 </programlisting>
             </para>
         </section>
+        <!--
         <section>
             <title>All of the Code</title>
             <para>Now let’s look at the complete code of your first MapReduce program. Although it
@@ -838,8 +837,10 @@
                 where we will also give you practical advice on the setup.
             </para>
         </section>
+        -->
     </section>
 
+    <!--
     <section>
         <title>How Hadoop Works Inside</title>
         <para>Having successfully gone through the first example, and perhaps even having
@@ -851,34 +852,11 @@
         </para>
         <para>This is why we should welcome theory, and here it is.
         </para>
-        <section>
-            <title></title>
-            <para>
-            </para>
-        </section>
-        <section>
-            <title></title>
-            <para>
-            </para>
-        </section>
-        <section>
-            <title></title>
-            <para>
-            </para>
-        </section>
-        <section>
-            <title></title>
-            <para>
-            </para>
-        </section>
     </section>
+    -->
 
-    <section>
-        <title>Logging</title>
-        <para>
-        </para>
-    </section>
 
+    <!--
     <section>
         <title>Rolling Up Your Sleeves</title>
         <para>
@@ -1063,7 +1041,9 @@
             </para>
         </section>
     </section>
+    -->
 
+        <!--
     <section>
         <title>Exercises</title>
         <para>This chapter, as well as all succeeding ones, contains exercises building on the
@@ -1092,6 +1072,7 @@
             </para>
         </section>
     </section>
+    -->
 
     <section>
         <title>Chapter Summary</title>
