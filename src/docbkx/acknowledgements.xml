@@ -7,9 +7,7 @@
     xmlns:html="http://www.w3.org/1999/xhtml"
     xmlns:db="http://docbook.org/ns/docbook">
         <para>
-            From Mark
-        </para>
-        <para>
+            <emphasis role="bold">From Mark</emphasis><sbr/>
             I would like to express gratitude to my editors, co-authors, colleagues, and bosses
             who shared the thorny path to working clusters - with the hope to make it less thorny for
             those who follow. Seriously, folks, Hadoop is hard, and Big Data is tough, and there are
@@ -24,9 +22,7 @@
             </ulink>
         </para>
         <para>
-            From Sujee
-        </para>
-        <para>
+            <emphasis role="bold">From Sujee</emphasis><sbr/>
             To the kind souls who helped me along the way
         </para>
         <para>
