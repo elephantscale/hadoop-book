@@ -7,13 +7,85 @@
     xmlns:html="http://www.w3.org/1999/xhtml"
     xmlns:db="http://docbook.org/ns/docbook">
 
-    <title>Hadoop Use Cases</title>
+    <title>Hadoop Use Cases and Case Studies</title>
     <para>
         These are collection of some use cases of Hadoop.  This is not meant to be an exhaustive list, but a sample to give you some ideas.
     </para>
     <para>
         A pretty extensive list is available at <link xlink:href="http://wiki.apache.org/hadoop/PoweredBy">Powered By Hadoop site</link>
     </para>
+
+    <sect1>
+        <title>Politics</title>
+        <sect2>
+            <title>2012 US Presidential Election</title>
+            <para>
+                <link xlink:href="http://www.computerworld.com/s/article/9233587/Barack_Obama_39_s_Big_Data_won_the_US_election#disqus_thread">How Big Data help Obama win re-election</link>  - by Michael Lynch, the founder of <link xlink:href="http://www.autonomy.com/">Autonomy</link>
+            </para>
+        </sect2>
+    </sect1>
+
+
+    <sect1>
+        <title>Human Sciences</title>
+
+        <sect2>
+            <title>NextBio</title>
+            <para>
+                NextBio is using Hadoop MapReduce and HBase to process massive amounts of human gnome data.
+            </para>
+            <para>
+                <emphasis role="bold">Problem:</emphasis> processing multi-tera byte data sets wasn't feasible using tradional databases like mysql.
+            </para>
+            <para>
+                <emphasis role="bold">Solution:</emphasis> NextBio uses Hadoop map reduce to process gnome data in batches.  And it uses HBase as a scalable data store
+            </para>
+            <para>
+                <emphasis role="bold">Hadoop vendor :</emphasis> Intel
+            </para>
+            <para>
+                Links : <sbr/>
+                <link xlink:href="http://www.nextbio.com/">NextBio</link><sbr/>
+                <link xlink:href="http://hadoop.intel.com/pdfs/IntelNextBioCaseStudy.pdf">Intel case study</link> (<link xlink:href="cached_reports/IntelNextBioCaseStudy.pdf">cached version</link>) <sbr/>
+                <link xlink:href="http://www.informationweek.com/software/information-management/hbase-hadoops-next-big-data-chapter/232901601?pgno=1">Information Week article (May 2012)</link>
+            </para>
+
+        </sect2>
+
+    </sect1> <!-- end human sciences -->
+
+
+    <sect1>
+        <title>Telecom</title>
+        <sect2>
+            <title>China Telecom Guangdong</title>
+            <para>
+                <emphasis role="bold">Problem:</emphasis> Storing billions of mobile call records. And providing real time access to the call records and billing information to customers.  <sbr/>
+                Tradional storage/database systems couldn't scale to the loads and provide a cost effective solution
+            </para>
+            <para>
+                <emphasis role="bold">Solution:</emphasis> Hbase is used to store billions of rows of call record details.  30TB of data is added monthly
+            </para>
+            <para>
+                <emphasis role="bold">Hadoop vendor :</emphasis> Intel
+            </para>
+            <para>
+                <emphasis role="bold">Hadoop cluster size :</emphasis> 100+ nodes
+            </para>
+            <para>
+                Links : <sbr/>
+                <link xlink:href="http://gd.10086.cn/">China Telecom Quangdong</link><sbr/>
+                <link xlink:href="http://hadoop.intel.com/pdfs/IntelChinaMobileCaseStudy.pdf">Intel case study</link> (<link xlink:href="cached_reports/IntelChinaMobileCaseStudy.pdf">cached version</link>) <sbr/>
+                <link xlink:href="http://www.slideshare.net/IntelAPAC/apac-big-data-dc-strategy-update-for-idh-launch-rk">Intel APAC presentation</link>
+            </para>
+
+        </sect2>
+    </sect1>
+
+    <!--
+    <section>
+        <title>older case studies</title>
+
     <glosslist>
         <glossentry>
             <glossterm>Indexing the Web</glossterm>
@@ -45,7 +117,7 @@
                         </listitem>
 
                         <listitem>
-                            Twitter : 
+                            Twitter :
                             <link xlink:href="http://www.slideshare.net/kevinweil/hadoop-at-twitter-hadoop-summit-2010">Hadoop at Twitter</link>
                         </listitem>
 
@@ -171,5 +243,7 @@
             </glossdef>
         </glossentry>
     </glosslist>
+    </section>
+    -->
 
 </chapter>

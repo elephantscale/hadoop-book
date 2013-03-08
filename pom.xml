@@ -131,6 +131,14 @@
                             <chunkedOutput>true</chunkedOutput>
                             <imgSrcPath>images/</imgSrcPath>
                             <htmlStylesheet>css/jbossorg.css</htmlStylesheet>
+                            <!--
+                            <entities>
+                                <entity>
+                                    <name>version</name>
+                                    <value>YYY</value>
+                                </entity>
+                            </entities>
+                            -->
                         </configuration>
                     </execution>
                     <execution>
@@ -143,6 +151,15 @@
                             <targetDirectory>${basedir}/target/docbkx/singlepage</targetDirectory>
                             <imgSrcPath>../images/</imgSrcPath>
                             <htmlStylesheet>../css/jbossorg.css</htmlStylesheet>
+                            <!--
+                            <entities>
+                                <entity>
+                                    <name>version</name>
+                                    <value>XXX</value>
+                                </entity>
+                            </entities>
+                            -->
+
                         </configuration>
                     </execution>
                 </executions>
@@ -187,6 +204,30 @@
                                         <include>images/**</include>
                                     </includes>
                                 </resource>
+                                <resource>
+                                    <directory>${basedir}/src/docbkx</directory>
+                                    <includes>
+                                        <include>cached_reports/**</include>
+                                    </includes>
+                                </resource>
+                            </resources>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>copy-docbkx2</id>
+                        <goals>
+                            <goal>copy-resources</goal>
+                        </goals>
+                        <phase>pre-site</phase>
+                        <configuration>
+                            <outputDirectory>target/site/singlepage</outputDirectory>
+                            <resources>
+                                <resource>
+                                    <directory>${basedir}/src/docbkx</directory>
+                                    <includes>
+                                        <include>cached_reports/**</include>
+                                    </includes>
+                                </resource>
                             </resources>
                         </configuration>
                     </execution>
@@ -221,6 +262,12 @@
                                     <directory>${basedir}/src/docbkx</directory>
                                     <includes>
                                         <include>images/**</include>
+                                    </includes>
+                                </resource>
+                                <resource>
+                                    <directory>${basedir}/src/docbkx</directory>
+                                    <includes>
+                                        <include>cached_reports/**</include>
                                     </includes>
                                 </resource>
                             </resources>
