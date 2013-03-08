@@ -270,11 +270,11 @@
                 <link xlink:href="http://www.computerworld.com/s/article/9233587/Barack_Obama_39_s_Big_Data_won_the_US_election#disqus_thread">
                     Barack Obama's Big Data won the US election</link>. 
                 The articles says that the campaign carefully selected micro-segments of voters, analyzed their 
-                characteristics, and then addressed them directly. Michael is the author of IDOL enterprise smart search, 
+                characteristics, and then addressed them directly. Michael is the author of the IDOL the enterprise smart search, 
                 so he knows the technology in question.
             </para>
             <para>
-                One can image a MapReduce program which would accomplish this purpose as follows: read the person's 
+                One can imagine a MapReduce program that would accomplish this purpose as follows: read the person's 
                 characteristics, assign him a hash code (mapper), collect all of the people with the same hash code and 
                 analyze them (reducer). This is aptly illustrated in the following diagram.
             </para>
