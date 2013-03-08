@@ -40,11 +40,15 @@
             </orderedlist>
         </para>
         <para>
-            That was quite upsetting. I started having dreams about stacks of Linux servers, piled one upon another
-            (picture here), and then I read about the                  
-            <link xlink:href="http://en.wikipedia.org/wiki/Fallacies_of_Distributed_Computing">Fallacies of distributed computing</link>,
+            That was quite upsetting. I started having dreams about stacks of Linux servers, piled one upon another.
+            Then I read about the                  
+            <link xlink:href="http://en.wikipedia.org/wiki/Fallacies_of_Distributed_Computing">Fallacies of distributed computing</link>
             and realized that I have violated all of them.
         </para>
+        <figure>
+            <title>Dreams</title>
+            <graphic fileref="mr_intro_2.png"></graphic>
+        </figure>
     </sect1>
 
     <sect1>
@@ -234,6 +238,10 @@
                 in your own thought: you concentrate on the mystical name until it becomes a real physical seal. 
                 You then hand this seal to the angel, and he lets you in.
             </para>
+            <figure>
+                <title>Angel checks the seal</title>
+                <graphic fileref="mr_intro_1.png"></graphic>
+            </figure>
             <para>
                 To calculate the meaning of the seal, the angel had to take the numerical value assigned to each letter, and 
                 add them up.
@@ -253,6 +261,34 @@
             <para>                
                 This concludes our introduction to the MapReduce part of Hadoop, where our goal was to explain how it works, 
                 without one line of code.
+            </para>
+        </sect2>
+        <sect2>
+            <title>Another example</title>
+            <para>
+                According to Michael Lynch, the founder of Autonomy, 
+                <link xlink:href="http://www.computerworld.com/s/article/9233587/Barack_Obama_39_s_Big_Data_won_the_US_election#disqus_thread">
+                    Barack Obama's Big Data won the US election</link>. 
+                The articles says that the campaign carefully selected micro-segments of voters, analyzed their 
+                characteristics, and then addressed them directly. Michael is the author of IDOL enterprise smart search, 
+                so he knows the technology in question.
+            </para>
+            <para>
+                One can image a MapReduce program which would accomplish this purpose as follows: read the person's 
+                characteristics, assign him a hash code (mapper), collect all of the people with the same hash code and 
+                analyze them (reducer). This is aptly illustrated in the following diagram.
+            </para>
+            <figure>
+                <title>Micro-targeting the electorate</title>
+                <graphic fileref="mr_intro_3.png"></graphic>
+            </figure>
+            <para>
+                Let me explain. In step 1 the mapper asks each person his or her age. It could well be another 
+                characteristic, which the designers of the campaign suppose influences the voting decision. 
+                Each age is converted to the "age group", which serves as a key. The map then is the &lt;age_group, person_information&gt;
+                This map is emitted - sent for further processing - and all people in the same age group collect in the 
+                reduce. The reducer applies smart algorithm to extract the common features and presto! - the vote 
+                is determined.
             </para>
         </sect2>
     </sect1>
