@@ -125,6 +125,14 @@ user.footer.navigation : 	Called after the standard navigational footer.
   </xsl:template>
 
   <xsl:template name="user.footer.content">
+      <hr/>
+      <span style="float: center; color: darkgrey;">
+              Want to be notified when the book is updated?  Please join the discussion @ <a href="http://groups.google.com/group/hadoop-illuminated">Hadoop illuminated Google group</a>
+      </span>
+  </xsl:template>
+
+  <xsl:template name="user.footer.navigation">
+      <!-- google analytics -->
     <script type="text/javascript">
     var _gaq = _gaq || [];
     _gaq.push(['_setAccount', 'UA-38683425-1']);
