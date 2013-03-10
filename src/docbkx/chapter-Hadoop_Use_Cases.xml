@@ -225,7 +225,9 @@ Previous solution using Teradata and IBM Netezza was time consuming and complex,
             </para>
             <para>
                 <emphasis role="bold">Problem: </emphasis>
-                Dealing with 100TB structured data and 500TB+ of semi-structured data
+                <sbr/>
+                (1) Dealing with 100TB structured data and 500TB+ of semi-structured data <sbr/>
+                (2) 10s of PB across Nokia, 1TB / day
             </para>
             <para>
                 <emphasis role="bold">Solution: </emphasis>
@@ -237,14 +239,20 @@ Previous solution using Teradata and IBM Netezza was time consuming and complex,
             </para>
             <para>
                 <emphasis role="bold">Cluster/Data size: </emphasis>
-                500TB of data
+                (1) 500TB of data
+                (2) 10s of PB across Nokia, 1TB / day
             </para>
             <para>
                 <emphasis role="bold">Links: </emphasis><sbr/>
-                <link xlink:href="http://www.cloudera.com/content/dam/cloudera/Resources/PDF/Cloudera_Nokia_Case_Study_Hadoop.pdf">Cloudera case study</link>
+                (1) <link xlink:href="http://www.cloudera.com/content/dam/cloudera/Resources/PDF/Cloudera_Nokia_Case_Study_Hadoop.pdf">Cloudera case study</link>
                 (<link xlink:href="cached_reports/Cloudera_Nokia_Case_Study_Hadoop.pdf">cached version</link>)
                 (Published Apr 2012)
                 <sbr/>
+                <sbr/>
+                (2) <link xlink:href="http://cdn.oreillystatic.com/en/assets/1/event/85/Big%20Data%20Analytics%20Platform%20at%20Nokia%20%E2%80%93%20Selecting%20the%20Right%20Tool%20for%20the%20Right%20Workload%20Presentation.pdf">strata NY 2012 presentation slides</link>
+                (<link xlink:href="cached_reports/Nokia_Bigdata.pdf">cached version</link>)
+                <sbr/>
+                <link xlink:href="http://strataconf.com/stratany2012/public/schedule/detail/26880">Strata NY 2012 presentation</link>
             </para>
         </section>
     </section>
@@ -273,7 +281,7 @@ Previous solution using Teradata and IBM Netezza was time consuming and complex,
             </para>
             <para>
                 <emphasis role="bold">Links: </emphasis><sbr/>
-                <link xlink:href="http://www.slideshare.net/fullscreen/cloudera/hw2010-orbitz-jonathan-seidman-and-ramesh-venkataramaiah/1">Orbitz presentation</link>
+                <link xlink:href="http://www.slideshare.net/jseidman/windy-citydb-final-4635799">Orbitz presentation</link>
                 (Published 2010)
                 <sbr/>
                 <link xlink:href="http://www.datanami.com/datanami/2012-04-26/six_super-scale_hadoop_deployments.html">Datanami article</link>
@@ -282,7 +290,7 @@ Previous solution using Teradata and IBM Netezza was time consuming and complex,
     </section>
 
     <section>
-        <title>Natural Resource / Mining</title>
+        <title>Energy</title>
         <section>
             <title>Siesmic Data @ Chevron</title>
             <para>
@@ -305,12 +313,44 @@ Previous solution using Teradata and IBM Netezza was time consuming and complex,
             </para>
             <para>
                 <emphasis role="bold">Links: </emphasis><sbr/>
-                <link xlink:href="http://almaden.ibm.com/colloquium/resources/Managing%20More%20Bits%20Than%20Barrels%20Breuning.PDF">Cloudera case study</link>
+                <link xlink:href="http://almaden.ibm.com/colloquium/resources/Managing%20More%20Bits%20Than%20Barrels%20Breuning.PDF">Presentation</link>
                 (<link xlink:href="cached_reports/IBM_Chevron.pdf">cached version</link>)
                 (Published June 2012)
                 <sbr/>
             </para>
             <para>
+            </para>
+        </section>
+        <section>
+            <title>OPower</title>
+            <para>
+            Opower works with utility companies to provide engaging, relevant, and personalized content about home energy use to millions of households
+            </para>
+            <para>
+                <emphasis role="bold">Problem: </emphasis>
+                Collecting and analyzing massive amounts of data and deriving insights into customers' energy usage.
+            </para>
+            <para>
+                <emphasis role="bold">Solution: </emphasis>
+                Hadoop provides a single storage for all the massive data.  And machine learning algorithms are run on the data.
+            </para>
+            <para>
+                <emphasis role="bold">Hadoop Vendor: </emphasis>
+                ?
+            </para>
+            <para>
+                <emphasis role="bold">Cluster/Data size: </emphasis>
+                ?
+            </para>
+            <para>
+                <emphasis role="bold">Links: </emphasis><sbr/>
+                <link xlink:href="http://cdn.oreillystatic.com/en/assets/1/event/85/Data%20Science%20with%20Hadoop%20at%20Opower%20Presentation.pdf">presentation</link>
+                (<link xlink:href="cached_reports/Opower.pdf">cached version</link>)
+                (Published Oct 2012)
+                <sbr/>
+                <link xlink:href="http://strataconf.com/stratany2012/public/schedule/detail/25736">Strata NY 2012</link>
+                <sbr/>
+                <link xlink:href="http://www.opower.com">Opower.com</link>
             </para>
         </section>
     </section>
