@@ -86,6 +86,22 @@
             So the high end machines have more memory.  Plus newer machines are packed with lot more disks (36 TB) -- high storage density.
         </para>
 
+        <para>
+            Examples of Hadoop servers
+            <itemizedlist>
+                <listitem>
+                    <link xlink:href="http://h10010.www1.hp.com/wwpc/us/en/sm/WF06a/15351-15351-3328412-241644-241475-4091412.html?dnr=1">HP ProLiant DL380</link><sbr/>
+                </listitem>
+                <listitem>
+                    <link xlink:href="http://www.dell.com/us/enterprise/p/poweredge-c2100/pd">Dell C2100 series</link><sbr/>
+                </listitem>
+                <listitem>
+                    <link xlink:href="http://www.supermicro.com/products/nfo/files/hadoop/supermicro-hadoop.pdf">Supermicro Hadoop series</link><sbr/>
+                </listitem>
+            </itemizedlist>
+
+        </para>
+
 
         <para>
             So how does a large hadoop cluster looks like?  Here is a picture of Yahoo's Hadoop cluster.

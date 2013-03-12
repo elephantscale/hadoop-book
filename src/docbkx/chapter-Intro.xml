@@ -11,7 +11,7 @@
     <section>
         <title>MapReduce or Hadoop?</title>
         <para>The goal here is to present an intro to Hadoop so simple that any programmer who
-            reads it will be able to write simple Hadoop solutions and run them on a Hadoop
+            reads it will be able to write basic Hadoop solutions and run them on a Hadoop
             cluster.
         </para>
         <para>
@@ -19,8 +19,8 @@
             is MapReduce?
         </para>
         <para>
-            <emphasis>MapReduce</emphasis> is a programming framework,
-            <ulink url="http://research.google.com/archive/mapreduce.html">published by Google in 2004</ulink>.
+            <emphasis>MapReduce</emphasis> is a programming framework.
+            Its description was <ulink url="http://research.google.com/archive/mapreduce.html">published by Google in 2004</ulink>.
             Much like other frameworks, such as Spring, Struts, or MFC, the MapReduce framework
             does some things for you, and provides the place for you to fill in the blanks. What
             MapReduce does for you is to organize your multiple computers in a cluster in
@@ -32,15 +32,12 @@
             machines, and you provide the code to do the actual calculation.
         </para>
         <para>
-            <emphasis>Hadoop</emphasis> is an open-source implementation of the MapReduce framework. For
-            Google everything is MapReduce: both the way to write their applications, and the
-            actual implementation are called MapReduce. For the rest of the world, the
-            framework, the theory, and the way you spell out the computations are all called
-            MapReduce. However, the actual software that implements this is called Hadoop.
-            Let us agree for simplicity that MapReduce and Hadoop are just two names for
-            the same things. Note, however, that when Google teaches college students the
-            ideas of MapReduce programming, they, too, use Hadoop, because their actual
-            implementation of MapReduce is proprietary code. To emphasize the difference,
+            <emphasis>Hadoop</emphasis> is an open-source implementation of Google's distributed computing. 
+            It consists of two parts: Hadoop Distributed File System (HDFS), which is modeled after 
+            Google's GFS, and of Hadoop MapReduce, which is modeled after Google's MapReduce.
+            Google's system is proprietary code, so when Google teaches college students the
+            ideas of MapReduce programming, they, too, use Hadoop. 
+            To further emphasize the difference 
             we can note that the Hadoop engineers at Yahoo like to challenge the engineers at
             Google to sorting competitions between Hadoop and MapReduce.
         </para>
@@ -173,13 +170,11 @@
             There are a number of animals in the Hadoop zoo, and each deals with a certain
             aspect of Big Data. Let us illustrate this with a picture, and then introduce them
             one by one.
-        </para>
-            <!--
+        </para>            
             <figure>
                 <title>The Hadoop Zoo</title>
-                <graphic fileref="hadoop-zoo-resized.png"></graphic>
-            </figure>
-            -->
+                <graphic fileref="chapter-intro-01.png"></graphic>
+            </figure>            
         <section>
             <title>HDFS - Hadoop Distributed File System</title>
 
@@ -192,7 +187,7 @@
                 <listitem>
                     <para>
                         Horizontal scalability. Thousands of servers holding petabytes of data. When you need
-                        more more storage, you don't switch to more expensive solutions, but add servers to it.
+                        even more storage, you don't switch to more expensive solutions, but add servers to instead.
                     </para>
                 </listitem>
                 <listitem>
@@ -220,8 +215,9 @@
         <section>
             <title>Hadoop, the little elephant</title>
             <para>
-                Hadoop organizes your computations. It reads the data, usually from HDFS, in
-                blocks. However, it can read the data from other places too, including mounted
+                Hadoop organizes your computations using its MapReduce part. 
+                It reads the data, usually from the its storage, Hadoop Distributed File System (HDFS), in an optimal way.
+                However, it can read the data from other places too, including mounted
                 local file systems, web, and databases. It divides the computations between
                 different computers (servers, or nodes). It is also fault-tolerant.
             </para>
@@ -332,8 +328,8 @@
                 Another possible contender is ZFS, an open-source file system from SUN, and
                 currently Oracle. Intended as a complete redesign of file system thinking, ZFS
                 holds a strong promise of unlimited size, robustness, encryption, and many other
-                desirable qualities built into the low-level file system. After all, Hadoop and its
-                model GFS both build on a conventional file system, creating their improvement
+                desirable qualities built into the low-level file system. After all, HDFS and its
+                role model GFS both build on a conventional file system, creating their improvement
                 on top of it, and the premise of ZFS is that the underlying file system should be
                 redesigned to address the core issues.
             </para>
@@ -349,7 +345,7 @@
                 While other file system start out with the goal of improving on HDFS/GFS
                 design, the advantage of HDFS is that it is very widely used. I think that in
                 evaluating other file systems, the reader can be guided by the same considerations
-                that led to the design of GFS: the designer of it analyzed prevalent file usage in the
+                that led to the design of GFS: the designers of it analyzed prevalent file usage in the
                 majority of their applications, and created a file system that optimized reliability
                 for that particular type of usage. The reader may be well advised to compare the
                 assumption of GFS designers with his or her case, and decide if HDFS fits the
@@ -718,6 +714,7 @@
                 </programlisting>
             </para>
         </section>
+        <!--
         <section>
             <title>All of the Code</title>
             <para>Now let’s look at the complete code of your first MapReduce program. Although it
@@ -841,8 +838,10 @@
                 where we will also give you practical advice on the setup.
             </para>
         </section>
+        -->
     </section>
 
+    <!--
     <section>
         <title>How Hadoop Works Inside</title>
         <para>Having successfully gone through the first example, and perhaps even having
@@ -854,34 +853,11 @@
         </para>
         <para>This is why we should welcome theory, and here it is.
         </para>
-        <section>
-            <title></title>
-            <para>
-            </para>
-        </section>
-        <section>
-            <title></title>
-            <para>
-            </para>
-        </section>
-        <section>
-            <title></title>
-            <para>
-            </para>
-        </section>
-        <section>
-            <title></title>
-            <para>
-            </para>
-        </section>
     </section>
+    -->
 
-    <section>
-        <title>Logging</title>
-        <para>
-        </para>
-    </section>
 
+    <!--
     <section>
         <title>Rolling Up Your Sleeves</title>
         <para>
@@ -1066,7 +1042,9 @@
             </para>
         </section>
     </section>
+    -->
 
+        <!--
     <section>
         <title>Exercises</title>
         <para>This chapter, as well as all succeeding ones, contains exercises building on the
@@ -1095,6 +1073,7 @@
             </para>
         </section>
     </section>
+    -->
 
     <section>
         <title>Chapter Summary</title>

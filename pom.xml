@@ -100,10 +100,27 @@
                     <!-- <targetDirectory>${basedir}/target/docbkx</targetDirectory> -->
                     <chunkerOutputEncoding>UTF-8</chunkerOutputEncoding>
                     <highlightSource>1</highlightSource>
+		    <navigGraphics>1</navigGraphics>
+                    <navigGraphicsExtension>.png</navigGraphicsExtension>
+                    <htmlCustomization>${basedir}/src/docbkx/customization.xsl</htmlCustomization>
+                    <foCustomization>src/docbkx/docbook-fo.xsl</foCustomization>
                 </configuration>
                 <executions>
+                    <!--
                     <execution>
-                        <id>multipage</id>
+                        <id>pdf</id>
+                        <goals>
+                            <goal>generate-pdf</goal>
+                        </goals>
+                        <phase>pre-site</phase>
+                        <configuration>
+                            <targetDirectory>${basedir}/target/docbkx/pdf</targetDirectory>
+                            <imgSrcPath>images/</imgSrcPath>
+                        </configuration>
+                    </execution>
+                    -->
+                    <execution>
+                        <id>multipage-html</id>
                         <goals>
                             <goal>generate-html</goal>
                         </goals>
@@ -114,10 +131,18 @@
                             <chunkedOutput>true</chunkedOutput>
                             <imgSrcPath>images/</imgSrcPath>
                             <htmlStylesheet>css/jbossorg.css</htmlStylesheet>
+                            <!--
+                            <entities>
+                                <entity>
+                                    <name>version</name>
+                                    <value>YYY</value>
+                                </entity>
+                            </entities>
+                            -->
                         </configuration>
                     </execution>
                     <execution>
-                        <id>onepage</id>
+                        <id>singlepage-html</id>
                         <goals>
                             <goal>generate-html</goal>
                         </goals>
@@ -126,6 +151,15 @@
                             <targetDirectory>${basedir}/target/docbkx/singlepage</targetDirectory>
                             <imgSrcPath>../images/</imgSrcPath>
                             <htmlStylesheet>../css/jbossorg.css</htmlStylesheet>
+                            <!--
+                            <entities>
+                                <entity>
+                                    <name>version</name>
+                                    <value>XXX</value>
+                                </entity>
+                            </entities>
+                            -->
+
                         </configuration>
                     </execution>
                 </executions>
@@ -170,6 +204,30 @@
                                         <include>images/**</include>
                                     </includes>
                                 </resource>
+                                <resource>
+                                    <directory>${basedir}/src/docbkx</directory>
+                                    <includes>
+                                        <include>cached_reports/**</include>
+                                    </includes>
+                                </resource>
+                            </resources>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>copy-docbkx2</id>
+                        <goals>
+                            <goal>copy-resources</goal>
+                        </goals>
+                        <phase>pre-site</phase>
+                        <configuration>
+                            <outputDirectory>target/site/singlepage</outputDirectory>
+                            <resources>
+                                <resource>
+                                    <directory>${basedir}/src/docbkx</directory>
+                                    <includes>
+                                        <include>cached_reports/**</include>
+                                    </includes>
+                                </resource>
                             </resources>
                         </configuration>
                     </execution>
@@ -204,6 +262,12 @@
                                     <directory>${basedir}/src/docbkx</directory>
                                     <includes>
                                         <include>images/**</include>
+                                    </includes>
+                                </resource>
+                                <resource>
+                                    <directory>${basedir}/src/docbkx</directory>
+                                    <includes>
+                                        <include>cached_reports/**</include>
                                     </includes>
                                 </resource>
                             </resources>

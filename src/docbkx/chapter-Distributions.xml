@@ -184,6 +184,22 @@
                             Free / Premium model
                         </entry>
                     </row>
+                    <row>
+                        <entry>
+                            Intel <sbr/>
+                            <link xlink:href="http://hadoop.intel.com">hadoop.intel.com</link>
+                        </entry>
+                        <entry>
+                            <itemizedlist>
+                                <listitem>encryption support</listitem>
+                                <listitem>hardware accelleration added to some layers of stack to boost performance</listitem>
+                                <listitem>Admin tools to deploy and manage hadoop</listitem>
+                            </itemizedlist>
+                        </entry>
+                        <entry>
+                            Premium
+                        </entry>
+                    </row>
                 </tbody>
             </tgroup>
         </table>
