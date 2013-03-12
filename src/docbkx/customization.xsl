@@ -1,7 +1,6 @@
 <?xml version="1.0"?>
 <xsl:stylesheet
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-  xmlns:l="http://docbook.sourceforge.net/xmlns/l10n/1.0"
   version="1.0">
 
 <!--
@@ -87,19 +86,6 @@ user.footer.navigation : 	Called after the standard navigational footer.
 		  <xsl:if test="$header.rule != 0">
 			<hr/>
 		  </xsl:if>
-		  
-		  <div>
-			  <form action="http://www.google.com/search" method="get">
-				<input type="text" value="" maxlength="255" size="31" name="q"/>
-				<input type="submit" value="Google Search"/>
-				<input type="radio" value="" name="sitesearch"/>
-				The Web
-				<input type="radio" checked="checked" value="hadoopilluminated.com" name="sitesearch"/>
-				Hadoop Illuminated
-				<br/>
-			  </form>
-		  </div>
-		  
 		</div>
 	  </xsl:if>
 	</xsl:template>
@@ -161,90 +147,4 @@ user.footer.navigation : 	Called after the standard navigational footer.
     </script>
   </xsl:template>
 
-	<xsl:template name="head.content">
-	  <xsl:param name="node" select="."/>
-	  <xsl:param name="title">
-		<xsl:apply-templates select="$node" mode="object.title.html.markup.textonly"/>
-	  </xsl:param>
-
-	  <title>
-		<xsl:value-of select="$title"/> :: Hadoop Illuminated
-	  </title>
-
-	  <xsl:if test="$html.base != ''">
-		<base href="{$html.base}"/>
-	  </xsl:if>
-
-	  <!-- Insert links to CSS files or insert literal style elements -->
-	  <xsl:call-template name="generate.css"/>
-
-	  <xsl:if test="$html.stylesheet != ''">
-		<xsl:call-template name="output.html.stylesheets">
-		  <xsl:with-param name="stylesheets" select="normalize-space($html.stylesheet)"/>
-		</xsl:call-template>
-	  </xsl:if>
-
-	  <xsl:if test="$link.mailto.url != ''">
-		<link rev="made" href="{$link.mailto.url}"/>
-	  </xsl:if>
-
-	  <meta name="generator" content="DocBook {$DistroTitle} V{$VERSION}"/>
-
-	  <xsl:if test="$generate.meta.abstract != 0">
-		<xsl:variable name="info" select="(articleinfo                                       |bookinfo                                       |prefaceinfo                                       |chapterinfo                                       |appendixinfo                                       |sectioninfo                                       |sect1info                                       |sect2info                                       |sect3info                                       |sect4info                                       |sect5info                                       |referenceinfo                                       |refentryinfo                                       |partinfo                                       |info                                       |docinfo)[1]"/>
-		<xsl:if test="$info and $info/abstract">
-		  <meta name="description">
-			<xsl:attribute name="content">
-			  <xsl:for-each select="$info/abstract[1]/*">
-				<xsl:value-of select="normalize-space(.)"/>
-				<xsl:if test="position() &lt; last()">
-				  <xsl:text> </xsl:text>
-				</xsl:if>
-			  </xsl:for-each>
-			</xsl:attribute>
-		  </meta>
-		</xsl:if>
-	  </xsl:if>
-
-	  <xsl:if test="($draft.mode = 'yes' or                 ($draft.mode = 'maybe' and                 ancestor-or-self::*[@status][1]/@status = 'draft'))                 and $draft.watermark.image != ''">
-		<style type="text/css"><xsl:text>
-	body { background-image: url('</xsl:text>
-	<xsl:value-of select="$draft.watermark.image"/><xsl:text>');
-		   background-repeat: no-repeat;
-		   background-position: top left;
-		   /* The following properties make the watermark "fixed" on the page. */
-		   /* I think that's just a bit too distracting for the reader... */
-		   /* background-attachment: fixed; */
-		   /* background-position: center center; */
-		 }</xsl:text>
-		</style>
-	  </xsl:if>
-	  <xsl:apply-templates select="." mode="head.keywords.content"/>
-	</xsl:template>
-
-	<xsl:template match="*" mode="object.title.html.markup.textonly">
-	  <xsl:variable name="title">
-		<xsl:apply-templates select="." mode="object.title.html.markup"/>
-	  </xsl:variable>
-	  <xsl:value-of select="normalize-space($title)"/>
-	</xsl:template>
-	
-	<xsl:template match="*" mode="object.title.html.markup">
-	  <xsl:param name="allow-anchors" select="0"/>
-	  <xsl:variable name="template" select="'%t'"/>
-	  
-	  <xsl:call-template name="substitute-markup">
-		<xsl:with-param name="allow-anchors" select="$allow-anchors"/>
-		<xsl:with-param name="template" select="$template"/>
-	  </xsl:call-template>
-	</xsl:template>	
- 
-<!--	<xsl:param name="local.l10n.xml" select="document('')"/>
-	<l:i18n xmlns:l="http://docbook.sourceforge.net/xmlns/l10n/1.0">
-		<l:l10n language="en">
-			<l:context name="title-numbered"> 
-				<l:template name="chapter" text="%t"/> 
-			</l:context>    
-		</l:l10n>
-	</l:i18n> -->
 </xsl:stylesheet>

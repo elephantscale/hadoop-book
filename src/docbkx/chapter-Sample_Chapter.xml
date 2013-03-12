@@ -34,7 +34,7 @@
     <sect1>
         <title>sect1</title>
         <para>
-            para2
+        sample link : <link xlink:href="http://wiki.apache.org/hadoop/PoweredBy">Powered By Hadoop site</link>
         </para>
         <sect2>
             <title>sect1.1</title>
