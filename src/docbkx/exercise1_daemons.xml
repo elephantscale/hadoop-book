@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter version="5.0" xml:id="chapter-Sample_Chapter" xmlns="http://docbook.org/ns/docbook"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xi="http://www.w3.org/2001/XInclude"
+    xmlns:svg="http://www.w3.org/2000/svg"
+    xmlns:m="http://www.w3.org/1998/Math/MathML"
+    xmlns:html="http://www.w3.org/1999/xhtml"
+    xmlns:db="http://docbook.org/ns/docbook">
+
+<!-- 
+            <figure id="sample-figure">
+                <title>Old Mac</title>
+                <mediaobject>
+                    <imageobject>
+                        <imagedata fileref="macintosh_classic1.jpg" format="JPG" scale="100" />
+                    </imageobject>
+                </mediaobject>
+            </figure>
+
+            Just an image
+-->
+    <title>Exercise 1: Introduction to Hadoop</title>
+    <section>
+        <title>Introduction</title>
+        <para>
+	  In this lab we will check to ensure that Hadoop is running on your
+	  system and be able to get famliar with the user interface.
+        </para>
+    </section>
+    <section>
+        <title>Lab Goals</title>
+	<orderedlist>
+	  <listitem> 
+	    <para> View the Hadoop Daemons running on your system. </para>
+	  </listitem>
+	  <listitem> 
+	    <para> Learn how to view which daemons are running. </para>
+	  </listitem>
+	  <listitem> 
+	    <para> Examine the web interfaces forthe NameNode, JobTracker,
+	    and TaskTracker daemons.
+	    </para>
+	  </listitem>
+
+				
+	</orderedlist>
+    </section>
+    <section>
+        <title>Assumptions</title>
+	<orderedlist>
+	  <listitem> 
+	    <para>
+	      That you are on a Unix-like system.  Windows users may be
+	      able to achieve this by installing Cygwin, but are probably better
+	      served by running this lab inside a virtual machine.
+	    </para>
+	  </listitem>
+	  <listitem> 
+	    <para> 
+	      Hadoop is already installed on your box in pseudo-distributed mode,
+	      which means that your box has all the hadoop daemons (services) running.
+	    </para>
+	  </listitem>
+	</orderedlist>
+	<para>
+	  With that said, let's get started.
+	</para>
+    </section>
+    <section>
+        <title>Checking out the Hadoop Daemons</title>
+        <para>
+		First, let's go to a command prompt and we'll check to make sure that
+		the hadoop processes are indeed running. Go to a command prompt and
+		type the following:
+        </para>
+	<programlisting>
+$ ps -eaf | grep java
+	</programlisting>
+	<para>
+	  A note: in this guide we display the prompt as '$' -- don't actually
+	  TYPE the dollar sign for the prompt.
+	</para>
+	<para>
+	  Once you should see a long output of running java processes, including
+	  those which are not hadoop-related (like eclipse, for instance). An
+	  example output (edited for brevity) is the following:
+	</para>
+	<programlisting>
+hduser   11930     1  0 Mar05 pts/2    00:07:32 
+/usr/lib/jvm/java-6-oracle/bin/java -Dproc_namenode -Xmx1000m ...
+
+hduser   12462     1  0 Mar05 ?        00:08:31 
+/usr/lib/jvm/java-6-oracle/bin/java -Dproc_datanode -Xmx1000m ...
+
+hduser   12847     1  0 Mar05 ?        00:05:56 
+/usr/lib/jvm/java-6-oracle/bin/java -Dproc_secondarynamenode ...
+
+hduser   12940     1  0 Mar05 pts/2    00:06:54 
+/usr/lib/jvm/java-6-oracle/bin/java -Dproc_jobtracker -Xmx1000m ...
+
+hduser   13295     1  0 Mar05 ?        00:09:49 
+/usr/lib/jvm/java-6-oracle/bin/java -Dproc_tasktracker -Xmx1000m
+	</programlisting>
+	<para>
+	  Again, I have snipped the output of each of these, ps will
+	  dump all of the command line arguments including a lengthy
+	  classpath.
+	</para>
+	<para>
+	  Note that there are five (5) separate processes related to
+	  Hadoop: the Namenode, DataNode, SecondaryNameNode,
+	  JobTracker, and TaskTracker.  If there are fewer than five
+	  processes, hadoop may installed, but in either local mode,
+	  or in fully distributed mode (as part of a cluster).  As we
+	  said, we're assuming that this machine is in
+	  pseudo-distributed mode.
+	</para>
+	<para>
+	  A shorthand way to run this could be to run the command jps,
+	  which is part of the Oracle 6 JDK, which should be in your
+	  path.
+	</para>
+	<programlisting>
+$ jps
+12940 JobTracker
+4902 Jps
+13295 TaskTracker
+12462 DataNode
+12847 SecondaryNameNode
+11930 NameNode
+	</programlisting>
+	<para>
+	  Note that the output of this shows both jps itself and the
+	  five hadoop daemons.  This may not show anything,
+	  however. If it does not show anything it could be because
+	  your hadoop daemons are running under a different user (for
+	  instance, as root). If so, don't be overly concerned about
+	  that.
+	</para>
+	<para>
+	  If none of these processes are running on either the ps or
+	  jps commands, this is an indication that hadoop needs to be
+	  started on your system.  Going to your Hadoop home directory
+	  under the bin/ sub-directory, there is a run-all.sh script
+	  you could run that starts hadoop.
+	</para>
+    </section>
+    <section>
+      <title>Ensuring that the "hadoop" Command works</title>
+      <para>
+	We need to ensure that the hadoop command exists on your
+	system.  Open up the terminal window and try typing the
+	following command:
+      </para>
+      <programlisting>
+$ hadoop
+      </programlisting>
+      <para>
+If hadoop is in your path and properly configured, you should get the
+following:
+      </para>
+      <programlisting>
+Usage: hadoop [--config confdir] COMMAND
+where COMMAND is one of:
+....
+      </programlisting>
+      <para>
+	It will then list the commands.
+      </para>
+      <para>
+	If you get an error message, you probably need to set up your
+	path to include the hadoop bin directory.  That could be in
+	one of the following locations:
+      </para>
+      <ItemizedList>
+	<ListItem>
+	  /usr/lib/hadoop/bin
+	</ListItem>
+	<ListItem>
+	  /usr/local/hadoop/bin
+	</ListItem>
+	<ListItem>
+	  /usr/share/hadoop/bin
+	</ListItem>
+	<ListItem>
+	  etc.
+	</ListItem>
+      </ItemizedList>
+      <para>
+	You can fix your path in this shell window by using the following command:
+      </para>
+      <programlisting>
+$ export PATH=$PATH:/path/to/hadoop/location/bin
+      </programlisting>
+      <para>
+	where clearly you need to find the proper location of your
+	hadoop executable.  For those new to *nix systems, one could
+	do that by executing the following:
+      </para>
+      <programlisting>
+	$ ls /usr/lib/hadoop/bin
+      </programlisting>
+    </section>
+    <section>
+      <title>Checking out the web interface</title>
+      <para>
+	One of the main tools for monitoring Hadoop is by the web
+	interfaces to the 5 different services.  Let us try using a
+	web browser to see that.
+      </para>
+      <para>
+	Open a web browser (for instance, Firefox or Google Chrome).
+	If you do not have a windowing system (for instance, if you
+	are remotely logged into a server), you may be able to use the
+	command line browser lynx (more common), or w3m.
+      </para>
+      <para>
+	Navigate your chosen browser to the following:
+      </para>
+      <programlisting>
+	http://localhost:50070/
+      </programlisting>
+      <para>
+	lynx users can simply type "lynx http://localhost:50070/" at
+	the command line. Despite the obvious limitations lynx does a
+	respectable job on these pages.
+      </para>
+      <mediaobject>
+	<imageobject>
+	  <imagedata fileref="lab1-namenode.png" format="PNG" scale="100" />
+	</imageobject>
+      </mediaobject>
+      <para>
+	This is the NameNode information page.  You can see some
+	statistics on the usage of your Hadoop NameNode here.  We
+	won't worry too much about the detais.
+      </para>
+      <para>
+	Now, let's try the jobtracker page at:
+      </para>
+      <programlisting>
+	http://localhost:50030/
+      </programlisting>
+      <mediaobject>
+	<imageobject>
+	  <imagedata fileref="lab1-jobtracker.png" format="PNG" scale="100" />
+	</imageobject>
+      </mediaobject>
+      <para>
+	This is the JobTracker information page.  Take a look at what
+	it offers -- note that it gives information on running map and
+	reduce tasks -- you probably don't have any at the moment.
+      </para>
+      <para>
+	This is the NameNode information page.  You can see some
+	statistics on the usage of your Hadoop NameNode here.  We
+	won't worry too much about the detais.
+      </para>
+      <para>
+	Finally, let's see the TaskTracker at:
+      </para>
+      <programlisting>
+	http://localhost:50060/
+      </programlisting>
+      <mediaobject>
+	<imageobject>
+	  <imagedata fileref="lab1-tasktracker.png" format="PNG" scale="100" />
+	</imageobject>
+      </mediaobject>
+      <para>
+	This will also show something about tasks, which won't be
+	running.  Note that in Hadoop lingo, a Job is total work that
+	is being done, while a Task is an individual map or reduce.
+	There can be hundreds of tasks in one job.
+      </para>
+    </section>
+    <section>
+        <title>Exercise Review</title>
+	<orderedlist>
+	  <listitem> 
+	    <para> 
+	      Hadoop consists of 5 daemons: NameNode,
+	      SecondaryNameNode, DataNode, JobTracker, and
+	      TaskTracker.  A pseudo-distributed system has all 5
+	      daemons running on one machine, which is common for
+	      developers.
+	    </para>
+	  </listitem>
+	  <listitem> 
+	    <para>
+	      One can quickly verify that daemons are running using
+	      the ps -eaf or the jps command.
+	    </para>
+	  </listitem>
+	  <listitem> 
+	    <para> 
+	      It is important to make sure your hadoop/bin directory
+	      is in your path. This could be located at
+	      /usr/lib/hadoop/bin, but varies based on distribution.
+	    </para>
+	    <para>
+	      The NameNode, JobTracker, and TaskTracker daemons can be
+	      interfaced with their respective web interfaces.
+	    </para>
+	  </listitem>
+	</orderedlist>
+    </section>
+    <section>
+        <title>Conclusion</title>
+        <para>
+	  You're done -- congradulations!  You just checked to make
+	  sure that your Hadoop daemons are running, you ensured your
+	  path was set up properly, and then you viewed the web
+	  interface for three of your Hadoop Daemons.
+        </para>
+    </section>
+
+</chapter>
+
