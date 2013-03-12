@@ -33,7 +33,8 @@ div.longdesc-link {
 /* Headings */
 
 h1, h2, h3, h4, h5, h6 {
-    color:#009FDA;
+    /* color:#009FDA; */
+    color: rgb(37, 102, 218);
     line-height:130%;
     margin-top:0em;
     font-family:'Lucida Grande', Geneva, Verdana, Arial, sans-serif;
