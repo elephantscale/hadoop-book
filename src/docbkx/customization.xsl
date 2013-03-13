@@ -60,7 +60,7 @@ user.footer.navigation : 	Called after the standard navigational footer.
 							<xsl:with-param name="object" select="$prev"/>
 						  </xsl:call-template>
 						</xsl:attribute>
-						<img alt="Prev" src="images/prev.png"/>
+						<img alt="Prev" src="images/prev.png" border="0"/>
 					  </a>
 					</xsl:if>
 					<xsl:text>&#160;</xsl:text>
@@ -77,7 +77,7 @@ user.footer.navigation : 	Called after the standard navigational footer.
 							<xsl:with-param name="object" select="$next"/>
 						  </xsl:call-template>
 						</xsl:attribute>
-						<img alt="Next" src="images/next.png"/>
+						<img alt="Next" src="images/next.png" border="0"/>
 					  </a>
 					</xsl:if>
 				  </td>
@@ -87,18 +87,6 @@ user.footer.navigation : 	Called after the standard navigational footer.
 		  <xsl:if test="$header.rule != 0">
 			<hr/>
 		  </xsl:if>
-		  
-		  <div>
-			  <form action="http://www.google.com/search" method="get">
-				<input type="text" value="" maxlength="255" size="31" name="q"/>
-				<input type="submit" value="Google Search"/>
-				<input type="radio" value="" name="sitesearch"/>
-				The Web
-				<input type="radio" checked="checked" value="hadoopilluminated.com" name="sitesearch"/>
-				Hadoop Illuminated
-				<br/>
-			  </form>
-		  </div>
 		  
 		</div>
 	  </xsl:if>
@@ -135,7 +123,16 @@ user.footer.navigation : 	Called after the standard navigational footer.
 -->
 
   <xsl:template name="user.header.navigation">
-    <a href="/"><div class="logo"></div></a>
+    <div class="top-page-logo">
+		<a href="/"><div class="logo"></div></a>
+	</div>
+	<div class="top-page-search">
+		<form action="http://www.google.com/search" method="get">
+			<input type="text" value="" maxlength="255" size="31" name="q"/>
+			<input type="hidden" value="hadoopilluminated.com" name="sitesearch"/>
+			<input type="submit" value="Google Search"/>
+		</form>
+	</div>
   </xsl:template>
 
   <xsl:template name="user.footer.content">
