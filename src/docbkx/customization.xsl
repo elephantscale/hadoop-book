@@ -34,12 +34,13 @@ user.footer.content : 	Called after the chunk content but before the standard na
 footer.navigation : 	The standard navigational footer.
 user.footer.navigation : 	Called after the standard navigational footer.
 -->
-	
+
 
   <xsl:import href="urn:docbkx:stylesheet"/>
   <xsl:output method="html" encoding="UTF-8" indent="no"/>
- 
 
+
+  <!-- pretty nav header with bread crumbs -->
 	<xsl:template name="header.navigation">
 	  <xsl:param name="prev" select="/foo"/>
 	  <xsl:param name="next" select="/foo"/>
@@ -87,11 +88,14 @@ user.footer.navigation : 	Called after the standard navigational footer.
 		  <xsl:if test="$header.rule != 0">
 			<hr/>
 		  </xsl:if>
-		  
+
 		</div>
 	  </xsl:if>
 	</xsl:template>
+    <!-- end nav header -->
 
+
+    <!-- produce breadcrumbs -->
   <xsl:template name="breadcrumbs">
       <xsl:param name="this.node" select="."/>
       <div class="breadcrumbs">
@@ -115,18 +119,16 @@ user.footer.navigation : 	Called after the standard navigational footer.
           </span>
       </div>
   </xsl:template>
+    <!-- end breadcrumbs -->
 
-<!--
-  <xsl:template name="header.navigation">
-    hello
-  </xsl:template>
--->
 
+    <!-- top header = logo + custom search -->
   <xsl:template name="user.header.navigation">
     <div class="top-page-logo">
 		<a href="/"><div class="logo"></div></a>
 	</div>
 	<div class="top-page-search">
+        <b>Search the book:</b>
 		<form action="http://www.google.com/search" method="get">
 			<input type="text" value="" maxlength="255" size="31" name="q"/>
 			<input type="hidden" value="hadoopilluminated.com" name="sitesearch"/>
@@ -134,7 +136,11 @@ user.footer.navigation : 	Called after the standard navigational footer.
 		</form>
 	</div>
   </xsl:template>
+  <!-- end top header -->
 
+
+
+  <!-- google analytics -->
   <xsl:template name="user.footer.content">
     <script type="text/javascript">
     var _gaq = _gaq || [];
@@ -149,7 +155,9 @@ user.footer.navigation : 	Called after the standard navigational footer.
 
     </script>
   </xsl:template>
+  <!-- end google analytics -->
 
+  <!-- title customizing -->
 	<xsl:template name="head.content">
 	  <xsl:param name="node" select="."/>
 	  <xsl:param name="title">
@@ -217,23 +225,24 @@ user.footer.navigation : 	Called after the standard navigational footer.
 	  </xsl:variable>
 	  <xsl:value-of select="normalize-space($title)"/>
 	</xsl:template>
-	
+
 	<xsl:template match="*" mode="object.title.html.markup">
 	  <xsl:param name="allow-anchors" select="0"/>
 	  <xsl:variable name="template" select="'%t'"/>
-	  
+
 	  <xsl:call-template name="substitute-markup">
 		<xsl:with-param name="allow-anchors" select="$allow-anchors"/>
 		<xsl:with-param name="template" select="$template"/>
 	  </xsl:call-template>
-	</xsl:template>	
- 
+	</xsl:template>
+  <!-- end title customizing -->
+
 <!--	<xsl:param name="local.l10n.xml" select="document('')"/>
 	<l:i18n xmlns:l="http://docbook.sourceforge.net/xmlns/l10n/1.0">
 		<l:l10n language="en">
-			<l:context name="title-numbered"> 
-				<l:template name="chapter" text="%t"/> 
-			</l:context>    
+			<l:context name="title-numbered">
+				<l:template name="chapter" text="%t"/>
+			</l:context>
 		</l:l10n>
 	</l:i18n> -->
 </xsl:stylesheet>

@@ -15,7 +15,7 @@
         A pretty extensive list is available at <link xlink:href="http://wiki.apache.org/hadoop/PoweredBy">Powered By Hadoop site</link>
     </para>
     <!-- template
-        <sect2>
+        <section>
             <title>Dodd-Frank Compliance @  a bank</title>
             <para>
             intro
@@ -39,31 +39,30 @@
             <para>
                 <emphasis role="bold">Links: </emphasis><sbr/>
                 <link xlink:href="http://www.cloudera.com/content/dam/cloudera/Resources/PDF/connect_case_study_datameer_banking_financial.pdf">Cloudera case study</link>
-                (<link xlink:href="cached_reports/connect_case_study_datameer_banking_financial.pdf">cached version</link>)
+                (<link xlink:href="cached_reports/connect_case_study_datameer_banking_financial.pdf">cached copy</link>)
+                (Published Nov 2012)
                 <sbr/>
             </para>
-            <para>
-                Published Nov 2012
-            </para>
-        </sect2>
+        </section>
         -->
 
-    <sect1>
+    <section>
         <title>Politics</title>
-        <sect2>
+        <section>
             <title>2012 US Presidential Election</title>
             <para>
-                <link xlink:href="http://www.computerworld.com/s/article/9233587/Barack_Obama_39_s_Big_Data_won_the_US_election#disqus_thread">How Big Data help Obama win re-election</link>  - by Michael Lynch, the founder of <link xlink:href="http://www.autonomy.com/">Autonomy</link>
+                <link xlink:href="http://www.computerworld.com/s/article/9233587/Barack_Obama_39_s_Big_Data_won_the_US_election">How Big Data help Obama win re-election</link>  - by Michael Lynch, the founder of <link xlink:href="http://www.autonomy.com/">Autonomy</link>  
+                (<link xlink:href="cached_reports/Barack_Obama_Big_Data_won_the_US_election__Computerworld.pdf">cached copy</link>)
             </para>
-        </sect2>
-    </sect1>
+        </section>
+    </section>
 
-    <sect1>
+    <section>
         <title>Data Storage</title>
-        <sect2>
+        <section>
             <title>Net App</title>
             <para>
-                Net App collects diagnostic data from its storage systems deployed at customer sites.  This data is used to analyze the health of Net App systems. 
+                Net App collects diagnostic data from its storage systems deployed at customer sites.  This data is used to analyze the health of Net App systems.
 
             </para>
             <para>
@@ -85,18 +84,16 @@
             <para>
                 <emphasis role="bold">Links: </emphasis><sbr/>
                 <link xlink:href="http://www.cloudera.com/content/dam/cloudera/Resources/PDF/Cloudera_Case_Study_NetApp.pdf">Cloudera case study</link>
-                (<link xlink:href="cached_reports/Cloudera_Case_Study_NetApp.pdf">cached version</link>)
+                (<link xlink:href="cached_reports/Cloudera_Case_Study_NetApp.pdf">cached copy</link>)
+                (Published Sep 2012)
                 <sbr/>
             </para>
-            <para>
-                Published Sep 2012
-            </para>
-        </sect2>
-    </sect1>
+        </section>
+    </section>
 
-    <sect1>
+    <section>
         <title>Financial Services</title>
-        <sect2>
+        <section>
             <title>Dodd-Frank Compliance @  a bank</title>
             <para>
                 A leading retail bank is using Cloudera and Datameer to validate data accuracy and quality to comply with regulations like Dodd-Frank
@@ -121,19 +118,17 @@ Previous solution using Teradata and IBM Netezza was time consuming and complex,
             <para>
                 <emphasis role="bold">Links: </emphasis><sbr/>
                 <link xlink:href="http://www.cloudera.com/content/dam/cloudera/Resources/PDF/connect_case_study_datameer_banking_financial.pdf">Cloudera case study</link>
-                (<link xlink:href="cached_reports/connect_case_study_datameer_banking_financial.pdf">cached version</link>)
+                (<link xlink:href="cached_reports/connect_case_study_datameer_banking_financial.pdf">cached copy</link>)
+                (Published Nov 2012)
                 <sbr/>
             </para>
-            <para>
-                Published Nov 2012
-            </para>
-        </sect2>
-    </sect1>
+        </section>
+    </section>
 
 
-    <sect1>
+    <section>
         <title>Health Care</title>
-        <sect2>
+        <section>
             <title>Storing and processing Medical Records</title>
             <para>
                 <emphasis role="bold">Problem: </emphasis>
@@ -148,26 +143,24 @@ Previous solution using Teradata and IBM Netezza was time consuming and complex,
                 Cloudera
             </para>
             <para>
-                <emphasis role="bold">Links: </emphasis><sbr/>
-                <link xlink:href="http://www.cloudera.com/content/dam/cloudera/Resources/PDF/Cloudera_Case_Study_Healthcare.pdf">Cloudera case study</link>
-                (<link xlink:href="cached_reports/Cloudera_Case_Study_Healthcare.pdf">cached version</link>)
-                <sbr/>
-            </para>
-            <para>
                 <emphasis role="bold">Cluster/Data size: </emphasis>
                 10+ nodes pilot;  1TB of data / day
             </para>
             <para>
-                Published Oct 2012
+                <emphasis role="bold">Links: </emphasis><sbr/>
+                <link xlink:href="http://www.cloudera.com/content/dam/cloudera/Resources/PDF/Cloudera_Case_Study_Healthcare.pdf">Cloudera case study</link>
+                (<link xlink:href="cached_reports/Cloudera_Case_Study_Healthcare.pdf">cached copy</link>)
+                (Published Oct 2012)
+                <sbr/>
             </para>
-        </sect2>
-    </sect1>
+        </section>
+    </section>
 
 
-    <sect1>
+    <section>
         <title>Human Sciences</title>
 
-        <sect2>
+        <section>
             <title>NextBio</title>
             <para>
                 NextBio is using Hadoop MapReduce and HBase to process massive amounts of human gnome data.
@@ -187,18 +180,21 @@ Previous solution using Teradata and IBM Netezza was time consuming and complex,
             <para>
                 <emphasis role="bold">Links: </emphasis><sbr/>
                 <link xlink:href="http://www.nextbio.com/">NextBio</link><sbr/>
-                <link xlink:href="http://hadoop.intel.com/pdfs/IntelNextBioCaseStudy.pdf">Intel case study</link> (<link xlink:href="cached_reports/IntelNextBioCaseStudy.pdf">cached version</link>) <sbr/>
+                <link xlink:href="http://hadoop.intel.com/pdfs/IntelNextBioCaseStudy.pdf">Intel case study</link> (<link xlink:href="cached_reports/IntelNextBioCaseStudy.pdf">cached copy</link>)
+                (Published Feb 2013)
+                <sbr/>
                 <link xlink:href="http://www.informationweek.com/software/information-management/hbase-hadoops-next-big-data-chapter/232901601?pgno=1">Information Week article (May 2012)</link>
+                (<link xlink:href="cached_reports/www.informationweek_2012_05_08.pdf">cached copy</link>)
             </para>
 
-        </sect2>
+        </section>
 
-    </sect1> <!-- end human sciences -->
+    </section> <!-- end human sciences -->
 
 
-    <sect1>
+    <section>
         <title>Telecom</title>
-        <sect2>
+        <section>
             <title>China Telecom Guangdong</title>
             <para>
                 <emphasis role="bold">Problem:</emphasis> Storing billions of mobile call records. And providing real time access to the call records and billing information to customers.  <sbr/>
@@ -216,20 +212,24 @@ Previous solution using Teradata and IBM Netezza was time consuming and complex,
             <para>
                 <emphasis role="bold">Links: </emphasis><sbr/>
                 <link xlink:href="http://gd.10086.cn/">China Telecom Quangdong</link><sbr/>
-                <link xlink:href="http://hadoop.intel.com/pdfs/IntelChinaMobileCaseStudy.pdf">Intel case study</link> (<link xlink:href="cached_reports/IntelChinaMobileCaseStudy.pdf">cached version</link>) <sbr/>
+                <link xlink:href="http://hadoop.intel.com/pdfs/IntelChinaMobileCaseStudy.pdf">Intel case study</link> (<link xlink:href="cached_reports/IntelChinaMobileCaseStudy.pdf">cached copy</link>)
+                (Published Feb 2013)
+                <sbr/>
                 <link xlink:href="http://www.slideshare.net/IntelAPAC/apac-big-data-dc-strategy-update-for-idh-launch-rk">Intel APAC presentation</link>
             </para>
 
-        </sect2>
+        </section>
 
-        <sect2>
+        <section>
             <title>Nokia</title>
             <para>
                 Nokia collects and analyzes vast amounts of data from mobile phones
             </para>
             <para>
                 <emphasis role="bold">Problem: </emphasis>
-                Dealing with 100TB structured data and 500TB+ of semi-structured data
+                <sbr/>
+                (1) Dealing with 100TB structured data and 500TB+ of semi-structured data <sbr/>
+                (2) 10s of PB across Nokia, 1TB / day
             </para>
             <para>
                 <emphasis role="bold">Solution: </emphasis>
@@ -241,22 +241,126 @@ Previous solution using Teradata and IBM Netezza was time consuming and complex,
             </para>
             <para>
                 <emphasis role="bold">Cluster/Data size: </emphasis>
-                500TB of data
+                (1) 500TB of data
+                (2) 10s of PB across Nokia, 1TB / day
             </para>
             <para>
                 <emphasis role="bold">Links: </emphasis><sbr/>
-                <link xlink:href="http://www.cloudera.com/content/dam/cloudera/Resources/PDF/Cloudera_Nokia_Case_Study_Hadoop.pdf">Cloudera case study</link>
-                (<link xlink:href="cached_reports/Cloudera_Nokia_Case_Study_Hadoop.pdf">cached version</link>)
+                (1) <link xlink:href="http://www.cloudera.com/content/dam/cloudera/Resources/PDF/Cloudera_Nokia_Case_Study_Hadoop.pdf">Cloudera case study</link>
+                (<link xlink:href="cached_reports/Cloudera_Nokia_Case_Study_Hadoop.pdf">cached copy</link>)
+                (Published Apr 2012)
+                <sbr/>
+                <sbr/>
+                (2) <link xlink:href="http://cdn.oreillystatic.com/en/assets/1/event/85/Big%20Data%20Analytics%20Platform%20at%20Nokia%20%E2%80%93%20Selecting%20the%20Right%20Tool%20for%20the%20Right%20Workload%20Presentation.pdf">strata NY 2012 presentation slides</link>
+                (<link xlink:href="cached_reports/Nokia_Bigdata.pdf">cached copy</link>)
+                <sbr/>
+                <link xlink:href="http://strataconf.com/stratany2012/public/schedule/detail/26880">Strata NY 2012 presentation</link>
+            </para>
+        </section>
+    </section>
+
+    <section>
+        <title>Travel</title>
+        <section>
+            <title>Orbitz</title>
+            <para>
+            </para>
+            <para>
+                <emphasis role="bold">Problem: </emphasis>
+                Orbitz generates tremendous amount of log data.  The raw logs are only stored for a few days because of costly data warehouse.  Orbitz needed a effective way to store and process this data;  Plus they needed to improve their hotel rankings
+            </para>
+            <para>
+                <emphasis role="bold">Solution: </emphasis>
+                Hadoop cluster provided very cost effective way to store vast amounts of raw logs.  Data is cleaned and analyzed.  Machine learning algorithms are run
+            </para>
+            <para>
+                <emphasis role="bold">Hadoop Vendor: </emphasis>
+                ?
+            </para>
+            <para>
+                <emphasis role="bold">Cluster/Data size: </emphasis>
+                ?
+            </para>
+            <para>
+                <emphasis role="bold">Links: </emphasis><sbr/>
+                <link xlink:href="http://www.slideshare.net/jseidman/windy-citydb-final-4635799">Orbitz presentation</link>
+                (Published 2010)
+                <sbr/>
+                <link xlink:href="http://www.datanami.com/datanami/2012-04-26/six_super-scale_hadoop_deployments.html">Datanami article</link>
+            </para>
+        </section>
+    </section>
+
+    <section>
+        <title>Energy</title>
+        <section>
+            <title>Siesmic Data @ Chevron</title>
+            <para>
+            </para>
+            <para>
+                <emphasis role="bold">Problem: </emphasis>
+                Chevron analyzes vast amount of seismic data to find potential oil reserves.
+            </para>
+            <para>
+                <emphasis role="bold">Solution: </emphasis>
+                Hadoop offers the storage capacity and processing power to analyze this data
+            </para>
+            <para>
+                <emphasis role="bold">Hadoop Vendor: </emphasis>
+                IBM Big Insights
+            </para>
+            <para>
+                <emphasis role="bold">Cluster/Data size: </emphasis>
+                ?
+            </para>
+            <para>
+                <emphasis role="bold">Links: </emphasis><sbr/>
+                <link xlink:href="http://almaden.ibm.com/colloquium/resources/Managing%20More%20Bits%20Than%20Barrels%20Breuning.PDF">Presentation</link>
+                (<link xlink:href="cached_reports/IBM_Chevron.pdf">cached copy</link>)
+                (Published June 2012)
                 <sbr/>
             </para>
             <para>
-                Published Apr 2012
             </para>
-        </sect2>
-    </sect1>
+        </section>
+        <section>
+            <title>OPower</title>
+            <para>
+            Opower works with utility companies to provide engaging, relevant, and personalized content about home energy use to millions of households
+            </para>
+            <para>
+                <emphasis role="bold">Problem: </emphasis>
+                Collecting and analyzing massive amounts of data and deriving insights into customers' energy usage.
+            </para>
+            <para>
+                <emphasis role="bold">Solution: </emphasis>
+                Hadoop provides a single storage for all the massive data.  And machine learning algorithms are run on the data.
+            </para>
+            <para>
+                <emphasis role="bold">Hadoop Vendor: </emphasis>
+                ?
+            </para>
+            <para>
+                <emphasis role="bold">Cluster/Data size: </emphasis>
+                ?
+            </para>
+            <para>
+                <emphasis role="bold">Links: </emphasis><sbr/>
+                <link xlink:href="http://cdn.oreillystatic.com/en/assets/1/event/85/Data%20Science%20with%20Hadoop%20at%20Opower%20Presentation.pdf">presentation</link>
+                (<link xlink:href="cached_reports/Opower.pdf">cached copy</link>)
+                (Published Oct 2012)
+                <sbr/>
+                <link xlink:href="http://strataconf.com/stratany2012/public/schedule/detail/25736">Strata NY 2012</link>
+                <sbr/>
+                <link xlink:href="http://strataconf.com/strata2013/public/schedule/detail/27158">Strata 2013</link>
+                <sbr/>
+                <link xlink:href="http://www.opower.com">Opower.com</link>
+            </para>
+        </section>
+    </section>
 
     <!--
-    <sect1>
+    <section>
         <title>older case studies</title>
 
     <glosslist>
@@ -416,7 +520,7 @@ Previous solution using Teradata and IBM Netezza was time consuming and complex,
             </glossdef>
         </glossentry>
     </glosslist>
-    </sect1>
+    </section>
     -->
 
 </chapter>
