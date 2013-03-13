@@ -272,3 +272,14 @@
 .breadcrumb-node {
     font-size: 16px;
 }
+
+.top-page-search {
+	float: left;
+    margin: 30px 0 0 90px;
+}
+
+.top-page-logo {
+	float: left;
+    height: 100px;
+    width: 300px;
+}
