@@ -227,7 +227,7 @@ $ export PATH=$PATH:/path/to/hadoop/location/bin
       </para>
       <mediaobject>
 	<imageobject>
-	  <imagedata fileref="lab1-namenode.png" format="PNG" scale="100" />
+	  <imagedata fileref="images/lab1-namenode.png" format="PNG" scale="100" />
 	</imageobject>
       </mediaobject>
       <para>
@@ -243,7 +243,7 @@ $ export PATH=$PATH:/path/to/hadoop/location/bin
       </programlisting>
       <mediaobject>
 	<imageobject>
-	  <imagedata fileref="lab1-jobtracker.png" format="PNG" scale="100" />
+	  <imagedata fileref="images/lab1-jobtracker.png" format="PNG" scale="100" />
 	</imageobject>
       </mediaobject>
       <para>
@@ -264,7 +264,7 @@ $ export PATH=$PATH:/path/to/hadoop/location/bin
       </programlisting>
       <mediaobject>
 	<imageobject>
-	  <imagedata fileref="lab1-tasktracker.png" format="PNG" scale="100" />
+	  <imagedata fileref="images/lab1-tasktracker.png" format="PNG" scale="100" />
 	</imageobject>
       </mediaobject>
       <para>
