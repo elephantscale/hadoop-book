@@ -62,7 +62,7 @@
         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-HDFS_Intro.xml" />
         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-MapReduce_Intro.xml" />
         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-Hadoop_Use_Cases.xml" />
-        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-Public_Bigdata_Sets.xml" />
+        <!--<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-Public_Bigdata_Sets.xml" />-->
         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-Distributions.xml" />
         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-Bigdata_Ecosystem.xml" />
         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-Hardware_Software.xml" />
