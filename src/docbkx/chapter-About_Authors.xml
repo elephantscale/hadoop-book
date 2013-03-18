@@ -50,7 +50,8 @@
             <link xlink:href="https://www.linkedin.com/in/markkerzner">LinkedIn</link> ||
             <link xlink:href="https://github.com/markkerzner">GitHub</link> ||
             <link xlink:href="http://shmsoft.blogspot.com/">Personal blog</link> ||
-            <link xlink:href="https://twitter.com/markkerzner">Twitter</link>
+            <link xlink:href="https://twitter.com/markkerzner">Twitter</link> ||
+            <link xlink:href="http://www.meetup.com/Houston-Hadoop-Meetup-Group/">Houston Hadoop Meetup</link>
         </para>
     </simplesect>
 
@@ -87,7 +88,8 @@
         <para>
             The delightful artwork appearing in this book has been created by Rebecca Kerzner.
             She is seventeen and studies at Beren Academy in Houston, TX. She has attended the
-            Glassell school of art for many summers. Her collection of artwork can be seen
+            <link xlink:href="http://www.mfah.org/visit/glassell-school/">
+            Glassell school of art</link> for many summers. Her collection of artwork can be seen
             <link xlink:href="https://picasaweb.google.com/110574221375288281850/RebeccaSArt">here</link>.
         </para>
         <para>
