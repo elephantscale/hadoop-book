@@ -277,6 +277,39 @@
         </table>
     </section>
 
+    <section>
+        <title>Hadoop in Cloud</title>
+        <table id="table-bigdata-ecosystem-cloud">
+            <title>Hadoop in Cloud</title>
+            <tgroup cols='2' align='left' colsep='1' rowsep='1'>
+                <thead>
+                    <row>
+                        <entry>Tool</entry>
+                        <entry>Remarks</entry>
+                    </row>
+                </thead>
+                <tbody>
+                    <row>
+                        <entry>
+                            <link xlink:href="http://aws.amazon.com/elasticmapreduce/">Amazon Elastic Map Reduce (EMR)</link>
+                        </entry>
+                        <entry>
+                            On demand hadoop on Amazon Cloud
+                        </entry>
+                    </row>
+                    <row>
+                        <entry>
+                            <link xlink:href="http://whirr.apache.org">Whirr</link>
+                        </entry>
+                        <entry>
+                            Tool to easily spin up and manage hadop clusters on cloud services like Amazon / RackSpace
+                        </entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+    </section>
+
 
     <section>
         <title>Workflow Tools</title>
@@ -445,6 +478,39 @@
     </section>
 
     <section>
+        <title>Distributed Co-ordination</title>
+        <table id="table-bigdata-ecosystem-coordination">
+            <title>Distributed Co-ordination</title>
+            <tgroup cols='2' align='left' colsep='1' rowsep='1'>
+                <thead>
+                    <row>
+                        <entry>Tool</entry>
+                        <entry>Remarks</entry>
+                    </row>
+                </thead>
+                <tbody>
+                    <row>
+                        <entry>
+                            <link xlink:href="http://zookeeper.apache.org/">Zookeeper</link>
+                        </entry>
+                        <entry>
+                            ZooKeeper is a centralized service for maintaining configuration information, naming, providing distributed synchronization
+                        </entry>
+                    </row>
+                    <row>
+                        <entry>
+                            <link xlink:href="http://zookeeper.apache.org/bookkeeper/">Book keeper</link>
+                        </entry>
+                        <entry>
+                            Distributed logging service based on Zookeeper
+                        </entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+    </section>
+
+    <section>
         <title>Data Analytics Tools</title>
         <table id="table-bigdata-ecosystem-data-analytics">
             <title>Data Analytics on Hadoop</title>
@@ -476,6 +542,40 @@
             </tgroup>
         </table>
     </section>
+
+    <section>
+        <title>Distributed Message Processing </title>
+        <table id="table-bigdata-ecosystem-distributed-messaging">
+            <title>Distributed Message Processing</title>
+            <tgroup cols='2' align='left' colsep='1' rowsep='1'>
+                <thead>
+                    <row>
+                        <entry>Tool</entry>
+                        <entry>Remarks</entry>
+                    </row>
+                </thead>
+                <tbody>
+                    <row>
+                        <entry>
+                            <link xlink:href="http://akka.io/">Akka</link>
+                        </entry>
+                        <entry>
+                            Distributed messaging system with actors
+                        </entry>
+                    </row>
+                    <row>
+                        <entry>
+                            <link xlink:href="http://www.rabbitmq.com/">RabbitMQ</link>
+                        </entry>
+                        <entry>
+                            Distributed MQ messaging system
+                        </entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+    </section>
+
 
     <section>
         <title>Realtime Stream Processing</title>

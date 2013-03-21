@@ -13,13 +13,13 @@
             <author>
                 <firstname>Mark</firstname>
                 <surname>Kerzner</surname>
-                <contrib>Co-Author</contrib>
+                <contrib>Author</contrib>
                 <email>mark@hadoopilluminated.com</email>
             </author>
             <author>
                 <firstname>Sujee</firstname>
                 <surname>Maniyam</surname>
-                <contrib>Co-Author</contrib>
+                <contrib>Author</contrib>
                 <email>sujee@hadoopilluminated.com</email>
             </author>
         </authorgroup>
@@ -29,7 +29,7 @@
         <para>To the open source community
         </para>
         <para>
-            <ulink url="https://github.com/markkerzner/HadoopIlluminated">Companion project on GitHub</ulink>
+            <ulink url="https://github.com/markkerzner/HadoopIlluminatedSource">Companion project on GitHub</ulink>
         </para>
     </dedication>
 
