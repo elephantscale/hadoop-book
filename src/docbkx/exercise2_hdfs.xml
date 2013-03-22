@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter version="5.0" xml:id="chapter-Sample_Chapter" xmlns="http://docbook.org/ns/docbook"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xi="http://www.w3.org/2001/XInclude"
+    xmlns:svg="http://www.w3.org/2000/svg"
+    xmlns:m="http://www.w3.org/1998/Math/MathML"
+    xmlns:html="http://www.w3.org/1999/xhtml"
+    xmlns:db="http://docbook.org/ns/docbook">
+
+    <title>Exercise 2: Using HDFS (Hadoop Distributed File System</title>
+    <section>
+        <title>Introduction</title>
+        <para>
+		Welcome to Exercise 2!  In Exercise 1 we learned how to start and monitor
+		the hadoop daemons.  
+		In this lab we will be learning how to use the Hadoop Distributed File
+		System.
+        </para>
+    </section>
+    <section>
+        <title>Lab Goals</title>
+	<orderedlist>
+		<listitem> 
+			<para> View files on HDFS. </para>
+		</listitem>
+		<listitem> 
+			<para> Copy files to and from HDFS from your local system. </para>
+		</listitem>
+		<listitem> 
+			<para> Generate test data for future labs.
+			</para>
+		</listitem>
+
+				
+	</orderedlist>
+    </section>
+    <section>
+        <title>Assumptions</title>
+	<orderedlist>
+	  <listitem> 
+	    <para>
+	      That you are on a Unix-like system.  Windows users may
+	      be able to achieve this by installing Cygwin, but are
+	      probably better served by running this lab inside a
+	      virtual machine.
+	    </para>
+	  </listitem>
+	  <listitem> 
+	    <para> 
+	      Hadoop is already installed on your box in
+	      pseudo-distributed mode, which means that your box has
+	      all the hadoop daemons (services) running.
+	    </para>
+	  </listitem>
+				
+	</orderedlist>
+	<para>
+	  nWith that said, let's get started.
+	</para>
+    </section>
+    <section>
+        <title>Getting Started</title>
+        <para>
+	  Let's begin. First, we need to understand that hadoop does
+	  not know or care about files that may exist on your local
+	  machine.  It only cares about files in the Hadoop
+	  Distributed File System, or HDFS.  Any files that.
+        </para>
+	<para>
+	  On your pseudo-distributed system, this may seem like a chore, and
+indeed, Hadoop supports a local mode for developers who have no
+interest in running a local HDFS.  That said, it is generally a good
+idea to develop using psuedo-distributed mode as it far better
+reflects how a job will run on your Hadoop cluster than local mode.
+	</para>
+    </section>
+    <section>
+        <title>Viewing Files in HDFS</title>
+
+	<para>
+	  First, let's try to view the files in your HDFS.  This can
+	  be done with the following command:
+	</para>
+	<programlisting>
+$ hadoop fs -ls
+	</programlisting>
+
+	<para>
+	  Please note the dash in front of the ls, unlike the *nix equivalent
+	  command.
+	</para>
+
+
+	<para>
+	  If you have a fresh system, chances are very good you will
+	  get no output at all. This is expected; part of the *nix "no
+	  news is good news" philosophy.  This simply means that your
+	  home directory is empty.
+	</para>
+	<para>
+	  If you do have some data, you will see something like this:
+	</para>
+	<programlisting>
+$ hadoop fs -ls
+Found 1 items
+drwxr-xr-x   - hduser supergroup          0 2013-02-19 12:00 /user/hduser/xyz
+	</programlisting>
+
+	<para>
+	  This indicates that you have one file in your home directory
+	  /user/YourUserName, called xyz.
+	</para>
+
+	<para>
+	  Just like in *nix, your home directory isn't the root of the
+	  filesystem.  Perhaps you might want to view the base of your
+	  filesystem.
+	</para>
+
+	<programlisting>
+$ hadoop fs -ls /
+Found 4 items
+drwxr-xr-x   - hduser supergroup          0 2013-02-19 12:00 /app
+drwxr-xr-x   - hduser supergroup          0 2013-02-09 21:37 /hbase
+drwxr-xr-x   - hduser supergroup          0 2013-02-19 12:00 /tmp
+drwxrwxr-x   - hduser supergroup          0 2013-02-19 11:37 /user
+	</programlisting>
+
+	<para>
+	  Notice that there are several directories, including the /user
+	  directory in which the home directory that you saw before lives.
+	</para>
+
+	<para>
+	  Seeing your home directory can also be accomplished like this:
+	</para>
+
+	<programlisting>
+$ hadoop fs -ls /user/hduser
+Found 1 items
+drwxr-xr-x   - hduser supergroup          0 2013-02-19 12:00 /user/hduser/xyz
+	</programlisting>
+
+	<para>
+	  Naturally, you need to put your own *nix username in there
+	  rather than hduser.
+	</para>
+
+    </section>
+ 
+    <section>
+        <title>Generating some test data</title>
+	<para>
+	  Before diving into copying files to HDFS, first we are going
+	  to make some data to run on.  To do so, we have created some
+	  scripts which will generate random test data.  There are two
+	  scripts, a ruby version and a python version.
+	</para>
+
+	<para>
+	  To run these scripts you have to have either ruby or python
+	  installed on your system.  Usually at least one is
+	  available.  Try entering the following commands.
+	</para>
+	<programlisting>
+$ python --version
+Python 2.7.3
+
+$ ruby --version
+ruby 1.9.3p194 (2012-04-20 revision 35410) [x86_64-linux]
+	</programlisting>
+	<para>
+	  The actual versions probably don't matter if they match what
+	  is shown, only that the interpreters actually exist and are
+	  in the path.  If not, check to see if python or ruby may
+	  exist elsewhere in the path, or otherwise you can install
+	  python / ruby on your system using a package manager such as
+	  apt-get or yum.
+	</para>
+
+	<para>
+	  Once you have verified that interpreter exists, then you
+	  should run your chosen script: either gen-billing-data.py or
+	  gen-billing-data.rb.  These scripts are included with this lab.
+	</para>
+
+	<programlisting>
+$ python ./gen-billing-data.py
+generating log  2012-01-01.log
+generating log  2012-01-02.log
+generating log  2012-01-03.log
+generating log  2012-01-04.log
+generating log  2012-01-05.log
+generating log  2012-01-06.log
+generating log  2012-01-07.log
+generating log  2012-01-08.log
+generating log  2012-01-09.log
+generating log  2012-01-10.log
+	</programlisting>
+
+	
+    </section>
+
+    <section>
+        <title>Copying Files to HDFS</title>
+
+	<para>
+	  Before copying files to HDFS, we might want to create a 
+	  directory for the new files, using the mkdir command.
+	</para>
+	<programlisting>
+$ hadoop fs -mkdir billing_data
+	</programlisting>
+
+	<para>
+	  It's easy to copy files from your local system to HDFS. To
+	  do so, use the the hadoop fs -copyFromLocal command.
+	</para>
+
+	<programlisting>
+$ hadoop fs -copyFromLocal *.log billing_data
+	</programlisting>
+
+	<para>
+	  Let's say that we want to copy some files from hdfs to the
+	  local system.  Not surprisingly, we can do that with the
+	  hadoop fs -copyToLocal command.
+	</para>
+
+	<programlisting>
+$ mkdir copiedFromHdfs
+$ hadoop fs -copyToLocal billing_data/*.log copiedFromHdfs
+	</programlisting>
+    </section>
+
+    <section>
+      <title> Extra Credit </title>
+      <para>
+	Try experimenting with the following hadoop fs commands, most
+	of which are similar to equivalent *nix commands.
+      </para>
+
+	<orderedlist>
+		<listitem> 
+			<para> hadoop fs -cat </para>
+		</listitem>
+		<listitem> 
+			<para> hadoop fs -mv </para>
+		</listitem>
+		<listitem> 
+			<para> hadoop fs -rmr </para>
+		</listitem>
+	</orderedlist>
+    </section>
+    <section>
+        <title>Lab Review</title>
+	<para>
+	  In this lab we covered the following topics:
+	</para>
+	<orderedlist>
+		<listitem> 
+			<para> View files on HDFS. </para>
+		</listitem>
+		<listitem> 
+			<para> Copy files to and from HDFS from your
+			local system. </para>
+		</listitem>
+		<listitem> 
+			<para> Generate test data for future labs.
+			</para>
+		</listitem>
+	</orderedlist>
+    </section>
+</chapter>
