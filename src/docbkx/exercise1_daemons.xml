@@ -172,20 +172,20 @@
             path to include the hadoop bin directory.  That could be in
             one of the following locations:
         </para>
-        <ItemizedList>
-            <ListItem>
+        <itemizedlist>
+            <listitem>
                 /usr/lib/hadoop/bin
-            </ListItem>
-            <ListItem>
+            </listitem>
+            <listitem>
                 /usr/local/hadoop/bin
-            </ListItem>
-            <ListItem>
+            </listitem>
+            <listitem>
                 /usr/share/hadoop/bin
-            </ListItem>
-            <ListItem>
+            </listitem>
+            <listitem>
                 etc.
-            </ListItem>
-        </ItemizedList>
+            </listitem>
+        </itemizedlist>
         <para>
             You can fix your path in this shell window by using the following command:
         </para>
