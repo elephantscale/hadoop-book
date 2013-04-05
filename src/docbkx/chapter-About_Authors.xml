@@ -21,7 +21,7 @@
         <para>
             HI there!
             <sbr/>
-            Welcome to Hadoop illuminated.  This book is brought to you by two authors -- Mark Kerzner and Sujee Maniyam.  Both of us have been working in Hadoop eco system for a number of years.  We have implemented hadoop solutions and taught training courses in hadoop.  We both benefited from Hadoop and Open Source community tremendously.  So when we thought about writing a book on Hadoop, we choose to do it in the open, fully Open Source way !  It is a miniscule token of thank you from both of us to the Hadoop community.
+            Welcome to Hadoop Illuminated.  This book is brought to you by two authors -- Mark Kerzner and Sujee Maniyam.  Both of us have been working in Hadoop ecosystem for a number of years.  We have implemented hadoop solutions and taught training courses in Hadoop.  We both benefited from Hadoop and the open source community tremendously.  So when we thought about writing a book on Hadoop, we choose to do it in the fully open source way!  It is a miniscule token of thanks from both of us to the Hadoop community.
         </para>
     </simplesect>
 
@@ -29,13 +29,13 @@
     <simplesect>
         <title>Mark Kerzner (Author)</title>
         <para>
-            Mark Kerzner is an experienced/hands-on BigData architect.  He has been developing software for over 20 years in a variety of technologies (enterprise, web, HPC) and for a variety of verticals (Oil and Gas, legal, trading). He currently focuses on Hadoop, BigData, NOSQL and Amazon Cloud Services.  His clients include Bay Area startups, T-Mobile, GHX, Cision, and lately Intel, where he created and delivered Big Data training.
+            Mark Kerzner is an experienced, hands-on BigData architect.  He has been developing software for over 20 years in a variety of technologies (enterprise, web, HPC) and for a variety of vertical markets (oil and gas, legal, trading). He currently focuses on Hadoop, BigData, NOSQL and Amazon Cloud Services.  His clients include Bay Area startups, T-Mobile, GHX, Cision, and lately Intel, where he created and delivered Big Data training.
         </para>
         <para>
-            Mark stays active in the Hadoop / Startup communities.  He runs Houston Hadoop Meetup, where he presents and often trains, Mark’s company SHMsoft has won multiple innovation awards, and is a client of Houston incubator HTC, where Mark is involved with many startup initiatives.
+            Mark stays active in the Hadoop and Startup communities.  He runs Houston Hadoop Meetup, where he presents and often trains. Mark’s company, SHMsoft, has won multiple innovation awards and is a client of Houston Incubator HTC, where Mark is involved with many startup initiatives.
         </para>
         <para>
-            Mark contributes to a number of Hadoop-based projects and his open source projects can
+            Mark contributes to a number of Hadoop-based projects, and his open source projects can
             be found on
             <link xlink:href="http://github.com/markkerzner">GitHub</link>. He writes about Hadoop
             and other technologies on his
@@ -50,27 +50,26 @@
             <link xlink:href="https://www.linkedin.com/in/markkerzner">LinkedIn</link> ||
             <link xlink:href="https://github.com/markkerzner">GitHub</link> ||
             <link xlink:href="http://shmsoft.blogspot.com/">Personal blog</link> ||
-            <link xlink:href="https://twitter.com/markkerzner">Twitter</link> ||
-            <link xlink:href="http://www.meetup.com/Houston-Hadoop-Meetup-Group/">Houston Hadoop Meetup</link>
+            <link xlink:href="https://twitter.com/markkerzner">Twitter</link>
         </para>
     </simplesect>
 
     <simplesect>
         <title>Sujee Maniyam (Author)</title>
         <para>
-            Sujee Maniyam is an experienced/hands-on BigData architect.  He has been developing software for the past 12 years in a variety of technologies (enterprise, web and mobile). He currently focuses on Hadoop, BigData and NOSQL and Amazon Cloud Services.  His clients include early stage startups and enterprise companies.
+            Sujee Maniyam is an experienced/hands-on BigData architect.  He has been developing software for the past 12 years in a variety of technologies (enterprise, web and mobile). He currently focuses on Hadoop, BigData, NOSQL and Amazon Cloud Services.  His clients include early stage startups and enterprise companies.
         </para>
 
         <para>
-            Sujee stays active in Hadoop / Open Source community.  He runs a developer focused meetup called
-            <link xlink:href="http://www.meetup.com/BigDataGurus/">'Big Data Gurus'</link>.   And he has presented at variety of meetups
+            Sujee stays active in the Hadoop Open Source community.  He runs a developer-focused meetup called
+            <link xlink:href="http://www.meetup.com/BigDataGurus/">'Big Data Gurus'</link>.   And he has presented at variety of meetups.
         </para>
         <para>
-            Sujee contributes to Hadoop project and his open source projects can be found on GitHub.  He writes about Hadoop and other technologies on his website.
+            Sujee contributes to the Hadoop project and his open source projects can be found on GitHub.  He writes about Hadoop and other technologies on his website.
         </para>
 
         <para>
-            Sujee has been doing Hadoop training for individuals and corporations; his classes are hands-on and draws heavily on his industry experience
+            Sujee has been doing Hadoop training for individuals and corporations; his classes emphasize hands-on involvement with a strong focus on his industry experience.
         </para>
         <para>
             Links:
@@ -88,17 +87,16 @@
         <para>
             The delightful artwork appearing in this book has been created by Rebecca Kerzner.
             She is seventeen and studies at Beren Academy in Houston, TX. She has attended the
-            <link xlink:href="http://www.mfah.org/visit/glassell-school/">
-            Glassell school of art</link> for many summers. Her collection of artwork can be seen
+            Glassell school of art for many summers. Her collection of artwork can be seen
             <link xlink:href="https://picasaweb.google.com/110574221375288281850/RebeccaSArt">here</link>.
         </para>
         <para>
-            Rebecca started working on Hadoop illustrations two years prior, when she was fifteen.
+            Rebecca started working on Hadoop illustrations two years previously, when she was fifteen.
             It is interesting to follow her artistic progress. For example, the first version of the
             "Hadoop Zoo" can be found 
             <link xlink:href="https://plus.google.com/photos/110574221375288281850/albums/5850230050814801649/5852442815905345938?banner=pwa">here</link>. 
-            Note the programmers kids who 
-            "came to see the Hadoop Zoo" are all pretty young. But, as the artist grew, so also her 
+            Note the programmer's kids who 
+            "came to see the Hadoop Zoo" are all pretty young. But as the artist grew, so also did her 
             heroes, and in <link xlink:href="https://plus.google.com/photos/110574221375288281850/albums/5850230050814801649/5852442453552955282?banner=pwa">
             the current version of the same sketch</link> you can see the same characters, but 
             older, perhaps around seventeen years of age. Even the Hadoop elephant appears more mature and serious.
