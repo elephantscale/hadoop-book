@@ -47,7 +47,7 @@
             The book's companion source code is hosted on GitHub
             <ulink url="https://github.com/markkerzner/HadoopIlluminated">here.</ulink>
             Alternatively, the book can be viewed as a companion to the source code. The goal is
-            to make the source code project as a set of templates, where one can go to
+            to make the source code a set of templates, where one can go to
             copy a specific template, bring it into one's own project and continue to work
             by modifying it accordingly. At least I use it this way all the time, keeping the project
             open in my IDE for convenience.
