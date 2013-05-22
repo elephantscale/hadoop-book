@@ -9,10 +9,10 @@
 
     <title>Hadoop Use Cases and Case Studies</title>
     <para>
-        These are collection of some use cases of Hadoop.  This is not meant to be an exhaustive list, but a sample to give you some ideas.
+        This is a collection of some use cases of Hadoop.  This is not meant to be an exhaustive list, but a sample to give you some ideas.
     </para>
     <para>
-        A pretty extensive list is available at <link xlink:href="http://wiki.apache.org/hadoop/PoweredBy">Powered By Hadoop site</link>
+        A pretty extensive list is available at the <link xlink:href="http://wiki.apache.org/hadoop/PoweredBy">Powered By Hadoop site</link>
     </para>
     <!-- template
         <section>
@@ -60,18 +60,18 @@
     <section>
         <title>Data Storage</title>
         <section>
-            <title>Net App</title>
+            <title>NetApp</title>
             <para>
-                Net App collects diagnostic data from its storage systems deployed at customer sites.  This data is used to analyze the health of Net App systems.
+                NetApp collects diagnostic data from its storage systems deployed at customer sites.  This data is used to analyze the health of NetApp systems.
 
             </para>
             <para>
                 <emphasis role="bold">Problem: </emphasis>
-                Net App collects over 600,000 data transactions weekly, consisting of unstructured logs and system diagnostic information.  Tradional data storage system proved in-adequate to capture and process this data.
+                NetApp collects over 600,000 data transactions weekly, consisting of unstructured logs and system diagnostic information.  Tradional data storage systems proved inadequate to capture and process this data.
             </para>
             <para>
                 <emphasis role="bold">Solution: </emphasis>
-                Cloudera Hadoop system captures the data and allows parallel processing of data.
+                A Cloudera Hadoop system captures the data and allows parallel processing of data.
             </para>
             <para>
                 <emphasis role="bold">Hadoop Vendor: </emphasis>
@@ -94,18 +94,18 @@
     <section>
         <title>Financial Services</title>
         <section>
-            <title>Dodd-Frank Compliance @  a bank</title>
+            <title>Dodd-Frank Compliance at a bank</title>
             <para>
                 A leading retail bank is using Cloudera and Datameer to validate data accuracy and quality to comply with regulations like Dodd-Frank
 
             </para>
             <para>
                 <emphasis role="bold">Problem: </emphasis>
-Previous solution using Teradata and IBM Netezza was time consuming and complex, and the data mart approach didn’t provide the data completeness required for determining overall data quality.
+The previous solution using Teradata and IBM Netezza was time consuming and complex, and the data mart approach didn’t provide the data completeness required for determining overall data quality.
             </para>
             <para>
                 <emphasis role="bold">Solution: </emphasis>
-                Cloudera + Datameer platform allows analysing trillions of records which currently result in approximately one terabyte per month of reports. The results are reported through a data quality dashboard.
+                A Cloudera + Datameer platform allows analyzing trillions of records which currently result in approximately one terabyte per month of reports. The results are reported through a data quality dashboard.
             </para>
             <para>
                 <emphasis role="bold">Hadoop Vendor: </emphasis>
@@ -132,14 +132,14 @@ Previous solution using Teradata and IBM Netezza was time consuming and complex,
             <title>Storing and processing Medical Records</title>
             <para>
                 <emphasis role="bold">Problem: </emphasis>
-                This health IT company instituted a policy of saving seven years’ historical claims and remit data, but its in-house database systems had trouble meeting the data retention requirement while processing millions of claims every day
+                A health IT company instituted a policy of saving seven years of historical claims and remit data, but its in-house database systems had trouble meeting the data retention requirement while processing millions of claims every day
             </para>
             <para>
-                <emphasis role="bold">Solution:</emphasis><sbr/>
-                Hadoop system allows archiving seven years’ claims and remit data, which requires complex processing to get into a normalized format. Logging terabytes of data generated from transactional systems daily, and storing them in CDH for analytical purposes
+                <emphasis role="bold">Solution: </emphasis><sbr/>
+                A Hadoop system allows archiving seven years’ claims and remit data, which requires complex processing to get into a normalized format, logging terabytes of data generated from transactional systems daily, and storing them in CDH for analytical purposes
             </para>
             <para>
-                <emphasis role="bold">Hadoop vendor :</emphasis><sbr/>
+                <emphasis role="bold">Hadoop vendor: </emphasis><sbr/>
                 Cloudera
             </para>
             <para>
@@ -163,18 +163,18 @@ Previous solution using Teradata and IBM Netezza was time consuming and complex,
         <section>
             <title>NextBio</title>
             <para>
-                NextBio is using Hadoop MapReduce and HBase to process massive amounts of human gnome data.
+                NextBio is using Hadoop MapReduce and HBase to process massive amounts of human genome data.
             </para>
             <para>
-                <emphasis role="bold">Problem:</emphasis><sbr/>
-                processing multi-tera byte data sets wasn't feasible using tradional databases like mysql.
+                <emphasis role="bold">Problem: </emphasis><sbr/>
+                Processing multi-terabyte data sets wasn't feasible using tradional databases like mysql.
             </para>
             <para>
-                <emphasis role="bold">Solution:</emphasis><sbr/>
-                NextBio uses Hadoop map reduce to process gnome data in batches.  And it uses HBase as a scalable data store
+                <emphasis role="bold">Solution: </emphasis><sbr/>
+                NextBio uses Hadoop map reduce to process genome data in batches and it uses HBase as a scalable data store
             </para>
             <para>
-                <emphasis role="bold">Hadoop vendor :</emphasis><sbr/>
+                <emphasis role="bold">Hadoop vendor: </emphasis><sbr/>
                 Intel
             </para>
             <para>
@@ -197,17 +197,17 @@ Previous solution using Teradata and IBM Netezza was time consuming and complex,
         <section>
             <title>China Telecom Guangdong</title>
             <para>
-                <emphasis role="bold">Problem:</emphasis> Storing billions of mobile call records. And providing real time access to the call records and billing information to customers.  <sbr/>
+                <emphasis role="bold">Problem: </emphasis> Storing billions of mobile call records and providing real time access to the call records and billing information to customers.  <sbr/>
                 Tradional storage/database systems couldn't scale to the loads and provide a cost effective solution
             </para>
             <para>
-                <emphasis role="bold">Solution:</emphasis> Hbase is used to store billions of rows of call record details.  30TB of data is added monthly
+                <emphasis role="bold">Solution: </emphasis> Hbase is used to store billions of rows of call record details.  30TB of data is added monthly
             </para>
             <para>
-                <emphasis role="bold">Hadoop vendor :</emphasis> Intel
+                <emphasis role="bold">Hadoop vendor: </emphasis> Intel
             </para>
             <para>
-                <emphasis role="bold">Hadoop cluster size :</emphasis> 100+ nodes
+                <emphasis role="bold">Hadoop cluster size: </emphasis> 100+ nodes
             </para>
             <para>
                 <emphasis role="bold">Links: </emphasis><sbr/>
@@ -228,12 +228,12 @@ Previous solution using Teradata and IBM Netezza was time consuming and complex,
             <para>
                 <emphasis role="bold">Problem: </emphasis>
                 <sbr/>
-                (1) Dealing with 100TB structured data and 500TB+ of semi-structured data <sbr/>
+                (1) Dealing with 100TB of structured data and 500TB+ of semi-structured data <sbr/>
                 (2) 10s of PB across Nokia, 1TB / day
             </para>
             <para>
                 <emphasis role="bold">Solution: </emphasis>
-                HDFS data ware house allows storing all the semi/multi structured data and offers processing data at Peta byte scale
+                HDFS data warehouse allows storing all the semi/multi structured data and offers processing data at petabyte scale
             </para>
             <para>
                 <emphasis role="bold">Hadoop Vendor: </emphasis>
@@ -241,7 +241,8 @@ Previous solution using Teradata and IBM Netezza was time consuming and complex,
             </para>
             <para>
                 <emphasis role="bold">Cluster/Data size: </emphasis>
-                (1) 500TB of data
+                <sbr/>
+                (1) 500TB of data <sbr/>
                 (2) 10s of PB across Nokia, 1TB / day
             </para>
             <para>
@@ -249,7 +250,6 @@ Previous solution using Teradata and IBM Netezza was time consuming and complex,
                 (1) <link xlink:href="http://www.cloudera.com/content/dam/cloudera/Resources/PDF/Cloudera_Nokia_Case_Study_Hadoop.pdf">Cloudera case study</link>
                 (<link xlink:href="cached_reports/Cloudera_Nokia_Case_Study_Hadoop.pdf">cached copy</link>)
                 (Published Apr 2012)
-                <sbr/>
                 <sbr/>
                 (2) <link xlink:href="http://cdn.oreillystatic.com/en/assets/1/event/85/Big%20Data%20Analytics%20Platform%20at%20Nokia%20%E2%80%93%20Selecting%20the%20Right%20Tool%20for%20the%20Right%20Workload%20Presentation.pdf">strata NY 2012 presentation slides</link>
                 (<link xlink:href="cached_reports/Nokia_Bigdata.pdf">cached copy</link>)
@@ -267,11 +267,11 @@ Previous solution using Teradata and IBM Netezza was time consuming and complex,
             </para>
             <para>
                 <emphasis role="bold">Problem: </emphasis>
-                Orbitz generates tremendous amount of log data.  The raw logs are only stored for a few days because of costly data warehouse.  Orbitz needed a effective way to store and process this data;  Plus they needed to improve their hotel rankings
+                Orbitz generates tremendous amounts of log data.  The raw logs are only stored for a few days because of costly data warehousing.  Orbitz needed an effective way to store and process this data, plus they needed to improve their hotel rankings.
             </para>
             <para>
                 <emphasis role="bold">Solution: </emphasis>
-                Hadoop cluster provided very cost effective way to store vast amounts of raw logs.  Data is cleaned and analyzed.  Machine learning algorithms are run
+                A Hadoop cluster provided a very cost effective way to store vast amounts of raw logs.  Data is cleaned and analyzed and machine learning algorithms are run.
             </para>
             <para>
                 <emphasis role="bold">Hadoop Vendor: </emphasis>
@@ -294,16 +294,16 @@ Previous solution using Teradata and IBM Netezza was time consuming and complex,
     <section>
         <title>Energy</title>
         <section>
-            <title>Siesmic Data @ Chevron</title>
+            <title>Siesmic Data at Chevron</title>
             <para>
             </para>
             <para>
                 <emphasis role="bold">Problem: </emphasis>
-                Chevron analyzes vast amount of seismic data to find potential oil reserves.
+                Chevron analyzes vast amounts of seismic data to find potential oil reserves.
             </para>
             <para>
                 <emphasis role="bold">Solution: </emphasis>
-                Hadoop offers the storage capacity and processing power to analyze this data
+                Hadoop offers the storage capacity and processing power to analyze this data.
             </para>
             <para>
                 <emphasis role="bold">Hadoop Vendor: </emphasis>
@@ -326,7 +326,7 @@ Previous solution using Teradata and IBM Netezza was time consuming and complex,
         <section>
             <title>OPower</title>
             <para>
-            Opower works with utility companies to provide engaging, relevant, and personalized content about home energy use to millions of households
+            Opower works with utility companies to provide engaging, relevant, and personalized content about home energy use to millions of households.
             </para>
             <para>
                 <emphasis role="bold">Problem: </emphasis>
@@ -334,7 +334,7 @@ Previous solution using Teradata and IBM Netezza was time consuming and complex,
             </para>
             <para>
                 <emphasis role="bold">Solution: </emphasis>
-                Hadoop provides a single storage for all the massive data.  And machine learning algorithms are run on the data.
+                Hadoop provides a single storage for all the massive data and machine learning algorithms are run on the data.
             </para>
             <para>
                 <emphasis role="bold">Hadoop Vendor: </emphasis>
