@@ -13,14 +13,14 @@
     <sect1>
         <title>Hardware</title>
         <para>
-            Hadoop runs on commodity hardware.  That doesn't mean it runs on a cheapo hardware.  Hadoop runs on decent server class machines.
+            Hadoop runs on commodity hardware.  That doesn't mean it runs on cheapo hardware.  Hadoop runs on decent server class machines.
             <mediaobject> <imageobject>
                     <imagedata fileref="macintosh_classic1.jpg" format="JPG" scale="50" /> </imageobject>
             </mediaobject>
         </para>
 
         <para>
-            Here are some ideas of hardware for hadoop nodes.
+            Here are some possibilities of hardware for Hadoop nodes.
         </para>
 
         <table id="table-hardware">
@@ -50,10 +50,10 @@
                             Memory
                         </entry>
                         <entry>
-                            16 G
+                            16 GB
                         </entry>
                         <entry>
-                            48 G
+                            48 GB
                         </entry>
                     </row>
                     <row>
@@ -83,7 +83,7 @@
         </table>
 
         <para>
-            So the high end machines have more memory.  Plus newer machines are packed with lot more disks (36 TB) -- high storage density.
+            So the high end machines have more memory.  Plus, newer machines are packed with a lot more disks (e.g. 36 TB) -- high storage capacity.
         </para>
 
         <para>
@@ -136,7 +136,7 @@
                         <glossterm>CentOS</glossterm>
                         <glossdef>
                             <para>
-                                Source compatible distro with RHEL.  Free.  Very popular for running hadoop.  Go to the reasonably later version, version 6.x
+                                Source compatible distro with RHEL.  Free.  Very popular for running Hadoop.  Use a later version (version 6.x).
                             </para>
                         </glossdef>
                     </glossentry>
@@ -145,7 +145,7 @@
                         <glossterm>Ubuntu</glossterm>
                         <glossdef>
                             <para>
-                                The Server edition of Ubuntu is a good fit -- not the Desktop edition.  Long Term Support (LTS) releases are recommended.  Because they get updates for at least 2 years.
+                                The Server edition of Ubuntu is a good fit -- not the Desktop edition.  Long Term Support (LTS) releases are recommended, because they continue to be updated for at least 2 years.
                             </para>
                         </glossdef>
                     </glossentry>
@@ -157,10 +157,10 @@
         <sect2>
             <title>Java</title>
             <para>
-                Hadoop is written in Java.  Recommended Java version is Oracle JDK 1.6 releases; recommended minimum revision is 31 (v 1.6.31)
+                Hadoop is written in Java.  The recommended Java version is Oracle JDK 1.6 release and the recommended minimum revision is 31 (v 1.6.31).
             </para>
             <para>
-                So what about OpenJDK?  At this point, Sun JDK is the 'official' supported JDK.  You can still run Hadoop on OpenJDK, it runs reasonably ok.  But you are on your own for support :-)
+                So what about OpenJDK?  At this point the Sun JDK is the 'official' supported JDK.  You can still run Hadoop on OpenJDK (it runs reasonably well) but you are on your own for support :-)
             </para>
         </sect2>
     </sect1>
