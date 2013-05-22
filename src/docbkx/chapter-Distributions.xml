@@ -11,10 +11,10 @@
     <section>
         <title>Why distributions?</title>
         <para>
-            Hadoop is an Apache software.  So it is freely available for download and use.   So why do we need distributions at all?
+            Hadoop is Apache software so it is freely available for download and use.   So why do we need distributions at all?
         </para>
         <para>
-            This is very akin to Linux a few years back and Linux distributions like RedHat, Suse and Ubuntu.  Surely the software is free to download and use.  But distributions offer a easier to use bundle.
+            This is very akin to Linux a few years back and Linux distributions like RedHat, Suse and Ubuntu.  The software is free to download and use but distributions offer an easier to use bundle.
         </para>
         <para>
             So what do Hadoop distros offer?
@@ -24,7 +24,7 @@
                 <glossterm>Distributions provide easy to install mediums like RPMs</glossterm>
                 <glossdef>
                     <para>
-                        Apache version of Hadoop is just TAR balls.   Lot of distros actually package it nicely into easy to install packages.  Install packages make it easy for system administrators to manage software effectively.
+                        The Apache version of Hadoop is just TAR balls.  Distros actually package it nicely into easy to install packages which make it easy for system administrators to manage effectively.
                     </para>
                 </glossdef>
             </glossentry>
@@ -33,10 +33,10 @@
                 <glossterm>Distros package multiple components that work well together</glossterm>
                 <glossdef>
                     <para>
-                        Hadoop ecosystem contains a lot of components (Hbase, pig, hive, zookeeper ..etc).   These components are developed independently and have their own release schedules.  And there are version dependencies among the components.  For example version 0.92 of HBase needs a particular version of HDFS.
+                        The Hadoop ecosystem contains a lot of components (Hbase, Pig, Hive, Zookeeper, etc.) which are being developed independently and have their own release schedules.  Also, there are version dependencies among the components.  For example version 0.92 of HBase needs a particular version of HDFS.
                     </para>
                     <para>
-                        Distros bundle versions of components that work well together. This provides a working hadoop installation right out of the box.
+                        Distros bundle versions of components that work well together. This provides a working Hadoop installation right out of the box.
                     </para>
                 </glossdef>
             </glossentry>
@@ -54,7 +54,7 @@
                 <glossterm>Performance patches</glossterm>
                 <glossdef>
                     <para>
-                        Some times, distros lead the way of including performance patches to the 'vanilla' versions.
+                        Sometimes, distros lead the way by including performance patches to the 'vanilla' versions.
                     </para>
                 </glossdef>
             </glossentry>
@@ -63,25 +63,16 @@
                 <glossterm>Predictable upgrade path</glossterm>
                 <glossdef>
                     <para>
-                        Distros have predictable, product release road maps.  This ensures they keep up with developments and bug fixes.
+                        Distros have predictable product release road maps.  This ensures they keep up with developments and bug fixes.
                     </para>
                 </glossdef>
             </glossentry>
 
             <glossentry>
-                <glossterm>Predictable upgrade path</glossterm>
+                <glossterm>And most importantly . . SUPPORT</glossterm>
                 <glossdef>
                     <para>
-                        Distros have predictable, product release road maps.  This ensures they keep up with developments and bug fixes.
-                    </para>
-                </glossdef>
-            </glossentry>
-
-            <glossentry>
-                <glossterm>And most importantly.. SUPPORT</glossterm>
-                <glossdef>
-                    <para>
-                        Lot of distros will come with support, which could be very valuable for a production critical cluster.
+                        Lot of distros come with support, which could be very valuable for a production critical cluster.
                     </para>
                 </glossdef>
             </glossentry>
@@ -110,7 +101,7 @@
                         <entry>
                             <itemizedlist>
                                 <listitem>The Hadoop Source</listitem>
-                                <listitem>No packaging except tar balls</listitem>
+                                <listitem>No packaging except TAR balls</listitem>
                                 <listitem>No extra tools</listitem>
                             </itemizedlist>
                         </entry>
@@ -125,13 +116,13 @@
                         </entry>
                         <entry>
                             <itemizedlist>
-                                <listitem>Oldest distro in the block</listitem>
+                                <listitem>Oldest distro</listitem>
                                 <listitem>Very polished</listitem>
                                 <listitem>Comes with good tools to install and manage a Hadoop cluster</listitem>
                             </itemizedlist>
                         </entry>
                         <entry>
-                            Free / Premium model for depending on cluster size
+                            Free / Premium model (depending on cluster size)
                         </entry>
                     </row>
                     <row>
@@ -159,9 +150,9 @@
                             <itemizedlist>
                                 <listitem>MapR has their own file system (alternative to HDFS)</listitem>
                                 <listitem>Boasts higher performance</listitem>
-                                <listitem>nice set of tools to manage and administer a cluster</listitem>
+                                <listitem>Nice set of tools to manage and administer a cluster</listitem>
                                 <listitem>Does not suffer from Single Point of Failure</listitem>
-                                <listitem>Offer some cool features like : mirroring, snapshots ..etc</listitem>
+                                <listitem>Offer some cool features like mirroring, snapshots, etc.</listitem>
                             </itemizedlist>
                         </entry>
                         <entry>
@@ -176,7 +167,7 @@
                         <entry>
                             <itemizedlist>
                                 <listitem>Newer distro</listitem>
-                                <listitem>hadoop version 2</listitem>
+                                <listitem>Hadoop version 2</listitem>
                                 <listitem>Comes with tools to manage and administer a cluster</listitem>
                             </itemizedlist>
                         </entry>
@@ -191,8 +182,8 @@
                         </entry>
                         <entry>
                             <itemizedlist>
-                                <listitem>encryption support</listitem>
-                                <listitem>hardware accelleration added to some layers of stack to boost performance</listitem>
+                                <listitem>Encryption support</listitem>
+                                <listitem>Hardware accelleration added to some layers of stack to boost performance</listitem>
                                 <listitem>Admin tools to deploy and manage hadoop</listitem>
                             </itemizedlist>
                         </entry>
@@ -227,19 +218,19 @@
         <sect2>
             <title>Hadoop clusters in the Cloud</title>
             <para>
-                Hadoop clusters can be setup in any cloud service that offers suitable machines.
+                Hadoop clusters can be set up in any cloud service that offers suitable machines.
             </para>
             <para>
-                How ever, keeping up with the cloud mantra 'only pay for what you use' Hadoop can be run 'on demand' in the cloud.
+                However, in line with the cloud mantra 'only pay for what you use', Hadoop can be run 'on demand' in the cloud.
             </para>
         </sect2>
         <sect2>
             <title>Amazon Elastic Map Reduce</title>
             <para>
-                Amazon offers 'On Demand Hadoop'. This means, there is no permanent Hadoop cluster.  A cluster is spun up to do a job and after that it is shut down.  Pay for usage.
+                Amazon offers 'On Demand Hadoop', which means there is no permanent Hadoop cluster.  A cluster is spun up to do a job and after that it is shut down - 'pay for usage'.
             </para>
             <para>
-                Amazon offers a slightly customized version of Apache Hadoop.  And also offers MapR's distribution.
+                Amazon offers a slightly customized version of Apache Hadoop and also offers MapR's distribution.
             </para>
         </sect2>
 
