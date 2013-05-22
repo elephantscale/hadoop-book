@@ -14,16 +14,17 @@
     <section>
         <title>start/stop  scripts</title>
         <para>
-            These are files used to start/stop hadoop daemons.
+            These are files used to start/stop hadoop daemons:
             <command>
 
             start-dfs.sh, stop-dfs.sh, start-mapred.sh, stop-mapred.sh, start-all.sh, stop-all.sh,  hadoop-daemon.sh,  hadoop-daemons.sh
             </command>
         </para>
         <para>
-            In Hadoop v1 the start/stop scripts are in <command>HADOOP_HOME/bin</command> dir.  In Hadoop2 they are in <command>HADOOP_HOME/sbin</command> dir
-            <sbr/>
-            (in the following commands HH means hadoop install dir)
+            In Hadoop v1 the start/stop scripts are in the <command>HADOOP_HOME/bin</command> dir.  In Hadoop2 they are in the  <command>HADOOP_HOME/sbin</command> dir
+        </para>
+        <para>
+            Note: in the following tables ""HH" stands for the Hadoop install directory.
         </para>
 
         <section>
@@ -67,7 +68,7 @@
                         </row>
                         <row>
                             <entry>
-                                to start every thing
+                                to start everything
                             </entry>
                             <entry>
                                 <command>$ HH/bin/start-all.sh</command>
@@ -82,7 +83,7 @@
         </section>
 
         <section>
-            <title>RPM version</title>
+            <title>RPM Version</title>
             <table id="hadoop-v1-v2-start-stop-scrips-rpm" grid="all">
                 <title>Start / Stop scripts for rpm package version</title>
                 <tgroup cols='3' align='left' colsep='1'>
@@ -99,25 +100,25 @@
                                 to start HDFS
                             </entry>
                             <entry>
-                                On name node:<sbr/>
+                                On NameNode:<sbr/>
                                 <command>
                                     sudo service hadoop-0.20-namenode start
                                 </command>
                                 <sbr/>
                                 <sbr/>
-                                On data node:<sbr/>
+                                On DataNode:<sbr/>
                                 <command>
                                     sudo service hadoop-0.20-datanode start
                                 </command>
                             </entry>
                             <entry>
-                                On name node:<sbr/>
+                                On NameNode:<sbr/>
                                 <command>
                                     sudo service hadoop-hdfs-namenode  start
                                 </command>
                                 <sbr/>
                                 <sbr/>
-                                On data node:<sbr/>
+                                On DataNode:<sbr/>
                                 <command>
                                     sudo service hadoop-hdfs-datanode  start
                                 </command>
@@ -128,19 +129,19 @@
                                 to start Map Reduce
                             </entry>
                             <entry>
-                                on Job Tracker: <sbr/>
+                                on JobTracker: <sbr/>
                                 <command>
                                     sudo service hadoop-0.20-jobtracker start
                                 </command>
                                 <sbr/>
                                 <sbr/>
-                                on task tracker: <sbr/>
+                                on TaskTracker: <sbr/>
                                 <command>
                                     sudo service hadoop-0.20-tasktracker start
                                 </command>
                             </entry>
                             <entry>
-                                on Job Tracker: <sbr/>
+                                on JobTracker: <sbr/>
                                 <command>
                                     sudo service hadoop-yarn-resourcemanager restart
                                 </command>
@@ -155,7 +156,7 @@
 
                                 <sbr/>
                                 <sbr/>
-                                on worker nodes: <sbr/>
+                                on "worker nodes": <sbr/>
                                 <command>
                                     sudo service hadoop-yarn-nodemanager start
                                 </command>
@@ -170,9 +171,9 @@
     </section>
 
     <section>
-        <title>hadoop command split</title>
+        <title>Hadoop Command Split</title>
         <para>
-            before we had bin/hadoop executable used for file system operations, administration and map reduce operations.  In v2 these are handled by separate binaries.
+            In v1 there are bin/hadoop executables used for file system operations, administration and map reduce operations.  In v2 these are handled by separate binaries.
         </para>
             <table id="hadoop-v1-v2-hadoop-command-split" grid="all">
                 <title>Hadoop Command Split</title>
@@ -187,7 +188,7 @@
                     <tbody>
                         <row>
                             <entry>
-                                file system operations
+                                File system operations
                             </entry>
                             <entry>
                                 <command>$ HH/bin/hadoop dfs -ls</command>
@@ -198,7 +199,7 @@
                         </row>
                         <row>
                             <entry>
-                                namenode operations
+                                NameNode operations
                             </entry>
                             <entry>
                                 <command>$ HH/bin/hadoop namenode -format</command>
@@ -209,7 +210,7 @@
                         </row>
                         <row>
                             <entry>
-                                File System Admin commands
+                                File system admin commands
                             </entry>
                             <entry>
                                 <command>$ HH/bin/hadoop dfsadmin -refreshNodes</command>
@@ -224,19 +225,19 @@
     </section>
 
     <section>
-        <title>Config files</title>
+        <title>Config Files</title>
         <para>
-            sample files : core-site.xml, hdfs-site.xml, mapred-site.xml
+            Sample files: core-site.xml, hdfs-site.xml, mapred-site.xml
         </para>
         <para>
-            In Hadoop v1 the config files are in HADOOP_HOME/<emphasis>conf</emphasis> dir.  In Hadoop v2 they are in HADOOP_HOME/<emphasis>etc/hadoop</emphasis> dir.  The files are all intact at their new location.
+            In Hadoop v1 the config files are in the HADOOP_HOME/<emphasis>conf</emphasis> directory.  In Hadoop v2 they are in the  HADOOP_HOME/<emphasis>etc/hadoop</emphasis> directory.  The files are all intact at their new location.
         </para>
     </section>
 
     <section>
-        <title>lib dir split</title>
+        <title>Lib Dir Split</title>
         <para>
-            In Hadoop V1 all dependency jars are under lib dir.  In V2 they are all split input sub directories.
+            In Hadoop v1 all dependency jars are in the lib dir.  In v2 they are broken out into sub directories.
             <sbr/>
             HH/share/hadoop/common
             <sbr/>
@@ -249,7 +250,7 @@
             HH/share/hadoop/yarn
             <sbr/>
 
-            Each of these directories also have a lib sub folder for their own dependencies.  This means there may be duplicate copies of some jars.  For example
+            Each of these directories also has a lib sub folder for their own dependencies.  This means there may be duplicate copies of some jars.  For example
             <sbr/>
             find hadoop-2  -name "log4j*.jar" yields
             <sbr/>
@@ -266,7 +267,7 @@
             This is okay, as now each component (hdfs, mapreduce, yarn) can have it dependencies in a clean way.
         </para>
         <para>
-            Split of jar files means, we have to change run scripts also.  Here is an example of a java program that connects with HDFS
+            The split of jar files means that we have to change run scripts also.  Here is an example of a java program that connects with HDFS:
             <sbr/>
             <code>
                 java -cp my.jar:$hadoop_home/share/hadoop/hdfs/*:$hadoop_home/share/hadoop/hdfs/lib/*:$hadoop_home/share/hadoop/common/*:$hadoop_home/share/hadoop/common/lib/*  MyClass
@@ -277,14 +278,14 @@
     <section>
         <title>Running TestDFSIO</title>
         <para>
-            in V1
+            in v1
             <sbr/>
             <code>
                 $  hadoop jar HH/hadoop-tests.jar TestDFSIO  -write -nrFiles 10  -fileSize 1000
             </code>
         </para>
         <para>
-            in V2
+            in v2
             <sbr/>
             <code>
                 $ hadoop jar HH/share/hadoop/mapreduce/hadoop-mapreduce-client-jobclient-*-tests.jar TestDFSIO  -write -nrFiles 4 -fileSize 1GB
