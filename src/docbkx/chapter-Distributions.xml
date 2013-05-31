@@ -250,6 +250,18 @@
                 Google offers MapR's Hadoop distribution in their Compute Engine Cloud.
             </para>
         </sect2>
+
+        <sect2>
+            <title>SkyTab Cloud</title>
+            <para>
+                SkyTap offers deployable Hadoop templates
+            </para>
+            <para>
+                Links:<sbr/>
+            <link xlink:href="http://www.skytap.com/news-events/press-releases/skytap-introduces-cloudera-hadoop">Skytap announcement</link>  ||
+            <link xlink:href="http://blog.cloudera.com/blog/2013/01/how-to-deploy-a-cdh-cluster-in-the-skytap-cloud/">How to</link> <sbr/>
+            </para>
+        </sect2>
     </section>
 
 </chapter>
