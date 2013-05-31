@@ -22,10 +22,10 @@
   <section>
       <title>Is Hadoop a fad or here to stay?</title>
       <para>
-          Sure, Hadoop and Big Data is all the rage now.  But Hadoop does solve a real problem.  And it is a safe bet that it is here to stay.
+          Sure, Hadoop and Big Data are all the rage now.  But Hadoop does solve a real problem and it is a safe bet that it is here to stay.
       </para>
       <para>
-          Below is the Hadoop job trends from <link xlink:href="http://www.indeed.com/jobtrends?q=hadoop">Indeed.com</link>.  As you can see, demand for Hadoop skills has been up and up since 2009.  So Hadoop is a good skill ot have!
+          Below is a graph of Hadoop job trends from <link xlink:href="http://www.indeed.com/jobtrends?q=hadoop">Indeed.com</link>.  As you can see, demand for Hadoop skills has been up and up since 2009.  So Hadoop is a good skill to have!
           <mediaobject>
               <imageobject>
                   <imagedata fileref="hadoop_job_trends.png" format="PNG" scale="100" />
@@ -55,7 +55,7 @@
   <section>
       <title>What kind of technical roles are available in Hadoop?</title>
       <para>
-          The following should give you an idea of kind of technical role in Hadoop.
+          The following should give you an idea of the kind of technical roles in Hadoop.
       </para>
       <table id="hadoop-roles">
           <title>Hadoop Roles</title>
@@ -106,7 +106,7 @@
                           Business Analyst
                       </entry>
                       <entry>
-                          Analyses data!
+                          Analyzes data!
                       </entry>
                       <entry>
                           Pig, Hive, SQL superman, familiarity with other BI tools
@@ -120,7 +120,7 @@
   <section>
       <title>I am not a programmer, can I still use Hadoop?</title>
       <para>
-          Yes.  You don't need to write Java Map Reduce code to extract data out of Hadoop.  You can use Pig and Hive.  Both Pig and Hive offer 'high lever' Map Reduce.  For example you can query hadoop  using SQL in Hive.
+          Yes, you don't need to write Java Map Reduce code to extract data out of Hadoop.  You can use Pig and Hive.  Both Pig and Hive offer 'high level' Map Reduce.  For example you can query hadoop  using SQL in Hive.
       </para>
   </section>
 
@@ -136,7 +136,7 @@
                   Eclipse and other Java IDEs : When writing Java code
               </listitem>
               <listitem>
-                  Command line editor like VIM : No matter what editor you use, you will be editing lot of files / scripts.  So familiarity with CLI editors is essential.
+                  Command line editor like VIM : No matter what editor you use, you will be editing a lot of files / scripts.  So familiarity with CLI editors is essential.
               </listitem>
           </itemizedlist>
       </para>

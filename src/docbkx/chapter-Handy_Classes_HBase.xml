@@ -2,10 +2,10 @@
 <chapter version="5.0" xml:id="chapter-Handy_Classes_HBase" xmlns="http://docbook.org/ns/docbook">
   <title>Handy Classes for HBase</title>
   <note>
-      The original article is published by Sujee Maniyam at his website : <ulink  url="http://sujee.net/tech/articles/hadoop/hadoop-useful-classes/">here</ulink>
+      The original article was published by Sujee Maniyam at his website: <ulink  url="http://sujee.net/tech/articles/hadoop/hadoop-useful-classes/">here</ulink>
   </note>
   <para>
-      These are some handy 'utility' classes bundled with Hadoop HBase
+      These are some handy 'utility' classes bundled with Hadoop HBase.
   </para>
 
   <sect1>
@@ -16,11 +16,11 @@
       </para>
 
       <para>
-          handy utility for dealing with bytes and byte arrays
+          Handy utility for dealing with bytes and byte arrays:
       </para>
 
       <sect2>
-          <title>Converting things to byte</title>
+          <title>Converting objects to bytes</title>
 
       <programlisting language="java">
  // -------- Bytes.toBytes() : converting objects to bytes ------

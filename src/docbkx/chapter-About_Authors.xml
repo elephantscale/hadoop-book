@@ -29,20 +29,20 @@
     <simplesect>
         <title>Mark Kerzner (Author)</title>
         <para>
-            Mark Kerzner is an experienced, hands-on BigData architect.  He has been developing software for over 20 years in a variety of technologies (enterprise, web, HPC) and for a variety of vertical markets (oil and gas, legal, trading). He currently focuses on Hadoop, BigData, NOSQL and Amazon Cloud Services.  His clients include Bay Area startups, T-Mobile, GHX, Cision, and lately Intel, where he created and delivered Big Data training.
+            Mark Kerzner is an experienced/hands-on BigData architect.  He has been developing software for over 20 years in a variety of technologies (enterprise, web, HPC) and for a variety of verticals (Oil and Gas, legal, trading). He currently focuses on Hadoop, BigData, NoSQL and Amazon Cloud Services.  His clients include Bay Area startups, T-Mobile, GHX, Cision, and lately Intel, where he created and delivered Big Data training.
         </para>
         <para>
-            Mark stays active in the Hadoop and Startup communities.  He runs Houston Hadoop Meetup, where he presents and often trains. Mark’s company, SHMsoft, has won multiple innovation awards and is a client of Houston Incubator HTC, where Mark is involved with many startup initiatives.
+            Mark stays active in the Hadoop / Startup communities.  He runs the Houston Hadoop Meetup, where he presents and often trains.  Mark’s company SHMsoft has won multiple innovation awards, and is a client of Houston Incubator HTC, where Mark is involved with many startup initiatives.
         </para>
         <para>
             Mark contributes to a number of Hadoop-based projects, and his open source projects can
             be found on
             <link xlink:href="http://github.com/markkerzner">GitHub</link>. He writes about Hadoop
-            and other technologies on his
+            and other technologies in his
             <link xlink:href="http://shmsoft.blogspot.com/">blog</link>.
         </para>
         <para>
-            Mark has been doing Hadoop training for individuals and corporations; his classes are hands-on and draw heavily on his industry experience.
+            Mark does Hadoop training for individuals and corporations; his classes are hands-on and draw heavily on his industry experience.
         </para>
         <para>
             Links:
@@ -57,19 +57,19 @@
     <simplesect>
         <title>Sujee Maniyam (Author)</title>
         <para>
-            Sujee Maniyam is an experienced/hands-on BigData architect.  He has been developing software for the past 12 years in a variety of technologies (enterprise, web and mobile). He currently focuses on Hadoop, BigData, NOSQL and Amazon Cloud Services.  His clients include early stage startups and enterprise companies.
+            Sujee Maniyam is an experienced/hands-on BigData architect.  He has been developing software for the past 12 years in a variety of technologies (enterprise, web and mobile). He currently focuses on Hadoop, BigData and NoSQL, and Amazon Cloud Services.  His clients include early stage startups and enterprise companies.
         </para>
 
         <para>
-            Sujee stays active in the Hadoop Open Source community.  He runs a developer-focused meetup called
-            <link xlink:href="http://www.meetup.com/BigDataGurus/">'Big Data Gurus'</link>.   And he has presented at variety of meetups.
+            Sujee stays active in the Hadoop / Open Source community.  He runs a developer focused Meetup called
+            <link xlink:href="http://www.meetup.com/BigDataGurus/">'Big Data Gurus'</link>.   He has also presented at a variety of Meetups
         </para>
         <para>
-            Sujee contributes to the Hadoop project and his open source projects can be found on GitHub.  He writes about Hadoop and other technologies on his website.
+            Sujee contributes to Hadoop projects and his open source projects can be found on GitHub.  He writes about Hadoop and other technologies on his website.
         </para>
 
         <para>
-            Sujee has been doing Hadoop training for individuals and corporations; his classes emphasize hands-on involvement with a strong focus on his industry experience.
+            Sujee does Hadoop training for individuals and corporations; his classes are hands-on and draw heavily on his industry experience
         </para>
         <para>
             Links:
@@ -85,20 +85,20 @@
     <simplesect>
         <title>Rebecca Kerzner (Illustrator)</title>
         <para>
-            The delightful artwork appearing in this book has been created by Rebecca Kerzner.
+            The delightful artwork appearing in this book was created by Rebecca Kerzner.
             She is seventeen and studies at Beren Academy in Houston, TX. She has attended the
             Glassell school of art for many summers. Her collection of artwork can be seen
             <link xlink:href="https://picasaweb.google.com/110574221375288281850/RebeccaSArt">here</link>.
         </para>
         <para>
-            Rebecca started working on Hadoop illustrations two years previously, when she was fifteen.
+            Rebecca started working on Hadoop illustrations two years ago, when she was fifteen.
             It is interesting to follow her artistic progress. For example, the first version of the
-            "Hadoop Zoo" can be found 
-            <link xlink:href="https://plus.google.com/photos/110574221375288281850/albums/5850230050814801649/5852442815905345938?banner=pwa">here</link>. 
-            Note the programmer's kids who 
-            "came to see the Hadoop Zoo" are all pretty young. But as the artist grew, so also did her 
+            "Hadoop Zoo" can be found
+            <link xlink:href="https://plus.google.com/photos/110574221375288281850/albums/5850230050814801649/5852442815905345938?banner=pwa">here</link>.
+            Note the programmer's kids who
+            "came to see the Hadoop Zoo" are all pretty young. But as the artist grew, so also did her
             heroes, and in <link xlink:href="https://plus.google.com/photos/110574221375288281850/albums/5850230050814801649/5852442453552955282?banner=pwa">
-            the current version of the same sketch</link> you can see the same characters, but 
+            the current version of the same sketch</link> you can see the same characters, but
             older, perhaps around seventeen years of age. Even the Hadoop elephant appears more mature and serious.
         </para>
         <para>

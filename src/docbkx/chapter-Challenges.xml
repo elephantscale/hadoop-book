@@ -15,21 +15,21 @@
     <section>
         <title>Hadoop is a cutting edge technology </title>
         <para>
-            Hadoop is a new technology.  And as with adopting any new technology, finding the people who knows the technology is harder.
+            Hadoop is a new technology, and as with adopting any new technology, finding people who know the technology is difficult!
         </para>
     </section>
 
     <section>
-        <title>Hadoop in the Enterprise Eco System</title>
+        <title>Hadoop in the Enterprise EcoSystem</title>
         <para>
-            Hadoop is designed to solve Big Data problems encountered by Web and Social companies.  In doing so, lot of the features Enterprises need or want are put on the back seat.  For example HDFS does not offer native support for security and authentication.
+            Hadoop is designed to solve Big Data problems encountered by Web and Social companies.  In doing so a lot of the features Enterprises need or want are put on the back burner.  For example, HDFS does not offer native support for security and authentication.
         </para>
     </section>
 
     <section>
-        <title>Hadoop is still rough on the edges</title>
+        <title>Hadoop is still rough around the edges</title>
         <para>
-            The development and admin tools for Hadoop are still pretty new.  Companies like Cloudera, Horton Works, MapR and Karmasphere have been working on this issue.  How ever the tooling may not be as mature as Enterprises are used to (say Oracle Admin ..etc)
+            The development and admin tools for Hadoop are still pretty new.  Companies like Cloudera, Hortonworks, MapR and Karmasphere have been working on this issue.  How ever the tooling may not be as mature as Enterprises are used to (as say, Oracle Admin, etc.)
         </para>
     </section>
 
@@ -38,10 +38,10 @@
         <section>
             <title>Hardware Cost</title>
             <para>
-                Hadoop runs on 'commodity' hardware. But these are not cheapo machines; these are server grade hardware.  For more see <xref linkend="chapter-Hardware_Software"/>
+                Hadoop runs on 'commodity' hardware. But these are not cheapo machines, they are server grade hardware.  For more see <xref linkend="chapter-Hardware_Software"/>
             </para>
             <para>
-                So standing up a reasonably large Hadoop cluster, say 100 nodes, will cost significant amount of money.   For example, lets say a Hadoop node is $5000.  A 100 node cluster would be $500,000 for hardware.
+                So standing up a reasonably large Hadoop cluster, say 100 nodes, will cost a significant amount of money.   For example, lets say a Hadoop node is $5000, so a 100 node cluster would be $500,000 for hardware.
             </para>
         </section>
 
@@ -51,7 +51,7 @@
                 A large Hadoop cluster will require support from various teams like : Network Admins,  IT, Security Admins,  System Admins.
             </para>
             <para>
-                Also one needs to think about operational costs like Data Center expenses : cooling, electricity ..etc
+                Also one needs to think about operational costs like Data Center expenses : cooling, electricity, etc.
             </para>
         </section>
     </section>
@@ -59,7 +59,7 @@
     <section>
         <title>Map Reduce is a different programming paradigm</title>
         <para>
-            Solving problems using Map Reduce requires a different kind of thinking.   Engineering teams would need additional training to take advantage of Hadoop.
+            Solving problems using Map Reduce requires a different kind of thinking.   Engineering teams generally need additional training to take advantage of Hadoop.
         </para>
     </section>
 
@@ -67,14 +67,14 @@
     <section>
         <title>Hadoop and High Availability</title>
         <para>
-            Hadoop version 1 had a Single-Point-Of-Failure problem because of Namenode.  There was only one Namenode for the cluster, and if it goes down, the whole Hadoop cluster would be in-operable.  This has prevented using Hadoop for mission-critical, always-on applications.
+            Hadoop version 1 had a single point of failure problem because of NameNode.  There was only one NameNode for the cluster, and if it went down, the whole Hadoop cluster would be inoperable.  This has prevented the use of Hadoop for mission critical, always-up applications.
         </para>
         <para>
-            This problem is more pronounced on paper than in reality.  Yahoo did a study that analyzed their Hadoop cluster failures.  And the study found only a tiny fraction of failures were caused by NameNode failure.<sbr/>
+            This problem is more pronounced on paper than in reality.  Yahoo did a study that analyzed their Hadoop cluster failures and found that only a tiny fraction of failures were caused by NameNode failure.<sbr/>
             TODO : link
         </para>
         <para>
-            How ever this problem is being solved by various Hadoop providers.  See <xref linkend="chapter-HA"/> chapter for more details.
+            However, this problem is being solved by various Hadoop providers.  See <xref linkend="chapter-HA"/> chapter for more details.
         </para>
     </section>
 

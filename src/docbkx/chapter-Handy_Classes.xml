@@ -2,14 +2,14 @@
 <chapter version="5.0" xml:id="chapter-Handy_Classes" xmlns="http://docbook.org/ns/docbook">
   <title>Handy Classes</title>
   <note>
-      The original article is published by Sujee Maniyam at his website : <ulink  url="http://sujee.net/tech/articles/hadoop/hadoop-useful-classes/">here</ulink>
+      The original article was published by Sujee Maniyam at his website: <ulink  url="http://sujee.net/tech/articles/hadoop/hadoop-useful-classes/">here</ulink>
   </note>
   <para>
       These are some handy 'utility' classes bundled with Hadoop.
   </para>
 
   <sect1>
-      <title>Executing Shell commands</title>
+      <title>Executing Shell Commands</title>
       <para>
           class : org.apache.hadoop.util.Shell / org.apache.hadoop.util.Shell.ShellCommandExecutor <sbr />
       jar : hadoop1 : HADOOP_HOME/lib/hadoop-core.jar <sbr/>
@@ -17,7 +17,7 @@
       </para>
 
       <para>
-          why would we want to execute a outside executable from within hadoop client or map reduce?  May be we have a program that converts image into another format (jpg --> png).  Rather than re-writing this in Java, we can use Shell to invoke the command
+          Why would we want to execute an outside executable from within a Hadoop client or map reduce?  Perhaps we have a program that converts images into another format (jpg --> png).  Rather than rewriting this in Java, we can use a shell to invoke the command:
       </para>
 
       <programlisting language="java">
@@ -60,7 +60,7 @@ stand alone
             StringUtils.byteDesc() : User-friendly / human-readable byte lengths
          </title>
          <para>
-            how many megabytes is 10000000 bytes?   this will tell you.
+            How many megabytes is 10000000 bytes?   this will tell you.
         </para>
       <programlisting language="java">
 import org.apache.hadoop.util.StringUtils;
@@ -110,7 +110,7 @@ aj89y1_xxy --> 616a383979315f787879 <-- aj89y1_xxy
      <sect2>
          <title>StringUtils.formatTime() :  human readable elapsed time</title>
          <para>
-how long is 100000000 ms?   see below
+How long is 100000000 ms?   See below:
          </para>
 
       <programlisting language="java">
@@ -138,7 +138,7 @@ operation took : 2hrs, 46mins, 40sec
       jar : hadoop 1 : HADOOP_HOME/lib/hadoop-core.jar <sbr/>
       jar : hadoop 2 : HADOOP_HOME/share/hadoop/client/lib/hadoop-mapreduce-client-core.jar
       <para>
-          Find out how many nodes are in the cluster, how many mappers, reducers ...etc
+          Find out how many nodes are in the cluster, how many mappers, reducers, etc.
       </para>
 
       <programlisting language="java">

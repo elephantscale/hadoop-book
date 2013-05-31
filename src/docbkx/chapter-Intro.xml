@@ -22,7 +22,7 @@
             <emphasis>MapReduce</emphasis> is a programming framework.
             Its description was <ulink url="http://research.google.com/archive/mapreduce.html">published by Google in 2004</ulink>.
             Much like other frameworks, such as Spring, Struts, or MFC, the MapReduce framework
-            does some things for you, and provides the place for you to fill in the blanks. What
+            does some things for you, and provides a place for you to fill in the blanks. What
             MapReduce does for you is to organize your multiple computers in a cluster in
             order to perform the calculations you need. It takes care of distributing the work
             between computers and of putting together the results of each computer's
@@ -34,7 +34,7 @@
         <para>
             <emphasis>Hadoop</emphasis> is an open-source implementation of Google's distributed computing. 
             It consists of two parts: Hadoop Distributed File System (HDFS), which is modeled after 
-            Google's GFS, and of Hadoop MapReduce, which is modeled after Google's MapReduce.
+            Google's GFS, and Hadoop MapReduce, which is modeled after Google's MapReduce.
             Google's system is proprietary code, so when Google teaches college students the
             ideas of MapReduce programming, they, too, use Hadoop. 
             To further emphasize the difference 
@@ -46,7 +46,7 @@
         <title>Why Hadoop?</title>
         <para>
             We have already mentioned that the MapReduce framework is used at Google,
-            Yahoo, Facebook. It sees big uptake in finance, retail, telecom, and the
+            Yahoo and Facebook. It has seen rapid uptake in finance, retail, telecom, and the
             government. It is making inroads into life sciences. Why is this?
         </para>
         <figure>
@@ -59,20 +59,20 @@
             The Hadoop framework has built-in power and flexibility to do what you could not
             do before. In fact, Cloudera presentations at the latest O'Reilly Strata conference
             mentioned that MapReduce was initially used at Google and Facebook not
-            primarily for its scalability, but for what it allowed do with the data.
+            primarily for its scalability, but for what it allowed you to do with the data.
         </para>
         <para>
-            In 2010, the average size of the Cloudera's customers' cluster was 30 machines.
+            In 2010, the average size of Cloudera's customers' clusters was 30 machines.
             In 2011 it was 70. When people start using Hadoop, they do it for many reasons,
             all concentrated around the new ways of dealing with the data. What gives them
             the security to go ahead is the knowledge that Hadoop solutions are massively
-            scalable, as has been proved by the Hadoop running in the world's largest computer
-            centers and at largest companies.
+            scalable, as has been proved by Hadoop running in the world's largest computer
+            centers and at the largest companies.
         </para>
         <para>
             As you will discover, the Hadoop framework organizes the data and the
             computations, and then runs your code. At times, it makes sense to run your
-            solution, expressed in MapReduce paradigm, even on a single machine.
+            solution, expressed in a MapReduce paradigm, even on a single machine.
         </para>
         <para>
             But of course, Hadoop really shines when you have not one, but rather tens,
@@ -86,19 +86,19 @@
             custom computation platform.
         </para>
         <para>
-            No less important than Hadoop itself are its many friends. Hadoop Distributed
+            No less important than Hadoop itself are its many friends. The Hadoop Distributed
             File System (HDFS) provides unlimited file space available from any Hadoop
             node. HBase is a high-performance unlimited-size database working on top of
             Hadoop. If you need the power of familiar SQL over your large datasets, Pig
             provides you with an answer. While Hadoop can be used by programmers and
             taught to students as an introduction to Big Data, its companion projects (including
-            the ZooKeeper, about which we will hear later on) will make possible and
-            simplify, by providing tried-and-proven frameworks, every aspect of dealing with
+            ZooKeeper, about which we will hear later on) will make projects possible and
+            simplify them by providing tried-and-proven frameworks for every aspect of dealing with
             large datasets.
         </para>
         <para>
             As you learn the concepts, and perfect your skills with the techniques described
-            in this book, you will discover that there are many cases where Hadoop storage,
+            in this book you will discover that there are many cases where Hadoop storage,
             Hadoop computation, or Hadoop's friends can help you. Let's look at some of these
             situations.
         </para>
@@ -128,9 +128,9 @@
                     But say you are lucky, and instead of maintaining legacy software, you are charged with
                     building new, progressive software for your company's work flow. Of course, you want to
                     have unlimited storage, solving this problem once and for all, so as to concentrate on
-                    what's really important. The answer is: you can mount HDFS as FUSE file system, and
-                    you have your unlimited storage. In our cases studies we look at the successful use of the
-                    HDFS as as grid storage for the Large Hadron Collider.
+                    what's really important. The answer is: you can mount HDFS as a FUSE file system, and
+                    you have your unlimited storage. In our cases studies we look at the successful use of
+                    HDFS as a grid storage for the Large Hadron Collider.
                 </para>
             </listitem>
             <listitem>
@@ -150,7 +150,7 @@
             you already do and come up with new and useful projects. In fact, this book
             partially came about by asking people how they used Hadoop in their work. You,
             the reader, are invited to submit your applications that became possible with
-            Hadoop, and I will put it into Case Studies, with attribution :). Of course.
+            Hadoop, and I will put it into Case Studies (with attribution :) of course.
         </para>
     </section>
     <section>
@@ -159,7 +159,7 @@
             QUINCE: Is all our company here?
         </para>
         <para>
-            BOTTOM: You were best to call them generally, man by man, according to the scrip.
+            BOTTOM: You were best to call them generally, man by man, according to the script.
         </para>
         <para>
             <ulink url="http://shakespeare.mit.edu/midsummer/full.html">
@@ -179,20 +179,20 @@
             <title>HDFS - Hadoop Distributed File System</title>
 
             <para>
-                HDFS, or Hadoop Distributed File System, gives the programmer unlimited
-                storage. Unlimited storage is a programmer's dream, so you can skip the rest.
-                However, here are the additional advantages of HDFS.
+                HDFS, or the Hadoop Distributed File System, gives the programmer unlimited
+                storage (fulfilling a cherished dream for programmers).
+                However, here are additional advantages of HDFS.
             </para>
             <itemizedlist>
                 <listitem>
                     <para>
                         Horizontal scalability. Thousands of servers holding petabytes of data. When you need
-                        even more storage, you don't switch to more expensive solutions, but add servers to instead.
+                        even more storage, you don't switch to more expensive solutions, but add servers instead.
                     </para>
                 </listitem>
                 <listitem>
                     <para>
-                        Commodity hardware. The HDFS is designed with relatively cheap commodity hardware
+                        Commodity hardware. HDFS is designed with relatively cheap commodity hardware
                         in mind. HDFS is self-healing and replicating.
                     </para>
                 </listitem>
@@ -200,14 +200,14 @@
                     <para>
                         Fault tolerance. Every member of the Hadoop zoo knows how to deal with hardware
                         failures. If you have 10 thousand servers, then you will see one server fail every day, on
-                        the average. HDFS foresees that by replicating the data, by default three times, on
+                        average.  HDFS foresees that by replicating the data, by default three times, on
                         different data node servers. Thus, if one data node fails, the other two can be used to
                         restore the third one in a different place.
                     </para>
                 </listitem>
             </itemizedlist>
             <para>
-                The HDFS implementation is modeled after GFS, Google Distributed File
+                HDFS implementation is modeled after GFS, Google Distributed File
                 system, thus you can read the first paper on this, to be found here:
                 http://labs.google.com/papers/gfs.html.
             </para>
@@ -216,15 +216,15 @@
             <title>Hadoop, the little elephant</title>
             <para>
                 Hadoop organizes your computations using its MapReduce part. 
-                It reads the data, usually from the its storage, Hadoop Distributed File System (HDFS), in an optimal way.
+                It reads the data, usually from its storage, the Hadoop Distributed File System (HDFS), in an optimal way.
                 However, it can read the data from other places too, including mounted
-                local file systems, web, and databases. It divides the computations between
+                local file systems, the web, and databases. It divides the computations between
                 different computers (servers, or nodes). It is also fault-tolerant.
             </para>
             <para>
                 If some of your nodes fail, Hadoop knows how to continue with the
                 computation, by re-assigning the incomplete work to another node and cleaning up
-                after that node that could not complete its task. It also knows how to combine the
+                after the node that could not complete its task. It also knows how to combine the
                 results of the computation in one place.
             </para>
         </section>
@@ -260,7 +260,7 @@
                 naming, providing distributed synchronization, and providing group services.
             </para>
             <para>
-                ZooKeeper is also fault-tolerant. In your environment development, you can put
+                ZooKeeper is also fault-tolerant. In your development environment, you can put
                 the zookeeper on one node, but in production you usually run it on an odd number
                 of servers, such as 3 or 5.
             </para>
@@ -273,7 +273,7 @@
             <para>
                 Hive is a way for you to get all the honey, and to leave all the work to the bees.
                 You can do a lot of data analysis with Hadoop, but you will also have to write
-                MapReduce tasks. Hive tasks it upon itself. Hive defines a simple SQL-like query
+                MapReduce tasks. Hive takes that task upon itself. Hive defines a simple SQL-like query
                 language, called QL, that enables users familiar with SQL to query the data.
             </para>
             <para>
@@ -290,15 +290,13 @@
                 Pig: "I am Pig, I let you move HDFS cages around, and I speak Pig Latin."
             </para>
             <para>
-                Pig is called this way not because it eats a lot, although you can imagine a pig
-                pushing around and consuming big volumes of information. Rather, it is called this
-                way because it speaks Pig Latin. Others who also speak this language are the kids -
-                or the programmers, who visit the Hadoop zoo.
+                Pig is called pig not because it eats a lot, although you can imagine a pig
+                pushing around and consuming big volumes of information. Rather, it is called pig because it speaks Pig Latin. Others who also speak this language are the kids (the programmers) who visit the Hadoop zoo.
             </para>
             <para>
                 So what is Pig Latin that Apache Pig speaks? As a rough analogy, if Hive is the
                 SQL of Big Data, then Pig Latin is the language of the stored procedures of Big
-                Data. It allows you to manipulate large volume of information, analyze them, and
+                Data. It allows you to manipulate large volumes of information, analyze them, and
                 create new derivative data sets. Internally it creates a sequence of MapReduce jobs,
                 and thus you, the programmer-kid, can use this simple language to solve pretty
                 sophisticated large-scale problems.
@@ -309,7 +307,7 @@
         <title>Hadoop alternatives</title>
         <para>
             Now that we have met the Hadoop zoo, we are ready to start our excursion. Only
-            one thing stops are at this point - and that is, a gnawing doubt, are we in the right
+            one thing stops us at this point - and that is, a gnawing doubt, are we in the right
             zoo? Let us look at some alternatives to dealing with Big Data. Granted, our
             concentration here is Hadoop, and we may not give justice to all the other
             approaches. But we will try.
@@ -319,9 +317,9 @@
             <para>
                 HDFS is not the only, and in fact, not the earliest or the latest distributed file
                 system. CEPH claims to be more flexible and to remove the limit on the number of
-                files. HDFS stored all of its file information in the memory of the server which is
+                files. HDFS stores all of its file information in the memory of the server which is
                 called the NameNode. This is its strong point - speed - but it is also its Achilles'
-                heel. CEPH, on the other hand, makes the function of the NameNode completely
+                heel!  CEPH, on the other hand, makes the function of the NameNode completely
                 distributed.
             </para>
             <para>
@@ -337,22 +335,22 @@
                 I have seen production architectures built on ZFS, where the data storage
                 requirements were very clear and well-defined and where storing data from
                 multiple field sensors was considered better done with ZFS. The pros for ZFS in
-                this case were: built-in replication, low overhead, and - given the right structured
-                of records when written - build-in indexing for searching. Obviously, this was a
+                this case were: built-in replication, low overhead, and - given the right structure
+                of records when written - built-in indexing for searching. Obviously, this was a
                 very specific, though very fitting solution.
             </para>
             <para>
                 While other file system start out with the goal of improving on HDFS/GFS
                 design, the advantage of HDFS is that it is very widely used. I think that in
                 evaluating other file systems, the reader can be guided by the same considerations
-                that led to the design of GFS: the designers of it analyzed prevalent file usage in the
+                that led to the design of GFS: its designers analyzed prevalent file usage in the
                 majority of their applications, and created a file system that optimized reliability
                 for that particular type of usage. The reader may be well advised to compare the
-                assumption of GFS designers with his or her case, and decide if HDFS fits the
+                assumptions of GFS designers with his or her case, and decide if HDFS fits the
                 purpose, or if something else should be used in its place.
             </para>
             <para>
-                We should also note here that we compare Hadoop to other open-source storage
+                We should also note here that we compared Hadoop to other open-source storage
                 solutions. There are proprietary and commercial solutions, but such comparison
                 goes beyond the scope of this introduction.
             </para>
@@ -370,9 +368,9 @@
                 Hypertable is another database close to Google's BigTable in features, and it
                 claims to run 10 times faster than HBase. There is an ongoing discussion between
                 HBase and Hypertable proponents, and the authors do not want to take sides in it,
-                leaving the comparison to the reader. Like Cassandra, Hypertable has less users
+                leaving the comparison to the reader. Like Cassandra, Hypertable has fewer users
                 than HBase, and here too, the reader needs to evaluate the speed of Hypertable for
-                his application, and weight it with other factors.
+                his application, and weigh it with other factors.
             </para>
             <para>
                 MongoDB (from "humongous") is a scalable, high-performance, open source,
@@ -389,7 +387,7 @@
             <para>
                 In the end, before embarking on a development project, you will need to
                 compare alternatives. Below is an example of such comparison. Please keep in
-                mind that this is just possible point of view, and that the specifics of your project
+                mind that this is just one possible point of view, and that the specifics of your project
                 and of your view will be different. Therefore, the table below is mainly to
                 encourage the reader to do a similar evaluation for his own needs.
             </para>
@@ -449,9 +447,9 @@
             The first such example is the JavaSpaces paradigm. JavaSpaces is a giant hash
             map container. It provides the framework for building large-scale systems with
             multiple cooperating computational nodes. The framework is thread-safe and
-            fault-tolerant. Many computer working on the same problem can store their data in
+            fault-tolerant. Many computers working on the same problem can store their data in
             a JavaSpaces container. When a node wants to do some work, it finds the data in
-            the container, check its out, works on it, and then returns it back. The framework
+            the container, checks it out, works on it, and then returns it. The framework
             provides for atomicity. While the node is working on the data, other nodes cannot
             see it. If it fails, its lease on the data expires, and the data is returned back to the
             pool of data for processing.
@@ -468,16 +466,16 @@
         <para>
             GridGain is another Hadoop alternative. The proponents of GridGain claim that
             while Hadoop is a compute grid and a data grid, GridGain is just a compute grid,
-            so if your data requirements are not huge, why bother? They also say that seems to
+            so if your data requirements are not huge, why bother? They also say that it seems to
             be enormously simpler to use. Study of the tools and prototyping with them can
             give one a good feel for the most fitting answer.
         </para>
         <para>
             Terracotta is a commercial open source company, and in the open source realm
             it provides Java big cache and a number of other components for building large
-            distributed systems. One of its advantages is that it allows to scale existing
-            applications without a significant rewrite. By now we have gotten pretty far away
-            from Hadoop, which proves that we have achieved our goal - give a reader a quick
+            distributed systems. One of its advantages is that it allows existing
+            applications to scale without a significant rewrite. By now we have gotten pretty far away
+            from Hadoop, which proves that we have achieved our goal - give the reader a quick
             overview of various alternatives for building large distributed systems. Success in
             whichever way you choose to go!
         </para>
@@ -498,8 +496,8 @@
         <para>
             Google has built multiple applications on GFS, MapReduce, and BigTable, which
             are all implemented as open-source projects in the Hadoop zoo. According to Jeff,
-            the plan is continue with 1,000,000 to 10,000,000 machines spread at 100s to
-            1000s locations around the world, and as arguments go, that is pretty big.
+            the plan is to continue with 1,000,000 to 10,000,000 machines spread at 100s to
+            1000s of locations around the world, and as arguments go, that is pretty big.
         </para>
     </section>
     <section>
@@ -522,10 +520,10 @@
                 the process may be slow. If you try to use multiple computers all accessing shared
                 memory, the system immediately gets complicated, with multi-threading, and we
                 have not even thought of hardware failures. Anyone who has gone through similar
-                exercises know how quickly a simple task can become a nightmare.
+                exercises knows how quickly a simple task can become a nightmare.
             </para>
             <para>
-                Enter Hadoop and offers its services. The following dialog ensues.
+                Enter Hadoop which offers its services. The following dialog ensues.
             </para>
             <para>
                 <emphasis>Hadoop: </emphasis>How can I help?
@@ -552,7 +550,7 @@
             </para>
             <para>I am not pulling your leg: it is that simple. That is the essence of a MapReduce
                 job. Hadoop uses the cluster of computers (nodes), where each node reads words in
-                parallel with all others (Map), then the nodes collect the results (Reduce) and write
+                parallel with all others (Map), then the nodes collect the results (Reduce) and writes
                 them back. Notice that there is a sort step, which is essential to the solution, and is
                 provided for you - regardless of the size of the data. It may take place all in
                 memory, or it may spill to disk. If any of the computers go bad, their tasks are
@@ -659,7 +657,7 @@
             </para>
         </section>
         <section>
-            <title>Let me see, who is Map and who is Reduce</title>
+            <title>Let me see, who is Map and who is Reduce?</title>
             <para>
             </para>
             <para>MapReduce (or MR, if you want to impress your friends) has mappers and
@@ -690,7 +688,7 @@
                 next chapter. Having sorted the maps, the framework gives them back to you in
                 groups. You supply the code which tells it how to process each group. This is the
                 Reducer. The key that you gave to the framework is the same key that it returns to
-                your Reducer. In our case, it was the word found in a document.
+                your Reducer. In our case, it was a word found in a document.
             </para>
             <para>In the code, this is how we went through a group of values:
             </para>
@@ -703,7 +701,7 @@
                 </programlisting>
             </para>
             <para>While the key was now the word, the value was count - which, as you may
-                remember, we have set to 1 for each word. These ones are being summed up.
+                remember, we have set to 1 for each word. These are being summed up.
             </para>
             <para>Finally, you return the reduced result to the framework, and it outputs results to
                 a file.

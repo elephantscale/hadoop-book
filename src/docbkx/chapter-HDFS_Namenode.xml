@@ -7,9 +7,9 @@
          xmlns:html="http://www.w3.org/1999/xhtml"
          xmlns:db="http://docbook.org/ns/docbook">
 
-    <title>HDFS Namenode</title>
+    <title>HDFS NameNode</title>
     <para>
-        Namenode is the co-ordinator in HDFS.  In this chapter we will look at functions and internals of Namenode.
+        Namenode is the coordinator in HDFS.  In this chapter we will look at the functions and internals of NameNode.
     </para>
 
 
@@ -17,84 +17,84 @@
         <title> Functions of NameNode </title>
 
         <sect2>
-            <title>Namenode Maintains the file-system meta data</title>
+            <title>NameNode maintains the filesystem metadata</title>
             <para>
-                Namenode contains all meta data about the file system.  For example, the file system hierarchy,  file permissions ...etc.   This information is vital for navigating the file system and accessing data.
+                NameNode contains all meta data about the file system.  For example, the file system hierarchy,  file permissions, etc.   This information is vital for navigating the file system and accessing data.
                 <note>
-                    Namenode does not store actual data of file system.  All file data is stored by Datanodes.
+                    NameNode does not store the actual data of the file system.  All file data is stored by DataNodes.
                 </note>
             </para>
         </sect2>
 
 
         <sect2>
-            <title>Namenode has the location information for files for the cluster</title>
+            <title>NameNode has the location information for files in the cluster</title>
             <para>
-                As we know, in HDFS files are spread across the cluster.  So how does one know which machine contains which files?  This information is maintained by Namenode.  This piece of information is called 'Block Location data'... because files are chopped into blocks.
+                As we know, in HDFS files are spread across the cluster.  So how does one know which machine contains which files?  This information is maintained by NameNode.  This information is called 'Block Location data' - because files are chopped into blocks.
             </para>
             <para>
-                This 'block map' is not persisted by namenode.  It dynamically builds this map, from 'block reports' sent by Datanodes.  Each Datanode reports in with what blocks it has  when it joins the cluster.  Also Datanodes periodically send updated block reports to Namenode.  So Namenode has latest accurate block information across the cluster
+                This 'block map' is not persisted by NameNode.  It dynamically builds this map from 'block reports' sent by DataNodes.  Each DataNode reports in with what blocks it has  when it joins the cluster.  Also DataNodes periodically send updated block reports to NameNode.  So NameNode has the latest accurate block information across the cluster.
             </para>
             <graphic fileref="hdfs_block_map.jpg"></graphic>
         </sect2>
 
         <sect2>
-            <title>Namenode is client's first contact</title>
+            <title>NameNode is a client's first point of contact</title>
             <para>
-                When a client wants to access a file, it contacts Namenode first.  Namenode will provide details of the file and redirects the client to appropriate Datanodes.  Then the client contacts the Datanode to access the file.
+                When a client wants to access a file, it contacts NameNode first.  NameNode provides the details of the file and redirects the client to the appropriate DataNodes.  Then the client contacts the DataNode to access the file.
             </para>
         </sect2>
         <sect2>
-            <title>Namenode does not get involved in data-path</title>
+            <title>NameNode does not get involved in the data path</title>
             <para>
-                Namenode serves as a reference point for files.  When a client needs to read the file, it actually contacts the Datanodes and streams data directly from Datanodes.  Namenode does not get involved in data handling path.  The reasons for this is obvious, we don't want Namenode to be the bottleneck of the cluster.
+                The NameNode serves as a reference point for files.  When a client needs to read a file it actually contacts the DataNodes and streams data directly from DataNodes.  The NameNode does not get involved in the data handling path.  The reason for this is obvious, we don't want the NameNode to be a bottleneck.
             </para>
         </sect2>
     </sect1>
 
     <sect1>
-        <title>Namenode architecture</title>
+        <title>NameNode Architecture</title>
         <sect2>
-            <title>What data does Namenode store?</title>
+            <title>What data does the NameNode store?</title>
             <para>
-                We said Namenode has file system meta data.  What exactly is it?  There are two parts to it.  One, it keeps information about the file system (meta data) such as file system hierarchy, permissions ...etc.   Second, it keeps the location info of where the files are.
+                We said the NameNode contains file system metadata.  What exactly is it?  There are two parts to it.  One, it keeps information about the file system (metadata) such as the file system hierarchy, permissions, etc.   Second, it keeps the location information of where the files are.
             </para>
             <para>
-                So where is this information stored?  Namenode stores this data in memory.  So Namenode can access this information very quickly.  But how does this information survives a Namenode restart?  Namenode persists this information on disk as well.
+                So where is this information stored?  NameNode stores this data in memory so NameNode can access this information very quickly.  But how does this information survive a NameNode restart?  NameNode persists this information on disk as well.
             </para>
             <para>
-                As we saw, Namenode is very critical for the cluster operation.  So we can not risk loosing Namenode data.  We are already storing the data to disk.  What if that disk fails?
+                As we saw, NameNode is very critical for the cluster operation, so we cannot risk losing NameNode data.  We are already storing the data to disk.  What if that disk fails?
             </para>
             <para>
-                We will store this data in two disks
+                We will store this data on two disks.
             </para>
             <para>
-                What if the machine that Namenode is running catches fire and takes down both the disks?  We can write to remote storage.  It could be an external filer that can be mounted by NFS.  So a copy of data is available even if Namenode machine melts down!
+                What if the machine that NameNode is running catches fire and takes down both the disks?  We can write to remote storage.  It could be an external filer that can be mounted by NFS.  So a copy of data is available even if the NameNode machine melts down!
             </para>
             <para>
-                So on production systems, Namenode is configured to save the data at multiple locations
+                So on production systems, NameNode is configured to save the data at multiple locations:
                 <itemizedlist>
                     <listitem>
-                        a disk on the Namenode host
+                        a disk on the NameNode host
                     </listitem>
                     <listitem>
-                        another disk on the Namenode host
+                        another disk on the NameNode host
                     </listitem>
                     <listitem>
                         a remote filer (usually mounted by NFS)
                     </listitem>
                 </itemizedlist>
-                This way, we can be sure the precious Namenode data is saved against disk / host failures.
+                This way, we can be sure the precious NameNode data is saved against disk / host failures.
             </para>
             <para>
-                So lets see how Namenode updates its data.  In the following diagram, shows how file system data is modified.
+                So lets see how NameNode updates its data.  The following diagram shows how file system data is modified.
 
                 <orderedlist>
                     <listitem>
-                        a client makes a request (say to create a file)
+                        a client makes a request (say, to create a file)
                     </listitem>
                     <listitem>
-                        Namenode first updates  disk images
+                        NameNode first updates  disk images
                         <itemizedlist>
                             <listitem>
                                 Writes to disk 1
@@ -109,96 +109,96 @@
                     </listitem>
 
                     <listitem>
-                        it then updates its in memory data structures
+                        it then updates its in-memory data structures
                     </listitem>
 
                     <listitem>
-                        after all this is done, it returns SUCCESS code to the client
+                        after all this is done, it returns a SUCCESS code to the client
                     </listitem>
                 </orderedlist>
-                Why is data on disk persisted before in-memory data structure?  This way, even if Namenode goes down in between writes, the meta data will be in consistent state
+                Why is data on disk persisted before in-memory data structures?  This way, even if the NameNode goes down between writes, the metadata will be in a consistent state.
                 <graphic fileref="nn_1.jpg"></graphic>
             </para>
         </sect2>
         <sect2>
-            <title>How is the meta data stored?</title>
+            <title>How is the metadata stored?</title>
             <para>
-                So we learned Namenode saves the meta data on disk.  On a busy clusters there could be thousands of file system operations (create, delete, move) per minute.  And a big cluster, the meta-data size could approach gigabytes.  Updating such a large file would be slow and un unwieldy.  So how does NN solves this?
+                We learned NameNode saves metadata on disk.  On a busy cluster there could be thousands of file system operations (create, delete, move) per minute and, on a big cluster, the size of the metadata could approach gigabytes.  Updating such a large file would be slow and unwieldy.  So how does the NameNode solve this?
             </para>
             <para>
-                The approach consists of SNAPSHOTS and EDITLOGS.  The process is like this:
+                The approach consists of Snapshots and EditLogs.  The process is like this:
 
                 <orderedlist>
                     <listitem>
-                        When Namenode boots up, it loads the latest snapshot of the meta data
+                        When NameNode boots up, it loads the latest Snapshot of the metadata.
                     </listitem>
                     <listitem>
-                        As it handles file system changes, it writes to a separate file called EDITLOG.  As editlog exceeds a certain size, a new edit log file is created
+                        As it handles file system changes, it writes to a separate file called EditLog.  As EditLog exceeds a certain size, a new EditLog file is created.
                     </listitem>
                     <listitem>
-                        Next time Namenode boots, it loads the latest snapshot and replays the editlogs to it is up to date on file system status.
+                        Next time NameNode boots, it loads the latest snapshot and replays the EditLogs until it is up to date on file system status.
                     </listitem>
                     <listitem>
-                        Once all editlogs are replayed, then Namenode is ready to accept file systems operations.  They will be recorded in editlogs as well.
+                        Once all EditLogs are replayed, then NameNode is ready to accept file system operations.  They will be recorded in EditLogs as well.
                     </listitem>
                     <listitem>
-                        This process repeats many times during Namenode's life cycle
+                        This process repeats many times during a NameNode's life cycle.
                     </listitem>
                 </orderedlist>
             </para>
 
             <para>
-                As you can imagine, the edit logs can add up.  And replaying them each time Namenode boots up can take longer and longer.  It makes sense to create new snapshots out of editlogs.
+                As you can imagine, the EditLogs can add up in size and replaying them each time NameNode boots up can take longer and longer.  It makes sense to create new snapshots out of EditLogs.
                 <graphic fileref="nn_editlogs.jpg"></graphic>
-                This is where secondary namenode comes into play.
+                This is where the Secondary NameNode comes into play.
             </para>
         </sect2>
 
         <sect2>
             <title>Secondary Namenode</title>
             <para>
-                Secondary Namenode is another daemon that is responsible for merging edit logs into snapshots.   The name 'secondary' can mislead people into thinking this is a 'backup' Namenode, and can take over when Namenode goes down.  That is not what Secondary Namenode does.  It is actually a 'side kick' for Namenode. 
+                A Secondary NameNode is another daemon that is responsible for merging edit logs into snapshots.   The name 'secondary' can mislead people into thinking this is a 'backup' NameNode, and can take over when NameNode goes down.  That is not what Secondary NameNode does.  It is actually a 'sidekick' for NameNode. 
             </para>
             <para>
-                Here is what secondary namenode does:
+                Here is what Secondary NameNode does:
                 <orderedlist>
                     <listitem>
-                        Contacts Namenode and gets latest snapshot.  It uses HTTP to communicate
+                        Contacts NameNode and gets latest Snapshot.  It uses HTTP to communicate.
                     </listitem>
                     <listitem>
-                        Also gets editlogs from Namenode
+                        Also gets EditLogs from NameNode
                     </listitem>
                     <listitem>
-                        Loads both snapshots and edit logs into memory, applies editlogs to the snapshot, creates another snapshot.
+                        Loads both snapshots and EditLogs into memory, applies EditLogs to the Snapshot, creates another Snapshot.
                     </listitem>
                     <listitem>
-                        uploads the newly minted snapshot back to Namenode
+                        Uploads the newly minted Snapshot back to NameNode.
                     </listitem>
                     <listitem>
-                        Namenode accepts the new snapshot and replaces its current one
+                        NameNode accepts the new Snapshot and replaces its current one.
                     </listitem>
                     <listitem>
-                        This process repeats
+                        This process repeats.
                     </listitem>
                 </orderedlist>
                 <graphic fileref="snn.jpg"></graphic>
             </para>
             <para>
-                So why make Secondary Namenode another daemon instead of part of Namenode?
+                So why make Secondary NameNode another daemon instead of part of NameNode?
                 <sbr/>
                 This is for two reasons:
                 <itemizedlist>
                     <listitem>
-                        To merge the snapshots and edit logs into a new snapshot, they have to be loaded into memory.   On a large cluster, the image files can quite large (gigabytes) and loading them into memory can consume large amounts of memory.  By moving it another host, we can minimize the memory needs of Namenode.
+                        To merge the snapshots and EditLogs into a new snapshot, they have to be loaded into memory.   On a large cluster, the image files can be quite large (gigabytes) and loading them into memory can consume large amounts of memory.  By moving it to another host, we can minimize the memory needs of NameNode.
                     </listitem>
 
                     <listitem>
-                        Also on a large, busy cluster the edit logs can be large and merging them can be very resource consuming.  By off loading to another host, Namenode is not over loaded
+                        Also on a large, busy cluster the EditLogs can be large and merging them can be very resource consuming.  By offloading to another host, NameNode is not overloaded.
                     </listitem>
                 </itemizedlist>
             </para>
             <para>
-                On a large cluster (more than 25 nodes) it is advisable to run Secondary Namenode on a separate host.  For smaller clusters, Secondary can be ran at the same node as Namenode
+                On a large cluster (more than 25 nodes) it is advisable to run Secondary Namenode on a separate host.  For smaller clusters, Secondary NameNode can be run on the same node as NameNode
             </para>
         </sect2>
 
