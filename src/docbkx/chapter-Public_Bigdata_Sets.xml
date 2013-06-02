@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter version="5.0" xml:id="chapter-Public_Bigdata_Sets" xmlns="http://docbook.org/ns/docbook"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xi="http://www.w3.org/2001/XInclude"
+    xmlns:svg="http://www.w3.org/2000/svg"
+    xmlns:m="http://www.w3.org/1998/Math/MathML"
+    xmlns:html="http://www.w3.org/1999/xhtml"
+    xmlns:db="http://docbook.org/ns/docbook">
+
+    <title>Publicly Available Big Data Sets</title>
+
+    <section>
+        <title>Pointers to data sets</title>
+        <itemizedlist>
+            <listitem>
+                    <link xlink:href="http://www.quora.com/Data/Where-can-I-find-large-datasets-open-to-the-public">www.quora.com/Data/Where-can-I-find-large-datasets-open-to-the-public</link> -- very good collection of links
+            </listitem>
+        </itemizedlist>
+    </section>
+
+    <section>
+        <title>Generic Repositories</title>
+        <itemizedlist>
+            <listitem>
+                <bridgehead>Public Data sets on Amazon AWS</bridgehead>
+                <para>
+                    Amazon provides following datasets : ENSEMBL Annotatated Gnome data,  US Census data, UniGene, Freebase dump
+                </para>
+                <para>
+                    Data transfer is 'free' within Amazon eco system (within the same zone)
+                </para>
+                <para>
+                    Links:<sbr/>
+                    <link xlink:href="http://aws.amazon.com/publicdatasets/">AWS datasets</link>
+                    <sbr/>
+                </para>
+            </listitem>
+
+            <listitem>
+                <bridgehead>InfoChimps</bridgehead>
+                <para>
+                    Links:<sbr/>
+                    <link xlink:href="http://www.infochimps.com/">InfoChimps</link>
+                    <sbr/>
+                </para>
+            </listitem>
+
+        </itemizedlist>
+    </section>
+
+</chapter>
