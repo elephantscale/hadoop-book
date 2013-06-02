@@ -29,7 +29,8 @@
         <para>To the open source community
         </para>
         <para>
-            <ulink url="https://github.com/markkerzner/HadoopIlluminatedSource">Companion project on GitHub</ulink>
+            <ulink url="https://github.com/hadoop-illuminated/hadoop-book">This book on GitHub</ulink> <sbr/>
+            <ulink url="https://github.com/hadoop-illuminated/hadoop-labs">Companion project on GitHub</ulink>
         </para>
     </dedication>
 

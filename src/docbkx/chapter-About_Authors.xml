@@ -109,9 +109,14 @@
 
 
     <simplesect>
-        <title>And our thanks go to...</title>
+        <title>Contributors</title>
         <para>
             We would like to thank the following people that helped us make this book a reality.
         </para>
+        <itemizedlist>
+            <listitem>
+                Ben Burford : <link xlink:href="https://github.com/benburford">github.com/benburford</link>
+            </listitem>
+        </itemizedlist>
     </simplesect>
 </chapter>
