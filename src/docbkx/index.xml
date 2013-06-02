@@ -67,6 +67,7 @@
         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-Bigdata_Ecosystem.xml" />
         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-Hardware_Software.xml" />
         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-Challenges.xml" />
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-Public_Bigdata_Sets.xml" />
     </part>
 
     <part>

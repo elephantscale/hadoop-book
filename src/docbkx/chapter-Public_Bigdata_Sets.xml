@@ -13,8 +13,87 @@
         <title>Pointers to data sets</title>
         <itemizedlist>
             <listitem>
-                    <link xlink:href="http://www.quora.com/Data/Where-can-I-find-large-datasets-open-to-the-public">www.quora.com/Data/Where-can-I-find-large-datasets-open-to-the-public</link> -- very good collection of links
+                <bridgehead>
+                    How to get experience working with large data sets
+                </bridgehead>
+                <para>
+                    <link xlink:href="http://www.philwhln.com/how-to-get-experience-working-with-large-datasets">http://www.philwhln.com/how-to-get-experience-working-with-large-datasets</link>
+                </para>
+                <sbr/>
             </listitem>
+            <listitem>
+                <bridgehead>
+                    Quora
+                </bridgehead>
+                <para>
+                    <link xlink:href="http://www.quora.com/Data/Where-can-I-find-large-datasets-open-to-the-public">www.quora.com/Data/Where-can-I-find-large-datasets-open-to-the-public</link> -- very good collection of links
+                </para>
+                <sbr/>
+            </listitem>
+
+            <!--
+            <listitem>
+                    <link xlink:href='http://www.linkedin.com/groupItem?view=&gid=3638279&type=member&item=35736572&qid=d948b5c6-ed2f-4e6e-8806-e97c8dc852dd&trk=group_search_item_list-0-b-ttl&goback=%2Enas_*1_*1_*1'>linked in thread</link>
+            </listitem>
+            -->
+            <listitem>
+                <bridgehead>
+                    DataMobs
+                </bridgehead>
+                <para>
+                    <link xlink:href="http://datamob.org/datasets">http://datamob.org/datasets</link>
+                </para>
+                <sbr/>
+            </listitem>
+
+            <listitem>
+                <bridgehead>
+                    KDNuggets
+                </bridgehead>
+                <para>
+                    <link xlink:href="http://www.kdnuggets.com/datasets/">http://www.kdnuggets.com/datasets/</link>
+                </para>
+                <sbr/>
+            </listitem>
+            <listitem>
+                <bridgehead>
+                    Research Pipeline
+                </bridgehead>
+                <para>
+                    <link xlink:href="http://www.researchpipeline.com/mediawiki/index.php?title=Main_Page">http://www.researchpipeline.com/mediawiki/index.php?title=Main_Page</link>
+                </para>
+                <sbr/>
+            </listitem>
+            <listitem>
+                <bridgehead>
+                    Google Public Data Directory
+                </bridgehead>
+                <para>
+                    <link xlink:href="http://www.google.com/publicdata/directory">http://www.google.com/publicdata/directory</link>
+                </para>
+                <sbr/>
+            </listitem>
+
+            <listitem>
+                <bridgehead>
+                    Delicious 1
+                </bridgehead>
+                <para>
+                    <link xlink:href="https://delicious.com/pskomoroch/dataset">https://delicious.com/pskomoroch/dataset</link>
+                </para>
+                <sbr/>
+            </listitem>
+
+            <listitem>
+                <bridgehead>
+                    Delcious 2
+                </bridgehead>
+                <para>
+                    <link xlink:href="https://delicious.com/judell/publicdata?networkaddconfirm=judell">https://delicious.com/judell/publicdata?networkaddconfirm=judell</link>
+                </para>
+                <sbr/>
+            </listitem>
+
         </itemizedlist>
     </section>
 
@@ -22,7 +101,9 @@
         <title>Generic Repositories</title>
         <itemizedlist>
             <listitem>
-                <bridgehead>Public Data sets on Amazon AWS</bridgehead>
+                <bridgehead>
+                    Public Data sets on Amazon AWS
+                </bridgehead>
                 <para>
                     Amazon provides following datasets : ENSEMBL Annotatated Gnome data,  US Census data, UniGene, Freebase dump
                 </para>
@@ -30,22 +111,301 @@
                     Data transfer is 'free' within Amazon eco system (within the same zone)
                 </para>
                 <para>
-                    Links:<sbr/>
                     <link xlink:href="http://aws.amazon.com/publicdatasets/">AWS datasets</link>
-                    <sbr/>
                 </para>
+                <sbr/>
+            </listitem>
+
+
+            <listitem>
+                <bridgehead>
+                    InfoChimps
+                </bridgehead>
+                <para>
+                    InfoChimps has data marketplace with a wide variety of data sets.
+                </para>
+                <para>
+                    <link xlink:href="http://www.infochimps.com/marketplace">InfoChimps market place</link>
+                </para>
+                <sbr/>
             </listitem>
 
             <listitem>
-                <bridgehead>InfoChimps</bridgehead>
+                <bridgehead>
+                    Comprehensive Knowledge Archive Network
+                </bridgehead>
                 <para>
-                    Links:<sbr/>
-                    <link xlink:href="http://www.infochimps.com/">InfoChimps</link>
-                    <sbr/>
+                    open source data portal platform
                 </para>
+                <para>
+                    data sets available on <link xlink:href="http://datahub.io/">datahub.io</link> from
+                    <link xlink:href="http://ckan.org/">ckan.org</link>
+                </para>
+                <sbr/>
+            </listitem>
+
+            <listitem>
+                <bridgehead>
+                    Stanford network data collection
+                </bridgehead>
+                <para>
+                    <link xlink:href="http://snap.stanford.edu/data/index.html">http://snap.stanford.edu/data/index.html</link>
+                </para>
+                <sbr/>
+            </listitem>
+
+            <listitem>
+                <bridgehead>
+                    Open Flights
+                </bridgehead>
+                <para>
+                    Crowd sourced flight data <link xlink:href="http://openflights.org/">http://openflights.org/</link>
+                </para>
+                <sbr/>
             </listitem>
 
         </itemizedlist>
+
+    </section>
+
+    <section>
+        <title>Geo data</title>
+
+        <itemizedlist>
+
+            <listitem>
+                <bridgehead>
+                    Wikipedia data
+                </bridgehead>
+                <para>
+                    <link xlink:href="http://en.wikipedia.org/wiki/Wikipedia:Database_download">wikipedia data</link>
+                </para>
+                <sbr/>
+            </listitem>
+            <listitem>
+                <bridgehead>
+                    OpenStreetMap.org
+                </bridgehead>
+                <para>
+                    OpenStreetMap is a free worldwide map, created by people users.  The geo and map data is available for download.
+                    <sbr/>
+                    <link xlink:href="http://planet.openstreetmap.org/">openstreet.org</link>
+                </para>
+                <sbr/>
+            </listitem>
+            <listitem>
+                <bridgehead>
+                    Natural Earth Data
+                </bridgehead>
+                <para>
+                    <link xlink:href="http://www.naturalearthdata.com/downloads/">http://www.naturalearthdata.com/downloads/</link>
+                </para>
+                <sbr/>
+            </listitem>
+
+            <listitem>
+                <bridgehead>
+                    Geocomm
+                </bridgehead>
+                <para>
+                    <link xlink:href="http://data.geocomm.com/drg/index.html">http://data.geocomm.com/drg/index.html</link>
+                </para>
+                <sbr/>
+            </listitem>
+            <listitem>
+                <bridgehead>
+                    Geonames data
+                </bridgehead>
+                <para>
+                    <link xlink:href="http://www.geonames.org/">http://www.geonames.org/</link>
+                </para>
+                <sbr/>
+            </listitem>
+
+            <listitem>
+                <bridgehead>
+                    US GIS Data
+                </bridgehead>
+                <para>
+                    Available from
+                    <link xlink:href="http://libremap.org/">http://libremap.org/</link>
+                </para>
+                <sbr/>
+            </listitem>
+
+        </itemizedlist>
+
+    </section>
+
+    <section>
+        <title>Web data</title>
+        <itemizedlist>
+
+            <listitem>
+                <bridgehead>
+                    Wikipedia data
+                </bridgehead>
+                <para>
+                    <link xlink:href="http://en.wikipedia.org/wiki/Wikipedia:Database_download">wikipedia data</link>
+                </para>
+                <sbr/>
+            </listitem>
+
+            <listitem>
+                <bridgehead>
+                    Google N-gram data
+                </bridgehead>
+                <para>
+                    <link xlink:href="http://storage.googleapis.com/books/ngrams/books/datasetsv2.html">google ngram</link>
+                </para>
+                <sbr/>
+            </listitem>
+
+            <listitem>
+                <bridgehead>
+                    Public terabyte data
+                </bridgehead>
+                <para>
+                    Web data crawl data
+                    <link xlink:href="http://www.scaleunlimited.com/datasets/public-terabyte-dataset-project/">linky</link>
+                </para>
+                <sbr/>
+            </listitem>
+
+            <listitem>
+                <bridgehead>
+                    Freebase data
+                </bridgehead>
+                <para>
+                    variety of data available from
+                    <link xlink:href="http://www.freebase.com/">http://www.freebase.com/</link>
+                </para>
+                <sbr/>
+            </listitem>
+
+            <listitem>
+                <bridgehead>
+                    Stack OverFlow data
+                </bridgehead>
+                <para>
+                    <link xlink:href="http://blog.stackoverflow.com/category/cc-wiki-dump/">http://blog.stackoverflow.com/category/cc-wiki-dump/</link>
+                </para>
+                <sbr/>
+            </listitem>
+
+            <listitem>
+                <bridgehead>
+                    UCI KDD data
+                </bridgehead>
+                <para>
+                    <link xlink:href="http://kdd.ics.uci.edu/">http://kdd.ics.uci.edu/</link>
+                </para>
+                <sbr/>
+            </listitem>
+        </itemizedlist>
+
+
+
+    </section>
+
+
+    <section>
+        <title>
+            Government data
+        </title>
+        <itemizedlist>
+
+            <listitem>
+                <bridgehead>
+                    European parliment proceedings
+                </bridgehead>
+                <para>
+                    <link xlink:href="http://www.statmt.org/europarl/">proceedings</link> from
+                    <link xlink:href="http://www.statmt.org">Statistical machine Translation</link>
+                </para>
+                <sbr/>
+            </listitem>
+            <listitem>
+                <bridgehead>
+                    US governmnet data
+                </bridgehead>
+                <para>
+                    <link xlink:href="http://www.data.gov/">data.gov</link>
+                </para>
+                <sbr/>
+            </listitem>
+
+            <listitem>
+                <bridgehead>
+                    UK government data
+                </bridgehead>
+                <para>
+                    <link xlink:href="http://data.gov.uk/">data.gov.uk</link>
+                </para>
+                <sbr/>
+            </listitem>
+            <listitem>
+                <bridgehead>
+                    US Patent and Trademark Office Filings
+                </bridgehead>
+                <para>
+                    <link xlink:href="http://www.google.com/googlebooks/uspto.html">www.google.com/googlebooks/uspto.html</link>
+                </para>
+                <sbr/>
+            </listitem>
+
+            <listitem>
+                <bridgehead>
+                    World Bank Data
+                </bridgehead>
+                <para>
+                    <link xlink:href="http://datacatalog.worldbank.org/">http://datacatalog.worldbank.org/</link>
+                </para>
+                <sbr/>
+            </listitem>
+
+            <listitem>
+                <bridgehead>
+                    Public Health Data sets
+                </bridgehead>
+                <para>
+                    <link xlink:href="http://phpartners.org/health_stats.html">http://phpartners.org/health_stats.html</link>
+                </para>
+                <sbr/>
+            </listitem>
+
+            <listitem>
+                <bridgehead>
+                    National Institute of Health
+                </bridgehead>
+                <para>
+                    <link xlink:href="http://projectreporter.nih.gov/reporter.cfm">http://projectreporter.nih.gov/reporter.cfm</link>
+                </para>
+                <sbr/>
+            </listitem>
+
+            <listitem>
+                <bridgehead>
+                    Aid information
+                </bridgehead>
+                <para>
+                    <link xlink:href="http://www.aidinfo.org/data">http://www.aidinfo.org/data</link>
+                </para>
+                <sbr/>
+            </listitem>
+
+            <listitem>
+                <bridgehead>
+                    UN Data
+                </bridgehead>
+                <para>
+                    <link xlink:href="http://data.un.org/Explorer.aspx">http://data.un.org/Explorer.aspx</link>
+                </para>
+                <sbr/>
+            </listitem>
+
+        </itemizedlist>
+
     </section>
 
 </chapter>
