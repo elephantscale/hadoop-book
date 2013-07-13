@@ -36,6 +36,7 @@
                     <link xlink:href='http://www.linkedin.com/groupItem?view=&gid=3638279&type=member&item=35736572&qid=d948b5c6-ed2f-4e6e-8806-e97c8dc852dd&trk=group_search_item_list-0-b-ttl&goback=%2Enas_*1_*1_*1'>linked in thread</link>
             </listitem>
             -->
+
             <listitem>
                 <bridgehead>
                     DataMobs
@@ -160,6 +161,16 @@
                 </bridgehead>
                 <para>
                     Crowd sourced flight data <link xlink:href="http://openflights.org/">http://openflights.org/</link>
+                </para>
+                <sbr/>
+            </listitem>
+
+            <listitem>
+                <bridgehead>
+                    Flight arrival data
+                </bridgehead>
+                <para>
+                    <link xlink:href="http://stat-computing.org/dataexpo/2009/the-data.html">http://stat-computing.org/dataexpo/2009/the-data.html</link>
                 </para>
                 <sbr/>
             </listitem>
