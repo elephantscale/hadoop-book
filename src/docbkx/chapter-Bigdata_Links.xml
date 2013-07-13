@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter version="5.0" xml:id="chapter-BigData_Links" xmlns="http://docbook.org/ns/docbook"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xi="http://www.w3.org/2001/XInclude"
+    xmlns:svg="http://www.w3.org/2000/svg"
+    xmlns:m="http://www.w3.org/1998/Math/MathML"
+    xmlns:html="http://www.w3.org/1999/xhtml"
+    xmlns:db="http://docbook.org/ns/docbook">
+
+    <title>Big Data News and Links</title>
+
+    <section>
+        <title>news sites</title>
+        <itemizedlist>
+            <listitem>
+                <link xlink:href="http://www.datasciencecentral.com/">datasciencecentral.com</link> 
+            </listitem>
+            <listitem>
+                <link xlink:href="http://www.scoop.it/t/hadoop-and-mahout">www.scoop.it/t/hadoop-and-mahout</link>
+            </listitem>
+            <listitem>
+                <link xlink:href="http://www.infoworld.com/t/big-data">www.infoworld.com/t/big-data</link>
+            </listitem>
+            <listitem>
+                <link xlink:href="http://highscalability.com/">highscalability.com</link>
+            </listitem>
+            <listitem>
+                <link xlink:href="http://gigaom.com/tag/big-data/">gigaom.com/tag/big-data/</link>
+            </listitem>
+            <listitem>
+                <link xlink:href="http://techcrunch.com/tag/big-data/">techcrunch.com/tag/big-data/</link>
+            </listitem>
+        </itemizedlist>
+    </section>
+
+    <section>
+        <title>blogs from hadoop vendors</title>
+        <itemizedlist>
+            <listitem>
+                <link xlink:href="http://blog.cloudera.com/blog/">blog.cloudera.com/blog</link>
+            </listitem>
+            <listitem>
+                <link xlink:href="http://hortonworks.com/blog/">hortonworks.com/blog</link>
+            </listitem>
+            <listitem>
+                <link xlink:href="http://www.greenplum.com/blog/tag/pivotal-hd">www.greenplum.com/blog/tag/pivotal-hd</link>
+            </listitem>
+            <listitem>
+                <link xlink:href="http://blogs.wandisco.com/category/big-data/">blogs.wandisco.com/category/big-data/</link>
+            </listitem>
+            <listitem>
+                <link xlink:href="http://www.mapr.com/blog">www.mapr.com/blog</link>
+            </listitem>
+        </itemizedlist>
+    </section>
+</chapter>
