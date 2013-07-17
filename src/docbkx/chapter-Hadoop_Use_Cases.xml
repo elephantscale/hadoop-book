@@ -154,6 +154,37 @@ The previous solution using Teradata and IBM Netezza was time consuming and comp
                 <sbr/>
             </para>
         </section>
+
+        <section>
+            <title>Monitoring patient vitals at Los Angeles Childrens Hospital</title>
+            <para>
+            Researchers at LA Childrens Hospital is using Hadoop to capture and analyze medical sensor data.
+            </para>
+            <para>
+                <emphasis role="bold">Problem: </emphasis>
+                Collecting lots (billions) of data points from sensors / machines attached to the patients.  This data was periodically purged before becasuse storing this large volume of data on expensive storage was  cost-prohibitive.
+            </para>
+            <para>
+                <emphasis role="bold">Solution: </emphasis>
+                Continously streaming data from sensors/machines is collected and stored in HDFS.  HDFS provides scalable data storage at reasonable cost.
+            </para>
+            <para>
+                <emphasis role="bold">Hadoop Vendor: </emphasis>
+                Unknown
+            </para>
+            <para>
+                <emphasis role="bold">Cluster/Data size: </emphasis>
+                ???
+            </para>
+            <para>
+                <emphasis role="bold">Links: </emphasis><sbr/>
+                <link xlink:href="http://www.youtube.com/watch?v=NmMbFM7l1Rs">video</link>
+                <sbr/>
+                <link xlink:href="http://siliconangle.com/blog/2013/06/27/leveraging-hadoop-to-advance-healthcare-research-childrens-hospital-use-case-hadoopsummit/">silicon angle story</link>
+                (Published June 2013)
+                <sbr/>
+            </para>
+        </section>
     </section>
 
 
