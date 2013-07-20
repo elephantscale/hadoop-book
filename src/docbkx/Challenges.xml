@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<chapter version="5.0" xml:id="chapter-Challenges" xmlns="http://docbook.org/ns/docbook"
+<chapter version="5.0" xml:id="Challenges" xmlns="http://docbook.org/ns/docbook"
     xmlns:xlink="http://www.w3.org/1999/xlink"
     xmlns:xi="http://www.w3.org/2001/XInclude"
     xmlns:svg="http://www.w3.org/2000/svg"
@@ -38,7 +38,7 @@
         <section>
             <title>Hardware Cost</title>
             <para>
-                Hadoop runs on 'commodity' hardware. But these are not cheapo machines, they are server grade hardware.  For more see <xref linkend="chapter-Hardware_Software"/>
+                Hadoop runs on 'commodity' hardware. But these are not cheapo machines, they are server grade hardware.  For more see <xref linkend="Hardware_Software"/>
             </para>
             <para>
                 So standing up a reasonably large Hadoop cluster, say 100 nodes, will cost a significant amount of money.   For example, lets say a Hadoop node is $5000, so a 100 node cluster would be $500,000 for hardware.
@@ -74,7 +74,7 @@
             TODO : link
         </para>
         <para>
-            However, this problem is being solved by various Hadoop providers.  See <xref linkend="chapter-HA"/> chapter for more details.
+            However, this problem is being solved by various Hadoop providers.  See <xref linkend="HA"/> chapter for more details.
         </para>
     </section>
 

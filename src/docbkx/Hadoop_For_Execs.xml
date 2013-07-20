@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<chapter version="5.0" xml:id="chapter-Hadoop_For_Execs" xmlns="http://docbook.org/ns/docbook"
+<chapter version="5.0" xml:id="Hadoop_For_Execs" xmlns="http://docbook.org/ns/docbook"
          xmlns:xlink="http://www.w3.org/1999/xlink"
          xmlns:xi="http://www.w3.org/2001/XInclude"
          xmlns:svg="http://www.w3.org/2000/svg"
@@ -73,7 +73,7 @@
           </listitem>
       </itemizedlist>
       <para>
-          See here for complete list of <xref linkend="chapter-Challenges"/>
+          See here for complete list of <xref linkend="Challenges"/>
       </para>
   </section>
 
@@ -81,14 +81,14 @@
   <section>
       <title>What distributions to use?</title>
       <para>
-          Please see <xref linkend="chapter-Distributions"/>
+          Please see <xref linkend="Distributions"/>
       </para>
   </section>
 
   <section>
       <title>What are the some of the use cases for Hadoop?</title>
       <para>
-          Please see <xref linkend="chapter-Hadoop_Use_Cases"/>
+          Please see <xref linkend="Hadoop_Use_Cases"/>
       </para>
   </section>
 

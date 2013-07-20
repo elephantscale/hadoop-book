@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<chapter version="5.0" xml:id="chapter-HDFS_Intro" xmlns="http://docbook.org/ns/docbook"
+<chapter version="5.0" xml:id="HDFS_Intro" xmlns="http://docbook.org/ns/docbook"
     xmlns:xlink="http://www.w3.org/1999/xlink"
     xmlns:xi="http://www.w3.org/2001/XInclude"
     xmlns:svg="http://www.w3.org/2000/svg"
@@ -54,7 +54,7 @@
                 We want our system to be cost-effective, so we are not going to use these 'expensive' machines.  Instead we will opt to use commodity hardware.  By that we don't mean cheapo desktop class machines.  We will use performant server class machines -- but these will be commodity servers that you can order from any of the vendors (Dell, HP, etc)
             </para>
             <para>
-                So what do these server machines look like?  Look at the <xref linkend="chapter-Hardware_Software"/> guide.
+                So what do these server machines look like?  Look at the <xref linkend="Hardware_Software"/> guide.
             </para>
 
             <bridgehead>

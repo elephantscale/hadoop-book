@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<chapter version="5.0" xml:id="chapter-Handy_Classes_HBase" xmlns="http://docbook.org/ns/docbook">
+<chapter version="5.0" xml:id="Handy_Classes_HBase" xmlns="http://docbook.org/ns/docbook">
   <title>Handy Classes for HBase</title>
   <note>
       The original article was published by Sujee Maniyam at his website: <ulink  url="http://sujee.net/tech/articles/hadoop/hadoop-useful-classes/">here</ulink>

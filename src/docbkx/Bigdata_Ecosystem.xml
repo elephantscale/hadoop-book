@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<chapter version="5.0" xml:id="chapter-Bigdata_Ecosystem" xmlns="http://docbook.org/ns/docbook"
+<chapter version="5.0" xml:id="Bigdata_Ecosystem" xmlns="http://docbook.org/ns/docbook"
     xmlns:xlink="http://www.w3.org/1999/xlink"
     xmlns:xi="http://www.w3.org/2001/XInclude"
     xmlns:svg="http://www.w3.org/2000/svg"
@@ -9,7 +9,7 @@
 
     <title>Big Data Ecosystem</title>
     <para>
-        We met a few members of the Hadoop ecosystem in <xref linkend="chapter-Intro"/>.  However the Hadoop ecosystem is bigger than that, and the Big Data ecosystem is even bigger!  And, it is growing at a rapid pace.  Keeping track of Big Data components / products is now a full time job :-)
+        We met a few members of the Hadoop ecosystem in <xref linkend="Intro"/>.  However the Hadoop ecosystem is bigger than that, and the Big Data ecosystem is even bigger!  And, it is growing at a rapid pace.  Keeping track of Big Data components / products is now a full time job :-)
     </para>
     <para>
         In this chapter we are going to meet a few more members.

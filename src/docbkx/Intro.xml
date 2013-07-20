@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<chapter version="5.0" xml:id="chapter-Intro" xmlns="http://docbook.org/ns/docbook"
+<chapter version="5.0" xml:id="Intro" xmlns="http://docbook.org/ns/docbook"
          xmlns:xlink="http://www.w3.org/1999/xlink"
          xmlns:xi="http://www.w3.org/2001/XInclude"
          xmlns:svg="http://www.w3.org/2000/svg"
@@ -173,7 +173,7 @@
         </para>            
             <figure>
                 <title>The Hadoop Zoo</title>
-                <graphic fileref="chapter-intro-01.png"></graphic>
+                <graphic fileref="intro-01.png"></graphic>
             </figure>            
         <section>
             <title>HDFS - Hadoop Distributed File System</title>

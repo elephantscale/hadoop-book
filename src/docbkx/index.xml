@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <book version="5.0" xmlns="http://docbook.org/ns/docbook"
-      xmlns:xlink="http://www.w3.org/1999/xlink"
-      xmlns:xi="http://www.w3.org/2001/XInclude"
-      xmlns:svg="http://www.w3.org/2000/svg"
-      xmlns:m="http://www.w3.org/1998/Math/MathML"
-      xmlns:html="http://www.w3.org/1999/xhtml"
-      xmlns:db="http://docbook.org/ns/docbook" xml:id="book">
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xi="http://www.w3.org/2001/XInclude"
+    xmlns:svg="http://www.w3.org/2000/svg"
+    xmlns:m="http://www.w3.org/1998/Math/MathML"
+    xmlns:html="http://www.w3.org/1999/xhtml"
+    xmlns:db="http://docbook.org/ns/docbook" xml:id="book">
 
     <title>Hadoop Illuminated</title>
     <info>
@@ -42,9 +42,9 @@
             <literallayout>
             </literallayout>
         </partintro>
-        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-Audience.xml" />
-        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-About_Authors.xml" />
-        <!-- <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-Code.xml" />  -->
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Audience.xml" />
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="About_Authors.xml" />
+        <!-- <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Code.xml" />  -->
     </part>
 
     <part>
@@ -56,19 +56,19 @@
             <literallayout>
             </literallayout>
         </partintro>
-        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-Big_Data.xml" />
-        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-Intro.xml" />
-        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-Hadoop_For_Execs.xml" />
-        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-Hadoop_For_Developers.xml" />
-        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-HDFS_Intro.xml" />
-        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-MapReduce_Intro.xml" />
-        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-Hadoop_Use_Cases.xml" />
-        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-Distributions.xml" />
-        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-Bigdata_Ecosystem.xml" />
-        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-Hardware_Software.xml" />
-        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-Challenges.xml" />
-        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-Public_Bigdata_Sets.xml" />
-        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-Bigdata_Links.xml" />
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Big_Data.xml" />
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Intro.xml" />
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Hadoop_For_Execs.xml" />
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Hadoop_For_Developers.xml" />
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="HDFS_Intro.xml" />
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="MapReduce_Intro.xml" />
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Hadoop_Use_Cases.xml" />
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Distributions.xml" />
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Bigdata_Ecosystem.xml" />
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Hardware_Software.xml" />
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Challenges.xml" />
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Public_Bigdata_Sets.xml" />
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Bigdata_Links.xml" />
     </part>
 
     <part>
@@ -87,19 +87,19 @@
                 </itemizedlist>
             </para>
         </partintro>
-        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-HDFS_Namenode.xml" />
-        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-MapReduce_Internals.xml" />
-        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-Hadoop_Versions.xml" />
-        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-Hadoop_V1_V2.xml" />
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="HDFS_Namenode.xml" />
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="MapReduce_Internals.xml" />
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Hadoop_Versions.xml" />
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Hadoop_V1_V2.xml" />
         <!--
-        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-MapReduce_Configuration.xml" />
-         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-MapReduce_Hello_World.xml" />
-         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-MapReduce_Counters.xml" />
-        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-MapReduce_Distributed_Cache.xml" />
-        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-MapReduce_Types.xml" />
-        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-MapReduce_Joins.xml" />
-        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-HA.xml" />
-        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-Benchmarking_Hadoop.xml" />
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="MapReduce_Configuration.xml" />
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="MapReduce_Hello_World.xml" />
+         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="MapReduce_Counters.xml" />
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="MapReduce_Distributed_Cache.xml" />
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="MapReduce_Types.xml" />
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="MapReduce_Joins.xml" />
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="HA.xml" />
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Benchmarking_Hadoop.xml" />
         -->
 
     </part>
@@ -124,11 +124,11 @@
             <literallayout>
             </literallayout>
         </partintro>
-        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-Handy_Classes.xml" />
-        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-Handy_Classes_HBase.xml" />
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Handy_Classes.xml" />
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Handy_Classes_HBase.xml" />
     </part>
 
     <!--
-    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapter-Sorting1.xml" />
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Sorting1.xml" />
     -->
 </book>
