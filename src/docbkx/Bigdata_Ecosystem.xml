@@ -77,6 +77,47 @@
 
 
     </section>
+
+    <section>
+        <title>Compute Frameworks</title>
+        <table id="table-bigdata-ecosystem-compute">
+            <title>Hadoop Compute Frameworks</title>
+            <tgroup cols='2' align='left' colsep='1' rowsep='1'>
+                <thead>
+                    <row>
+                        <entry>Tool</entry>
+                        <entry>Remarks</entry>
+                    </row>
+                </thead>
+                <tbody>
+                    <row>
+                        <entry>
+                            <link xlink:href="http://hadoop.apache.org/docs/stable/mapred_tutorial.html">Mapreduce</link>
+                        </entry>
+                        <entry>
+                            Original distributed compute framework of Hadoop
+                        </entry>
+                    </row>
+                    <row>
+                        <entry>
+                            <link xlink:href="http://hadoop.apache.org/docs/current/hadoop-yarn/hadoop-yarn-site/YARN.html">YARN</link>
+                        </entry>
+                        <entry>
+                            Next generation mapreduce, available in Hadoop version 2.0
+                        </entry>
+                    </row>
+                    <row>
+                        <entry>
+                            <link xlink:href="https://github.com/continuuity/weave">Weave</link>
+                        </entry>
+                        <entry>
+                            Simplified YARN programming
+                        </entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+    </section>
     <section>
         <title>Querying data in HDFS</title>
         <table id="table-bigdata-ecosystem-querying">
@@ -137,6 +178,14 @@
                         <entry>
                             Relational database with SQL support on top of Hadoop HDFS. <sbr/>
                             (commercial product)
+                        </entry>
+                    </row>
+                    <row>
+                        <entry>
+                            <link xlink:href="http://www.cloudera.com/content/cloudera/en/campaign/introducing-search.html">Cloudera Search</link>
+                        </entry>
+                        <entry>
+                            Text search on HDFS
                         </entry>
                     </row>
                 </tbody>
@@ -345,6 +394,14 @@
                         </entry>
                         <entry>
                              Scala library that makes it easy to specify Hadoop MapReduce jobs. Scalding is built on top of Cascading.
+                        </entry>
+                    </row>
+                    <row>
+                        <entry>
+                            <link xlink:href="https://github.com/Netflix/Lipstick">Lipstick</link>
+                        </entry>
+                        <entry>
+                             Pig workflow visualization
                         </entry>
                     </row>
                 </tbody>
