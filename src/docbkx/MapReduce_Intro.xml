@@ -271,16 +271,9 @@
             </para>
             <figure>
                 <title>Micro-targeting the electorate</title>
-                <graphic fileref="mr_intro_3.png"></graphic>
+                <!-- <graphic fileref="mr_intro_3.png"></graphic> -->
+                <graphic fileref="big_data_elections_sized.png"></graphic>
             </figure>
-            <para>
-                Let me explain. In step 1 the mapper asks each person his or her age. It could well be another 
-                characteristic which the designers of the campaign suppose influences the voting decision. 
-                Each age is converted to the "age group", which serves as a key. The map then is the &lt;age_group, person_information&gt;
-                This map is emitted - sent for further processing - and all people in the same age group collect in the 
-                reducer. The reducer applies a smart algorithm to extract the common features and presto! - the vote 
-                is determined.
-            </para>
             <para>                
                 This concludes our introduction to the MapReduce part of Hadoop, where our goal was to explain how it works, without one line of code.
             </para>
