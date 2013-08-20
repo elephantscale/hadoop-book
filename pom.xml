@@ -106,7 +106,6 @@
                     <foCustomization>src/docbkx/docbook-fo.xsl</foCustomization>
                 </configuration>
                 <executions>
-                    <!--
                     <execution>
                         <id>pdf</id>
                         <goals>
@@ -116,9 +115,10 @@
                         <configuration>
                             <targetDirectory>${basedir}/target/docbkx/pdf</targetDirectory>
                             <imgSrcPath>images/</imgSrcPath>
+							<includes>index.xml</includes>
+							<ignoreImageScaling>1</ignoreImageScaling>
                         </configuration>
                     </execution>
-                    -->
                     <execution>
                         <id>multipage-html</id>
                         <goals>
