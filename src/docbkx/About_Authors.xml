@@ -9,11 +9,7 @@
 
     <title>About Authors</title>
     <para>
-        <mediaobject>
-            <imageobject>
-                <imagedata fileref="mark_and_sujee.png" format="PNG" scale="100" />
-            </imageobject>
-        </mediaobject>
+		<inlinegraphic fileref="mark_and_sujee.png" format="PNG" width="250" height="297"/>
     </para>
 
     <simplesect>

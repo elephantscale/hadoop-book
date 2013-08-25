@@ -116,7 +116,13 @@
                             <targetDirectory>${basedir}/target/docbkx/pdf</targetDirectory>
                             <imgSrcPath>images/</imgSrcPath>
 							<includes>index.xml</includes>
-							<ignoreImageScaling>1</ignoreImageScaling>
+							<ignoreImageScaling>0</ignoreImageScaling>
+							<postProcess>
+								<tstamp>
+									<format property="touch.time" pattern="yyyy_MM_dd"/>
+								</tstamp>
+								<rename src="${basedir}/target/docbkx/pdf/index.pdf" dest="${basedir}/target/docbkx/pdf/HI-hadoop-book-${touch.time}.pdf"/>
+							</postProcess>
                         </configuration>
                     </execution>
                     <execution>

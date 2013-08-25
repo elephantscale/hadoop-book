@@ -20,7 +20,9 @@
       </itemizedlist>
   </para>
 
-  <graphic fileref="hadoop-versions.png"></graphic>
+  <para>
+	<inlinegraphic fileref="hadoop-versions.png" format="PNG" width="100%" />
+  </para>
 
   <section>
       <title>Hadoop version 1.0</title>
@@ -54,9 +56,7 @@
   </section>
   <section>
       <title>History of Hadoop</title>
-      <para>
-        <graphic fileref="hadoop-history.png"></graphic>
-      </para>
+	  <inlinegraphic fileref="hadoop-history.png" format="PNG" width="100%" />
   </section>
 
 </chapter>

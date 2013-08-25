@@ -35,7 +35,7 @@
             <para>
                 This 'block map' is not persisted by NameNode.  It dynamically builds this map from 'block reports' sent by DataNodes.  Each DataNode reports in with what blocks it has  when it joins the cluster.  Also DataNodes periodically send updated block reports to NameNode.  So NameNode has the latest accurate block information across the cluster.
             </para>
-            <graphic fileref="hdfs_block_map.jpg"></graphic>
+			<inlinegraphic fileref="hdfs_block_map.jpg" format="JPG" width="100%" />
         </sect2>
 
         <sect2>
@@ -117,7 +117,7 @@
                     </listitem>
                 </orderedlist>
                 Why is data on disk persisted before in-memory data structures?  This way, even if the NameNode goes down between writes, the metadata will be in a consistent state.
-                <graphic fileref="nn_1.jpg"></graphic>
+				<inlinegraphic fileref="nn_1.jpg" format="JPG" width="100%" />
             </para>
         </sect2>
         <sect2>
@@ -149,7 +149,7 @@
 
             <para>
                 As you can imagine, the EditLogs can add up in size and replaying them each time NameNode boots up can take longer and longer.  It makes sense to create new snapshots out of EditLogs.
-                <graphic fileref="nn_editlogs.jpg"></graphic>
+				<inlinegraphic fileref="nn_editlogs.jpg" format="JPG" width="100%" />
                 This is where the Secondary NameNode comes into play.
             </para>
         </sect2>
@@ -181,7 +181,7 @@
                         This process repeats.
                     </listitem>
                 </orderedlist>
-                <graphic fileref="snn.jpg"></graphic>
+				<inlinegraphic fileref="snn.jpg" format="JPG" width="100%" />
             </para>
             <para>
                 So why make Secondary NameNode another daemon instead of part of NameNode?

@@ -18,11 +18,7 @@
         </para>
         <figure id="mapreduce-job-submission">
             <title>Map Reduce Job Submission Process - Hadoop 1</title>
-            <mediaobject>
-                <imageobject>
-                    <imagedata fileref="mr_job_submission.jpg" format="JPG" scale="100" />
-                </imageobject>
-            </mediaobject>
+			<inlinegraphic fileref="mr_job_submission.jpg" format="JPG" width="100%" />
         </figure>
         <para>
             Whoa, that is quite a lot; let's take it in stride

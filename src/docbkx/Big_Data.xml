@@ -33,11 +33,7 @@
         <para>
             Before 'hadoop' was in the scene, the machine generated data was mostly ignored and not captured.  It is because dealing with the volume was NOT possible, or NOT cost effective.
         </para>
-        <mediaobject>
-            <imageobject>
-                <imagedata fileref="bigdata_pyramid1.png" format="PNG" scale="100" />
-            </imageobject>
-        </mediaobject>
+		<inlinegraphic fileref="bigdata_pyramid1.png" format="PNG" width="100%" />
     </sect1>
     <sect1>
         <title>Where does Big Data come from</title>
@@ -76,7 +72,7 @@
         </itemizedlist>
         <figure>
             <title>Tidal Wave of Data</title>
-            <graphic fileref="tidal_wave_of_data_scaled.png"></graphic>
+			<inlinegraphic fileref="tidal_wave_of_data_scaled.png" format="PNG" width="100%" />
         </figure>
     </sect1>
 

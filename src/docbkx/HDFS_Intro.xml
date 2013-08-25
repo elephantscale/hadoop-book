@@ -48,7 +48,7 @@
             </para>
             <figure>
                 <title>Cray computer</title>
-                <graphic fileref="cray_sm.jpg"></graphic>
+				<inlinegraphic fileref="cray_sm.jpg" format="PNG" width="255" height="297" />
             </figure>
             <para>
                 We want our system to be cost-effective, so we are not going to use these 'expensive' machines.  Instead we will opt to use commodity hardware.  By that we don't mean cheapo desktop class machines.  We will use performant server class machines -- but these will be commodity servers that you can order from any of the vendors (Dell, HP, etc)

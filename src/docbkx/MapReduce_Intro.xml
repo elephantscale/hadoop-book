@@ -272,7 +272,7 @@
             <figure>
                 <title>Micro-targeting the electorate</title>
                 <!-- <graphic fileref="mr_intro_3.png"></graphic> -->
-                <graphic fileref="big_data_elections_sized.png"></graphic>
+				<inlinegraphic fileref="big_data_elections_sized.png" format="PNG" width="100%" />
             </figure>
             <para>                
                 This concludes our introduction to the MapReduce part of Hadoop, where our goal was to explain how it works, without one line of code.
