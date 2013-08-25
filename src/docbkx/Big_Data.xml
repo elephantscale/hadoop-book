@@ -74,11 +74,10 @@
                 EBay : 40 PB of data, captures 50 TB / day
             </listitem>
         </itemizedlist>
-        <mediaobject>
-            <imageobject>
-                <imagedata fileref="tidal_wave_of_data.png" format="PNG" scale="100" />
-            </imageobject>
-        </mediaobject>
+        <figure>
+            <title>Tidal Wave of Data</title>
+            <graphic fileref="tidal_wave_of_data_scaled.png"></graphic>
+        </figure>
     </sect1>
 
 
