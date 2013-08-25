@@ -114,6 +114,14 @@
                             Simplified YARN programming
                         </entry>
                     </row>
+                    <row>
+                        <entry>
+                            Cloudera SDK
+                        </entry>
+                        <entry>
+                            Simplified MapReduce programming
+                        </entry>
+                    </row>
                 </tbody>
             </tgroup>
         </table>
@@ -633,6 +641,57 @@
         </table>
     </section>
 
+    <section>
+        <title>Business Intelligence (BI) Tools</title>
+        <table id="table-bigdata-ecosystem-bi-tools">
+            <title>Business Intelligence (BI) Tools</title>
+            <tgroup cols='2' align='left' colsep='1' rowsep='1'>
+                <thead>
+                    <row>
+                        <entry>Tool</entry>
+                        <entry>Remarks</entry>
+                    </row>
+                </thead>
+                <tbody>
+                    <row>
+                        <entry>
+                            <link xlink:href="http://www.datameer.com/">Datameer</link>
+                        </entry>
+                        <entry>
+                        </entry>
+                    </row>
+                    <row>
+                        <entry>
+                            <link xlink:href="http://www.tableausoftware.com/">Tableau</link>
+                        </entry>
+                        <entry>
+                        </entry>
+                    </row>
+                    <row>
+                        <entry>
+                            <link xlink:href="http://www.pentaho.com/">Pentaho</link>
+                        </entry>
+                        <entry>
+                        </entry>
+                    </row>
+                    <row>
+                        <entry>
+                            <link xlink:href="http://www.sisense.com/">SiSense</link>
+                        </entry>
+                        <entry>
+                        </entry>
+                    </row>
+                    <row>
+                        <entry>
+                            <link xlink:href="http://www.sumologic.com/">SumoLogic</link>
+                        </entry>
+                        <entry>
+                        </entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+    </section>
 
     <section>
         <title>Realtime Stream Processing</title>
