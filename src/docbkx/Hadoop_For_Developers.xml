@@ -43,7 +43,7 @@
                 Hadoop runs on Linux, so you should know basic Linux command line navigation skills
             </listitem>
             <listitem>
-                Some linux scripting skills will go a long way
+                Some Linux scripting skills will go a long way
             </listitem>
         </itemizedlist>
     </para>
@@ -70,7 +70,7 @@
                         Hadoop Developer
                     </entry>
                     <entry>
-                        develops mapreduce jobs, designs data warehouses
+                        develops MapReduce jobs, designs data warehouses
                     </entry>
                     <entry>
                         Java, Scripting, Linux
@@ -117,7 +117,7 @@
         I am not a programmer, can I still use Hadoop?
     </bridgehead>
     <para>
-        Yes, you don't need to write Java Map Reduce code to extract data out of Hadoop.  You can use Pig and Hive.  Both Pig and Hive offer 'high level' Map Reduce.  For example you can query hadoop  using SQL in Hive.
+        Yes, you don't need to write Java Map Reduce code to extract data out of Hadoop.  You can use Pig and Hive.  Both Pig and Hive offer 'high level' Map Reduce.  For example you can query Hadoop  using SQL in Hive.
     </para>
 
     <bridgehead>
@@ -158,7 +158,7 @@
             Newsgroups : If you have any questions:
             <itemizedlist>
                 <listitem>
-                    <link xlink:href="http://hadoop.apache.org/mailing_lists.html">apache mailing lists</link>
+                    <link xlink:href="http://hadoop.apache.org/mailing_lists.html">Apache mailing lists</link>
                 </listitem>
             </itemizedlist>
         </listitem>

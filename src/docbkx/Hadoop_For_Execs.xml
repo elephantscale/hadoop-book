@@ -52,7 +52,7 @@
         How much data is considered Big Data, differs from company to company.  For some companies, 10 TB of data would be considered Big Data;  for others 1 PB would be 'Big Data'.  So only you can determine how much is Big Data.
     </para>
     <para>
-        Also, if you don't have a 'Big Data problem' now, is that because you are not capturing some data?  In some scenarios, companies chose to forego capturing data, because there wasn't a feasible way to store and process it.  Now that Hadoop can help with Big Data, it may be possible to start capturing data that wasn't captured before.
+        Also, if you don't have a 'Big Data problem' now, is that because you are not capturing some data?  In some scenarios, companies chose to forgo capturing data, because there wasn't a feasible way to store and process it.  Now that Hadoop can help with Big Data, it may be possible to start capturing data that wasn't captured before.
     </para>
 
 

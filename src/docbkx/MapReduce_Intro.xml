@@ -113,12 +113,12 @@
                 MapReduce has a master and slaves, and they collaborate on getting the work done.
                 The master is listed in the "masters" configuration file, and
                 the slaves are listed in the "slaves", and in this way they know about each other. 
-                Furthermore, to be a real "master", the node must run a daemon called the "JobTracker" daemon.
-                The slave, to be able to do its work, must run another daemon, called the "TaskTracker" daemon.
+                Furthermore, to be a real "master", the node must run a daemon called the "Job Tracker" daemon.
+                The slave, to be able to do its work, must run another daemon, called the "Tasktracker" daemon.
             </para>
             <para>
                 The master does not divide all the work beforehand, but has an algorithm on how to assign the next portion of the work. 
-                Thus, no time is spent up front, and the job can begin right away. This division of labor, how much to give to the next TaskTracker,
+                Thus, no time is spent up front, and the job can begin right away. This division of labor, how much to give to the next Tasktracker,
                 is called "split", and you have control over it. By default, the input file is split into chunks of about 64MB in size.
                 About, because complete lines in the input file have to be preserved.
             </para>
@@ -135,8 +135,8 @@
                 not very good at that. You can image multiple scenarios when this would fail.
             </para>
             <para>
-                By contrast, in MapReduce the JobTracker doles out the work. There is no contention: it takes the next split and 
-                assigns it to the next available TaskTracker. If a TaskTracker crashes, it stops sending hearbeats to the JobTracker.
+                By contrast, in MapReduce the Job Tracker doles out the work. There is no contention: it takes the next split and 
+                assigns it to the next available Tasktracker. If a Tasktracker crashes, it stops sending heartbeats to the Job Tracker.
                 
             </para>
         </sect2>
@@ -172,13 +172,13 @@
             </para>
             <para>
                 MapReduce, however, notes where the data is (by using the IP address of the block of data that needs to be processed) and it 
-                also knows where the TaskTracker is (by using its IP address). If it can, MapReduce assigns the computation to the server 
-                which has the data locally, that is, whose IP address is the same as that of the data. Every TaskTracker has a copy of the 
+                also knows where the Task Tracker is (by using its IP address). If it can, MapReduce assigns the computation to the server 
+                which has the data locally, that is, whose IP address is the same as that of the data. Every Task Tracker has a copy of the 
                 code that does the computation (the job's jar, in the case of Java code), and thus the computation can begin.
             </para>
             <para>
                 If local computation is not possible, MapReduce can select the server that is at least closest to the data, so 
-                that the network traffic will go through the least number of hops. It does it by comparing the ip's, which have
+                that the network traffic will go through the least number of hops. It does it by comparing the IPs, which have
                 the distance information encoded. Naturally, servers in the same rack are considered closer to each other than servers 
                 on different racks. This property of MapReduce to follow the network configuration is called "rack awareness". You set the 
                 rack information in the configuration files and reap the benefits.

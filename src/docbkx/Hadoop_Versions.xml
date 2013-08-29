@@ -40,7 +40,7 @@
           This is a development branch of Hadoop.  Hadoop 2 has significant new enhancements.  It has been under development for a while.  Hadoop 2 has the following new features:
 
       <itemizedlist>
-          <listitem>HDFS failover</listitem>
+          <listitem>HDFS fail over</listitem>
           <listitem>Federated NameNode</listitem>
           <listitem>Map Reduce version 2 (MRV2) also known as YARN</listitem>
       </itemizedlist>
@@ -50,7 +50,7 @@
           The following distributions currently bundle Hadoop 2:
           <itemizedlist>
           <listitem>Cloudera's CDH4 (Cloudera's Distribution of Hadoop) series. </listitem>
-          <listitem>Hortonworks's HDP2 (Hortonworks Data Platform) series. </listitem>
+          <listitem>HortonWorks HDP2 (Hortonworks Data Platform) series. </listitem>
       </itemizedlist>
   </para>
   </section>

@@ -14,7 +14,7 @@
     <section>
         <title>start/stop  scripts</title>
         <para>
-            These are files used to start/stop hadoop daemons:
+            These are files used to start/stop Hadoop daemons:
             <command>
 
             start-dfs.sh, stop-dfs.sh, start-mapred.sh, stop-mapred.sh, start-all.sh, stop-all.sh,  hadoop-daemon.sh,  hadoop-daemons.sh
@@ -106,7 +106,7 @@
                                 </command>
                                 <sbr/>
                                 <sbr/>
-                                On DataNode:<sbr/>
+                                On Data Node:<sbr/>
                                 <command>
                                     sudo service hadoop-0.20-datanode start
                                 </command>
@@ -118,7 +118,7 @@
                                 </command>
                                 <sbr/>
                                 <sbr/>
-                                On DataNode:<sbr/>
+                                On Data Node:<sbr/>
                                 <command>
                                     sudo service hadoop-hdfs-datanode  start
                                 </command>
@@ -129,19 +129,19 @@
                                 to start Map Reduce
                             </entry>
                             <entry>
-                                on JobTracker: <sbr/>
+                                on Job Tracker: <sbr/>
                                 <command>
                                     sudo service hadoop-0.20-jobtracker start
                                 </command>
                                 <sbr/>
                                 <sbr/>
-                                on TaskTracker: <sbr/>
+                                on Task Tracker: <sbr/>
                                 <command>
                                     sudo service hadoop-0.20-tasktracker start
                                 </command>
                             </entry>
                             <entry>
-                                on JobTracker: <sbr/>
+                                on Job Tracker: <sbr/>
                                 <command>
                                     sudo service hadoop-yarn-resourcemanager restart
                                 </command>

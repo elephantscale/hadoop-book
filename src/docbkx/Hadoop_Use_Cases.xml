@@ -67,7 +67,7 @@
             </para>
             <para>
                 <emphasis role="bold">Problem: </emphasis>
-                NetApp collects over 600,000 data transactions weekly, consisting of unstructured logs and system diagnostic information.  Tradional data storage systems proved inadequate to capture and process this data.
+                NetApp collects over 600,000 data transactions weekly, consisting of unstructured logs and system diagnostic information.  Traditional data storage systems proved inadequate to capture and process this data.
             </para>
             <para>
                 <emphasis role="bold">Solution: </emphasis>
@@ -156,17 +156,17 @@ The previous solution using Teradata and IBM Netezza was time consuming and comp
         </section>
 
         <section>
-            <title>Monitoring patient vitals at Los Angeles Childrens Hospital</title>
+            <title>Monitoring patient vitals at Los Angeles Children's Hospital</title>
             <para>
-            Researchers at LA Childrens Hospital is using Hadoop to capture and analyze medical sensor data.
+            Researchers at LA Children's Hospital is using Hadoop to capture and analyze medical sensor data.
             </para>
             <para>
                 <emphasis role="bold">Problem: </emphasis>
-                Collecting lots (billions) of data points from sensors / machines attached to the patients.  This data was periodically purged before becasuse storing this large volume of data on expensive storage was  cost-prohibitive.
+                Collecting lots (billions) of data points from sensors / machines attached to the patients.  This data was periodically purged before because storing this large volume of data on expensive storage was  cost-prohibitive.
             </para>
             <para>
                 <emphasis role="bold">Solution: </emphasis>
-                Continously streaming data from sensors/machines is collected and stored in HDFS.  HDFS provides scalable data storage at reasonable cost.
+                Continuously streaming data from sensors/machines is collected and stored in HDFS.  HDFS provides scalable data storage at reasonable cost.
             </para>
             <para>
                 <emphasis role="bold">Hadoop Vendor: </emphasis>
@@ -198,7 +198,7 @@ The previous solution using Teradata and IBM Netezza was time consuming and comp
             </para>
             <para>
                 <emphasis role="bold">Problem: </emphasis><sbr/>
-                Processing multi-terabyte data sets wasn't feasible using tradional databases like mysql.
+                Processing multi-terabyte data sets wasn't feasible using traditional databases like MySQL.
             </para>
             <para>
                 <emphasis role="bold">Solution: </emphasis><sbr/>
@@ -224,15 +224,15 @@ The previous solution using Teradata and IBM Netezza was time consuming and comp
 
 
     <section>
-        <title>Telecom</title>
+        <title>Telecoms</title>
         <section>
             <title>China Telecom Guangdong</title>
             <para>
                 <emphasis role="bold">Problem: </emphasis> Storing billions of mobile call records and providing real time access to the call records and billing information to customers.  <sbr/>
-                Tradional storage/database systems couldn't scale to the loads and provide a cost effective solution
+                Traditional storage/database systems couldn't scale to the loads and provide a cost effective solution
             </para>
             <para>
-                <emphasis role="bold">Solution: </emphasis> Hbase is used to store billions of rows of call record details.  30TB of data is added monthly
+                <emphasis role="bold">Solution: </emphasis> HBase is used to store billions of rows of call record details.  30TB of data is added monthly
             </para>
             <para>
                 <emphasis role="bold">Hadoop vendor: </emphasis> Intel
@@ -264,7 +264,7 @@ The previous solution using Teradata and IBM Netezza was time consuming and comp
             </para>
             <para>
                 <emphasis role="bold">Solution: </emphasis>
-                HDFS data warehouse allows storing all the semi/multi structured data and offers processing data at petabyte scale
+                HDFS data warehouse allows storing all the semi/multi structured data and offers processing data at peta byte scale
             </para>
             <para>
                 <emphasis role="bold">Hadoop Vendor: </emphasis>
@@ -325,7 +325,7 @@ The previous solution using Teradata and IBM Netezza was time consuming and comp
     <section>
         <title>Energy</title>
         <section>
-            <title>Siesmic Data at Chevron</title>
+            <title>Seismic Data at Chevron</title>
             <para>
             </para>
             <para>
@@ -357,7 +357,7 @@ The previous solution using Teradata and IBM Netezza was time consuming and comp
         <section>
             <title>OPower</title>
             <para>
-            Opower works with utility companies to provide engaging, relevant, and personalized content about home energy use to millions of households.
+            OPower works with utility companies to provide engaging, relevant, and personalized content about home energy use to millions of households.
             </para>
             <para>
                 <emphasis role="bold">Problem: </emphasis>
@@ -385,7 +385,7 @@ The previous solution using Teradata and IBM Netezza was time consuming and comp
                 <sbr/>
                 <link xlink:href="http://strataconf.com/strata2013/public/schedule/detail/27158">Strata 2013</link>
                 <sbr/>
-                <link xlink:href="http://www.opower.com">Opower.com</link>
+                <link xlink:href="http://www.opower.com">OPower.com</link>
             </para>
         </section>
     </section>
@@ -399,11 +399,11 @@ The previous solution using Teradata and IBM Netezza was time consuming and comp
             </para>
             <para>
                 <emphasis role="bold">Problem: </emphasis>
-                Collecting and and storing 100s of data points from thousands of trucks, plus lots of geodata.
+                Collecting and and storing 100s of data points from thousands of trucks, plus lots of geo data.
             </para>
             <para>
                 <emphasis role="bold">Solution: </emphasis>
-                Hadoop allows storing enormous amount of sensor data.  Also Hadoop allows querying / joining this data with other datasets.
+                Hadoop allows storing enormous amount of sensor data.  Also Hadoop allows querying / joining this data with other data sets.
             </para>
             <para>
                 <emphasis role="bold">Hadoop Vendor: </emphasis>

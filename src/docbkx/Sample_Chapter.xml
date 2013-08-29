@@ -14,11 +14,7 @@
             Figure
             <figure id="sample-figure">
                 <title>Old Mac</title>
-                <mediaobject>
-                    <imageobject>
-                        <imagedata fileref="macintosh_classic1.jpg" format="JPG" scale="100" />
-                    </imageobject>
-                </mediaobject>
+			    <inlinegraphic fileref="tidal_wave_of_data_scaled.png" format="PNG" scale="100%" />
             </figure>
 
             Just an image
@@ -43,4 +39,11 @@
             </para>
         </sect2>
     </sect1>
+
+    <section>
+        <para>
+            Linking to other chapters
+            See here for complete list of <xref linkend="Challenges"/>
+        </para>
+    </section>
 </chapter>

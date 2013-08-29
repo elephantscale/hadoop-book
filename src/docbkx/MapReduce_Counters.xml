@@ -66,7 +66,7 @@
                 <glossterm>Performance check : data locality</glossterm> <sbr/>
                 <glossdef>
                     <para>
-                        One of the principles of Map Reduce is data locality -- maps operate on data available on the same node -- well mostly.   How can we inspect how many map tasks were local?  'Data-local map tasks' will tell you that.  In this case no data needs to be copied.  The next level is 'Rack-locak map tasks' -- maps.  In this case data needs to be copied, but within the rack.
+                        One of the principles of Map Reduce is data locality -- maps operate on data available on the same node -- well mostly.   How can we inspect how many map tasks were local?  'Data-local map tasks' will tell you that.  In this case no data needs to be copied.  The next level is 'Rack-local map tasks' -- maps.  In this case data needs to be copied, but within the rack.
                     </para>
                 </glossdef>
             </glossentry>
@@ -94,7 +94,7 @@
             Map or Reduce jobs run on Task Trackers (on worker nodes).  When the tasks read data from HDFS they keep a count.  Now these counts are kept in memory of individual task trackers.  The Task Trackers send these counters up to Job Tracker.  The Job Tracker collects counters from Task Trackers and aggregates them.
         </para>
         <para>
-            The following diagram shows how task trackers keep their own count and the Job Traker keeps the 'master' count
+            The following diagram shows how task trackers keep their own count and the Job Tracker keeps the 'master' count
         TODO : counter picture
         </para>
     </section>

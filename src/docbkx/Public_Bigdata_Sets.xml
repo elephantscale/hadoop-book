@@ -106,13 +106,13 @@
                     Public Data sets on Amazon AWS
                 </bridgehead>
                 <para>
-                    Amazon provides following datasets : ENSEMBL Annotatated Gnome data,  US Census data, UniGene, Freebase dump
+                    Amazon provides following data sets : ENSEMBL Annotated Gnome data,  US Census data, UniGene, Freebase dump
                 </para>
                 <para>
                     Data transfer is 'free' within Amazon eco system (within the same zone)
                 </para>
                 <para>
-                    <link xlink:href="http://aws.amazon.com/publicdatasets/">AWS datasets</link>
+                    <link xlink:href="http://aws.amazon.com/publicdatasets/">AWS data sets</link>
                 </para>
                 <sbr/>
             </listitem>
@@ -328,7 +328,7 @@
 
             <listitem>
                 <bridgehead>
-                    European parliment proceedings
+                    European Parliament proceedings
                 </bridgehead>
                 <para>
                     <link xlink:href="http://www.statmt.org/europarl/">proceedings</link> from
@@ -338,7 +338,7 @@
             </listitem>
             <listitem>
                 <bridgehead>
-                    US governmnet data
+                    US government data
                 </bridgehead>
                 <para>
                     <link xlink:href="http://www.data.gov/">data.gov</link>

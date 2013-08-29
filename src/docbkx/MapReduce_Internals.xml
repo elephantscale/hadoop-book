@@ -35,7 +35,7 @@
             <sect2>
                 <title>Step 2) Getting JobID</title>
                 <para>
-                    Each Map Reduce job gets assigned a unique ID. Clients contact the JobTracker to grab a new jobID.
+                    Each Map Reduce job gets assigned a unique ID. Clients contact the Job Tracker to grab a new jobID.
                 </para>
             </sect2>
 
@@ -61,52 +61,52 @@
             <sect2>
                 <title>Step 4) Submit the job</title>
                 <para>
-                    The client submits the job to JobTracker
+                    The client submits the job to Job Tracker
                 </para>
             </sect2>
         </sect2>
 
         <sect2>
-            <title>JobTracker side : Getting the Job going</title>
+            <title>Job Tracker side : Getting the Job going</title>
 
             <sect2>
                 <title>Step 6) Job Splits</title>
                 <para>
-                    One important concept of Map Reduce is parallelism.  The input is divided up and processed across the cluster.   Inputs are chopped up into what are called 'input splits'.  JobTracker next calculates input splits.
+                    One important concept of Map Reduce is parallelism.  The input is divided up and processed across the cluster.   Inputs are chopped up into what are called 'input splits'.  Job Tracker next calculates input splits.
                 </para>
             </sect2>
 
             <sect2>
                 <title>Step 7) Job is kicked off</title>
                 <para>
-                    JobTracker starts the job and TaskTrackers will start executing the job.
+                    Job Tracker starts the job and Task Trackers will start executing the job.
                 </para>
             </sect2>
         </sect2>
 
         <sect2>
-            <title>TaskTracker side : Executing the Job</title>
+            <title>Tasktracker side : Executing the Job</title>
             <para>
-                JobTracker doesn't run any jobs.  TaskTrackers actually execute the jobs.
+                Job Tracker doesn't run any jobs.  Task Trackers actually execute the jobs.
             </para>
             <sect2>
                 <title>Step 8) Getting Job Resources locally</title>
                 <para>
-                    Remember the job resources that were copied to HDFS by the client?  The TaskTracker nodes now need to copy these resources locally.  These files are copied from HDFS to local storage.  A 'local run directory' is created and the contents are copied there and 'un jarred'.
+                    Remember the job resources that were copied to HDFS by the client?  The Tasktracker nodes now need to copy these resources locally.  These files are copied from HDFS to local storage.  A 'local run directory' is created and the contents are copied there and 'un jarred'.
                 </para>
             </sect2>
 
             <sect2>
                 <title>Step 9) Spinning up the map or reduce job</title>
                 <para>
-                    Now that all job resources are locally available, the actual job is ready to be run.  TaskTracker spins up a separate Java Virtual Machine (JVM) and runs map or reduce programs.   So why is map/reduce run in a separate VM?  This way any errors in map/reduce code don't kill the TaskTracker.
+                    Now that all job resources are locally available, the actual job is ready to be run.  Tasktracker spins up a separate Java Virtual Machine (JVM) and runs map or reduce programs.   So why is map/reduce run in a separate VM?  This way any errors in map/reduce code don't kill the Tasktracker.
                 </para>
             </sect2>
 
             <sect2>
-                <title>Step 10) Heartbeats -- reporting back to JobTracker</title>
+                <title>Step 10) Heartbeats -- reporting back to Job Tracker</title>
                 <para>
-                    TaskTracker periodically sends updates to JobTracker.  This is called the 'heartbeat'.  The Heartbeat contains information like job status, resource usage, etc.  JobTracker collects all reports from TaskTrackers and figures out how the job is progressing.
+                    Tasktracker periodically sends updates to Job Tracker.  This is called the 'heartbeat'.  The Heartbeat contains information like job status, resource usage, etc.  Job Tracker collects all reports from Task Trackers and figures out how the job is progressing.
                 </para>
             </sect2>
         </sect2>
@@ -147,7 +147,7 @@
         </para>
         <itemizedlist>
             <listitem>
-                An exception thrown by a map or reduce program.  The child JVM notifies TaskTracker of this failure.  The exception is then propagated up the chain to JobTracker.
+                An exception thrown by a map or reduce program.  The child JVM notifies Tasktracker of this failure.  The exception is then propagated up the chain to Job Tracker.
             </listitem>
             <listitem>
                 The child JVM exits abnormally.  Say it runs out of memory, etc.
@@ -163,7 +163,7 @@
             </listitem>
         </itemizedlist>
         <para>
-            So what happens when a task fails?  The TaskTracker detects the failure and sends the failure up the chain to JobTracker.  JobTracker will retry this task.  The task is retried on another node other than where it failed once.  The reasoning is the node may be failing (hardware failure, etc.) and JobTracker wants to try the task somewhere else.
+            So what happens when a task fails?  The Tasktracker detects the failure and sends the failure up the chain to Job Tracker.  Job Tracker will retry this task.  The task is retried on another node other than where it failed once.  The reasoning is the node may be failing (hardware failure, etc.) and Job Tracker wants to try the task somewhere else.
         </para>
         <para>
             A failed task is retried 3 times.  If it keeps failing, then the entire Job is marked failed.  A coding error (e.g. Null Pointer Exception) can make the task fail consistently, eventually failing the job.

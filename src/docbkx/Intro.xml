@@ -89,12 +89,12 @@
             No less important than Hadoop itself are its many friends. The Hadoop Distributed
             File System (HDFS) provides unlimited file space available from any Hadoop
             node. HBase is a high-performance unlimited-size database working on top of
-            Hadoop. If you need the power of familiar SQL over your large datasets, Pig
+            Hadoop. If you need the power of familiar SQL over your large data sets, Pig
             provides you with an answer. While Hadoop can be used by programmers and
             taught to students as an introduction to Big Data, its companion projects (including
             ZooKeeper, about which we will hear later on) will make projects possible and
             simplify them by providing tried-and-proven frameworks for every aspect of dealing with
-            large datasets.
+            large data sets.
         </para>
         <para>
             As you learn the concepts, and perfect your skills with the techniques described
@@ -135,7 +135,7 @@
             </listitem>
             <listitem>
                 <para>
-                    Imagine you have multiple clients using your online resources, computations, or data.
+                    Imagine you have multiple clients using your on line resources, computations, or data.
                     Each single use is saved in a log, and you need to generate a summary of use of resources
                     for each client by day or by hour. From this you will do your invoices, so it IS important.
                     But the data set is large. You can write a quick MapReduce job for that. Better yet, you
@@ -359,13 +359,13 @@
             <title>Large database alternatives</title>
             <para>
                 The closest to HBase is Cassandra. While HBase is a near-clone of Google’s
-                BigTable, Cassandra purports to being a “BigTable/Dynamo hybrid”. It can be said
+                Big Table, Cassandra purports to being a “Big Table/Dynamo hybrid”. It can be said
                 that while Cassandra’s “writes-never-fail” emphasis has its advantages, HBase is
                 the more robust database for a majority of use-cases. HBase being more prevalent
                 in use, Cassandra faces an uphill battle - but it may be just what you need.
             </para>
             <para>
-                Hypertable is another database close to Google's BigTable in features, and it
+                Hypertable is another database close to Google's Big Table in features, and it
                 claims to run 10 times faster than HBase. There is an ongoing discussion between
                 HBase and Hypertable proponents, and the authors do not want to take sides in it,
                 leaving the comparison to the reader. Like Cassandra, Hypertable has fewer users
@@ -415,7 +415,7 @@
                         <entry>Key-based NoSQL, active user community, Cloudera support </entry>
                         <entry>Key-based NoSQL, active user community, Amazon's Dynamo on EC2</entry>
                         <entry>Closed-source, SQL-standard, easy to use, visualization tools, complex queries </entry>
-                        <entry>Closed-source optimized online transaction processing </entry>
+                        <entry>Closed-source optimized on line transaction processing </entry>
                         <entry>Drop-in replacement for HBase, open-source, arguably much faster</entry>
                     </row>
                     <row>
@@ -494,7 +494,7 @@
             </ulink>
         </para>
         <para>
-            Google has built multiple applications on GFS, MapReduce, and BigTable, which
+            Google has built multiple applications on GFS, MapReduce, and Big Table, which
             are all implemented as open-source projects in the Hadoop zoo. According to Jeff,
             the plan is to continue with 1,000,000 to 10,000,000 machines spread at 100s to
             1000s of locations around the world, and as arguments go, that is pretty big.
@@ -615,7 +615,7 @@
                 the same line, if Hadoop chooses to give them to you. This follows the principles of
                 defensive programming. Then you immediately realize that each input line can be
                 as long as it wants. In fact, Hadoop is optimized to have the best overall throughput
-                on large datasets. Therefore, each input can be a complete document, and you are
+                on large data sets. Therefore, each input can be a complete document, and you are
                 counting word frequencies in documents. If the documents come from the Web, for
                 example, you already have the scale of computations needed for such tasks.
             </para>

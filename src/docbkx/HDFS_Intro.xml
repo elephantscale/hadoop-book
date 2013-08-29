@@ -70,7 +70,7 @@
                 In the old days of distributed computing, failure was an exception, and hardware errors were not tolerated well.  So companies providing gear for distributed computing made sure their hardware seldom failed.  This is achieved by using high quality components, and having backup systems (in come cases backup to backup systems!).  So the machines are engineered to withstand component failures, but still keep functioning.  This line of thinking created hardware that is impressive, but EXPENSIVE!
             </para>
             <para>
-                On the other hand we are going with commodity hardware.  These don't have high end whizz bang components like the main frames mentioned above.  So they are going to fail -- and fail often.  We need to prepared for this.  How?
+                On the other hand we are going with commodity hardware.  These don't have high end whiz bang components like the main frames mentioned above.  So they are going to fail -- and fail often.  We need to prepared for this.  How?
             </para>
             <para>
                 The approach we will take is we build the 'intelligence' into the software.  So the cluster software will be smart enough to handle hardware failure.  The software detects hardware failures and takes corrective actions automatically -- without human intervention.  Our software will be smarter!
@@ -108,7 +108,7 @@
                 Since each machine is part of the 'storage', we will have a 'daemon' running on each machine to manage storage for that machine.  These daemons will talk to each other to exchange data.
             </para>
             <para>
-                Ok, now we have all these nodes storing data, how do we coordinate among them?  One approach is to have a MASTER to be the coordinator.  While building distributed systems with a centralized coordinator may seem like an odd idea, it is not a bad choice.  It simplifies architecture, design and implementation of the system
+                OK, now we have all these nodes storing data, how do we coordinate among them?  One approach is to have a MASTER to be the coordinator.  While building distributed systems with a centralized coordinator may seem like an odd idea, it is not a bad choice.  It simplifies architecture, design and implementation of the system
             </para>
             <para>
                 So now our architecture looks like this.  We have a single master node and multiple worker nodes.

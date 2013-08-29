@@ -17,11 +17,11 @@
         <title> Functions of NameNode </title>
 
         <sect2>
-            <title>NameNode maintains the filesystem metadata</title>
+            <title>NameNode maintains the file system meta data</title>
             <para>
                 NameNode contains all meta data about the file system.  For example, the file system hierarchy,  file permissions, etc.   This information is vital for navigating the file system and accessing data.
                 <note>
-                    NameNode does not store the actual data of the file system.  All file data is stored by DataNodes.
+                    NameNode does not store the actual data of the file system.  All file data is stored by Data Nodes.
                 </note>
             </para>
         </sect2>
@@ -33,7 +33,7 @@
                 As we know, in HDFS files are spread across the cluster.  So how does one know which machine contains which files?  This information is maintained by NameNode.  This information is called 'Block Location data' - because files are chopped into blocks.
             </para>
             <para>
-                This 'block map' is not persisted by NameNode.  It dynamically builds this map from 'block reports' sent by DataNodes.  Each DataNode reports in with what blocks it has  when it joins the cluster.  Also DataNodes periodically send updated block reports to NameNode.  So NameNode has the latest accurate block information across the cluster.
+                This 'block map' is not persisted by NameNode.  It dynamically builds this map from 'block reports' sent by Data Nodes.  Each Data Node reports in with what blocks it has  when it joins the cluster.  Also Data Nodes periodically send updated block reports to NameNode.  So NameNode has the latest accurate block information across the cluster.
             </para>
 			<inlinegraphic fileref="hdfs_block_map.jpg" format="JPG" width="100%" />
         </sect2>
@@ -41,13 +41,13 @@
         <sect2>
             <title>NameNode is a client's first point of contact</title>
             <para>
-                When a client wants to access a file, it contacts NameNode first.  NameNode provides the details of the file and redirects the client to the appropriate DataNodes.  Then the client contacts the DataNode to access the file.
+                When a client wants to access a file, it contacts NameNode first.  NameNode provides the details of the file and redirects the client to the appropriate Data Nodes.  Then the client contacts the Data Node to access the file.
             </para>
         </sect2>
         <sect2>
             <title>NameNode does not get involved in the data path</title>
             <para>
-                The NameNode serves as a reference point for files.  When a client needs to read a file it actually contacts the DataNodes and streams data directly from DataNodes.  The NameNode does not get involved in the data handling path.  The reason for this is obvious, we don't want the NameNode to be a bottleneck.
+                The NameNode serves as a reference point for files.  When a client needs to read a file it actually contacts the Data Nodes and streams data directly from Data Nodes.  The NameNode does not get involved in the data handling path.  The reason for this is obvious, we don't want the NameNode to be a bottleneck.
             </para>
         </sect2>
     </sect1>
@@ -57,7 +57,7 @@
         <sect2>
             <title>What data does the NameNode store?</title>
             <para>
-                We said the NameNode contains file system metadata.  What exactly is it?  There are two parts to it.  One, it keeps information about the file system (metadata) such as the file system hierarchy, permissions, etc.   Second, it keeps the location information of where the files are.
+                We said the NameNode contains file system meta data.  What exactly is it?  There are two parts to it.  One, it keeps information about the file system (meta data) such as the file system hierarchy, permissions, etc.   Second, it keeps the location information of where the files are.
             </para>
             <para>
                 So where is this information stored?  NameNode stores this data in memory so NameNode can access this information very quickly.  But how does this information survive a NameNode restart?  NameNode persists this information on disk as well.
@@ -116,21 +116,21 @@
                         after all this is done, it returns a SUCCESS code to the client
                     </listitem>
                 </orderedlist>
-                Why is data on disk persisted before in-memory data structures?  This way, even if the NameNode goes down between writes, the metadata will be in a consistent state.
+                Why is data on disk persisted before in-memory data structures?  This way, even if the NameNode goes down between writes, the meta data will be in a consistent state.
 				<inlinegraphic fileref="nn_1.jpg" format="JPG" width="100%" />
             </para>
         </sect2>
         <sect2>
-            <title>How is the metadata stored?</title>
+            <title>How is the meta data stored?</title>
             <para>
-                We learned NameNode saves metadata on disk.  On a busy cluster there could be thousands of file system operations (create, delete, move) per minute and, on a big cluster, the size of the metadata could approach gigabytes.  Updating such a large file would be slow and unwieldy.  So how does the NameNode solve this?
+                We learned NameNode saves meta data on disk.  On a busy cluster there could be thousands of file system operations (create, delete, move) per minute and, on a big cluster, the size of the meta data could approach gigabytes.  Updating such a large file would be slow and unwieldy.  So how does the NameNode solve this?
             </para>
             <para>
                 The approach consists of Snapshots and EditLogs.  The process is like this:
 
                 <orderedlist>
                     <listitem>
-                        When NameNode boots up, it loads the latest Snapshot of the metadata.
+                        When NameNode boots up, it loads the latest Snapshot of the meta data.
                     </listitem>
                     <listitem>
                         As it handles file system changes, it writes to a separate file called EditLog.  As EditLog exceeds a certain size, a new EditLog file is created.

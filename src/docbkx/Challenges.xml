@@ -20,7 +20,7 @@
     </section>
 
     <section>
-        <title>Hadoop in the Enterprise EcoSystem</title>
+        <title>Hadoop in the Enterprise Ecosystem</title>
         <para>
             Hadoop is designed to solve Big Data problems encountered by Web and Social companies.  In doing so a lot of the features Enterprises need or want are put on the back burner.  For example, HDFS does not offer native support for security and authentication.
         </para>

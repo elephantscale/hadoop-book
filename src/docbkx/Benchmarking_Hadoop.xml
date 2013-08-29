@@ -11,16 +11,16 @@
   <sect1>
       <title>Why Benchmark?</title>
       <para>
-          Usually after a new hadoop cluster is setup, benchmarking is a good way to 'kick the tires' of the cluster.  Running a benchmark gives an idea that the cluster is up and running properly.
+          Usually after a new Hadoop cluster is setup, benchmarking is a good way to 'kick the tires' of the cluster.  Running a benchmark gives an idea that the cluster is up and running properly.
       </para>
       <para>
-          When tweaking and optimizing a hadoop cluster, benchmarks provide a baseline and provide feedback on improvements.
+          When tweaking and optimizing a Hadoop cluster, benchmarks provide a baseline and provide feedback on improvements.
       </para>
       <para>
-          It is plain fun!  Playing with a hadoop cluster, tweaking it and running benchmarks is pretty good fun!
+          It is plain fun!  Playing with a Hadoop cluster, tweaking it and running benchmarks is pretty good fun!
       </para>
       <para>
-          Benchmarks are readily available.  A good variety of benchmarks are freely available -- bundled with hadoop or open source projects.  So we do not need to write a lot of code to run benchmarks
+          Benchmarks are readily available.  A good variety of benchmarks are freely available -- bundled with Hadoop or open source projects.  So we do not need to write a lot of code to run benchmarks
       </para>
   </sect1>
 
@@ -28,7 +28,7 @@
       <title>What Benchmarks to Run?</title>
       <itemizedlist>
           <listitem>
-              TestDFSIO : This is sort of 'hello world' of hadoop benchmarks.  It is bundled with hadoop and is very easy to run.  This tests the IO capacity of HDFS
+              TestDFSIO : This is sort of 'hello world' of Hadoop benchmarks.  It is bundled with Hadoop and is very easy to run.  This tests the IO capacity of HDFS
           </listitem>
 
           <listitem>

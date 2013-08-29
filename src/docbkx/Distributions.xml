@@ -33,7 +33,7 @@
                 <glossterm>Distros package multiple components that work well together</glossterm>
                 <glossdef>
                     <para>
-                        The Hadoop ecosystem contains a lot of components (Hbase, Pig, Hive, Zookeeper, etc.) which are being developed independently and have their own release schedules.  Also, there are version dependencies among the components.  For example version 0.92 of HBase needs a particular version of HDFS.
+                        The Hadoop ecosystem contains a lot of components (HBase, Pig, Hive, Zookeeper, etc.) which are being developed independently and have their own release schedules.  Also, there are version dependencies among the components.  For example version 0.92 of HBase needs a particular version of HDFS.
                     </para>
                     <para>
                         Distros bundle versions of components that work well together. This provides a working Hadoop installation right out of the box.
@@ -167,8 +167,8 @@
                         <entry>
                             <itemizedlist>
                                 <listitem>Encryption support</listitem>
-                                <listitem>Hardware accelleration added to some layers of stack to boost performance</listitem>
-                                <listitem>Admin tools to deploy and manage hadoop</listitem>
+                                <listitem>Hardware acceleration added to some layers of stack to boost performance</listitem>
+                                <listitem>Admin tools to deploy and manage Hadoop</listitem>
                             </itemizedlist>
                         </entry>
                         <entry>
@@ -182,7 +182,7 @@
                         </entry>
                         <entry>
                             <itemizedlist>
-                                <listitem>fast sql on hadoop</listitem>
+                                <listitem>fast SQL on Hadoop</listitem>
                                 <listitem>software only or appliance</listitem>
                             </itemizedlist>
                         </entry>
@@ -260,7 +260,7 @@
         <sect2>
             <title>SkyTab Cloud</title>
             <para>
-                SkyTap offers deployable Hadoop templates
+                SkyTap offers deploy-able Hadoop templates
             </para>
             <para>
                 Links:<sbr/>

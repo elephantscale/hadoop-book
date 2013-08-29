@@ -92,7 +92,7 @@
                 <tbody>
                     <row>
                         <entry>
-                            <link xlink:href="http://hadoop.apache.org/docs/stable/mapred_tutorial.html">Mapreduce</link>
+                            <link xlink:href="http://hadoop.apache.org/docs/stable/mapred_tutorial.html">Map reduce</link>
                         </entry>
                         <entry>
                             Original distributed compute framework of Hadoop
@@ -103,7 +103,7 @@
                             <link xlink:href="http://hadoop.apache.org/docs/current/hadoop-yarn/hadoop-yarn-site/YARN.html">YARN</link>
                         </entry>
                         <entry>
-                            Next generation mapreduce, available in Hadoop version 2.0
+                            Next generation MapReduce, available in Hadoop version 2.0
                         </entry>
                     </row>
                     <row>
@@ -252,7 +252,7 @@
                             <link xlink:href="http://blog.cloudera.com/blog/2012/10/cloudera-impala-real-time-queries-in-apache-hadoop-for-real/">Impala</link>
                         </entry>
                         <entry>
-                            Provides real time queries over Big Data.  Developed by Cloduera.
+                            Provides real time queries over Big Data.  Developed by Cloudera.
                         </entry>
                     </row>
                     <row>
@@ -260,7 +260,7 @@
                             <link xlink:href="http://phoenix-hbase.blogspot.com/">Phoenix</link>
                         </entry>
                         <entry>
-                            SQL layer over Hbase.  Developed by SalesForce.com.
+                            SQL layer over HBase.  Developed by SalesForce.com.
                         </entry>
                     </row>
                     <row>
@@ -268,7 +268,7 @@
                             <link xlink:href="http://drawntoscale.com/why-spire/">Spire</link>
                         </entry>
                         <entry>
-                            SQL layer over Hbase.  Developed by DrawnToScale.com.
+                            SQL layer over HBase.  Developed by DrawnToScale.com.
                         </entry>
                     </row>
                 </tbody>
@@ -369,9 +369,9 @@
 
 
     <section>
-        <title>Workflow Tools</title>
+        <title>Work flow Tools</title>
         <table id="table-bigdata-ecosystem-workflow-tools">
-            <title>Workflow Tools</title>
+            <title>Work flow Tools</title>
             <tgroup cols='2' align='left' colsep='1' rowsep='1'>
                 <thead>
                     <row>
@@ -409,7 +409,7 @@
                             <link xlink:href="https://github.com/Netflix/Lipstick">Lipstick</link>
                         </entry>
                         <entry>
-                             Pig workflow visualization
+                             Pig work flow visualization
                         </entry>
                     </row>
                 </tbody>
@@ -694,7 +694,7 @@
     </section>
 
     <section>
-        <title>Realtime Stream Processing</title>
+        <title>Real time Stream Processing</title>
         <table id="table-bigdata-ecosystem-stream-processing">
             <title>Stream Processing Tools</title>
             <tgroup cols='2' align='left' colsep='1' rowsep='1'>

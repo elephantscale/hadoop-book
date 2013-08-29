@@ -72,10 +72,10 @@
                             Network
                         </entry>
                         <entry>
-                            1 Gb Ethernet
+                            1 GB Ethernet
                         </entry>
                         <entry>
-                            10 Gb Ethernet or Infiniband
+                            10 GB Ethernet or Infiniband
                         </entry>
                     </row>
                 </tbody>
@@ -123,7 +123,7 @@
                         <glossterm>RedHat Enterprise Linux (RHEL)</glossterm>
                         <glossdef>
                             <para>
-                                This is a well tested Linux distro  that is geared for Enterprise.  Comes with Redhat support
+                                This is a well tested Linux distro  that is geared for Enterprise.  Comes with RedHat support
                             </para>
                         </glossdef>
                     </glossentry>
