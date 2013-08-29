@@ -161,22 +161,6 @@
                     </row>
                     <row>
                         <entry>
-                            WANdisco <sbr/>
-                            <link xlink:href="http://www.wandisco.com">www.wandisco.com</link>
-                        </entry>
-                        <entry>
-                            <itemizedlist>
-                                <listitem>Newer distro</listitem>
-                                <listitem>Hadoop version 2</listitem>
-                                <listitem>Comes with tools to manage and administer a cluster</listitem>
-                            </itemizedlist>
-                        </entry>
-                        <entry>
-                            Free / Premium model
-                        </entry>
-                    </row>
-                    <row>
-                        <entry>
                             Intel <sbr/>
                             <link xlink:href="http://hadoop.intel.com">hadoop.intel.com</link>
                         </entry>
@@ -189,6 +173,37 @@
                         </entry>
                         <entry>
                             Premium
+                        </entry>
+                    </row>
+                    <row>
+                        <entry>
+                            Pivotal HD <sbr/>
+                            <link xlink:href="http://gopivotal.com/pivotal-products/pivotal-data-fabric/pivotal-hd">gopivotal.com</link>
+                        </entry>
+                        <entry>
+                            <itemizedlist>
+                                <listitem>fast sql on hadoop</listitem>
+                                <listitem>software only or appliance</listitem>
+                            </itemizedlist>
+                        </entry>
+                        <entry>
+                            Premium
+                        </entry>
+                    </row>
+                    <row>
+                        <entry>
+                            WANdisco <sbr/>
+                            <link xlink:href="http://www.wandisco.com">www.wandisco.com</link>
+                        </entry>
+                        <entry>
+                            <itemizedlist>
+                                <listitem>Newer distro</listitem>
+                                <listitem>Hadoop version 2</listitem>
+                                <listitem>Comes with tools to manage and administer a cluster</listitem>
+                            </itemizedlist>
+                        </entry>
+                        <entry>
+                            Free / Premium model
                         </entry>
                     </row>
                 </tbody>
