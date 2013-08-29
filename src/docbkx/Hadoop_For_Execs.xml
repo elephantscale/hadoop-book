@@ -1,95 +1,95 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <chapter version="5.0" xml:id="Hadoop_For_Execs" xmlns="http://docbook.org/ns/docbook"
-         xmlns:xlink="http://www.w3.org/1999/xlink"
-         xmlns:xi="http://www.w3.org/2001/XInclude"
-         xmlns:svg="http://www.w3.org/2000/svg"
-         xmlns:m="http://www.w3.org/1998/Math/MathML"
-         xmlns:html="http://www.w3.org/1999/xhtml"
-         xmlns:db="http://docbook.org/ns/docbook">
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xi="http://www.w3.org/2001/XInclude"
+    xmlns:svg="http://www.w3.org/2000/svg"
+    xmlns:m="http://www.w3.org/1998/Math/MathML"
+    xmlns:html="http://www.w3.org/1999/xhtml"
+    xmlns:db="http://docbook.org/ns/docbook">
 
-  <title>Hadoop for Executives</title>
-  <para>
-      This section is a quick 'fact sheet' in a Q&amp;A format.
-  </para>
-  <section>
-      <title>What is Hadoop?</title>
-      <para>
-          Hadoop is an open source software stack that runs on a cluster of machines.  Hadoop provides distributed storage and distributed processing for very large data sets.
-      </para>
-  </section>
+    <title>Hadoop for Executives</title>
+    <para>
+        This section is a quick 'fact sheet' in a Q&amp;A format.
+    </para>
+    <bridgehead>
+        What is Hadoop?
+    </bridgehead>
+    <para>
+        Hadoop is an open source software stack that runs on a cluster of machines.  Hadoop provides distributed storage and distributed processing for very large data sets.
+    </para>
 
-  <section>
-      <title>What is the license of Hadoop?</title>
-      <para>
-          Hadoop is open source software.  It is an Apache project released under Apache Open Source License v2.0.  This license is very commercial friendly.
-      </para>
-  </section>
+    <bridgehead>
+        What is the license of Hadoop?
+    </bridgehead>
+    <para>
+        Hadoop is open source software.  It is an Apache project released under Apache Open Source License v2.0.  This license is very commercial friendly.
+    </para>
 
-  <section>
-      <title>Who contributes to Hadoop?</title>
-      <para>
-          Originally Hadoop was developed and open sourced by Yahoo.  Now Hadoop is developed as an Apache Software Foundation project and has numerous contributors from Cloudera, Horton Works, Facebook, etc.
-      </para>
-  </section>
+    <bridgehead>
+        Who contributes to Hadoop?
+    </bridgehead>
+    <para>
+        Originally Hadoop was developed and open sourced by Yahoo.  Now Hadoop is developed as an Apache Software Foundation project and has numerous contributors from Cloudera, Horton Works, Facebook, etc.
+    </para>
 
-  <section>
-      <title>Isn't Hadoop used by foo-foo social media companies and not by enterprises</title>
-      <para>
-          Hadoop had its start in a Web company.  It was adopted pretty early by social media companies because the companies had Big Data problems and Hadoop offered a solution.
-      </para>
-      <para>
-          However, Hadoop is now making inroads into Enterprises.
-      </para>
-  </section>
+    <bridgehead>
+        Isn't Hadoop used by foo-foo social media companies and not by enterprises
+    </bridgehead>
+    <para>
+        Hadoop had its start in a Web company.  It was adopted pretty early by social media companies because the companies had Big Data problems and Hadoop offered a solution.
+    </para>
+    <para>
+        However, Hadoop is now making inroads into Enterprises.
+    </para>
 
-  <section>
-      <title>I am not sure my company has a big data problem</title>
-      <para>
-          Hadoop is designed to deal with Big Data.  So if you don't have a 'Big Data Problem', then Hadoop probably isn't the best fit for your company.  But before you stop reading right here, please read on :-)
-      </para>
-      <para>
-          How much data is considered Big Data, differs from company to company.  For some companies, 10 TB of data would be considered Big Data;  for others 1 PB would be 'Big Data'.  So only you can determine how much is Big Data.
-      </para>
-      <para>
-          Also, if you don't have a 'Big Data problem' now, is that because you are not capturing some data?  In some scenarios, companies chose to forego capturing data, because there wasn't a feasible way to store and process it.  Now that Hadoop can help with Big Data, it may be possible to start capturing data that wasn't captured before.
-      </para>
-  </section>
-
-
-  <section>
-      <title>How much does it cost to adopt Hadoop?</title>
-      <para>
-          Hadoop is open source.  The software is free.  However running Hadoop does have other cost components.
-      </para>
-      <itemizedlist>
-          <listitem>
-              Cost of hardware : Hadoop runs on a cluster of machines.  The cluster size can be anywhere from 10 nodes to 1000s of nodes.  For a large cluster, the hardware costs will be significant.
-          </listitem>
-          <listitem>
-              The cost of IT / OPS for standing up a large Hadoop cluster and supporting it will need to be factored in.
-          </listitem>
-          <listitem>
-              Since Hadoop is a newer technology, finding people to work on this ecosystem is not easy.
-          </listitem>
-      </itemizedlist>
-      <para>
-          See here for complete list of <xref linkend="Challenges"/>
-      </para>
-  </section>
+    <bridgehead>
+        I am not sure my company has a big data problem
+    </bridgehead>
+    <para>
+        Hadoop is designed to deal with Big Data.  So if you don't have a 'Big Data Problem', then Hadoop probably isn't the best fit for your company.  But before you stop reading right here, please read on :-)
+    </para>
+    <para>
+        How much data is considered Big Data, differs from company to company.  For some companies, 10 TB of data would be considered Big Data;  for others 1 PB would be 'Big Data'.  So only you can determine how much is Big Data.
+    </para>
+    <para>
+        Also, if you don't have a 'Big Data problem' now, is that because you are not capturing some data?  In some scenarios, companies chose to forego capturing data, because there wasn't a feasible way to store and process it.  Now that Hadoop can help with Big Data, it may be possible to start capturing data that wasn't captured before.
+    </para>
 
 
-  <section>
-      <title>What distributions to use?</title>
-      <para>
-          Please see <xref linkend="Distributions"/>
-      </para>
-  </section>
+    <bridgehead>
+        How much does it cost to adopt Hadoop?
+    </bridgehead>
+    <para>
+        Hadoop is open source.  The software is free.  However running Hadoop does have other cost components.
+    </para>
+    <itemizedlist>
+        <listitem>
+            Cost of hardware : Hadoop runs on a cluster of machines.  The cluster size can be anywhere from 10 nodes to 1000s of nodes.  For a large cluster, the hardware costs will be significant.
+        </listitem>
+        <listitem>
+            The cost of IT / OPS for standing up a large Hadoop cluster and supporting it will need to be factored in.
+        </listitem>
+        <listitem>
+            Since Hadoop is a newer technology, finding people to work on this ecosystem is not easy.
+        </listitem>
+    </itemizedlist>
+    <para>
+        See here for complete list of <xref linkend="Challenges"/>
+    </para>
 
-  <section>
-      <title>What are the some of the use cases for Hadoop?</title>
-      <para>
-          Please see <xref linkend="Hadoop_Use_Cases"/>
-      </para>
-  </section>
+
+    <bridgehead>
+        What distributions to use?
+    </bridgehead>
+    <para>
+        Please see <xref linkend="Distributions"/>
+    </para>
+
+    <bridgehead>
+        What are the some of the use cases for Hadoop?
+    </bridgehead>
+    <para>
+        Please see <xref linkend="Hadoop_Use_Cases"/>
+    </para>
 
 </chapter>

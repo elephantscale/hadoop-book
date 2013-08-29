@@ -4,3 +4,10 @@ The book itself is generated with docbook, http://code.google.com/p/docbkx-tools
 To generate book text, do this:
     $ mvn clean pre-site
 
+
+References:
+
+* xsl formatting reference : http://www.sagehill.net/docbookxsl/index.html
+
+* docbooks quick reference : http://docbook.org/tdg/en/html/quickref.html
+

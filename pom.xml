@@ -90,7 +90,7 @@
                 <configuration>
                     <xincludeSupported>true</xincludeSupported>
                     <useIdAsFilename>true</useIdAsFilename>
-                    <sectionAutolabelMaxDepth>100</sectionAutolabelMaxDepth>
+                    <sectionAutolabelMaxDepth>1</sectionAutolabelMaxDepth>
                     <chunkFirstSections>0</chunkFirstSections>
                     <chunkSectionDepth>0</chunkSectionDepth>
                     <sectionAutolabel>true</sectionAutolabel>
@@ -115,13 +115,17 @@
                         <configuration>
                             <targetDirectory>${basedir}/target/docbkx/pdf</targetDirectory>
                             <imgSrcPath>images/</imgSrcPath>
-							<includes>index.xml</includes>
+							<includes>HI-hadoop-book.xml</includes>
 							<ignoreImageScaling>0</ignoreImageScaling>
 							<postProcess>
 								<tstamp>
 									<format property="touch.time" pattern="yyyy_MM_dd"/>
 								</tstamp>
+                                <!--
 								<rename src="${basedir}/target/docbkx/pdf/index.pdf" dest="${basedir}/target/docbkx/pdf/HI-hadoop-book-${touch.time}.pdf"/>
+								<rename src="${basedir}/target/docbkx/pdf/index.pdf" dest="${basedir}/target/docbkx/pdf/HI-hadoop-book.pdf"/>
+								<copy src="${basedir}/target/docbkx/pdf/index.pdf" target="${basedir}/target/docbkx/pdf/HI-hadoop-book.pdf"/>
+                                -->
 							</postProcess>
                         </configuration>
                     </execution>
@@ -187,16 +191,29 @@
                             <outputDirectory>target/site</outputDirectory>
                             <resources>
                                 <resource>
+                                    <directory>${basedir}/target/docbkx/pdf</directory>
+                                    <includes>
+                                        <include>HI-hadoop-book.pdf</include>
+                                    </includes>
+                                </resource>
+
+                                <resource>
                                     <directory>${basedir}/target/docbkx/multipage/index</directory>
                                     <includes>
                                         <include>**/**</include>
                                     </includes>
+                                    <excludes>
+                                        <exclude>HI-hadoop-book/**</exclude>
+                                    </excludes>
                                 </resource>
                                 <resource>
                                     <directory>${basedir}/target/docbkx</directory>
                                     <includes>
                                         <include>singlepage/**</include>
                                     </includes>
+                                    <excludes>
+                                        <exclude>HI-hadoop-book/**</exclude>
+                                    </excludes>
                                 </resource>
                                 <resource>
                                     <directory>${basedir}/src/docbkx</directory>

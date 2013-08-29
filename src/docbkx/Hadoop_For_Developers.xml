@@ -1,41 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <chapter version="5.0" xml:id="Hadoop_For_Developers" xmlns="http://docbook.org/ns/docbook"
-         xmlns:xlink="http://www.w3.org/1999/xlink"
-         xmlns:xi="http://www.w3.org/2001/XInclude"
-         xmlns:svg="http://www.w3.org/2000/svg"
-         xmlns:m="http://www.w3.org/1998/Math/MathML"
-         xmlns:html="http://www.w3.org/1999/xhtml"
-         xmlns:db="http://docbook.org/ns/docbook">
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xi="http://www.w3.org/2001/XInclude"
+    xmlns:svg="http://www.w3.org/2000/svg"
+    xmlns:m="http://www.w3.org/1998/Math/MathML"
+    xmlns:html="http://www.w3.org/1999/xhtml"
+    xmlns:db="http://docbook.org/ns/docbook">
 
-  <title>Hadoop for Developers</title>
-  <para>
-      This section is a quick 'fact sheet' in a Q&amp;A format.
-  </para>
+    <title>Hadoop for Developers</title>
+    <para>
+        This section is a quick 'fact sheet' in a Q&amp;A format.
+    </para>
 
-  <section>
-      <title>What is Hadoop?</title>
-      <para>
-          Hadoop is an open source software stack that runs on a cluster of machines.  Hadoop provides distributed storage and distributed processing for very large data sets.
-      </para>
-  </section>
+    <bridgehead>
+        What is Hadoop?
+    </bridgehead>
+    <para>
+        Hadoop is an open source software stack that runs on a cluster of machines.  Hadoop provides distributed storage and distributed processing for very large data sets.
+    </para>
 
-  <section>
-      <title>Is Hadoop a fad or here to stay?</title>
-      <para>
-          Sure, Hadoop and Big Data are all the rage now.  But Hadoop does solve a real problem and it is a safe bet that it is here to stay.
-      </para>
-      <para>
-          Below is a graph of Hadoop job trends from <link xlink:href="http://www.indeed.com/jobtrends?q=hadoop">Indeed.com</link>.  As you can see, demand for Hadoop skills has been up and up since 2009.  So Hadoop is a good skill to have!
-		  <inlinegraphic fileref="hadoop_job_trends.png" format="PNG" width="100%" />
-      </para>
-  </section>
+    <bridgehead>
+        Is Hadoop a fad or here to stay?
+    </bridgehead>
+    <para>
+        Sure, Hadoop and Big Data are all the rage now.  But Hadoop does solve a real problem and it is a safe bet that it is here to stay.
+    </para>
+    <para>
+        Below is a graph of Hadoop job trends from <link xlink:href="http://www.indeed.com/jobtrends?q=hadoop">Indeed.com</link>.  As you can see, demand for Hadoop skills has been up and up since 2009.  So Hadoop is a good skill to have!
+        <inlinegraphic fileref="hadoop_job_trends.png" format="PNG" width="100%" />
+    </para>
 
-  <section>
-      <title>What skills do I need to learn Hadoop?</title>
-      <para>
-          A hands-on developer or admin can learn Hadoop.  The following list is a start - in no particular order
-          <itemizedlist>
-              <listitem>
+    <bridgehead>
+        What skills do I need to learn Hadoop?
+    </bridgehead>
+    <para>
+        A hands-on developer or admin can learn Hadoop.  The following list is a start - in no particular order
+        <itemizedlist>
+            <listitem>
                 Hadoop is written in Java.  So knowing Java helps
             </listitem>
             <listitem>
@@ -44,128 +45,127 @@
             <listitem>
                 Some linux scripting skills will go a long way
             </listitem>
-          </itemizedlist>
-      </para>
-  </section>
+        </itemizedlist>
+    </para>
 
-  <section>
-      <title>What kind of technical roles are available in Hadoop?</title>
-      <para>
-          The following should give you an idea of the kind of technical roles in Hadoop.
-      </para>
-      <table id="hadoop-roles">
-          <title>Hadoop Roles</title>
-          <tgroup cols='3' align='left' colsep='1' rowsep='1'>
-              <thead>
-                  <row>
-                      <entry>Job Type</entry>
-                      <entry>Job functions</entry>
-                      <entry>Skills</entry>
-                  </row>
-              </thead>
-              <tbody>
-                  <row>
-                      <entry>
-                          Hadoop Developer
-                      </entry>
-                      <entry>
-                          develops mapreduce jobs, designs data warehouses
-                      </entry>
-                      <entry>
-                          Java, Scripting, Linux
-                      </entry>
-                  </row>
-                  <row>
-                      <entry>
-                          Hadoop Admin
-                      </entry>
-                      <entry>
-                          manages Hadoop cluster, designs data pipelines
-                      </entry>
-                      <entry>
-                          Linux administration,  Network Management, Experience in managing large cluster of machines
-                      </entry>
-                  </row>
-                  <row>
-                      <entry>
-                          Data Scientist
-                      </entry>
-                      <entry>
-                          Data mining and figuring out hidden knowledge in data
-                      </entry>
-                      <entry>
-                          Math, data mining algorithms
-                      </entry>
-                  </row>
-                  <row>
-                      <entry>
-                          Business Analyst
-                      </entry>
-                      <entry>
-                          Analyzes data!
-                      </entry>
-                      <entry>
-                          Pig, Hive, SQL superman, familiarity with other BI tools
-                      </entry>
-                  </row>
-              </tbody>
-          </tgroup>
-      </table>
-  </section>
+    <bridgehead>
+        What kind of technical roles are available in Hadoop?
+    </bridgehead>
+    <para>
+        The following should give you an idea of the kind of technical roles in Hadoop.
+    </para>
+    <table id="hadoop-roles">
+        Hadoop Roles
+        <tgroup cols='3' align='left' colsep='1' rowsep='1'>
+            <thead>
+                <row>
+                    <entry>Job Type</entry>
+                    <entry>Job functions</entry>
+                    <entry>Skills</entry>
+                </row>
+            </thead>
+            <tbody>
+                <row>
+                    <entry>
+                        Hadoop Developer
+                    </entry>
+                    <entry>
+                        develops mapreduce jobs, designs data warehouses
+                    </entry>
+                    <entry>
+                        Java, Scripting, Linux
+                    </entry>
+                </row>
+                <row>
+                    <entry>
+                        Hadoop Admin
+                    </entry>
+                    <entry>
+                        manages Hadoop cluster, designs data pipelines
+                    </entry>
+                    <entry>
+                        Linux administration,  Network Management, Experience in managing large cluster of machines
+                    </entry>
+                </row>
+                <row>
+                    <entry>
+                        Data Scientist
+                    </entry>
+                    <entry>
+                        Data mining and figuring out hidden knowledge in data
+                    </entry>
+                    <entry>
+                        Math, data mining algorithms
+                    </entry>
+                </row>
+                <row>
+                    <entry>
+                        Business Analyst
+                    </entry>
+                    <entry>
+                        Analyzes data!
+                    </entry>
+                    <entry>
+                        Pig, Hive, SQL superman, familiarity with other BI tools
+                    </entry>
+                </row>
+            </tbody>
+        </tgroup>
+    </table>
 
-  <section>
-      <title>I am not a programmer, can I still use Hadoop?</title>
-      <para>
-          Yes, you don't need to write Java Map Reduce code to extract data out of Hadoop.  You can use Pig and Hive.  Both Pig and Hive offer 'high level' Map Reduce.  For example you can query hadoop  using SQL in Hive.
-      </para>
-  </section>
+    <bridgehead>
+        I am not a programmer, can I still use Hadoop?
+    </bridgehead>
+    <para>
+        Yes, you don't need to write Java Map Reduce code to extract data out of Hadoop.  You can use Pig and Hive.  Both Pig and Hive offer 'high level' Map Reduce.  For example you can query hadoop  using SQL in Hive.
+    </para>
 
-  <section>
-      <title>What kind of development tools are available for Hadoop?</title>
-      <para>
-          Hadoop development tools are still evolving.  Here are a few:
-          <itemizedlist>
-              <listitem>
-                  Karmasphere IDE : tuned for developing for Hadoop
-              </listitem>
-              <listitem>
-                  Eclipse and other Java IDEs : When writing Java code
-              </listitem>
-              <listitem>
-                  Command line editor like VIM : No matter what editor you use, you will be editing a lot of files / scripts.  So familiarity with CLI editors is essential.
-              </listitem>
-          </itemizedlist>
-      </para>
-  </section>
+    <bridgehead>
+        What kind of development tools are available for Hadoop?
+    </bridgehead>
+    <para>
+        Hadoop development tools are still evolving.  Here are a few:
+        <itemizedlist>
+            <listitem>
+                Karmasphere IDE : tuned for developing for Hadoop
+            </listitem>
+            <listitem>
+                Eclipse and other Java IDEs : When writing Java code
+            </listitem>
+            <listitem>
+                Command line editor like VIM : No matter what editor you use, you will be editing a lot of files / scripts.  So familiarity with CLI editors is essential.
+            </listitem>
+        </itemizedlist>
+    </para>
 
-  <section>
-      <title>Where can I learn more?</title>
-      <itemizedlist>
-          <listitem>
-              Books
-              <itemizedlist>
-                  <listitem>
-                      Tom White's Hadoop Book : This is the 'Hadoop Bible'
-                  </listitem>
-                  <listitem>
-                      This book :-)
-                  </listitem>
-              </itemizedlist>
-          </listitem>
+    <bridgehead>
+        Where can I learn more?
+    </bridgehead>
+    <itemizedlist>
+        <listitem>
+            Books
+            <itemizedlist>
+                <listitem>
+                    Tom White's Hadoop Book : This is the 'Hadoop Bible'
+                </listitem>
+                <listitem>
+                    This book :-)
+                </listitem>
+            </itemizedlist>
+        </listitem>
 
-          <listitem>
-              Newsgroups : If you have any questions:
-              <itemizedlist>
-                  <listitem>
-                      <link xlink:href="http://hadoop.apache.org/mailing_lists.html">apache mailing lists</link>
-                  </listitem>
-              </itemizedlist>
-          </listitem>
+        <listitem>
+            Newsgroups : If you have any questions:
+            <itemizedlist>
+                <listitem>
+                    <link xlink:href="http://hadoop.apache.org/mailing_lists.html">apache mailing lists</link>
+                </listitem>
+            </itemizedlist>
+        </listitem>
 
-          <listitem>
-              Meetups : to meet like minded people.  Find the one closest to you at <link xlink:href="http://www.meetup.com">meetup.com</link>
-          </listitem>
-      </itemizedlist>
-  </section>
+        <listitem>
+            Meetups : to meet like minded people.  Find the one closest to you at <link xlink:href="http://www.meetup.com">meetup.com</link>
+        </listitem>
+    </itemizedlist>
 
 </chapter>
