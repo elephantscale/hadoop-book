@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter version="5.0" xml:id="BI_Tools_For_Hadoop" xmlns="http://docbook.org/ns/docbook"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xi="http://www.w3.org/2001/XInclude"
+    xmlns:svg="http://www.w3.org/2000/svg"
+    xmlns:m="http://www.w3.org/1998/Math/MathML"
+    xmlns:html="http://www.w3.org/1999/xhtml"
+    xmlns:db="http://docbook.org/ns/docbook">
+
+    <title>
+        Business Intelligence Tools For Hadoop
+    </title>
+    <para>
+        Analytics for Hadoop used to be done by the following:
+        <itemizedlist>
+            <listitem>Writing custom Map Reduce code using Java, Python, R ..etc</listitem>
+            <listitem>Using high level Pig scripts</listitem>
+            <listitem>Using SQL using Hive</listitem>
+        </itemizedlist>
+        How ever doing analytics like this can feel a little pedantic and time consuming.  Business INtelligence tools (BI tools for short) can address this problem.
+    </para>
+
+
+    <para>
+        BI tools have been around since before Hadoop.  Some of them are generic, some are very specific towards a certain domain (e.g.  Telecom, Health Care ..etc).  BI tools provide rich, user friendly environment to slice and dice data.  Most of them have nice GUI environments as well.
+    </para>
+    <para>
+        Since Hadoop is gaining popularity as a data silo, a lot of BI tools have added support to Hadoop. In this chapter we will look into some BI tools that work with Hadoop.
+    </para>
+
+
+    <table id="table-hadoop-BI-tools-comparison-data" frame="all">
+        <title>BI Tools Comparison : Data Access and Management</title>
+        <tgroup cols='6' align='left' colsep='1' rowsep='1'>
+            <thead>
+                <row>
+                    <entry>BI tool</entry>
+                    <entry>Access raw data on Hadoop</entry>
+                    <entry>Manage data on HDFS</entry>
+                    <entry>Import/Export data into/out of HDFS</entry>
+                    <entry>Transparent compression</entry>
+                    <entry>Data Retention</entry>
+                </row>
+            </thead>
+            <tbody>
+                <row>
+                    <entry> <!-- tool -->
+                        <link xlink:href="http://www.datameer.com">Datameer</link>
+                    </entry>
+                    <entry> <!-- raw data -->
+                        Y
+                    </entry>
+                    <entry> <!-- manage data -->
+                        Y
+                    </entry>
+                    <entry> <!-- import/export data -->
+                        Y
+                    </entry>
+                    <entry> <!-- transparent compression -->
+                        Y
+                    </entry>
+                    <entry> <!-- data retention -->
+                        Y
+                    </entry>
+                </row>
+
+                <row>
+                    <entry>
+                        <link xlink:href="http://www.tableausoftware.com/">Tableau</link>
+                    </entry>
+                </row>
+                <row>
+                    <entry>
+                        <link xlink:href="http://www.pentaho.com/">Pentaho</link>
+                    </entry>
+                </row>
+            </tbody>
+        </tgroup>
+    </table>
+
+    <table id="table-hadoop-BI-tools-comparison-analytics" frame="all">
+        <title>BI Tools Comparison : Analytics</title>
+        <tgroup cols='2' align='left' colsep='1' rowsep='1'>
+            <thead>
+                <row>
+                    <entry>BI tool</entry>
+                    <entry>pre-built analytics</entry>
+                </row>
+            </thead>
+            <tbody>
+                <row>
+                    <entry>
+                        <link xlink:href="http://www.datameer.com">Datameer</link>
+                    </entry>
+                    <entry> <!-- prebuilt analytics -->
+                        Y
+                    </entry>
+                </row>
+
+                <row>
+                    <entry>
+                        <link xlink:href="http://www.tableausoftware.com/">Tableau</link>
+                    </entry>
+                    <entry> <!-- prebuilt analytics -->
+                        Y
+                    </entry>
+                </row>
+                <row>
+                    <entry>
+                        <link xlink:href="http://www.pentaho.com/">Pentaho</link>
+                    </entry>
+                    <entry> <!-- prebuilt analytics -->
+                        Y
+                    </entry>
+                </row>
+            </tbody>
+        </tgroup>
+    </table>
+
+    <table id="table-hadoop-BI-tools-comparison-visualizing" frame="all">
+        <title>BI Tools Comparison : Visualizing</title>
+        <tgroup cols='4' align='left' colsep='1' rowsep='1'>
+            <thead>
+                <row>
+                    <entry>BI tool</entry>
+                    <entry>Visual query designer</entry>
+                    <entry>High level widgets</entry>
+                    <entry>multiple platforms / mobile</entry>
+                </row>
+            </thead>
+            <tbody>
+                <row>
+                    <entry>
+                        <link xlink:href="http://www.datameer.com">Datameer</link>
+                    </entry>
+                    <entry> <!-- visual query designer -->
+                        Y
+                    </entry>
+                    <entry> <!-- high level widgets -->
+                        Y
+                    </entry>
+                    <entry> <!-- visualizations on multiple platforms -->
+                        Y
+                    </entry>
+                </row>
+                <row>
+                    <entry>
+                        <link xlink:href="http://www.tableausoftware.com/">Tableau</link>
+                    </entry>
+                    <entry> <!-- visual query designer -->
+                        Y
+                    </entry>
+                    <entry> <!-- high level widgets -->
+                        Y
+                    </entry>
+                    <entry> <!-- visualizations on multiple platforms -->
+                        Y
+                    </entry>
+                </row>
+                <row>
+                    <entry>
+                        <link xlink:href="http://www.pentaho.com/">Pentaho</link>
+                    </entry>
+                </row>
+            </tbody>
+        </tgroup>
+    </table>
+
+    <table id="table-hadoop-BI-tools-comparison-misc" frame="all">
+        <title>BI Tools Comparison : Misc</title>
+        <tgroup cols='6' align='left' colsep='1' rowsep='1'>
+            <thead>
+                <row>
+                    <entry>BI tool</entry>
+                    <entry>Security</entry>
+                    <entry>Role based permissions</entry>
+                    <entry>Supports multiple Hadoop Distributions</entry>
+                    <entry>Supports Hadoop on Cloud</entry>
+                    <entry>Hosted analytics</entry>
+                    <entry>Share with others</entry>
+                    <entry>Free evaluation</entry>
+                </row>
+            </thead>
+            <tbody>
+                <row>
+                    <entry>
+                        <link xlink:href="http://www.datameer.com">Datameer</link>
+                    </entry>
+                    <entry> <!-- security -->
+                        Y
+                        <sbr/>
+                        (LDAP, Active Directory, Kerberos)
+                    </entry>
+                    <entry> <!-- role based -->
+                        Y
+                    </entry>
+                    <entry> <!-- multiple hadoop distros -->
+                        Y
+                    </entry>
+                    <entry> <!-- hadoop on cloud -->
+                        Y (Amazon)
+                    </entry>
+                    <entry> <!-- hosted analytics -->
+                        N
+                    </entry>
+                    <entry> <!-- share with others -->
+                        ?
+                    </entry>
+                    <entry> <!-- free evaluation -->
+                        Y 
+                    </entry>
+                </row>
+
+                <row>
+                    <entry>
+                        <link xlink:href="http://www.tableausoftware.com/">Tableau</link>
+                    </entry>
+                    <entry> <!-- security -->
+                        Y
+                        <sbr/>
+                        (LDAP, Active Directory, Kerberos)
+                    </entry>
+                    <entry> <!-- role based -->
+                        Y
+                    </entry>
+                    <entry> <!-- multiple hadoop distros -->
+                    </entry>
+                    <entry> <!-- hadoop on cloud -->
+                    </entry>
+                    <entry> <!-- hosted analytics -->
+                        Y
+                    </entry>
+                    <entry> <!-- share with others -->
+                        Y
+                    </entry>
+                    <entry> <!-- free evaluation -->
+                        Y
+                    </entry>
+                </row>
+                <row>
+                    <entry>
+                        <link xlink:href="http://www.pentaho.com/">Pentaho</link>
+                    </entry>
+                </row>
+            </tbody>
+        </tgroup>
+    </table>
+</chapter>

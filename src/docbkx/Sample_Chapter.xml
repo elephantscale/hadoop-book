@@ -14,7 +14,7 @@
             Figure
             <figure id="sample-figure">
                 <title>Old Mac</title>
-			    <inlinegraphic fileref="tidal_wave_of_data_scaled.png" format="PNG" scale="100%" />
+                <inlinegraphic fileref="tidal_wave_of_data_scaled.png" format="PNG" scale="100%" />
             </figure>
 
             Just an image
@@ -30,7 +30,7 @@
     <sect1>
         <title>sect1</title>
         <para>
-        sample link : <link xlink:href="http://wiki.apache.org/hadoop/PoweredBy">Powered By Hadoop site</link>
+            sample link : <link xlink:href="http://wiki.apache.org/hadoop/PoweredBy">Powered By Hadoop site</link>
         </para>
         <sect2>
             <title>sect1.1</title>
@@ -46,4 +46,14 @@
             See here for complete list of <xref linkend="Challenges"/>
         </para>
     </section>
+
+    <!-- list -->
+    <para>
+        <itemizedlist>
+            <listitem>The Hadoop Source</listitem>
+            <listitem>No packaging except TAR balls</listitem>
+            <listitem>No extra tools</listitem>
+        </itemizedlist>
+
+    </para>
 </chapter>

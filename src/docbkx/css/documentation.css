@@ -330,7 +330,10 @@ table th p:first-child, table td p:first-child, table li p:first-child {
     display:inline;
 }
 
-th, td {border-style:none;}
+/* th, td {border-style:none;} */
+
+th, td { border: 1px dotted lightgrey; }
+
 
 table table td {
     border-bottom:1px dotted #aaa !important;
