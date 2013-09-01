@@ -9,10 +9,6 @@
 
     <title>Why do I Need Hadoop ? </title>
     <para>
-        This section tries to answer the above question.
-
-    </para>
-    <para>
         Most people will consider hadoop because they have to deal with  Big Data.  See <xref linkend="Big_Data"/> for more.
         <figure id="too-much-data">
             <title>Too Much Data</title>
@@ -82,7 +78,7 @@
             Of course writing custom Map Reduce code is not the only way to analyze data in Hadoop.  Higher level Map Reduce is available.  For example a tool named Pig takes english like data flow language and translates them into Map Reduce.  Another tool Hive, takes SQL queries and runs them using Map Reduce.
         </para>
         <para>
-            Business Intelligence (BI) tools can provide even higher level of analysis. Quite a few BI tools can work with Hadoop and analyze data stored in Hadoop.  For a list of BI tools that support Hadoop please see this chapter : <xref linkend="BI_Tools_For_Hadoop" xreflabel="sujee"/>
+            Business Intelligence (BI) tools can provide even higher level of analysis. Quite a few BI tools can work with Hadoop and analyze data stored in Hadoop.  For a list of BI tools that support Hadoop please see this chapter : <xref linkend="BI_Tools_For_Hadoop"/>
 
         </para>
     </section>
