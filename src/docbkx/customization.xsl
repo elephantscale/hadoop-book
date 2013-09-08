@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
 <xsl:stylesheet
+  xmlns:xlink="http://www.w3.org/1999/xlink"
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
   xmlns:l="http://docbook.sourceforge.net/xmlns/l10n/1.0"
   version="1.0">
@@ -156,6 +157,14 @@ user.footer.navigation : 	Called after the standard navigational footer.
     </script>
   </xsl:template>
   <!-- end google analytics -->
+
+  <xsl:template name="user.footer.navigation">
+      <br/>
+      This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.en_US">Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License</a>.
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png" /></a>
+
+  </xsl:template>
+
 
   <!-- title customizing -->
 	<xsl:template name="head.content">
