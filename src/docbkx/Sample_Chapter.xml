@@ -17,6 +17,11 @@
                 <inlinegraphic fileref="tidal_wave_of_data_scaled.png" format="PNG" scale="100%" />
             </figure>
 
+            <figure>
+                <title>Will you join the Hadoop dance?</title>
+                <graphic fileref="hadoop-dance-resized.png"></graphic>
+            </figure>
+
             Just an image
             <mediaobject>
                 <imageobject>

@@ -66,6 +66,7 @@
         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Hadoop_Use_Cases.xml" />
         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Distributions.xml" />
         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Bigdata_Ecosystem.xml" />
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="BI_Tools_For_Hadoop.xml" />
         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Hardware_Software.xml" />
         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Challenges.xml" />
         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Public_Bigdata_Sets.xml" />
