@@ -694,7 +694,7 @@
     </section>
 
     <section>
-        <title>Real time Stream Processing</title>
+        <title>Stream Processing</title>
         <table id="table-bigdata-ecosystem-stream-processing">
             <title>Stream Processing Tools</title>
             <tgroup cols='2' align='left' colsep='1' rowsep='1'>
@@ -711,7 +711,111 @@
                         </entry>
                         <entry>
                             Fast stream processing developed by Twitter.
-                        </entry> </row>
+                        </entry>
+                    </row>
+
+                    <row>
+                        <entry>
+                            <link xlink:href="http://incubator.apache.org/s4/">Apache S4</link>
+                        </entry>
+                        <entry>
+
+                        </entry>
+                    </row>
+
+                    <row>
+                        <entry>
+                            <link xlink:href="http://samza.incubator.apache.org/">Samza</link>
+                        </entry>
+                        <entry>
+
+                        </entry>
+                    </row>
+
+                    <row>
+                        <entry>
+                            <link xlink:href="https://github.com/DataTorrent/Malhar">Malhar</link>
+                        </entry>
+                        <entry>
+                        </entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+    </section>
+
+    <section>
+        <title>YARN based frameworks</title>
+        <table id="table-bigdata-ecosystem-yarn-based-frameworks">
+            <title>YARN based frameworks</title>
+            <tgroup cols='2' align='left' colsep='1' rowsep='1'>
+                <thead>
+                    <row>
+                        <entry>Tool</entry>
+                        <entry>Remarks</entry>
+                    </row>
+                </thead>
+                <tbody>
+
+                    <row>
+                        <entry>
+                            <link xlink:href="http://samza.incubator.apache.org/">Samza</link>
+                        </entry>
+                        <entry>
+
+                        </entry>
+                    </row>
+
+                    <row>
+                        <entry>
+                            <link xlink:href="http://spark-project.org/">Spark</link>
+                        </entry>
+                        <entry>
+                            <link xlink:href="http://spark.incubator.apache.org/docs/0.6.0/running-on-yarn.html">Spark on YARN</link>
+                        </entry>
+                    </row>
+
+                    <row>
+                        <entry>
+                            <link xlink:href="https://github.com/DataTorrent/Malhar">Malhar</link>
+                        </entry>
+                        <entry>
+                        </entry>
+                    </row>
+
+                    <row>
+                        <entry>
+                            <link xlink:href="http://incubator.apache.org/giraph/">Giraph</link>
+                        </entry>
+                        <entry>
+                            <link xlink:href="http://www.slideshare.net/Hadoop_Summit/fast-scalable-graph-processing-apache-giraph-on-yarn">Giraph on YARN</link>
+                        </entry>
+                    </row>
+
+                    <row>
+                        <entry>
+                            <link xlink:href="http://storm-project.net/">Storm</link>
+                        </entry>
+                        <entry>
+                            <link xlink:href="http://developer.yahoo.com/blogs/ydn/storm-yarn-released-open-source-143745133.html">Storm on YARN</link>
+                        </entry>
+                    </row>
+
+                    <row>
+                        <entry>
+                            <link xlink:href="http://hortonworks.com/blog/introducing-hoya-hbase-on-yarn/">Hoya (HBase on YARN)</link>
+                        </entry>
+                        <entry>
+                        </entry>
+                    </row>
+
+                    <row>
+                        <entry>
+                            <link xlink:href="https://github.com/DataTorrent/Malhar">Malhar</link>
+                        </entry>
+                        <entry>
+                        </entry>
+                    </row>
                 </tbody>
             </tgroup>
         </table>
