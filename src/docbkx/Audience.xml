@@ -11,15 +11,16 @@
     <section>
         <title>About "Hadoop illuminated"</title>
         <para>This book is our experiment in making Hadoop knowledge available
-            to the open source community. The book is freely available, and its text is open source.
+            to a wider audience. We want this book to serve as a gentle introduction to Big Data and Hadoop.  No deep technical knowledge is needed to go through the book.  It can be a bed time read :-)
         </para>
         <para>
-            We want this book to serve as an introduction, as a cookbook, and in later parts
-            as an advanced manual.
+            The book is freely available, it is licensed under <link xlink:href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.en_US">Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License</link>.
         </para>
         <para>
-            "Hadoop Illuminated" is a work in progress. Techniques will get added and chapters will get added
-            and updated. We appreciate your feedback. You can follow it on Twitter,
+            "Hadoop Illuminated" is a work in progress.  It is a 'living book'.  We will keep updating the book to reflect the fast moving world of Big Data and hadoop.  So keep checking back.
+        </para>
+        <para>
+            We appreciate your feedback. You can follow it on Twitter,
             discuss it in Google Groups, or send your feedback via email.
         </para>
         <itemizedlist>
@@ -30,28 +31,16 @@
                 Google Group : <link xlink:href="http://groups.google.com/group/hadoop-illuminated">Hadoop Illuminated Google group</link>
             </listitem>
             <listitem>
-                Email Authors Directly : authors @ HadoopIlluminated.com
+                Email Authors Directly : <link xlink:href="mailto:authors@HadoopIlluminated.com">authors@hadoopilluminated.com</link>
             </listitem>
             <listitem>
-                Book GitHub : <link xlink:href="https://github.com/markkerzner/HadoopIlluminated">github.com/markkerzner/HadoopIlluminated</link>
+                Book GitHub : <link xlink:href="https://github.com/hadoop-illuminated/hadoop-book">github.com/hadoop-illuminated/hadoop-book</link>
             </listitem>
             <listitem>
-                Source Code on  GitHub : <link xlink:href="https://github.com/markkerzner/HadoopIlluminatedSource">github.com/markkerzner/HadoopIlluminatedSource</link>
+                Source Code on  GitHub : <link xlink:href="https://github.com/hadoop-illuminated/HI-labs">github.com/hadoop-illuminated/HI-labs</link>
             </listitem>
         </itemizedlist>
     </section>
 
-    <section>
-        <title>About the source code</title>
-        <para>
-            The book's companion source code is hosted on GitHub
-            <ulink url="https://github.com/markkerzner/HadoopIlluminated">here.</ulink>
-            Alternatively, the book can be viewed as a companion to the source code. The goal is
-            to make the source code a set of templates, where one can go to
-            copy a specific template, bring it into one's own project and continue to work
-            by modifying it accordingly. At least I use it this way all the time, keeping the project
-            open in my IDE for convenience.
-        </para>
-    </section>
 
 </chapter>

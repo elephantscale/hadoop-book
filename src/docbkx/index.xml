@@ -30,32 +30,16 @@
         </para>
         <para>
             <ulink url="https://github.com/hadoop-illuminated/hadoop-book">This book on GitHub</ulink> <sbr/>
-            <ulink url="https://github.com/hadoop-illuminated/hadoop-labs">Companion project on GitHub</ulink>
+            <ulink url="https://github.com/hadoop-illuminated/HI-labs">Companion project on GitHub</ulink>
         </para>
     </dedication>
 
     <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="acknowledgements.xml" />
 
-    <part >
-        <title>About this book</title>
-        <partintro>
-            <literallayout>
-            </literallayout>
-        </partintro>
         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Audience.xml" />
         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="About_Authors.xml" />
         <!-- <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Code.xml" />  -->
-    </part>
 
-    <part>
-        <title>High level introduction to Hadoop</title>
-        <partintro>
-            <para>
-                Learn about Hadoop
-            </para>
-            <literallayout>
-            </literallayout>
-        </partintro>
         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Why_Do_I_Need_Hadoop.xml" />
         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Big_Data.xml" />
         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Intro.xml" />
@@ -71,64 +55,9 @@
         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Challenges.xml" />
         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Public_Bigdata_Sets.xml" />
         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Bigdata_Links.xml" />
-    </part>
 
-    <part>
-        <title>Hadoop In Depth</title>
-        <partintro>
-            <para>
-                This section will take a closer look at Hadoop internals.
-            </para>
-            <para>
-                Coming Soon:
-                <itemizedlist>
-                    <listitem>'Hello world' in Map Reduce</listitem>
-                    <listitem>Configurations</listitem>
-                    <listitem>Counters</listitem>
-                    <listitem>Distributed Cache</listitem>
-                </itemizedlist>
-            </para>
-        </partintro>
-        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="HDFS_Namenode.xml" />
-        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="MapReduce_Internals.xml" />
-        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Hadoop_Versions.xml" />
-        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Hadoop_V1_V2.xml" />
-        <!--
-        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="MapReduce_Configuration.xml" />
-         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="MapReduce_Hello_World.xml" />
-         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="MapReduce_Counters.xml" />
-        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="MapReduce_Distributed_Cache.xml" />
-        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="MapReduce_Types.xml" />
-        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="MapReduce_Joins.xml" />
-        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="HA.xml" />
-        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Benchmarking_Hadoop.xml" />
-        -->
 
-    </part>
 
-    <part>
-        <title>Hadoop Administration</title>
-        <partintro>
-            <para>
-                Coming Soon:
-            </para>
-            <literallayout>
-            </literallayout>
-        </partintro>
-    </part>
-
-    <part>
-        <title>Hadoop Cookbook</title>
-        <partintro>
-            <para>
-                This section has specific guides and .
-            </para>
-            <literallayout>
-            </literallayout>
-        </partintro>
-        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Handy_Classes.xml" />
-        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Handy_Classes_HBase.xml" />
-    </part>
 
     <!--
     <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Sorting1.xml" />
