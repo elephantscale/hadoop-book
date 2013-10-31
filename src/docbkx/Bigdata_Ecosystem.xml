@@ -126,6 +126,9 @@
             </tgroup>
         </table>
     </section>
+
+
+
     <section>
         <title>Querying data in HDFS</title>
         <table id="table-bigdata-ecosystem-querying">
@@ -138,6 +141,22 @@
                     </row>
                 </thead>
                 <tbody>
+                    <row>
+                        <entry>
+                            <link xlink:href="http://hadoop.apache.org/docs/r1.2.1/mapred_tutorial.html">Java MapReduce</link>
+                        </entry>
+                        <entry>
+                            Native mapreduce in Java
+                        </entry>
+                    </row>
+                    <row>
+                        <entry>
+                            <link xlink:href="http://hadoop.apache.org/docs/r1.1.2/streaming.html">Hadoop Streaming</link>
+                        </entry>
+                        <entry>
+                            Map Reduce in other languages (Ruby, Python)
+                        </entry>
+                    </row>
                     <row>
                         <entry>
                             <link xlink:href="http://pig.apache.org/">Pig</link>
@@ -196,16 +215,23 @@
                             Text search on HDFS
                         </entry>
                     </row>
+                    <row>
+                        <entry>
+                            <link xlink:href="http://blog.cloudera.com/blog/2012/10/cloudera-impala-real-time-queries-in-apache-hadoop-for-real/">Impala</link>
+                        </entry>
+                        <entry>
+                            Provides real time queries over Big Data.  Developed by Cloudera.
+                        </entry>
+                    </row>
                 </tbody>
             </tgroup>
         </table>
     </section>
 
-
     <section>
-        <title>Real time data access</title>
-        <table id="table-bigdata-ecosystem-real-time">
-            <title>Real time access to data</title>
+        <title>SQL on Hadoop / HBase</title>
+        <table id="table-bigdata-ecosystem-sql-querying">
+            <title>SQL Querying Data in HDFS</title>
             <tgroup cols='2' align='left' colsep='1' rowsep='1'>
                 <thead>
                     <row>
@@ -216,31 +242,32 @@
                 <tbody>
                     <row>
                         <entry>
-                            <link xlink:href="http://hbase.apache.org/">HBase</link>
+                            <link xlink:href="http://hive.apache.org">Hive</link>
                         </entry>
                         <entry>
-                            A NoSQL data store built on top of Hadoop.  Provides real time access to data.
-                        </entry>
-                    </row>
-                    <row>
-                        <entry>
-                            <link xlink:href="http://accumulo.apache.org/">Accumulo</link>
-                        </entry>
-                        <entry>
-                            A NoSQL store developed by NSA (yes, that agency!).
+                            Hive provides an SQL layer on top of HDFS.  The data can be queried using SQL rather than writing Java Map Reduce code.
                         </entry>
                     </row>
                     <row>
                         <entry>
-                            <link xlink:href="http://incubator.apache.org/drill/">Apache Drill</link>
+                            <link xlink:href="http://hortonworks.com/blog/100x-faster-hive/">Stinger</link>  / <link xlink:href="http://hortonworks.com/blog/introducing-tez-faster-hadoop-processing/">Tez</link>
                         </entry>
                         <entry>
-                            Interactive analysis of large scale data sets.
+                            Next generation Hive.
                         </entry>
                     </row>
                     <row>
                         <entry>
-                            <link xlink:href="http://www.citusdata.com/">Citus Data</link>
+                            <link xlink:href="http://hadapt.com/">Hadapt</link>
+                        </entry>
+                        <entry>
+                            Provides SQL support for Hadoop. <sbr/>
+                            (commercial product)
+                        </entry>
+                    </row>
+                    <row>
+                        <entry>
+                            <link xlink:href="http://www.greenplum.com/blog/topics/hadoop/introducing-pivotal-hd">Greenplum HAWQ</link>
                         </entry>
                         <entry>
                             Relational database with SQL support on top of Hadoop HDFS. <sbr/>
@@ -271,16 +298,117 @@
                             SQL layer over HBase.  Developed by DrawnToScale.com.
                         </entry>
                     </row>
+                    <row>
+                        <entry>
+                            <link xlink:href="http://www.citusdata.com/">Citus Data</link>
+                        </entry>
+                        <entry>
+                            Relational database with SQL support on top of Hadoop HDFS. <sbr/>
+                            (commercial product)
+                        </entry>
+                    </row>
                 </tbody>
             </tgroup>
         </table>
     </section>
 
+    <section>
+        <title>Real time querying</title>
+        <table id="table-bigdata-ecosystem-real-time-querying">
+            <title>Real time queries</title>
+            <tgroup cols='2' align='left' colsep='1' rowsep='1'>
+                <thead>
+                    <row>
+                        <entry>Tool</entry>
+                        <entry>Remarks</entry>
+                    </row>
+                </thead>
+                <tbody>
+                    <row>
+                        <entry>
+                            <link xlink:href="http://incubator.apache.org/drill/">Apache Drill</link>
+                        </entry>
+                        <entry>
+                            Interactive analysis of large scale data sets.
+                        </entry>
+                    </row>
+                    <row>
+                        <entry>
+                            <link xlink:href="http://blog.cloudera.com/blog/2012/10/cloudera-impala-real-time-queries-in-apache-hadoop-for-real/">Impala</link>
+                        </entry>
+                        <entry>
+                            Provides real time queries over Big Data.  Developed by Cloudera.
+                        </entry>
+                    </row>
+                    <row>
+                        <entry>
+                            <link xlink:href="http://www.kiji.org/">Kiji</link>
+                        </entry>
+                        <entry>
+                            Build Real-time Big Data Applications on Apache HBase
+                        </entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+    </section>
 
     <section>
-        <title>Big Data databases</title>
-        <table id="table-bigdata-ecosystem-dbs">
-            <title>Databases for Big Data</title>
+        <title>Stream Processing</title>
+        <table id="table-bigdata-ecosystem-stream-processing">
+            <title>Stream Processing Tools</title>
+            <tgroup cols='2' align='left' colsep='1' rowsep='1'>
+                <thead>
+                    <row>
+                        <entry>Tool</entry>
+                        <entry>Remarks</entry>
+                    </row>
+                </thead>
+                <tbody>
+                    <row>
+                        <entry>
+                            <link xlink:href="http://storm-project.net/">Storm</link>
+                        </entry>
+                        <entry>
+                            Fast stream processing developed by Twitter.
+                        </entry>
+                    </row>
+
+                    <row>
+                        <entry>
+                            <link xlink:href="http://incubator.apache.org/s4/">Apache S4</link>
+                        </entry>
+                        <entry>
+
+                        </entry>
+                    </row>
+
+                    <row>
+                        <entry>
+                            <link xlink:href="http://samza.incubator.apache.org/">Samza</link>
+                        </entry>
+                        <entry>
+
+                        </entry>
+                    </row>
+
+                    <row>
+                        <entry>
+                            <link xlink:href="https://github.com/DataTorrent/Malhar">Malhar</link>
+                        </entry>
+                        <entry>
+                            Massively scalable, fault-tolerant, stateful native Hadoop platform, developed by <link xlink:href="https://datatorrent.com">DataTorrent</link>
+                        </entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+    </section>
+
+    <section>
+        <title>NOSQL stores</title>
+        <table id="table-bigdata-ecosystem-nosql">
+            <title>NOSQL stores for Big Data</title>
             <tgroup cols='2' align='left' colsep='1' rowsep='1'>
                 <thead>
                     <row>
@@ -329,6 +457,14 @@
                             Distributed key value store developed by LinkedIn.
                         </entry>
                     </row>
+                    <row>
+                        <entry>
+                            <link xlink:href="http://accumulo.apache.org/">Accumulo</link>
+                        </entry>
+                        <entry>
+                            A NoSQL store developed by NSA (yes, that agency!).
+                        </entry>
+                    </row>
                 </tbody>
             </tgroup>
         </table>
@@ -352,6 +488,14 @@
                         </entry>
                         <entry>
                             On demand Hadoop on Amazon Cloud.
+                        </entry>
+                    </row>
+                    <row>
+                        <entry>
+                            <link xlink:href="https://cloud.google.com/solutions/hadoop">Hadoop in Google Cloud</link>
+                        </entry>
+                        <entry>
+                            Hadoop runs on Google Cloud
                         </entry>
                     </row>
                     <row>
@@ -454,6 +598,14 @@
                             Popular serialization library (not a Hadoop project).
                         </entry>
                     </row>
+                    <row>
+                        <entry>
+                            <link xlink:href="http://parquet.io/">Parquet</link>
+                        </entry>
+                        <entry>
+                            columnar storage format for Hadoop
+                        </entry>
+                    </row>
                 </tbody>
             </tgroup>
         </table>
@@ -510,7 +662,7 @@
     </section>
 
     <section>
-        <title>Applications</title>
+        <title>Applications / Platforms</title>
         <table id="table-bigdata-ecosystem-applications">
             <title>Applications that run on top of Hadoop</title>
             <tgroup cols='2' align='left' colsep='1' rowsep='1'>
@@ -535,6 +687,14 @@
                         </entry>
                         <entry>
                             Fast graph processing on top of Hadoop.
+                        </entry>
+                    </row>
+                    <row>
+                        <entry>
+                            <link xlink:href="http://www.lilyproject.org/lily/index.html">Lily</link>
+                        </entry>
+                        <entry>
+                            Lily unifies Apache HBase, Hadoop and Solr into a comprehensively integrated, interactive data platform 
                         </entry>
                     </row>
                 </tbody>
@@ -693,56 +853,6 @@
         </table>
     </section>
 
-    <section>
-        <title>Stream Processing</title>
-        <table id="table-bigdata-ecosystem-stream-processing">
-            <title>Stream Processing Tools</title>
-            <tgroup cols='2' align='left' colsep='1' rowsep='1'>
-                <thead>
-                    <row>
-                        <entry>Tool</entry>
-                        <entry>Remarks</entry>
-                    </row>
-                </thead>
-                <tbody>
-                    <row>
-                        <entry>
-                            <link xlink:href="http://storm-project.net/">Storm</link>
-                        </entry>
-                        <entry>
-                            Fast stream processing developed by Twitter.
-                        </entry>
-                    </row>
-
-                    <row>
-                        <entry>
-                            <link xlink:href="http://incubator.apache.org/s4/">Apache S4</link>
-                        </entry>
-                        <entry>
-
-                        </entry>
-                    </row>
-
-                    <row>
-                        <entry>
-                            <link xlink:href="http://samza.incubator.apache.org/">Samza</link>
-                        </entry>
-                        <entry>
-
-                        </entry>
-                    </row>
-
-                    <row>
-                        <entry>
-                            <link xlink:href="https://github.com/DataTorrent/Malhar">Malhar</link>
-                        </entry>
-                        <entry>
-                        </entry>
-                    </row>
-                </tbody>
-            </tgroup>
-        </table>
-    </section>
 
     <section>
         <title>YARN based frameworks</title>
