@@ -426,4 +426,101 @@ The previous solution using Teradata and IBM Netezza was time consuming and comp
         </section>
     </section>
 
+    <section>
+        <title>Retail</title>
+        <section>
+            <title>Etsy</title>
+            <para>
+                <link xlink:href="http://www.etsy.com">Etsy</link> is an online market place for handmade stuff.
+            </para>
+            <para>
+                <emphasis role="bold">Problem: </emphasis>
+                Analyzing large volume of log data, without taxing the databases
+            </para>
+            <para>
+                <emphasis role="bold">Solution: </emphasis>
+                Etsy uses Hadoop to analyze large volumes of log data to calculate user behaviour,  search recommendations...etc
+            </para>
+            <para>
+                <emphasis role="bold">Hadoop Vendor: </emphasis>
+                Amazon Elastic Map Reduce (EMR)
+            </para>
+            <para>
+                <emphasis role="bold">Cluster/Data size: </emphasis>
+                varies
+            </para>
+            <para>
+                <emphasis role="bold">Links: </emphasis><sbr/>
+                <link xlink:href="http://www.slideshare.net/mwalkerinfo/funnel-analysis-in-hadoop-at-etsy">Hadoop at Etsy</link>  (March 2013)
+                <sbr/>
+                <link xlink:href="http://gigaom.com/2011/11/02/how-etsy-handcrafted-a-big-data-strategy/">gigaom article</link> (Nov 2011)
+                <sbr/>
+                <link xlink:href="http://assets.en.oreilly.com/1/event/61/Ephemeral%20Hadoop%20Clusters%20in%20the%20Cloud%20Presentation.pdf">pdf</link> 
+                (<link xlink:href="cached_reports/Esty_Ephemeral_Hadoop_Clusters_in_the_Cloud.pdf">cached copy</link>)
+                (Nov 2011)
+                <sbr/>
+            </para>
+        </section>
+
+        <section>
+            <title>Sears</title>
+            <para>
+                <link xlink:href="http://www.sears.com">Sears</link> is a department store (online and brick and mortar).
+            </para>
+            <para>
+                <emphasis role="bold">Problem: </emphasis>
+                Sears' process for analyzing marketing campaigns for loyalty club members used to take six weeks on mainframe, Teradata, and SAS servers. The old models made use of 10% of available data
+            </para>
+            <para>
+                <emphasis role="bold">Solution: </emphasis>
+                The new process running on Hadoop can be completed weekly. For certain online and mobile commerce scenarios, Sears can now perform daily analyses. Targeting is more granular, in some cases down to the individual customer.  New process can use 100% of available data.
+            </para>
+            <para>
+                <emphasis role="bold">Hadoop Vendor: </emphasis>
+                ?
+            </para>
+            <para>
+                <emphasis role="bold">Cluster/Data size: </emphasis>
+                ?
+            </para>
+            <para>
+                <emphasis role="bold">Links: </emphasis><sbr/>
+                <link xlink:href="http://www.informationweek.com/global-cio/interviews/why-sears-is-going-all-in-on-hadoop/240009717">http://www.informationweek.com/global-cio/interviews/why-sears-is-going-all-in-on-hadoop/240009717</link>  (Oct 2012)
+                <sbr/>
+                <link xlink:href="http://www.metascale.com/resources/blogs/187-big-data-case-study-hadoop-first-usage-in-production-at-sears-holdings">http://www.metascale.com/resources/blogs/187-big-data-case-study-hadoop-first-usage-in-production-at-sears-holdings</link>  (Aug 2013)
+            </para>
+        </section>
+    </section>
+
+    <section>
+        <title>Software / Software As Service (SAS) / Platforms / Cloud</title>
+        <section>
+            <title>SalesForce</title>
+            <para>
+                <link xlink:href="http://www.salesforce.com">SalesForce</link> 
+            </para>
+            <para>
+                <emphasis role="bold">Problem: </emphasis>
+                Analyzing data that is generated at a rate of multiple terabytes / day
+            </para>
+            <para>
+                <emphasis role="bold">Solution: </emphasis>
+                SalesForce uses Hadoop to compute Product Metrics,  Customer Behavior, Monitoring ..etc
+            </para>
+            <para>
+                <emphasis role="bold">Hadoop Vendor: </emphasis>
+                Apache Hadoop
+            </para>
+            <para>
+                <emphasis role="bold">Cluster/Data size: </emphasis>
+                ?
+            </para>
+            <para>
+                <emphasis role="bold">Links: </emphasis><sbr/>
+                <link xlink:href="http://www.slideshare.net/narayan26/data-sciencewebinar-061312-13372205">presentation</link>  (June 2012)
+                <sbr/>
+            </para>
+        </section>
+    </section>
+
 </chapter>
