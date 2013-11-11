@@ -223,6 +223,14 @@
                             Provides real time queries over Big Data.  Developed by Cloudera.
                         </entry>
                     </row>
+                    <row>
+                        <entry>
+                            <link xlink:href="http://prestodb.io/">Presto</link>
+                        </entry>
+                        <entry>
+                            Developed by Facebook, provides fast SQL querying over Hadoop
+                        </entry>
+                    </row>
                 </tbody>
             </tgroup>
         </table>
@@ -261,8 +269,7 @@
                             <link xlink:href="http://hadapt.com/">Hadapt</link>
                         </entry>
                         <entry>
-                            Provides SQL support for Hadoop. <sbr/>
-                            (commercial product)
+                            Provides SQL support for Hadoop.  (commercial product)
                         </entry>
                     </row>
                     <row>
@@ -270,8 +277,7 @@
                             <link xlink:href="http://www.greenplum.com/blog/topics/hadoop/introducing-pivotal-hd">Greenplum HAWQ</link>
                         </entry>
                         <entry>
-                            Relational database with SQL support on top of Hadoop HDFS. <sbr/>
-                            (commercial product)
+                            Relational database with SQL support on top of Hadoop HDFS.  (commercial product)
                         </entry>
                     </row>
                     <row>
@@ -280,6 +286,14 @@
                         </entry>
                         <entry>
                             Provides real time queries over Big Data.  Developed by Cloudera.
+                        </entry>
+                    </row>
+                    <row>
+                        <entry>
+                            <link xlink:href="http://prestodb.io/">Presto</link>
+                        </entry>
+                        <entry>
+                            Developed by Facebook, provides fast SQL querying over Hadoop
                         </entry>
                     </row>
                     <row>
@@ -303,8 +317,7 @@
                             <link xlink:href="http://www.citusdata.com/">Citus Data</link>
                         </entry>
                         <entry>
-                            Relational database with SQL support on top of Hadoop HDFS. <sbr/>
-                            (commercial product)
+                            Relational database with SQL support on top of Hadoop HDFS.  (commercial product)
                         </entry>
                     </row>
                 </tbody>
