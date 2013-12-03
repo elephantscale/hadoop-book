@@ -505,7 +505,15 @@
                     </row>
                     <row>
                         <entry>
-                            <link xlink:href="https://cloud.google.com/solutions/hadoop">Hadoop in Google Cloud</link>
+                            <link xlink:href="http://www.rackspace.com/">Hadoop on Rackspace</link>
+                        </entry>
+                        <entry>
+                            On demand and managed Hadoop at Rackspace
+                        </entry>
+                    </row>
+                    <row>
+                        <entry>
+                            <link xlink:href="https://cloud.google.com/solutions/hadoop">Hadoop on Google Cloud</link>
                         </entry>
                         <entry>
                             Hadoop runs on Google Cloud
