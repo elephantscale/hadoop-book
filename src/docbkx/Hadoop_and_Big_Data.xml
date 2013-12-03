@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter version="5.0" xml:id="Hadoop_and_Big_Data" xmlns="http://docbook.org/ns/docbook"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xi="http://www.w3.org/2001/XInclude"
+    xmlns:svg="http://www.w3.org/2000/svg"
+    xmlns:m="http://www.w3.org/1998/Math/MathML"
+    xmlns:html="http://www.w3.org/1999/xhtml"
+    xmlns:db="http://docbook.org/ns/docbook">
+
+    <title>Hadoop and Big Data</title>
+    <para>
+        Most people will consider hadoop because they have to deal with  Big Data.  See <xref linkend="Big_Data"/> for more.
+        <figure id="too-much-data">
+            <title>Too Much Data</title>
+            <graphic fileref="donkey.jpg" format="JPG" />
+        </figure>
+    </para>
+
+    <sect1>
+        <title>How Hadoop solves the Big Data problem</title>
+        <sect2>
+            <title>Hadoop is built to run on a cluster of machines</title>
+            <para>
+                Lets start with an example.  Say we need to store lots of photos.  We will start with a single disk.  When we exceed a single disk, we may use a few disks stacked on a machine.  When we max out all the disks on a single machine,  we need to get a bunch of machines, each with a bunch of disks.
+
+            <figure id="scaling_storage">
+                <title>Scaling Storage</title>
+                <inlinegraphic fileref="scaling_storage.png" format="PNG" scale="100%" />
+            </figure>
+            </para>
+            <para>
+                This is exactly how Hadoop is built.  Hadoop is designed to run on a cluster of machines from the get go.
+            </para>
+        </sect2>
+        <sect2>
+            <title>Hadoop clusters scale horizontally</title>
+            <para>
+                More storage and compute power can be achieved by adding more nodes to a Hadoop cluster.  This eliminates the need to buy more and more powerful and expensive hardware.
+            </para>
+        </sect2>
+        <sect2>
+            <title>Hadoop can handle unstructured / semi-structured data</title>
+            <para>
+                Hadoop doesn't enforce a 'schema' on the data it stores.  It can handle arbitrary text and binary data.  So Hadoop can 'digest' any unstructured data easily.
+            </para>
+        </sect2>
+
+        <sect2>
+            <title>Hadoop clusters provides storage and computing</title>
+            <para>
+                We saw how having separate storage and processing clusters is not the best fit for Big Data.  Hadoop clusters provide storage and distributed computing all in one.
+            </para>
+        </sect2>
+    </sect1>
+
+    <section>
+        <title>
+            Business Case for Hadoop
+        </title>
+
+        <section>
+            <title>Hadoop provides storage for Big Data at reasonable cost</title>
+            <para>
+                Storing Big Data using traditional storage can be expensive.  Hadoop is built around commodity hardware.  Hence it can provide fairly large storage for a reasonable cost.  Hadoop has been used in the field at Peta byte scale.
+            </para>
+            <para>
+                One study by Cloudera suggested that Enterprises usually spend around $25,000 to $50,000 dollars per tera byte per year.  With Hadoop this cost drops to few thousands of dollars per tera byte per year.  And hardware gets cheaper and cheaper this cost continues to drop.
+            </para>
+            <para>
+                More info : <xref linkend="HDFS_Intro"/>
+            </para>
+        </section>
+
+
+        <section>
+            <title>
+                Hadoop allows to capture new or more data
+            </title>
+            <para>
+                Some times organizations don't capture a type of data, because it was too cost prohibitive to store it.  Since Hadoop provides storage at reasonable cost, this type of data can be captured and stored.
+            </para>
+            <para>
+                One example would be web site click logs.  Because the volume of these logs can be very  high, not many organizations captured these.  Now with Hadoop it is possible to capture and store the logs
+            </para>
+        </section>
+
+
+        <section>
+            <title>
+                With Hadoop, you can store data longer
+            </title>
+            <para>
+                To manage the volume of data stored, companies periodically purge older data.  For example only logs for the last 3 months could be stored and older logs were deleted.  With Hadoop it is possible to store the historical data longer.  This allows new analytics to be done on older historical data.
+            </para>
+            <para>
+                For example, take click logs from a web site.  Few years ago, these logs were stored for a brief period of time to calculate statics like popular pages ..etc.  Now with Hadoop it is viable to store these click logs for longer period of time.
+            </para>
+        </section>
+
+        <section>
+            <title>
+                Hadoop provides scalable analytics
+            </title>
+            <para>
+                There is no point in storing all the data, if we can't analyze them.  Hadoop not only provides distributed storage, but also distributed processing as well.  Meaning we can crunch a large volume of data in parallel.  The compute framework of Hadoop is called Map Reduce.  Map Reduce has been proven to the scale of peta bytes.
+            </para>
+            <para>
+                <xref linkend="MapReduce_Intro"/>
+            </para>
+        </section>
+
+        <section>
+            <title>
+                Hadoop provides rich analytics
+            </title>
+            <para>
+                Native Map Reduce supports Java as primary programming language.  Other languages like Ruby, Python and R can be used as well.
+            </para>
+            <para>
+                Of course writing custom Map Reduce code is not the only way to analyze data in Hadoop.  Higher level Map Reduce is available.  For example a tool named Pig takes english like data flow language and translates them into Map Reduce.  Another tool Hive, takes SQL queries and runs them using Map Reduce.
+            </para>
+            <para>
+                Business Intelligence (BI) tools can provide even higher level of analysis. Quite a few BI tools can work with Hadoop and analyze data stored in Hadoop.  For a list of BI tools that support Hadoop please see this chapter : <xref linkend="BI_Tools_For_Hadoop"/>
+
+            </para>
+        </section>
+    </section>
+
+</chapter>

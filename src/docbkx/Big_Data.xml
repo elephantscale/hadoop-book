@@ -51,11 +51,15 @@
             <listitem>
                 sensor data : sensors embedded in roads to monitor traffic and misc. other applications generate a large volume of data
             </listitem>
+            <listitem>
+                Connected Devices : Smart phones are a great example.  For example when you use a navigation application like Google Maps or Waze, your phone sends pings back reporting its location and speed (this information is used for calculating traffic hotspots).  Just imagine hundres of millions (or even billions) of devices consuming data and generating data.
+            </listitem>
         </itemizedlist>
     </sect1>
 
     <sect1>
         <title>Examples of Big Data in the Real world</title>
+        So how much data are we talking about?
         <itemizedlist>
             <listitem>
                 Facebook : has 40 PB of data and captures 100 TB / day
@@ -132,26 +136,13 @@
         </sect2>
     </sect1>
 
-    <sect1>
-        <title>How Hadoop solves the Big Data problem</title>
-        <sect2>
-            <title>Hadoop clusters scale horizontally</title>
-            <para>
-                More storage and compute power can be achieved by adding more nodes to a Hadoop cluster.  This eliminates the need to buy more and more powerful and expensive hardware.
-            </para>
-        </sect2>
-        <sect2>
-            <title>Hadoop can handle unstructured / semi-structured data</title>
-            <para>
-                Hadoop doesn't enforce a 'schema' on the data it stores.  It can handle arbitrary text and binary data.  So Hadoop can 'digest' any unstructured data easily.
-            </para>
-        </sect2>
+    <section>
+        <title>
+            Taming Big Data
+        </title>
+        <para>
+            So as we have seen above, Big Data defies traditional storage.  So how do we handle Big Data?  In the next chapter we will see about <xref linkend="Hadoop_and_Big_Data"/>
+        </para>
+    </section>
 
-        <sect2>
-            <title>Hadoop clusters provides storage and computing</title>
-            <para>
-                We saw how having separate storage and processing clusters is not the best fit for Big Data.  Hadoop clusters provide storage and distributed computing all in one.
-            </para>
-        </sect2>
-    </sect1>
 </chapter>
