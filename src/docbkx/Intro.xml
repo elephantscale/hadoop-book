@@ -173,7 +173,7 @@
         </para>            
             <figure>
                 <title>The Hadoop Zoo</title>
-                <graphic fileref="intro-01.png"></graphic>
+                <graphic fileref="chapter-intro-01.png"></graphic>
             </figure>            
         <section>
             <title>HDFS - Hadoop Distributed File System</title>
@@ -568,8 +568,8 @@
             <para>
                 Hadoop:
                 <programlisting language="java">
-                    public class WordCount extends Configured implements Tool {
-                    public int run(String[] args) throws Exception {
+public class WordCount extends Configured implements Tool {
+public int run(String[] args) throws Exception {
                 </programlisting>
             </para>
             <para>
@@ -578,9 +578,9 @@
             <para>
                 You:
                 <programlisting language="java">
-                    Job job = new Job(getConf());
-                    job.setJarByClass(WordCount.class);
-                    job.setJobName("wordcount");
+    Job job = new Job(getConf());
+    job.setJarByClass(WordCount.class);
+    job.setJobName("wordcount");
                 </programlisting>
             </para>
             <para>
@@ -590,10 +590,10 @@
             <para>
                 Hadoop
                 <programlisting language="java">
-                    public static class Map extends Mapper &lt;LongWritable, Text, Text, IntWritable&gt; {
-                    public void map(LongWritable key, Text value, Context context)
-                    throws IOException, InterruptedException {
-                    String line = value.toString();
+        public static class Map extends Mapper &lt;LongWritable, Text, Text, IntWritable&gt; {
+        public void map(LongWritable key, Text value, Context context)
+        throws IOException, InterruptedException {
+            String line = value.toString();
                 </programlisting>
             </para>
             <para>
@@ -602,12 +602,12 @@
             <para>
                 You
                 <programlisting language="java">
-                    String [] tokens = line.split(" ,");
-                    for (String token: tokens) {
-                    Text word = new Text();
-                    word.set(token);
-                    context.write(word, new IntWritable(1));
-                    }
+            String [] tokens = line.split(" ,");
+            for (String token: tokens) {
+            Text word = new Text();
+            word.set(token);
+            context.write(word, new IntWritable(1));
+        }
                 </programlisting>
             </para>
             <para>
@@ -624,11 +624,10 @@
                 grouping the same words together. Can you count that?
             </para>
             <para>
-                Listing 1.5 Hadoop
                 <programlisting language="java">
-                    public static class Reduce extends Reducer &lt;Text, IntWritable, Text, IntWritable&gt; {
-                    @Override public void reduce(Text key, Iterable&lt;IntWritable&gt; values, Context context)
-                    throws IOException, InterruptedException {
+        public static class Reduce extends Reducer &lt;Text, IntWritable, Text, IntWritable&gt; {
+        @Override public void reduce(Text key, Iterable&lt;IntWritable&gt; values, Context context)
+        throws IOException, InterruptedException {
                 </programlisting>
             </para>
             <para>
@@ -637,11 +636,11 @@
             <para>
                 You
                 <programlisting language="java">
-                    int sum = 0;
-                    for (IntWritable val : values) {
-                    sum += val.get();
-                    }
-                    context.write(key, new IntWritable(sum));
+            int sum = 0;
+                for (IntWritable val : values) {
+                sum += val.get();
+            }
+            context.write(key, new IntWritable(sum));
                 </programlisting>
             </para>
             <para>
@@ -650,9 +649,9 @@
             <para>
                 Hadoop:
                 <programlisting language="java">
-                    // This is invisible - no code
-                    // but you can trust that he does it
-                    }
+            // This is invisible - no code
+            // but you can trust that he does it
+        }
                 </programlisting>
             </para>
         </section>
@@ -678,9 +677,9 @@
             <para>Finally, your Mapper code gives the Map to the framework. This is called
                 emitting the map. It is expressed by the following code line:
             </para>
-            <para>Listing 1.8 Emitting the map
+            <para>
                 <programlisting language="java">
-                    context.write(key, value);
+    context.write(key, value);
                 </programlisting>
             </para>
             <para>Now the framework sorts your maps. Sorting is an interesting process and it
@@ -694,10 +693,10 @@
             </para>
             <para>Going through values in the reducer
                 <programlisting language="java">
-                    int sum = 0;
-                    for (IntWritable val : values) {
-                    sum += val.get();
-                    }
+    int sum = 0;
+        for (IntWritable val : values) {
+        sum += val.get();
+    }
                 </programlisting>
             </para>
             <para>While the key was now the word, the value was count - which, as you may
@@ -708,137 +707,11 @@
             </para>
             <para>Reducer emits the final map
                 <programlisting language="java">
-                    context.write(key, new IntWritable(sum));
+    context.write(key, new IntWritable(sum));
                 </programlisting>
             </para>
         </section>
-        <!--
-        <section>
-            <title>All of the Code</title>
-            <para>Now let’s look at the complete code of your first MapReduce program. Although it
-                is the “Hello World” type of program, you can take it, adjust your Mapper and
-                Reducer to do real processing, and you have a real application. This is especially
-                true since we have prepared all the code that goes with the book as projects, both
-                for Eclipse and for NetBeans. The reader is thus free to download the projects for
-                his or her favorite IDE, and use it as a template. We have followed this approach
-                with every example in the book.
-            </para>
-            <para>Complete WordCount program
-                <programlisting language="java">
-                    package com.shmsoft.hadoopinpractice;
-                    import java.io.IOException;
-                    import org.apache.hadoop.conf.Configured;
-                    import org.apache.hadoop.fs.Path;
-                    import org.apache.hadoop.io.IntWritable;
-                    import org.apache.hadoop.io.LongWritable;
-                    import org.apache.hadoop.io.Text;
-                    import org.apache.hadoop.mapreduce.Job;
-                    import org.apache.hadoop.mapreduce.Mapper;
-                    import org.apache.hadoop.mapreduce.Reducer;
-                    import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;
-                    import org.apache.hadoop.mapreduce.lib.input.TextInputFormat;
-                    import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
-                    import org.apache.hadoop.mapreduce.lib.output.TextOutputFormat;
-                    import org.apache.hadoop.util.Tool;
-                    import org.apache.hadoop.util.ToolRunner;
-                    public class WordCountExample extends Configured implements Tool {
-
-                    private static IntWritable ONE = new IntWritable(1);
-
-                    @Override
-                    public int run(String[] args) throws Exception {
-                    String testData = "test-data/moby-dick.txt";
-                    String outputPath = "test-output";
-                    Job job = new Job(getConf());
-                    job.setJarByClass(WordCountExample.class);
-                    job.setJobName("WordCountExample");
-                    job.setOutputKeyClass(Text.class);
-                    job.setOutputValueClass(IntWritable.class);
-                    job.setMapperClass(Map.class);
-                    job.setCombinerClass(Reduce.class);
-                    job.setReducerClass(Reduce.class);
-                    job.setInputFormatClass(TextInputFormat.class);
-                    job.setOutputFormatClass(TextOutputFormat.class);
-                </programlisting>
-                Best practice -
-                avoid unnecessary
-                object creation in a
-                loop
-                The jar that
-                contains your
-                mapper and reduce
-                code
-                <programlisting language="java">
-                    FileInputFormat.setInputPaths(job, new Path(testData));
-                    FileOutputFormat.setOutputPath(job, new Path(outputPath));
-                    boolean success = job.waitForCompletion(true);
-                    return success ? 0 : 1;
-                    }
-                    public static void main(String[] args) throws Exception {
-                    int ret = ToolRunner.run(new WordCountExample(), args);
-                    System.exit(ret);
-                    }
-                    public static class Map extends Mapper &lt;LongWritable, Text, Text, IntWritable&gt; {
-                    @Override
-                    public void map(LongWritable key, Text value, Context context)
-                    throws IOException, InterruptedException {
-                    String line = value.toString();
-                    String[] words = line.split("\W");
-                    for (String word : words) {
-                    if (word.trim().length() > 0) {
-                    Text text = new Text();
-                    text.set(word);
-                    context.write(text, ONE);
-                    }
-                    }
-                    }
-                    }
-                    public static class Reduce extends Reducer &lt;Text, IntWritable, Text, IntWritable&gt; {
-                    @Override
-                    public void reduce(Text key, Iterable&lt;IntWritable&gt; values, Context context)
-                    throws IOException, InterruptedException {
-                    int sum = 0;
-                    for (IntWritable val : values) {
-                    sum += val.get();
-                    }
-                    context.write(key, new IntWritable(sum));
-                    }
-                    }
-                    }
-                </programlisting>
-            </para>
-            <para>After you run the program, and apply it to the complete text of Moby Dick's -
-                that is what we have used for testing and included in our sample project - your
-                output will look something like this segment:
-            </para>
-            <para>
-                <programlisting language="java">
-                    A 168
-                    ABOUT 1
-                    ACCOUNT 2
-                    ACTUAL 1
-                    ADDITIONAL 1
-                    ADVANCING 2
-                    ADVENTURES 1
-                    AFGHANISTAN 1
-                    AFRICA 1
-                    AFTER 1
-                    AGAINST 1
-                    AGREE 2
-                    AGREEMENT 1
-                    AHAB 10
-                    AK 1
-                    ALFRED 1
-                    ALGERINE 1
-                </programlisting>
-            </para>
-            <para>Running this example on your computer is the first lab at the end of the chapter,
-                where we will also give you practical advice on the setup.
-            </para>
-        </section>
-        -->
     </section>
-
     <!--
     <section>
         <title>How Hadoop Works Inside</title>
@@ -1042,7 +915,7 @@
     </section>
     -->
 
-        <!--
+    <!--
     <section>
         <title>Exercises</title>
         <para>This chapter, as well as all succeeding ones, contains exercises building on the
