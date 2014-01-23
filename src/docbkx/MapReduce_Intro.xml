@@ -7,20 +7,20 @@
          xmlns:html="http://www.w3.org/1999/xhtml"
          xmlns:db="http://docbook.org/ns/docbook">
 
-    <title>Introduction To MapReduce</title>    
+    <title>Introduction To MapReduce</title>
     <sect1>
         <title>How I failed at designing distributed processing</title>
         <para>
             Once, while working on an eDiscovery system, before Hadoop was born,
             I had to scale up my computations: whatever I had done on one computer
-            had to work on thirty computers which we had in our racks. I chose to 
+            had to work on thirty computers which we had in our racks. I chose to
             install JBoss on every machine, only to use its JMS messaging, and my computers
             were talking to each other through that. It was working, but it had its drawbacks:
             <orderedlist>
                 <listitem>
                     It had a concept of master and workers, and the master was dividing the
                     job into tasks for the workers, but this preparation, which happened at the start of the job,
-                    took a long time.                 
+                    took a long time.
                 </listitem>
                 <listitem>
                     The system was not stable: some tasks were forgotten and somehow never performed.
@@ -41,7 +41,7 @@
         </para>
         <para>
             That was quite upsetting. I started having dreams about stacks of Linux servers, piled one upon another.
-            Then I read about the                  
+            Then I read about the
             <link xlink:href="http://en.wikipedia.org/wiki/Fallacies_of_Distributed_Computing">Fallacies of distributed computing</link>
             and realized that I had violated all of them.
         </para>
@@ -56,23 +56,23 @@
             How MapReduce does it
         </title>
         <para>
-            At the risk of being a 
+            At the risk of being a
             <link xlink:href="http://en.wikipedia.org/wiki/Spoiler_(media)">spoiler</link>,
             I will describe
             how the MapReduce part of Hadoop addresses the problems above. Now, if you don't want
             to take it easy but would rather design a good multiprocessing system yourself, then
-            take a pause here, create the design, and 
+            take a pause here, create the design, and
             <link xlink:href="authors@hadoopilluminated.com">email it to us </link>. I will trust you that did not cheat
             by looking ahead. Whether you do this or not, looking at the MapReduce solution gives you
             an appreciation of how much it provides.
             <orderedlist>
                 <listitem>
                     MapReduce has a master and workers, but it is not all push or pull, rather, the work is a
-                    collaborative effort between them. 
+                    collaborative effort between them.
                 </listitem>
                 <listitem>
                     The master assigns a work portion to the next available worker; thus, no work portion is forgotten
-                    or left unfinished. 
+                    or left unfinished.
                 </listitem>
                 <listitem>
                     Workers send periodic heartbeats to the master. If the worker is silent for a period of time (usually 10 minutes),
@@ -81,11 +81,11 @@
                 </listitem>
                 <listitem>
                     All of the data resides in HDFS, which avoids the central server concept, with its limitations on concurrent
-                    access and on size. MapReduce never updates data, rather, it writes new output instead. This is one of the features of functional 
+                    access and on size. MapReduce never updates data, rather, it writes new output instead. This is one of the features of functional
                     programming, and it avoids update lockups.
                 </listitem>
                 <listitem>
-                    MapReduce is network and rack aware, and it optimizes the network traffic. 
+                    MapReduce is network and rack aware, and it optimizes the network traffic.
                 </listitem>
             </orderedlist>
         </para>
@@ -95,7 +95,7 @@
             How MapReduce really does it
         </title>
         <para>
-            In the previous section I have shown how MapReduce resolves the common instability problems 
+            In the previous section I have shown how MapReduce resolves the common instability problems
             found in homegrown distributed systems. But I really just hinted at it, so now let us explain this in a little more detail.
         </para>
         <sect2>
@@ -103,21 +103,21 @@
                 Masters and slaves
             </title>
             <para>
-                Nobody likes to be a slave, and up until now we avoided this terminology, calling them workers. 
-                In that, we followed the remark from the movie 
+                Nobody likes to be a slave, and up until now we avoided this terminology, calling them workers.
+                In that, we followed the remark from the movie
                 <link xlink:href="http://www.imdb.com/title/tt0118715/quotes">Big Lebowski"</link>:
                 "Also, Dude, chinaman is not the preferred nomenclature. Asian-American, please." However, "slave" is
-                the actual term to be used. 
+                the actual term to be used.
             </para>
             <para>
                 MapReduce has a master and slaves, and they collaborate on getting the work done.
                 The master is listed in the "masters" configuration file, and
-                the slaves are listed in the "slaves", and in this way they know about each other. 
+                the slaves are listed in the "slaves", and in this way they know about each other.
                 Furthermore, to be a real "master", the node must run a daemon called the "Job Tracker" daemon.
                 The slave, to be able to do its work, must run another daemon, called the "Tasktracker" daemon.
             </para>
             <para>
-                The master does not divide all the work beforehand, but has an algorithm on how to assign the next portion of the work. 
+                The master does not divide all the work beforehand, but has an algorithm on how to assign the next portion of the work.
                 Thus, no time is spent up front, and the job can begin right away. This division of labor, how much to give to the next Tasktracker,
                 is called "split", and you have control over it. By default, the input file is split into chunks of about 64MB in size.
                 About, because complete lines in the input file have to be preserved.
@@ -131,13 +131,13 @@
                 mark the work as "done" after it was completed, but when it crashed, there was nobody to do this for him, so
                 it kept hanging. You needed watchers over watchers, and so on. Another problem would be created when two
                 overzealous workers wanted the same portion. There was a need to somehow coordinate this effort. My solution was a flag
-                in the database, but then this database was becoming the real-time coordinator for multiple processes, and it is 
+                in the database, but then this database was becoming the real-time coordinator for multiple processes, and it is
                 not very good at that. You can image multiple scenarios when this would fail.
             </para>
             <para>
-                By contrast, in MapReduce the Job Tracker doles out the work. There is no contention: it takes the next split and 
+                By contrast, in MapReduce the Job Tracker doles out the work. There is no contention: it takes the next split and
                 assigns it to the next available Tasktracker. If a Tasktracker crashes, it stops sending heartbeats to the Job Tracker.
-                
+
             </para>
         </sect2>
         <sect2>
@@ -146,19 +146,19 @@
             </title>
             <para>
                 MapReduce works on data that resides in HDFS. As described in the previous section, HDFS (Hadoop Distributed File System)
-                is unlimited and linearly scalable, that is, it grows by adding servers. Thus the problem of a central files server, with its 
+                is unlimited and linearly scalable, that is, it grows by adding servers. Thus the problem of a central files server, with its
                 limited capacity, is eliminated.
             </para>
             <para>
-                Moreover, MapReduce never updates data, rather, it writes a new output instead. 
-                This is one of the principles of 
+                Moreover, MapReduce never updates data, rather, it writes a new output instead.
+                This is one of the principles of
                 <link xlink:href="http://en.wikipedia.org/wiki/Functional_programming">
                     functional programming
-                </link>, and it avoids update lockups. It also avoids the need to coordinate multiple 
+                </link>, and it avoids update lockups. It also avoids the need to coordinate multiple
                 processes writing to the same file; instead, each Reducer writes to its own output file in an HDFS directory,
                 designated as output for the given job. The Reducer's output file is named using the Reducer ID, which is unique.
-                In further processing, MapReduce will treat all of the files in the input directory as its input, and thus 
-                having multiple files either in the input or the output directory is no problem.               
+                In further processing, MapReduce will treat all of the files in the input directory as its input, and thus
+                having multiple files either in the input or the output directory is no problem.
             </para>
         </sect2>
         <sect2>
@@ -166,59 +166,67 @@
                 MapReduce optimizes network traffic
             </title>
             <para>
-                As it turns out, network bandwidth is probably the most precious and scarce resource in a distributed system 
-                and should be used with care. It is a problem which I have not seen even in my eDiscovery application, 
-                because it needs to be correct and stable before optimizing, and getting there is not an easy task.                
+                As it turns out, network bandwidth is probably the most precious and scarce resource in a distributed system
+                and should be used with care. It is a problem which I have not seen even in my eDiscovery application,
+                because it needs to be correct and stable before optimizing, and getting there is not an easy task.
             </para>
             <para>
-                MapReduce, however, notes where the data is (by using the IP address of the block of data that needs to be processed) and it 
-                also knows where the Task Tracker is (by using its IP address). If it can, MapReduce assigns the computation to the server 
-                which has the data locally, that is, whose IP address is the same as that of the data. Every Task Tracker has a copy of the 
+                MapReduce, however, notes where the data is (by using the IP address of the block of data that needs to be processed) and it
+                also knows where the Task Tracker is (by using its IP address). If it can, MapReduce assigns the computation to the server
+                which has the data locally, that is, whose IP address is the same as that of the data. Every Task Tracker has a copy of the
                 code that does the computation (the job's jar, in the case of Java code), and thus the computation can begin.
             </para>
             <para>
-                If local computation is not possible, MapReduce can select the server that is at least closest to the data, so 
+                If local computation is not possible, MapReduce can select the server that is at least closest to the data, so
                 that the network traffic will go through the least number of hops. It does it by comparing the IPs, which have
-                the distance information encoded. Naturally, servers in the same rack are considered closer to each other than servers 
-                on different racks. This property of MapReduce to follow the network configuration is called "rack awareness". You set the 
+                the distance information encoded. Naturally, servers in the same rack are considered closer to each other than servers
+                on different racks. This property of MapReduce to follow the network configuration is called "rack awareness". You set the
                 rack information in the configuration files and reap the benefits.
             </para>
         </sect2>
+
+
+
         <sect2>
             <title>
                 MapReduce has Mappers and Reducers
             </title>
             <para>
-                This may sound like a 
-                <link xlink:href="http://en.wikipedia.org/wiki/Tautology">tautology</link>, 
-                but without Mappers and Reducers what we have described so far can only help us produce one line 
-                of output per one line of input. To go any further, we need to introduce the computational 
-                capability of MapReduce. Let me give an example. Suppose you want to output only unique values from your 
-                input, and drop all duplicates. That is, if in processing a large amount of files you find another one 
-                with the same content as the previous one, you don't really need it. It would be nice if you could assign a 
-                key to your input file, such as the MD5 hash signature of the file, and then compare all signatures of all 
-                files. 
+                MapReduce splits computation into multiple tasks.  They are called Mappers and Reducers.  Next section will illustrate this concept.
+            </para>
+        </sect2>
+        <!--
+            <para>
+                This may sound like a
+                <link xlink:href="http://en.wikipedia.org/wiki/Tautology">tautology</link>,
+                but without Mappers and Reducers what we have described so far can only help us produce one line
+                of output per one line of input. To go any further, we need to introduce the computational
+                capability of MapReduce. Let me give an example. Suppose you want to output only unique values from your
+                input, and drop all duplicates. That is, if in processing a large amount of files you find another one
+                with the same content as the previous one, you don't really need it. It would be nice if you could assign a
+                key to your input file, such as the MD5 hash signature of the file, and then compare all signatures of all
+                files.
             </para>
             <para>
-                Well, this is exactly what MapReduce does. It asks you to assign a key to your input value, and it then 
-                sorts all your values by key. The files with the same content will have the same hash value, will end up 
+                Well, this is exactly what MapReduce does. It asks you to assign a key to your input value, and it then
+                sorts all your values by key. The files with the same content will have the same hash value, will end up
                 together in the sort order, and you will be able to drop them.
             </para>
             <para>
-                Or say, you don't want to drop the inputs with the same key, but rather you want to analyze them. For example, 
-                you may be reading financial records, checking account transactions, and you may want to group all transaction 
-                for the same accounts together, so that you can calculate the balance. Again, MapReduce has already done 
+                Or say, you don't want to drop the inputs with the same key, but rather you want to analyze them. For example,
+                you may be reading financial records, checking account transactions, and you may want to group all transaction
+                for the same accounts together, so that you can calculate the balance. Again, MapReduce has already done
                 this for you: all records for the same account will be grouped together (the sorting being done by the Hadoop framework),
                 and all you have to do is calculate the total.
             </para>
             <para>
-                We can now introduce the concept of Mappers and Reducers: Mappers process, or understand the input, and 
-                express this understanding by assigning the key, and potentially extracting or changing the value (such as converting 
+                We can now introduce the concept of Mappers and Reducers: Mappers process, or understand the input, and
+                express this understanding by assigning the key, and potentially extracting or changing the value (such as converting
                 the currency). The Reducer receives all values with the same key, and can loop through them, to perform any operation required.
             </para>
             <para>
-                The Mapper's pair of key and value, usually denoted as &lt;key, value&gt;, is called a map. The Mapper 
-                that does the above calculation is called to "emit the map", and the Reducer then loops through all the maps, 
+                The Mapper's pair of key and value, usually denoted as &lt;key, value&gt;, is called a map. The Mapper
+                that does the above calculation is called to "emit the map", and the Reducer then loops through all the maps,
                 and summarizes the results in some way.
             </para>
         </sect2>
@@ -227,10 +235,10 @@
                 A practical example
             </title>
             <para>
-                To explain the MapReduce calculation better, let me give you a practical example. 
-                In one ancient book I read that to get around through the chambers 
-                of Heaven, you had to give a seal to the angel who was guarding each door. The seal was to be created 
-                in your own thought: you concentrate on the mystical name until it becomes a real physical seal. 
+                To explain the MapReduce calculation better, let me give you a practical example.
+                In one ancient book I read that to get around through the chambers
+                of Heaven, you had to give a seal to the angel who was guarding each door. The seal was to be created
+                in your own thought: you concentrate on the mystical name until it becomes a real physical seal.
                 You then hand this seal to the angel, and he lets you in.
             </para>
             <figure>
@@ -238,57 +246,130 @@
                 <graphic fileref="mr_intro_1.png"></graphic>
             </figure>
             <para>
-                To calculate the meaning of the seal, the angel had to take the numerical value assigned to each letter, and 
+                To calculate the meaning of the seal, the angel had to take the numerical value assigned to each letter, and
                 add them up.
             </para>
             <para>
-                This then becomes the perfect analogy of the MapReduce calculation. Your value is the mystical name, 
-                represented by the seal. It may be a simple string or a multi-dimensional object. From this value, you 
+                This then becomes the perfect analogy of the MapReduce calculation. Your value is the mystical name,
+                represented by the seal. It may be a simple string or a multi-dimensional object. From this value, you
                 calculate the key, or the sum total of each letter. This is the Mapper.
             </para>
             <para>
-                With this &lt;key, value&gt; combination you begin your travels. All the people who have the same key 
-                are collected by the same angel in a certain chamber. This is your Reducer. The computation is parallel 
-                (each person does his own travels) and scalable (there is no limit on the number of people traveling 
-                at the same time). This is the MapReduce calculation. If one angel fails, another can take its place, 
+                With this &lt;key, value&gt; combination you begin your travels. All the people who have the same key
+                are collected by the same angel in a certain chamber. This is your Reducer. The computation is parallel
+                (each person does his own travels) and scalable (there is no limit on the number of people traveling
+                at the same time). This is the MapReduce calculation. If one angel fails, another can take its place,
                 because angels too are defined by their names. Thus you have fault tolerance.
             </para>
         </sect2>
         <sect2>
             <title>Another example</title>
             <para>
-                According to Michael Lynch, the founder of Autonomy, 
+                According to Michael Lynch, the founder of Autonomy,
                 <link xlink:href="http://www.computerworld.com/s/article/9233587/Barack_Obama_39_s_Big_Data_won_the_US_election#disqus_thread">
-                    Barack Obama's Big Data won the US election</link>. 
-                The articles says that the campaign carefully selected micro-segments of voters, analyzed their 
-                characteristics, and then addressed them directly. Michael is the creator of the Intelligent Data Operating Layer (IDOL), the enterprise smart search, 
+                    Barack Obama's Big Data won the US election</link>.
+                The articles says that the campaign carefully selected micro-segments of voters, analyzed their
+                characteristics, and then addressed them directly. Michael is the creator of the Intelligent Data Operating Layer (IDOL), the enterprise smart search,
                 so he knows the technology in question.
             </para>
             <para>
-                One can imagine a MapReduce program that would accomplish this purpose as follows: read the person's 
-                characteristics, assign him a hash code (mapper), collect all of the people with the same hash code and 
+                One can imagine a MapReduce program that would accomplish this purpose as follows: read the person's
+                characteristics, assign him a hash code (mapper), collect all of the people with the same hash code and
                 analyze them (reducer). This is aptly illustrated in the following diagram.
             </para>
             <figure>
                 <title>Micro-targeting the electorate</title>
-                <!-- <graphic fileref="mr_intro_3.png"></graphic> -->
 				<inlinegraphic fileref="big_data_elections_sized.png" format="PNG" width="100%" />
             </figure>
-            <para>                
+            <para>
                 This concludes our introduction to the MapReduce part of Hadoop, where our goal was to explain how it works, without one line of code.
             </para>
         </sect2>
+        -->
     </sect1>
+    <section>
+        <title>
+            Understanding Mappers and Reducers
+        </title>
+        <para>
+            MapReduce is not like the usual programming models we grew up with. To illustrate the MapReduce model, lets look at an example.
+        </para>
+        <para>
+            The example we choose is taking 'Exit Polling'.  Say there is a election in progress.  People are voting at the polling places.  To predict election results lot of polling organizations conduct 'exit polling'.  It is a fancy way of saying they interview voters exiting the polling place and ask them how they voted.
+        </para>
+        <para>
+            So for our problem, say we want to understand how different age groups voted.  We want to understand how people aged 20s,  30s and 40s voted.
+        </para>
+        <para>
+            We are going to divide the problem into two phases
+            <itemizedlist>
+                <listitem>
+                    Phase one : sort the voters into distinct age groups (20s, 30s, 40s)
+                </listitem>
+                <listitem>
+                    Phase two: Interview each age group and see how they voted.
+                </listitem>
+            </itemizedlist>
+            The following image explains this.
+        </para>
+        <figure id="mapreduce-voting">
+            <title>MapReduce analogy : Exit Polling</title>
+			<inlinegraphic fileref="mapreduce_voting.png" format="PNG" width="100%" />
+        </figure>
+
+        <section>
+            <title>
+                Mapper
+            </title>
+            <para>
+                The 'sorter' (the girl asking 'how old are you') only concerned about sorting people into appropriate groups (in our case, age).  She isn't concerned about the next step of compute.
+            </para>
+            <para>
+                In MapReduce parlance the girl is known as <emphasis role="bold">MAPPER</emphasis>
+            </para>
+        </section>
+
+        <section>
+            <title>
+                Reducer
+            </title>
+            <para>
+                Once the participants are sorted into appropriate age groups, then the guy wearing 'bowtie' just interviews that particular age group to produce the final result for that group.  There are few subtle things happening here:
+                <itemizedlist>
+                    <listitem>
+                        The result for one age group is not influenced by the result of other age group.  So they can be processed in parallel.
+                    </listitem>
+                    <listitem>
+                        we can be certain that each group has all participants for that group.  For example, all 20 somethings are in the group 20s.  If the mapper did her job right, this would be the case.
+                    </listitem>
+                    <listitem>
+                        With these assumptions, the guy in bowtie can produce a result for a particular age group, indepedently.
+                    </listitem>
+                </itemizedlist>
+                <para>
+                    In MapReduce parlance the guy-wearing-bowtie is known as <emphasis role="bold">REDUCER</emphasis>
+                </para>
+            </para>
+        </section>
+        <section>
+            <title>Parallelism</title>
+            <para>
+                Each phase (map phase and reduce phase) can be parallelised independently.
+            </para>
+        </section>
+
+
+    </section>
     <sect1>
         <title>
             Who invented this?
         </title>
         <para>
-            According to an article in "Wired" magazine 
-            entitled 
-            <link xlink:href="http://www.wired.com/wiredenterprise/2012/08/google-as-xerox-parc/all/">                    
+            According to an article in "Wired" magazine
+            entitled
+            <link xlink:href="http://www.wired.com/wiredenterprise/2012/08/google-as-xerox-parc/all/">
                 "If Xerox PARC Invented the PC, Google Invented the Internet
-            </link> all of modern computer science 
+            </link> all of modern computer science
             was invented at Google. Definitely the MapReduce technology was invented there, by Jeff Dean and
             Sanjay Ghemawat. To prove the point, here are some "facts" about Jeff:
         </para>
@@ -310,18 +391,18 @@
     <sect1>
         <title>The benefits of MapReduce programming</title>
         <para>
-            So what are the benefits of MapReduce programming? As you can see, it summarizes a lot of the 
-            experiences of scientists and practitioners in the design of distributed processing systems. It resolves 
-            or avoids several complications of distributed computing. It allows unlimited computations on an 
-            unlimited amount of data. It actually simplifies the developer's life. And, although it looks 
-            deceptively simple, it is very powerful, with a great number of sophisticated (and profitable) 
+            So what are the benefits of MapReduce programming? As you can see, it summarizes a lot of the
+            experiences of scientists and practitioners in the design of distributed processing systems. It resolves
+            or avoids several complications of distributed computing. It allows unlimited computations on an
+            unlimited amount of data. It actually simplifies the developer's life. And, although it looks
+            deceptively simple, it is very powerful, with a great number of sophisticated (and profitable)
             applications written in this framework.
         </para>
         <para>
-            In the other sections of this book we will introduce you to the practical aspects of MapReduce implementation. 
-            We will also show you how to avoid it, by using higher-level tools, 'cause not everybody likes 
-            to write Java code. Then you will be able to see whether or not Hadoop is for you, or even invent a new 
+            In the other sections of this book we will introduce you to the practical aspects of MapReduce implementation.
+            We will also show you how to avoid it, by using higher-level tools, 'cause not everybody likes
+            to write Java code. Then you will be able to see whether or not Hadoop is for you, or even invent a new
             framework. Keep in mind though that other developers are also busy inventing new frameworks, so hurry to read more.
         </para>
-    </sect1>     
+    </sect1>
 </chapter>

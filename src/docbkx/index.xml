@@ -44,7 +44,7 @@
         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Hadoop_and_Big_Data.xml" />
         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Hadoop_For_Execs.xml" />
         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Hadoop_For_Developers.xml" />
-        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Intro.xml" />
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Intro_To_Hadoop.xml" />
         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="HDFS_Intro.xml" />
         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="MapReduce_Intro.xml" />
         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Hadoop_Use_Cases.xml" />
