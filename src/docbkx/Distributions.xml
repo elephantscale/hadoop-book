@@ -9,7 +9,7 @@
 
     <title>Hadoop Distributions</title>
     <section>
-        <title>Why distributions?</title>
+        <title>The Case for Distributions</title>
         <para>
             Hadoop is Apache software so it is freely available for download and use.   So why do we need distributions at all?
         </para>
@@ -188,22 +188,6 @@
                         </entry>
                         <entry>
                             Premium
-                        </entry>
-                    </row>
-                    <row>
-                        <entry>
-                            WANdisco <sbr/>
-                            <link xlink:href="http://www.wandisco.com">www.wandisco.com</link>
-                        </entry>
-                        <entry>
-                            <itemizedlist>
-                                <listitem>Newer distro</listitem>
-                                <listitem>Hadoop version 2</listitem>
-                                <listitem>Comes with tools to manage and administer a cluster</listitem>
-                            </itemizedlist>
-                        </entry>
-                        <entry>
-                            Free / Premium model
                         </entry>
                     </row>
                 </tbody>

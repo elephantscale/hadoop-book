@@ -11,10 +11,10 @@
     <section>
         <title>About "Hadoop illuminated"</title>
         <para>This book is our experiment in making Hadoop knowledge available
-            to a wider audience. We want this book to serve as a gentle introduction to Big Data and Hadoop.  No deep technical knowledge is needed to go through the book.  It can be a bed time read :-)
+            to a wider audience. We want this book to serve as a gentle introduction to Big Data and Hadoop.  No deep technical knowledge is needed to go through the book.  It can even be a bedtime read :-)
         </para>
         <para>
-            The book is freely available, it is licensed under <link xlink:href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.en_US">Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License</link>.
+            The book is freely available.  It is licensed under <link xlink:href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.en_US">Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License</link>.
         </para>
         <para>
             "Hadoop Illuminated" is a work in progress.  It is a 'living book'.  We will keep updating the book to reflect the fast moving world of Big Data and hadoop.  So keep checking back.

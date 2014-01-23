@@ -27,7 +27,10 @@
     </para>
     <para>
         Below is a graph of Hadoop job trends from <link xlink:href="http://www.indeed.com/jobtrends?q=hadoop">Indeed.com</link>.  As you can see, demand for Hadoop skills has been up and up since 2009.  So Hadoop is a good skill to have!
-        <inlinegraphic fileref="hadoop_job_trends.png" format="PNG" width="100%" />
+        <figure id="hadoop-job-trends">
+            <title>Hadoop Job Trends</title>
+            <inlinegraphic fileref="hadoop_job_trends.png" format="PNG" width="100%" />
+        </figure>
     </para>
 
     <bridgehead>
@@ -55,7 +58,7 @@
         The following should give you an idea of the kind of technical roles in Hadoop.
     </para>
     <table id="hadoop-roles">
-        Hadoop Roles
+        <title>Hadoop Roles</title>
         <tgroup cols='3' align='left' colsep='1' rowsep='1'>
             <thead>
                 <row>

@@ -419,9 +419,9 @@
     </section>
 
     <section>
-        <title>NOSQL stores</title>
+        <title>NoSQL stores</title>
         <table id="table-bigdata-ecosystem-nosql">
-            <title>NOSQL stores for Big Data</title>
+            <title>NoSQL stores for Big Data</title>
             <tgroup cols='2' align='left' colsep='1' rowsep='1'>
                 <thead>
                     <row>
@@ -876,9 +876,9 @@
 
 
     <section>
-        <title>YARN based frameworks</title>
+        <title>YARN-based frameworks</title>
         <table id="table-bigdata-ecosystem-yarn-based-frameworks">
-            <title>YARN based frameworks</title>
+            <title>YARN-based frameworks</title>
             <tgroup cols='2' align='left' colsep='1' rowsep='1'>
                 <thead>
                     <row>

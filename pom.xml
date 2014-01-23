@@ -8,24 +8,6 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <profiles>
-        <profile>
-            <id>default</id>
-            <repositories>
-                <repository>
-                    <id>CDH</id>
-                    <name>cloudera</name>
-                    <url>https://repository.cloudera.com/content/repositories/releases</url>
-                </repository>
-                <repository>
-                    <id>releases</id>
-                    <name>Releases</name>
-                    <url>https://oss.sonatype.org/content/repositories/releases</url>
-                </repository>
-            </repositories>
-        </profile>
-
-    </profiles>
     <name>HadoopIlluminated</name>
     <url>http://maven.apache.org</url>
     <build>
