@@ -97,7 +97,7 @@
                         <configuration>
                             <targetDirectory>${basedir}/target/docbkx/pdf</targetDirectory>
                             <imgSrcPath>images/</imgSrcPath>
-							<includes>HI-hadoop-illuminated.xml</includes>
+							<includes>hadoop-illuminated.xml</includes>
 							<ignoreImageScaling>0</ignoreImageScaling>
 							<postProcess>
 								<tstamp>
@@ -175,7 +175,7 @@
                                 <resource>
                                     <directory>${basedir}/target/docbkx/pdf</directory>
                                     <includes>
-                                        <include>HI-hadoop-illuminated.pdf</include>
+                                        <include>hadoop-illuminated.pdf</include>
                                     </includes>
                                 </resource>
 
@@ -185,7 +185,7 @@
                                         <include>**/**</include>
                                     </includes>
                                     <excludes>
-                                        <exclude>HI-hadoop-illuminated/**</exclude>
+                                        <exclude>hadoop-illuminated/**</exclude>
                                     </excludes>
                                 </resource>
                                 <resource>
@@ -194,7 +194,7 @@
                                         <include>singlepage/**</include>
                                     </includes>
                                     <excludes>
-                                        <exclude>HI-hadoop-illuminated/**</exclude>
+                                        <exclude>hadoop-illuminated/**</exclude>
                                     </excludes>
                                 </resource>
                                 <resource>
