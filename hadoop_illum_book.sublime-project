@@ -1,0 +1,26 @@
+{
+    "folders":
+    [
+        {
+            "follow_symlinks": true,
+            "path": ".",
+            "folder_exclude_patterns": ["target", "pdf", "test-data"],
+            "file_exclude_patterns": ["*.bak"]
+        }
+    ],
+     "build_systems":
+    [
+        {
+            "name": "maven clean pre-site",
+            "working_dir": "${project_path:${folder}}",
+            "cmd": ["mvn", "clean", "pre-site"],
+            "selector": "source.xml"
+        },
+        {
+            "name": "maven pre-site",
+            "working_dir": "${project_path:${folder}}",
+            "cmd": ["mvn",  "pre-site"],
+            "selector": "source.xml"
+        }
+    ]
+}
