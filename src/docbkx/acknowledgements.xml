@@ -1,11 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <acknowledgements version="5.0" xmlns="http://docbook.org/ns/docbook"
-                  xmlns:xlink="http://www.w3.org/1999/xlink"
-                  xmlns:xi="http://www.w3.org/2001/XInclude"
-                  xmlns:svg="http://www.w3.org/2000/svg"
-                  xmlns:m="http://www.w3.org/1998/Math/MathML"
-                  xmlns:html="http://www.w3.org/1999/xhtml"
-                  xmlns:db="http://docbook.org/ns/docbook">
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xi="http://www.w3.org/2001/XInclude"
+    xmlns:svg="http://www.w3.org/2000/svg"
+    xmlns:m="http://www.w3.org/1998/Math/MathML"
+    xmlns:html="http://www.w3.org/1999/xhtml"
+    xmlns:db="http://docbook.org/ns/docbook">
+    <para>
+        To Hadoop community
+        <itemizedlist>
+            <listitem>
+
+                <link xlink:href="http://wiki.apache.org/hadoop/PoweredBy">Apache Hadoop</link>
+                is an open source software from <link xlink:href="http://wiki.apache.org/hadoop/PoweredBy">Apache Software Foundation</link>.
+            </listitem>
+            <listitem>
+                Apache, Apache Hadoop, and Hadoop are trademarks of The Apache Software Foundation. Used with permission. No endorsement by The Apache Software Foundation is implied by the use of these marks
+            </listitem>
+            <listitem>For brevity we will refer Apache Hadoop as Hadoop</listitem>
+        </itemizedlist>
+    </para>
     <para>
         <emphasis role="bold">From Mark</emphasis>
         <sbr/>
@@ -13,31 +27,26 @@
         who shared the thorny path to working clusters - with the hope to make it less thorny for
         those who follow. Seriously, folks, Hadoop is hard, and Big Data is tough, and there are
         many related products and skills that you need to master. Therefore, have fun,
-        <ulink url="http://groups.google.com/group/hadoop-illuminated">provide your feedback</ulink>,
-        and I hope you will find the book entertaining. 
+        <ulink url="http://groups.google.com/group/hadoop-illuminated">provide your feedback</ulink>
+        ,
+        and I hope you will find the book entertaining.
     </para>
     <para>
         "The author's opinions do not necessarily coincide with his point of view." -
-        <ulink url="http://en.wikipedia.org/wiki/Generation_%22%D0%9F%22">
-            Victor Pelevin, "Generation P"
-        </ulink>
+        <ulink url="http://en.wikipedia.org/wiki/Generation_%22%D0%9F%22">Victor Pelevin, "Generation P"</ulink>
     </para>
     <para>
         <emphasis role="bold">From Sujee</emphasis>
         <sbr/>
         To the kind souls who helped me along the way.
     </para>
-    <para>
-        Copyright 2013 Hadoop Illuminated LLC
-    </para>
+    <para>Copyright 2013 Hadoop Illuminated LLC</para>
     <para>
         Licensed under the Apache License, Version 2.0 (the "License");
         you may not use this file except in compliance with the License.
         You may obtain a copy of the License at
     </para>
-    <para>
-        http://www.apache.org/licenses/LICENSE-2.0
-    </para>
+    <para>http://www.apache.org/licenses/LICENSE-2.0</para>
     <para>
         Unless required by applicable law or agreed to in writing, software
         distributed under the License is distributed on an "AS IS" BASIS,

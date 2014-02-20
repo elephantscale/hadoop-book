@@ -17,10 +17,10 @@
         <para>
             HI there!
             <sbr/>
-            Welcome to Hadoop Illuminated.  This book is brought to you by two authors -- Mark Kerzner and Sujee Maniyam.  
-            Both of us have been working in Hadoop ecosystem for a number of years.  We have implemented Hadoop solutions 
-            and taught training courses in Hadoop.  We both benefited from Hadoop and the open source community tremendously.  
-            So when we thought about writing a book on Hadoop, we choose to do it in the fully open source way!  
+            Welcome to Hadoop Illuminated.  This book is brought to you by two authors -- Mark Kerzner and Sujee Maniyam.
+            Both of us have been working in Hadoop ecosystem for a number of years.  We have implemented Hadoop solutions
+            and taught training courses in Hadoop.  We both benefited from Hadoop and the open source community tremendously.
+            So when we thought about writing a book on Hadoop, we choose to do it in the fully open source way!
             It is a minuscule token of thanks from both of us to the Hadoop community.
         </para>
     </simplesect>
@@ -29,16 +29,16 @@
     <simplesect>
         <title>Mark Kerzner (Author)</title>
         <para>
-            Mark Kerzner is an experienced/hands-on Big Data architect.  He has been developing software 
-            for over 20 years in a variety of technologies (enterprise, web, HPC) 
-            and for a variety of verticals (Oil and Gas, legal, trading). 
-            He currently focuses on Hadoop, Big Data, NoSQL and Amazon Cloud Services.  
-            His clients include Bay Area startups, T-Mobile, GHX, Cision, and lately Intel, 
+            Mark Kerzner is an experienced/hands-on Big Data architect.  He has been developing software
+            for over 20 years in a variety of technologies (enterprise, web, HPC)
+            and for a variety of verticals (Oil and Gas, legal, trading).
+            He currently focuses on Hadoop, Big Data, NoSQL and Amazon Cloud Services.
+            His clients include Bay Area startups, T-Mobile, GHX, Cision, and lately Intel,
             where he created and delivered Big Data training.
         </para>
         <para>
-            Mark stays active in the Hadoop / Startup communities.  He runs the Houston Hadoop Meetup, 
-            where he presents and often trains.  Mark’s company SHMsoft has won multiple innovation awards, 
+            Mark stays active in the Hadoop / Startup communities.  He runs the Houston Hadoop Meetup,
+            where he presents and often trains.  Mark’s company SHMsoft has won multiple innovation awards,
             and is a client of Houston Incubator HTC, where Mark is involved with many startup initiatives.
         </para>
         <para>
@@ -49,7 +49,7 @@
             <link xlink:href="http://shmsoft.blogspot.com/">blog</link>.
         </para>
         <para>
-            Mark does Hadoop training for individuals and corporations; his classes are hands-on and draw heavily on 
+            Mark does Hadoop training for individuals and corporations; his classes are hands-on and draw heavily on
             his industry experience.
         </para>
         <para>
@@ -65,25 +65,25 @@
     <simplesect>
         <title>Sujee Maniyam (Author)</title>
         <para>
-            Sujee Maniyam is an experienced/hands-on Big Data architect.  He has been developing software for the past 
-            12 years in a variety of technologies (enterprise, web and mobile). He currently focuses on Hadoop, 
-            Big Data and NoSQL, and Amazon Cloud Services.  His clients include early stage startups and 
+            Sujee Maniyam is an experienced/hands-on Big Data architect.  He has been developing software for the past
+            12 years in a variety of technologies (enterprise, web and mobile). He currently focuses on Hadoop,
+            Big Data and NoSQL, and Amazon Cloud Services.  His clients include early stage startups and
             enterprise companies.
         </para>
 
         <para>
             Sujee stays active in the Hadoop / Open Source community.  He runs a developer focused Meetup called
-            <link xlink:href="http://www.meetup.com/BigDataGurus/">'Big Data Gurus'</link>.   He has also presented at 
+            <link xlink:href="http://www.meetup.com/BigDataGurus/">'Big Data Gurus'</link>.   He has also presented at
             a variety of Meetups.
         </para>
         <para>
-            Sujee contributes to Hadoop projects and his open source projects can be found on GitHub.  
-            He writes about Hadoop and other technologies on 
+            Sujee contributes to Hadoop projects and his open source projects can be found on GitHub.
+            He writes about Hadoop and other technologies on
             <link xlink:href="http://www.sujee.net/">his website</link>
         </para>
 
         <para>
-            Sujee does Hadoop training for individuals and corporations; his classes are hands-on and draw 
+            Sujee does Hadoop training for individuals and corporations; his classes are hands-on and draw
             heavily on his industry experience.
         </para>
         <para>
@@ -133,8 +133,8 @@
                 Ben Burford : <link xlink:href="https://github.com/benburford">github.com/benburford</link>
             </listitem>
             <listitem>
-                Yosef Kerzner : <link xlink:href="http://www.linkedin.com/pub/yosef-kerzner/6/1ab/723">github.com/benburford</link>
-            </listitem>            
+                 <link xlink:href="http://www.linkedin.com/pub/yosef-kerzner/6/1ab/723">Yosef Kerzner</link>
+            </listitem>
         </itemizedlist>
     </simplesect>
 </chapter>
