@@ -14,7 +14,7 @@
             Figure
             <figure id="sample-figure">
                 <title>Old Mac</title>
-                <inlinegraphic fileref="tidal_wave_of_data_scaled.png" format="PNG" scale="100%" />
+                <inlinegraphic fileref="tidal_wave_of_data_scaled.png" format="PNG" scale="100" />
             </figure>
 
             <figure>

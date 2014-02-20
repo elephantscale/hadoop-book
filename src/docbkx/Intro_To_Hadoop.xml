@@ -10,24 +10,26 @@
     <title>Soft Introduction to Hadoop</title>
     <section>
         <title>Hadoop = HDFS + MapReduce</title>
-        <para>The goal here is to present an intro to Hadoop so simple that any programmer who
-            reads it will be able to write basic Hadoop solutions and run them on a Hadoop
-            cluster.
+        <para>
+            Hadoop provides two things : Storage &amp; Compute.  If you think of Hadoop as a coin, one side is storage and other side is compute.
+        </para>
+        <figure id="hadoop-coin">
+            <title>Hadoop coin</title>
+            <inlinegraphic fileref="hadoop_coin.png" format="PNG" scale="70" />
+        </figure>
+        <para>
+            In Hadoop speak, storage is provided by <emphasis>Hadoop Distributed File System (HDFS)</emphasis>.  Compute is provided by <emphasis>MapReduce</emphasis>.
         </para>
         <para>
-            First, however, let us have the key basic definitions - what is Hadoop and what
-            is MapReduce?
-        </para>
-        <para>
-            <emphasis>Hadoop</emphasis> is an open-source implementation of Google's distributed computing. 
-            It consists of two parts: Hadoop Distributed File System (HDFS), which is modeled after 
+            <emphasis>Hadoop</emphasis> is an open-source implementation of Google's distributed computing framework (which is proprietary).
+            It consists of two parts: Hadoop Distributed File System (HDFS), which is modeled after
             Google's GFS, and Hadoop MapReduce, which is modeled after Google's MapReduce.
-            Google's system is proprietary code, so when Google teaches college students the
-            ideas of MapReduce programming, they, too, use Hadoop. 
-            To further emphasize the difference 
+<!--             , so when Google teaches college students the
+            ideas of MapReduce programming, they, too, use Hadoop.
+            To further emphasize the difference
             we can note that the Hadoop engineers at Yahoo like to challenge the engineers at
             Google to sorting competitions between Hadoop and MapReduce.
-        </para>
+ -->        </para>
         <para>
             <emphasis>MapReduce</emphasis> is a programming framework.
             Its description was <ulink url="http://research.google.com/archive/mapreduce.html">published by Google in 2004</ulink>.
@@ -45,8 +47,8 @@
     <section>
         <title>Why Hadoop?</title>
         <para>
-            We have already mentioned that the Hadoop is used at 
-            Yahoo and Facebook. It has seen rapid uptake in finance, retail, telecom, and the
+            We have already mentioned that the Hadoop is used at
+            Yahoo and Facebook. It has seen rapid uptake in finance, retail, telco, and the
             government. It is making inroads into life sciences. Why is this?
         </para>
         <figure>
@@ -170,11 +172,11 @@
             There are a number of animals in the Hadoop zoo, and each deals with a certain
             aspect of Big Data. Let us illustrate this with a picture, and then introduce them
             one by one.
-        </para>            
+        </para>
             <figure>
                 <title>The Hadoop Zoo</title>
                 <graphic fileref="chapter-intro-01.png"></graphic>
-            </figure>            
+            </figure>
         <section>
             <title>HDFS - Hadoop Distributed File System</title>
 
@@ -212,7 +214,7 @@
                 http://labs.google.com/papers/gfs.html.
             </para>
             <para>
-                More indepth discussoin of HDFS is here : <xref linkend="HDFS_Intro"/>
+                More in-depth discussion of HDFS is here : <xref linkend="HDFS_Intro"/>
             </para>
         </section>
         <section>
@@ -231,7 +233,7 @@
                 results of the computation in one place.
             </para>
             <para>
-                More indepth discussoin of MapReduce is here : <xref linkend="MapReduce_Intro"/>
+                More in-depth discussing of MapReduce is here : <xref linkend="MapReduce_Intro"/>
             </para>
         </section>
         <section>
