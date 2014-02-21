@@ -14,7 +14,8 @@
             Figure
             <figure id="sample-figure">
                 <title>Old Mac</title>
-                <inlinegraphic fileref="tidal_wave_of_data_scaled.png" format="PNG" scale="100" />
+                <!-- this fits images niceely -->
+                <inlinegraphic fileref="tidal_wave_of_data_scaled.png" format="PNG" scalefit="1" contentdepth="100%" width="100%" />
             </figure>
 
             <figure>

@@ -29,7 +29,7 @@
         Below is a graph of Hadoop job trends from <link xlink:href="http://www.indeed.com/jobtrends?q=hadoop">Indeed.com</link>.  As you can see, demand for Hadoop skills has been up and up since 2009.  So Hadoop is a good skill to have!
         <figure id="hadoop-job-trends">
             <title>Hadoop Job Trends</title>
-            <inlinegraphic fileref="hadoop_job_trends.png" format="PNG" width="100%" />
+            <inlinegraphic fileref="hadoop_job_trends.png" format="PNG" width="100%" scalefit="1" contentdepth="100%"/>
         </figure>
     </para>
 

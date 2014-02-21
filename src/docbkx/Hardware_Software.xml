@@ -105,7 +105,7 @@
 
         <para>
             So how does a large hadoop cluster looks like?  Here is a picture of Yahoo's Hadoop cluster.
-			<inlinegraphic fileref="Yahoo-hadoop-cluster_OSCON_2007.jpg" format="JPG" width="100%" />
+			<inlinegraphic fileref="Yahoo-hadoop-cluster_OSCON_2007.jpg" format="JPG"  width="100%" scalefit="1" contentdepth="100%"/>
             <caption>image credit to : http://developer.yahoo.com/blogs/ydn/posts/2007/07/yahoo-hadoop/</caption>
         </para>
 

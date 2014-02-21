@@ -314,7 +314,7 @@
         </para>
         <figure id="mapreduce-voting">
             <title>MapReduce analogy : Exit Polling</title>
-			<inlinegraphic fileref="mapreduce_voting.png" format="PNG" width="100%" />
+			<inlinegraphic fileref="mapreduce_voting.png" format="PNG"  width="100%" scalefit="1" contentdepth="100%"/>
         </figure>
 
         <section>

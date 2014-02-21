@@ -15,7 +15,7 @@
         </para>
         <figure id="hadoop-coin">
             <title>Hadoop coin</title>
-            <inlinegraphic fileref="hadoop_coin.png" format="PNG" scale="70" />
+            <inlinegraphic fileref="hadoop_coin.png" format="PNG"  width="100%" scalefit="1" contentdepth="100%"/>
         </figure>
         <para>
             In Hadoop speak, storage is provided by <emphasis>Hadoop Distributed File System (HDFS)</emphasis>.  Compute is provided by <emphasis>MapReduce</emphasis>.

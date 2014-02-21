@@ -25,7 +25,7 @@
 
             <figure id="scaling_storage">
                 <title>Scaling Storage</title>
-                <inlinegraphic fileref="scaling_storage.png" format="PNG" scale="100%" />
+                <inlinegraphic fileref="scaling_storage.png" format="PNG"  width="100%" scalefit="1" contentdepth="100%"/>
             </figure>
             </para>
             <para>
