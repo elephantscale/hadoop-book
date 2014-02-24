@@ -137,6 +137,23 @@ user.footer.navigation : 	Called after the standard navigational footer.
 		</form>
 	</div>
   </xsl:template>
+
+    <!-- google ads -->
+  <xsl:template name="user.header.content">
+    <div id="google-adsense">
+        <script type="text/javascript"><!--
+google_ad_client = "ca-pub-4468594927160864";
+/* hadoop illuminated book */
+google_ad_slot = "5293305636";
+google_ad_width = 468;
+google_ad_height = 60;
+//-->
+</script>
+<script type="text/javascript"
+    src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+</xsl:template>
   <!-- end top header -->
 
 
