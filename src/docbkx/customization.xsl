@@ -3,6 +3,7 @@
   xmlns:xlink="http://www.w3.org/1999/xlink"
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
   xmlns:l="http://docbook.sourceforge.net/xmlns/l10n/1.0"
+  xmlns:indent="yes"
   version="1.0">
 
 <!--
@@ -141,17 +142,17 @@ user.footer.navigation : 	Called after the standard navigational footer.
     <!-- google ads -->
   <xsl:template name="user.header.content">
     <div id="google-adsense">
-        <script type="text/javascript"><!--
+<script type="text/javascript">
 google_ad_client = "ca-pub-4468594927160864";
 /* hadoop illuminated book */
 google_ad_slot = "5293305636";
 google_ad_width = 468;
 google_ad_height = 60;
-//-->
 </script>
 <script type="text/javascript"
-    src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 </script>
+
 </div>
 </xsl:template>
   <!-- end top header -->
