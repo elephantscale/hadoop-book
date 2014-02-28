@@ -51,7 +51,7 @@
         <section>
             <title>2012 US Presidential Election</title>
             <para>
-                <link xlink:href="http://www.computerworld.com/s/article/9233587/Barack_Obama_39_s_Big_Data_won_the_US_election">How Big Data help Obama win re-election</link>  - by Michael Lynch, the founder of <link xlink:href="http://www.autonomy.com/">Autonomy</link>  
+                <link xlink:href="http://www.computerworld.com/s/article/9233587/Barack_Obama_39_s_Big_Data_won_the_US_election">How Big Data help Obama win re-election</link>  - by Michael Lynch, the founder of <link xlink:href="http://www.autonomy.com/">Autonomy</link>
                 (<link xlink:href="cached_reports/Barack_Obama_Big_Data_won_the_US_election__Computerworld.pdf">cached copy</link>)
             </para>
         </section>
@@ -101,7 +101,7 @@
             </para>
             <para>
                 <emphasis role="bold">Problem: </emphasis>
-The previous solution using Teradata and IBM Netezza was time consuming and complex, and the data mart approach didn’t provide the data completeness required for determining overall data quality.
+                The previous solution using Teradata and IBM Netezza was time consuming and complex, and the data mart approach didn’t provide the data completeness required for determining overall data quality.
             </para>
             <para>
                 <emphasis role="bold">Solution: </emphasis>
@@ -158,7 +158,7 @@ The previous solution using Teradata and IBM Netezza was time consuming and comp
         <section>
             <title>Monitoring patient vitals at Los Angeles Children's Hospital</title>
             <para>
-            Researchers at LA Children's Hospital is using Hadoop to capture and analyze medical sensor data.
+                Researchers at LA Children's Hospital is using Hadoop to capture and analyze medical sensor data.
             </para>
             <para>
                 <emphasis role="bold">Problem: </emphasis>
@@ -357,7 +357,7 @@ The previous solution using Teradata and IBM Netezza was time consuming and comp
         <section>
             <title>OPower</title>
             <para>
-            OPower works with utility companies to provide engaging, relevant, and personalized content about home energy use to millions of households.
+                OPower works with utility companies to provide engaging, relevant, and personalized content about home energy use to millions of households.
             </para>
             <para>
                 <emphasis role="bold">Problem: </emphasis>
@@ -415,7 +415,7 @@ The previous solution using Teradata and IBM Netezza was time consuming and comp
             </para>
             <para>
                 <emphasis role="bold">Links: </emphasis><sbr/>
-                
+
                 <link xlink:href="http://www.computerweekly.com/news/2240146943/Case-Study-US-Xpress-deploys-hybrid-big-data-with-Informatica">Computer Weekly article</link> (Published May 2012)
                 <sbr/>
                 <link xlink:href="http://hortonworks.com/wp-content/uploads/downloads/2013/06/Hortonworks.BusinessValueofHadoop.v1.0.pdf">Hortonworks white paper on 'Business Value of Hadoop'</link>                 (<link xlink:href="cached_reports/Hortonworks.BusinessValueofHadoop.v1.0.pdf">cached copy</link>) (Published July 2013)
@@ -455,7 +455,7 @@ The previous solution using Teradata and IBM Netezza was time consuming and comp
                 <sbr/>
                 <link xlink:href="http://gigaom.com/2011/11/02/how-etsy-handcrafted-a-big-data-strategy/">gigaom article</link> (Nov 2011)
                 <sbr/>
-                <link xlink:href="http://assets.en.oreilly.com/1/event/61/Ephemeral%20Hadoop%20Clusters%20in%20the%20Cloud%20Presentation.pdf">pdf</link> 
+                <link xlink:href="http://assets.en.oreilly.com/1/event/61/Ephemeral%20Hadoop%20Clusters%20in%20the%20Cloud%20Presentation.pdf">pdf</link>
                 (<link xlink:href="cached_reports/Esty_Ephemeral_Hadoop_Clusters_in_the_Cloud.pdf">cached copy</link>)
                 (Nov 2011)
                 <sbr/>
@@ -497,7 +497,7 @@ The previous solution using Teradata and IBM Netezza was time consuming and comp
         <section>
             <title>SalesForce</title>
             <para>
-                <link xlink:href="http://www.salesforce.com">SalesForce</link> 
+                <link xlink:href="http://www.salesforce.com">SalesForce</link>
             </para>
             <para>
                 <emphasis role="bold">Problem: </emphasis>
@@ -519,6 +519,126 @@ The previous solution using Teradata and IBM Netezza was time consuming and comp
                 <emphasis role="bold">Links: </emphasis><sbr/>
                 <link xlink:href="http://www.slideshare.net/narayan26/data-sciencewebinar-061312-13372205">presentation</link>  (June 2012)
                 <sbr/>
+            </para>
+        </section>
+    </section>
+
+    <section>
+        <title>Imaging / Videos</title>
+        <section>
+            <title>SkyBox</title>
+            <para>
+                SkyBox is developing a low cost imaging satellite system and web-accessible big data processing platform that will capture video or images of any location on Earth
+            </para>
+            <para>
+                <emphasis role="bold">Problem: </emphasis>
+                <sbr/>
+                Analyzing really large volumes image data downloaded from the satellites
+            </para>
+            <para>
+                <emphasis role="bold">Solution: </emphasis>
+                <sbr/>
+                Skybox uses Hadoop to process images in parallel.  Their image processing algorithms are in C/C++.  Their proprietary framework 'BusBoy' allows using native code from Hadoop MapReduce Java framework.
+            </para>
+            <para>
+                <emphasis role="bold">Hadoop Vendor: </emphasis>
+                Cloudera and Amazon EC2
+            </para>
+            <para>
+                <emphasis role="bold">Cluster/Data size: </emphasis>
+                ?
+            </para>
+            <para>
+                <emphasis role="bold">Links: </emphasis><sbr/>
+                <itemizedlist>
+                    <listitem>
+                        <link xlink:href="http://blog.cloudera.com/blog/2012/10/sneak-peek-into-skybox-imagings-cloudera-powered-satellite-system/">Case Study @ Cloudera</link>  (Oct 2012),
+                    </listitem>
+                    <listitem>
+                        <link xlink:href="http://searchbusinessanalytics.techtarget.com/feature/Companies-using-Hadoop-for-analytics-bring-meaning-to-satellite-data">TechTarget article</link>  (Aug 2013)
+                    </listitem>
+                    <listitem>
+                        <link xlink:href="http://www.skyboximaging.com/">SkyBox</link>
+                    </listitem>
+                </itemizedlist>
+                <sbr/>
+            </para>
+        </section>
+
+        <section>
+            <title>Comcast</title>
+            <para>
+                Comcast provides video and bandwidth to lots of US customers.
+            </para>
+            <para>
+                <emphasis role="bold">Problem: </emphasis>
+                <sbr/>
+                Analyzing large volumes of data generated by video players and monitoring performance issues in real time
+            </para>
+            <para>
+                <emphasis role="bold">Solution: </emphasis>
+                <sbr/>
+                Comcast uses a Hadoop infrastructure to capture and analyze large volumes of 'dial-home' data generated by multitude of video players.  They do both analysis in (near) real time and in batch mode
+            </para>
+            <para>
+                <emphasis role="bold">Hadoop Vendor: </emphasis>
+                Cloudera
+            </para>
+            <para>
+                <emphasis role="bold">Cluster/Data size: </emphasis>
+                ?
+            </para>
+            <para>
+                <emphasis role="bold">Links: </emphasis><sbr/>
+                <itemizedlist>
+                    <listitem>
+                        <link xlink:href="http://strataconf.com/stratany2013/public/schedule/detail/30915">Talk at Strata 2013</link>  (Oct 2013),
+                    </listitem>
+                    <listitem>
+                        <link xlink:href="http://www.comcast.com/">Comcast</link>
+                    </listitem>
+                </itemizedlist>
+                <sbr/>
+            </para>
+        </section>
+    </section>
+
+    <section>
+        <title>Online Publishing , Personalized Content</title>
+        <section>
+            <title>Gravity</title>
+            <para>
+                Gravity’s mission is to personalize the internet by generating interest graphs that help websites deliver customized content to every site visitor.
+
+            </para>
+            <para>
+                <emphasis role="bold">Problem: </emphasis>
+                <sbr/>
+                Building user profiles from large volumes of data
+            </para>
+            <para>
+                <emphasis role="bold">Solution: </emphasis>
+                <sbr/>
+                Gravity uses Hadoop to analyze data and build profile and targets content for users.  With improved targeting the click rates have gone up 300-400% and users are staying on the site longer.
+            </para>
+            <para>
+                <emphasis role="bold">Hadoop Vendor: </emphasis>
+                Cloudera
+            </para>
+            <para>
+                <emphasis role="bold">Cluster/Data size: </emphasis>
+                ?
+            </para>
+            <para>
+                <emphasis role="bold">Links: </emphasis><sbr/>
+                <itemizedlist>
+                    <listitem>
+                        <link xlink:href="http://www.cloudera.com/content/cloudera/en/resources/library/video/gravity-creates-a-personalized-web-experience.html">Cloudera case study</link>
+                    </listitem>
+                    <listitem>
+                        <link xlink:href="https://www.gravity.com/">Gravity</link>
+                    </listitem>
+                </itemizedlist>
             </para>
         </section>
     </section>

@@ -51,6 +51,14 @@
             Linking to other chapters
             See here for complete list of <xref linkend="Challenges"/>
         </para>
+
+         <formalpara>
+            <title>Para with a title</title>
+            <sbr/>
+            <para>
+                content
+            </para>
+        </formalpara>
     </section>
 
     <!-- list -->

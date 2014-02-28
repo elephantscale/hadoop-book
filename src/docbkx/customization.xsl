@@ -144,10 +144,10 @@ user.footer.navigation : 	Called after the standard navigational footer.
     <div id="google-adsense">
 <script type="text/javascript">
 google_ad_client = "ca-pub-4468594927160864";
-/* hadoop illuminated book */
-google_ad_slot = "5293305636";
-google_ad_width = 468;
-google_ad_height = 60;
+/*  book 3 */
+google_ad_slot = "8428242033";
+google_ad_width = 728;
+google_ad_height = 90;
 </script>
 <script type="text/javascript"
 src="//pagead2.googlesyndication.com/pagead/show_ads.js">
