@@ -14,6 +14,14 @@
     <para>
         In this chapter we are going to meet a few more members.
     </para>
+    <para>
+        The following sites are great reference as well
+        <itemizedlist>
+            <listitem>
+                <link xlink:href="http://hadoopecosystemtable.github.io/">hadoopecosystemtable.github.io</link>
+            </listitem>
+        </itemizedlist>
+    </para>
 
     <section>
         <title>Getting Data into HDFS</title>
@@ -320,6 +328,22 @@
                             Relational database with SQL support on top of Hadoop HDFS.  (commercial product)
                         </entry>
                     </row>
+                     <row>
+                        <entry>
+                            <link xlink:href="http://incubator.apache.org/drill/">Apache Drill</link>
+                        </entry>
+                        <entry>
+                            Interactive analysis of large scale data sets.
+                        </entry>
+                    </row>
+                     <row>
+                        <entry>
+                            <link xlink:href="http://prestodb.io/">Presto</link>
+                        </entry>
+                        <entry>
+                            Developed by Facebook, provides fast SQL querying over Hadoop
+                        </entry>
+                    </row>
                 </tbody>
             </tgroup>
         </table>
@@ -351,14 +375,6 @@
                         </entry>
                         <entry>
                             Provides real time queries over Big Data.  Developed by Cloudera.
-                        </entry>
-                    </row>
-                    <row>
-                        <entry>
-                            <link xlink:href="http://www.kiji.org/">Kiji</link>
-                        </entry>
-                        <entry>
-                            Build Real-time Big Data Applications on Apache HBase
                         </entry>
                     </row>
                 </tbody>
@@ -534,7 +550,7 @@
 
 
     <section>
-        <title>Work flow Tools</title>
+        <title>Work flow Tools / Schedulers</title>
         <table id="table-bigdata-ecosystem-workflow-tools">
             <title>Work flow Tools</title>
             <tgroup cols='2' align='left' colsep='1' rowsep='1'>
@@ -551,6 +567,14 @@
                         </entry>
                         <entry>
                             Orchestrates map reduce jobs.
+                        </entry>
+                    </row>
+                    <row>
+                        <entry>
+                            <link xlink:href="http://data.linkedin.com/opensource/azkaban">Azkaban</link>
+                        </entry>
+                        <entry>
+
                         </entry>
                     </row>
                     <row>
@@ -715,7 +739,7 @@
                             <link xlink:href="http://www.lilyproject.org/lily/index.html">Lily</link>
                         </entry>
                         <entry>
-                            Lily unifies Apache HBase, Hadoop and Solr into a comprehensively integrated, interactive data platform 
+                            Lily unifies Apache HBase, Hadoop and Solr into a comprehensively integrated, interactive data platform
                         </entry>
                     </row>
                 </tbody>
@@ -801,6 +825,14 @@
                     </row>
                 </thead>
                 <tbody>
+                    <row>
+                        <entry>
+                            <link xlink:href="http://kafka.apache.org/">Kafka</link>
+                        </entry>
+                        <entry>
+                            Distributed publish-subscribe system.
+                        </entry>
+                    </row>
                     <row>
                         <entry>
                             <link xlink:href="http://akka.io/">Akka</link>
@@ -953,6 +985,127 @@
     </section>
 
     <section>
+        <title>Libraries / Frameworks</title>
+        <table id="table-bigdata-ecosystem-libraries">
+            <title>Libraries / Frameworks</title>
+            <tgroup cols='2' align='left' colsep='1' rowsep='1'>
+                <thead>
+                    <row>
+                        <entry>Tool</entry>
+                        <entry>Remarks</entry>
+                    </row>
+                </thead>
+                <tbody>
+                    <row>
+                        <entry>
+                            <link xlink:href="http://www.kiji.org/">Kiji</link>
+                        </entry>
+                        <entry>
+                            Build Real-time Big Data Applications on Apache HBase
+                        </entry>
+                    </row>
+                    <row>
+                        <entry>
+                            <link xlink:href="https://github.com/kevinweil/elephant-bird">Elephant Bird</link>
+                        </entry>
+                        <entry>
+                            Compression codes and serializers for Hadoop.
+                        </entry>
+                    </row>
+                    <row>
+                        <entry>
+                            <link xlink:href="https://github.com/twitter/summingbird">Summing Bird</link>
+                        </entry>
+                        <entry>
+                            MapReduce on Storm / Scalding
+                        </entry>
+                    </row>
+                    <row>
+                        <entry>
+                            <link xlink:href="http://crunch.apache.org/">Apache Crunch</link>
+                        </entry>
+                        <entry>
+                            Simple, efficient MapReduce piplelines for Hadoop and Spark
+                        </entry>
+                    </row>
+                    <row>
+                        <entry>
+                            <link xlink:href="http://datafu.incubator.apache.org/">Apache DataFu</link>
+                        </entry>
+                        <entry>
+                            Pig UDFs that provide cool functionality
+                        </entry>
+                    </row>
+                    <row>
+                        <entry>
+                            <link xlink:href="http://www.continuuity.com/">Continuuity</link>
+                        </entry>
+                        <entry>
+                            Build apps on HBase easily
+                        </entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+    </section>
+
+ <section>
+        <title>Data Management</title>
+        <table id="table-bigdata-ecosystem-data-management">
+            <title>Data Management</title>
+            <tgroup cols='2' align='left' colsep='1' rowsep='1'>
+                <thead>
+                    <row>
+                        <entry>Tool</entry>
+                        <entry>Remarks</entry>
+                    </row>
+                </thead>
+                <tbody>
+                    <row>
+                        <entry>
+                            <link xlink:href="http://falcon.incubator.apache.org/">Apache Falcon</link>
+                        </entry>
+                        <entry>
+                            Data management, data lineage
+                        </entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+    </section>
+
+    <section>
+        <title>Security</title>
+        <table id="table-bigdata-ecosystem-data-security">
+            <title>Security</title>
+            <tgroup cols='2' align='left' colsep='1' rowsep='1'>
+                <thead>
+                    <row>
+                        <entry>Tool</entry>
+                        <entry>Remarks</entry>
+                    </row>
+                </thead>
+                <tbody>
+                    <row>
+                        <entry>
+                            <link xlink:href="https://incubator.apache.org/projects/sentry.html">Apache Sentry</link>
+                        </entry>
+                        <entry>
+                        </entry>
+                    </row>
+                    <row>
+                        <entry>
+                            <link xlink:href="http://knox.incubator.apache.org/">Apache Knox</link>
+                        </entry>
+                        <entry>
+                        </entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+    </section>
+
+    <section>
         <title>Miscellaneous</title>
         <table id="table-bigdata-ecosystem-misc">
             <title>Miscellaneous Stuff</title>
@@ -978,14 +1131,6 @@
                         </entry>
                         <entry>
                             Hive compatible data warehouse system developed at Berkeley.  Claims to be much faster than Hive.
-                        </entry>
-                    </row>
-                    <row>
-                        <entry>
-                            <link xlink:href="https://github.com/kevinweil/elephant-bird">Elephant Bird</link>
-                        </entry>
-                        <entry>
-                            Compression codes and serializers for Hadoop.
                         </entry>
                     </row>
                 </tbody>
