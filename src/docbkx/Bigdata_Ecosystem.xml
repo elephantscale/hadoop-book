@@ -1105,6 +1105,40 @@
         </table>
     </section>
 
+     <section>
+        <title>Testing Frameworks</title>
+        <table id="table-bigdata-ecosystem-testing">
+            <title>Testing Frameworks</title>
+            <tgroup cols='2' align='left' colsep='1' rowsep='1'>
+                <thead>
+                    <row>
+                        <entry>Tool</entry>
+                        <entry>Remarks</entry>
+                    </row>
+                </thead>
+                <tbody>
+                    <row>
+                        <entry>
+                            <link xlink:href="http://mrunit.apache.org/">MrUnit</link>
+                        </entry>
+                        <entry>
+                            Unit Testing frameworks for Java MapReduce
+                        </entry>
+                    </row>
+                    <row>
+                        <entry>
+                            <link xlink:href="http://pig.apache.org/docs/r0.10.0/test.html#pigunit">PigUnit</link>
+                        </entry>
+                        <entry>
+                            For testing Pig scripts
+                        </entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+    </section>
+
+
     <section>
         <title>Miscellaneous</title>
         <table id="table-bigdata-ecosystem-misc">
