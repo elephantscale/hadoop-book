@@ -9,7 +9,7 @@
 
     <title>Hadoop Distributed File System (HDFS) -- Introduction</title>
     <para>
-        In this chapter we will learn about the Hadoop Distributed File System, also known as HDFS.   When people say 'Hadoop' it usually includes two core components : HDFS and MapReduce
+        In this chapter we shall learn about the Hadoop Distributed File System, also known as HDFS.   When people say 'Hadoop' it usually includes two core components : HDFS and MapReduce
     </para>
     <para>
         HDFS is the 'file system' or 'storage layer' of Hadoop.  It takes care of storing data -- and it can handle very large amount of data (on a petabytes scale).
