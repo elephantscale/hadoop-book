@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <chapter version="5.0" xml:id="Hadoop_and_Big_Data" xmlns="http://docbook.org/ns/docbook"
-    xmlns:xlink="http://www.w3.org/1999/xlink"
-    xmlns:xi="http://www.w3.org/2001/XInclude"
-    xmlns:svg="http://www.w3.org/2000/svg"
-    xmlns:m="http://www.w3.org/1998/Math/MathML"
-    xmlns:html="http://www.w3.org/1999/xhtml"
-    xmlns:db="http://docbook.org/ns/docbook">
+         xmlns:xlink="http://www.w3.org/1999/xlink"
+         xmlns:xi="http://www.w3.org/2001/XInclude"
+         xmlns:svg="http://www.w3.org/2000/svg"
+         xmlns:m="http://www.w3.org/1998/Math/MathML"
+         xmlns:html="http://www.w3.org/1999/xhtml"
+         xmlns:db="http://docbook.org/ns/docbook">
 
     <title>Hadoop and Big Data</title>
     <para>
@@ -23,10 +23,10 @@
             <para>
                 Lets start with an example.  Say we need to store lots of photos.  We will start with a single disk.  When we exceed a single disk, we may use a few disks stacked on a machine.  When we max out all the disks on a single machine,  we need to get a bunch of machines, each with a bunch of disks.
 
-            <figure id="scaling_storage">
-                <title>Scaling Storage</title>
-                <inlinegraphic fileref="scaling_storage.png" format="PNG"  width="100%" scalefit="1" contentdepth="100%"/>
-            </figure>
+                <figure id="scaling_storage">
+                    <title>Scaling Storage</title>
+                    <inlinegraphic fileref="scaling_storage.png" format="PNG"  width="100%" scalefit="1" contentdepth="100%"/>
+                </figure>
             </para>
             <para>
                 This is exactly how Hadoop is built.  Hadoop is designed to run on a cluster of machines from the get go.
@@ -53,12 +53,12 @@
         </sect2>
     </sect1>
 
-    <section>
+    <sect1>
         <title>
             Business Case for Hadoop
         </title>
 
-        <section>
+        <sect2>
             <title>Hadoop provides storage for Big Data at reasonable cost</title>
             <para>
                 Storing Big Data using traditional storage can be expensive.  Hadoop is built around commodity hardware.  Hence it can provide fairly large storage for a reasonable cost.  Hadoop has been used in the field at Peta byte scale.
@@ -69,10 +69,10 @@
             <para>
                 More info : <xref linkend="HDFS_Intro"/>
             </para>
-        </section>
+        </sect2>
 
 
-        <section>
+        <sect2>
             <title>
                 Hadoop allows to capture new or more data
             </title>
@@ -82,10 +82,10 @@
             <para>
                 One example would be web site click logs.  Because the volume of these logs can be very  high, not many organizations captured these.  Now with Hadoop it is possible to capture and store the logs
             </para>
-        </section>
+        </sect2>
 
 
-        <section>
+        <sect2>
             <title>
                 With Hadoop, you can store data longer
             </title>
@@ -95,9 +95,9 @@
             <para>
                 For example, take click logs from a web site.  Few years ago, these logs were stored for a brief period of time to calculate statics like popular pages ..etc.  Now with Hadoop it is viable to store these click logs for longer period of time.
             </para>
-        </section>
+        </sect2>
 
-        <section>
+        <sect2>
             <title>
                 Hadoop provides scalable analytics
             </title>
@@ -107,9 +107,9 @@
             <para>
                 <xref linkend="MapReduce_Intro"/>
             </para>
-        </section>
+        </sect2>
 
-        <section>
+        <sect2>
             <title>
                 Hadoop provides rich analytics
             </title>
@@ -123,7 +123,6 @@
                 Business Intelligence (BI) tools can provide even higher level of analysis. Quite a few BI tools can work with Hadoop and analyze data stored in Hadoop.  For a list of BI tools that support Hadoop please see this chapter : <xref linkend="BI_Tools_For_Hadoop"/>
 
             </para>
-        </section>
-    </section>
-
+        </sect2>
+    </sect1>
 </chapter>
