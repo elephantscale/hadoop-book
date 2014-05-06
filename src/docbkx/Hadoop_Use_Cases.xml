@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <chapter version="5.0" xml:id="Hadoop_Use_Cases" xmlns="http://docbook.org/ns/docbook"
-    xmlns:xlink="http://www.w3.org/1999/xlink"
-    xmlns:xi="http://www.w3.org/2001/XInclude"
-    xmlns:svg="http://www.w3.org/2000/svg"
-    xmlns:m="http://www.w3.org/1998/Math/MathML"
-    xmlns:html="http://www.w3.org/1999/xhtml"
-    xmlns:db="http://docbook.org/ns/docbook">
+         xmlns:xlink="http://www.w3.org/1999/xlink"
+         xmlns:xi="http://www.w3.org/2001/XInclude"
+         xmlns:svg="http://www.w3.org/2000/svg"
+         xmlns:m="http://www.w3.org/1998/Math/MathML"
+         xmlns:html="http://www.w3.org/1999/xhtml"
+         xmlns:db="http://docbook.org/ns/docbook">
 
     <title>Hadoop Use Cases and Case Studies</title>
     <para>
@@ -15,36 +15,36 @@
         A pretty extensive list is available at the <link xlink:href="http://wiki.apache.org/hadoop/PoweredBy">Powered By Hadoop site</link>
     </para>
     <!-- template
-        <section>
-            <title>Dodd-Frank Compliance @  a bank</title>
-            <para>
-            intro
-            </para>
-            <para>
-                <emphasis role="bold">Problem: </emphasis>
-                problem
-            </para>
-            <para>
-                <emphasis role="bold">Solution: </emphasis>
-                solution
-            </para>
-            <para>
-                <emphasis role="bold">Hadoop Vendor: </emphasis>
-                Cloudera
-            </para>
-            <para>
-                <emphasis role="bold">Cluster/Data size: </emphasis>
-                20+ nodes;  1TB of data / month
-            </para>
-            <para>
-                <emphasis role="bold">Links: </emphasis><sbr/>
-                <link xlink:href="http://www.cloudera.com/content/dam/cloudera/Resources/PDF/connect_case_study_datameer_banking_financial.pdf">Cloudera case study</link>
-                (<link xlink:href="cached_reports/connect_case_study_datameer_banking_financial.pdf">cached copy</link>)
-                (Published Nov 2012)
-                <sbr/>
-            </para>
-        </section>
-        -->
+    <section>
+        <title>Dodd-Frank Compliance @  a bank</title>
+        <para>
+        intro
+        </para>
+        <para>
+            <emphasis role="bold">Problem: </emphasis>
+            problem
+        </para>
+        <para>
+            <emphasis role="bold">Solution: </emphasis>
+            solution
+        </para>
+        <para>
+            <emphasis role="bold">Hadoop Vendor: </emphasis>
+            Cloudera
+        </para>
+        <para>
+            <emphasis role="bold">Cluster/Data size: </emphasis>
+            20+ nodes;  1TB of data / month
+        </para>
+        <para>
+            <emphasis role="bold">Links: </emphasis><sbr/>
+            <link xlink:href="http://www.cloudera.com/content/dam/cloudera/Resources/PDF/connect_case_study_datameer_banking_financial.pdf">Cloudera case study</link>
+            (<link xlink:href="cached_reports/connect_case_study_datameer_banking_financial.pdf">cached copy</link>)
+            (Published Nov 2012)
+            <sbr/>
+        </para>
+    </section>
+    -->
 
     <section>
         <title>Politics</title>
@@ -82,7 +82,8 @@
                 30+ nodes;  7TB of data / month
             </para>
             <para>
-                <emphasis role="bold">Links: </emphasis><sbr/>
+                <emphasis role="bold">Links: </emphasis>
+                <sbr/>
                 <link xlink:href="http://www.cloudera.com/content/dam/cloudera/Resources/PDF/Cloudera_Case_Study_NetApp.pdf">Cloudera case study</link>
                 (<link xlink:href="cached_reports/Cloudera_Case_Study_NetApp.pdf">cached copy</link>)
                 (Published Sep 2012)
@@ -116,7 +117,8 @@
                 20+ nodes;  1TB of data / month
             </para>
             <para>
-                <emphasis role="bold">Links: </emphasis><sbr/>
+                <emphasis role="bold">Links: </emphasis>
+                <sbr/>
                 <link xlink:href="http://www.cloudera.com/content/dam/cloudera/Resources/PDF/connect_case_study_datameer_banking_financial.pdf">Cloudera case study</link>
                 (<link xlink:href="cached_reports/connect_case_study_datameer_banking_financial.pdf">cached copy</link>)
                 (Published Nov 2012)
@@ -135,11 +137,13 @@
                 A health IT company instituted a policy of saving seven years of historical claims and remit data, but its in-house database systems had trouble meeting the data retention requirement while processing millions of claims every day
             </para>
             <para>
-                <emphasis role="bold">Solution: </emphasis><sbr/>
+                <emphasis role="bold">Solution: </emphasis>
+                <sbr/>
                 A Hadoop system allows archiving seven years’ claims and remit data, which requires complex processing to get into a normalized format, logging terabytes of data generated from transactional systems daily, and storing them in CDH for analytical purposes
             </para>
             <para>
-                <emphasis role="bold">Hadoop vendor: </emphasis><sbr/>
+                <emphasis role="bold">Hadoop vendor: </emphasis>
+                <sbr/>
                 Cloudera
             </para>
             <para>
@@ -147,7 +151,8 @@
                 10+ nodes pilot;  1TB of data / day
             </para>
             <para>
-                <emphasis role="bold">Links: </emphasis><sbr/>
+                <emphasis role="bold">Links: </emphasis>
+                <sbr/>
                 <link xlink:href="http://www.cloudera.com/content/dam/cloudera/Resources/PDF/Cloudera_Case_Study_Healthcare.pdf">Cloudera case study</link>
                 (<link xlink:href="cached_reports/Cloudera_Case_Study_Healthcare.pdf">cached copy</link>)
                 (Published Oct 2012)
@@ -177,7 +182,8 @@
                 ???
             </para>
             <para>
-                <emphasis role="bold">Links: </emphasis><sbr/>
+                <emphasis role="bold">Links: </emphasis>
+                <sbr/>
                 <link xlink:href="http://www.youtube.com/watch?v=NmMbFM7l1Rs">video</link>
                 <sbr/>
                 <link xlink:href="http://siliconangle.com/blog/2013/06/27/leveraging-hadoop-to-advance-healthcare-research-childrens-hospital-use-case-hadoopsummit/">silicon angle story</link>
@@ -197,20 +203,25 @@
                 NextBio is using Hadoop MapReduce and HBase to process massive amounts of human genome data.
             </para>
             <para>
-                <emphasis role="bold">Problem: </emphasis><sbr/>
+                <emphasis role="bold">Problem: </emphasis>
+                <sbr/>
                 Processing multi-terabyte data sets wasn't feasible using traditional databases like MySQL.
             </para>
             <para>
-                <emphasis role="bold">Solution: </emphasis><sbr/>
+                <emphasis role="bold">Solution: </emphasis>
+                <sbr/>
                 NextBio uses Hadoop map reduce to process genome data in batches and it uses HBase as a scalable data store
             </para>
             <para>
-                <emphasis role="bold">Hadoop vendor: </emphasis><sbr/>
+                <emphasis role="bold">Hadoop vendor: </emphasis>
+                <sbr/>
                 Intel
             </para>
             <para>
-                <emphasis role="bold">Links: </emphasis><sbr/>
-                <link xlink:href="http://www.nextbio.com/">NextBio</link><sbr/>
+                <emphasis role="bold">Links: </emphasis>
+                <sbr/>
+                <link xlink:href="http://www.nextbio.com/">NextBio</link>
+                <sbr/>
                 <link xlink:href="http://hadoop.intel.com/pdfs/IntelNextBioCaseStudy.pdf">Intel case study</link> (<link xlink:href="cached_reports/IntelNextBioCaseStudy.pdf">cached copy</link>)
                 (Published Feb 2013)
                 <sbr/>
@@ -226,7 +237,7 @@
     <section>
         <title>Telecoms</title>
         <section>
-            <title>China Telecom Guangdong</title>
+            <title>China Mobil Guangdong</title>
             <para>
                 <emphasis role="bold">Problem: </emphasis> Storing billions of mobile call records and providing real time access to the call records and billing information to customers.  <sbr/>
                 Traditional storage/database systems couldn't scale to the loads and provide a cost effective solution
@@ -241,8 +252,10 @@
                 <emphasis role="bold">Hadoop cluster size: </emphasis> 100+ nodes
             </para>
             <para>
-                <emphasis role="bold">Links: </emphasis><sbr/>
-                <link xlink:href="http://gd.10086.cn/">China Telecom Quangdong</link><sbr/>
+                <emphasis role="bold">Links: </emphasis>
+                <sbr/>
+                <link xlink:href="http://gd.10086.cn/">China Mobil Quangdong</link>
+                <sbr/>
                 <link xlink:href="http://hadoop.intel.com/pdfs/IntelChinaMobileCaseStudy.pdf">Intel case study</link> (<link xlink:href="cached_reports/IntelChinaMobileCaseStudy.pdf">cached copy</link>)
                 (Published Feb 2013)
                 <sbr/>
@@ -277,7 +290,8 @@
                 (2) 10s of PB across Nokia, 1TB / day
             </para>
             <para>
-                <emphasis role="bold">Links: </emphasis><sbr/>
+                <emphasis role="bold">Links: </emphasis>
+                <sbr/>
                 (1) <link xlink:href="http://www.cloudera.com/content/dam/cloudera/Resources/PDF/Cloudera_Nokia_Case_Study_Hadoop.pdf">Cloudera case study</link>
                 (<link xlink:href="cached_reports/Cloudera_Nokia_Case_Study_Hadoop.pdf">cached copy</link>)
                 (Published Apr 2012)
@@ -313,7 +327,8 @@
                 ?
             </para>
             <para>
-                <emphasis role="bold">Links: </emphasis><sbr/>
+                <emphasis role="bold">Links: </emphasis>
+                <sbr/>
                 <link xlink:href="http://www.slideshare.net/jseidman/windy-citydb-final-4635799">Orbitz presentation</link>
                 (Published 2010)
                 <sbr/>
@@ -345,7 +360,8 @@
                 ?
             </para>
             <para>
-                <emphasis role="bold">Links: </emphasis><sbr/>
+                <emphasis role="bold">Links: </emphasis>
+                <sbr/>
                 <link xlink:href="http://almaden.ibm.com/colloquium/resources/Managing%20More%20Bits%20Than%20Barrels%20Breuning.PDF">Presentation</link>
                 (<link xlink:href="cached_reports/IBM_Chevron.pdf">cached copy</link>)
                 (Published June 2012)
@@ -376,7 +392,8 @@
                 ?
             </para>
             <para>
-                <emphasis role="bold">Links: </emphasis><sbr/>
+                <emphasis role="bold">Links: </emphasis>
+                <sbr/>
                 <link xlink:href="http://cdn.oreillystatic.com/en/assets/1/event/85/Data%20Science%20with%20Hadoop%20at%20Opower%20Presentation.pdf">presentation</link>
                 (<link xlink:href="cached_reports/Opower.pdf">cached copy</link>)
                 (Published Oct 2012)
@@ -414,7 +431,8 @@
                 ?
             </para>
             <para>
-                <emphasis role="bold">Links: </emphasis><sbr/>
+                <emphasis role="bold">Links: </emphasis>
+                <sbr/>
 
                 <link xlink:href="http://www.computerweekly.com/news/2240146943/Case-Study-US-Xpress-deploys-hybrid-big-data-with-Informatica">Computer Weekly article</link> (Published May 2012)
                 <sbr/>
@@ -450,7 +468,8 @@
                 varies
             </para>
             <para>
-                <emphasis role="bold">Links: </emphasis><sbr/>
+                <emphasis role="bold">Links: </emphasis>
+                <sbr/>
                 <link xlink:href="http://www.slideshare.net/mwalkerinfo/funnel-analysis-in-hadoop-at-etsy">Hadoop at Etsy</link>  (March 2013)
                 <sbr/>
                 <link xlink:href="http://gigaom.com/2011/11/02/how-etsy-handcrafted-a-big-data-strategy/">gigaom article</link> (Nov 2011)
@@ -484,7 +503,8 @@
                 ?
             </para>
             <para>
-                <emphasis role="bold">Links: </emphasis><sbr/>
+                <emphasis role="bold">Links: </emphasis>
+                <sbr/>
                 <link xlink:href="http://www.informationweek.com/global-cio/interviews/why-sears-is-going-all-in-on-hadoop/240009717">http://www.informationweek.com/global-cio/interviews/why-sears-is-going-all-in-on-hadoop/240009717</link>  (Oct 2012)
                 <sbr/>
                 <link xlink:href="http://www.metascale.com/resources/blogs/187-big-data-case-study-hadoop-first-usage-in-production-at-sears-holdings">http://www.metascale.com/resources/blogs/187-big-data-case-study-hadoop-first-usage-in-production-at-sears-holdings</link>  (Aug 2013)
@@ -513,7 +533,8 @@
                 ?
             </para>
             <para>
-                <emphasis role="bold">Links: </emphasis><sbr/>
+                <emphasis role="bold">Links: </emphasis>
+                <sbr/>
                 <itemizedlist>
                     <listitem>
                         <link xlink:href="http://www.salesforce.com">SalesForce</link>
@@ -550,7 +571,8 @@
                 ?
             </para>
             <para>
-                <emphasis role="bold">Links: </emphasis><sbr/>
+                <emphasis role="bold">Links: </emphasis>
+                <sbr/>
                 <itemizedlist>
                     <listitem>
                         <link xlink:href="http://strataconf.com/stratany2013/public/schedule/detail/30499">talk at Strata 2013</link>  (Oct 2013)
@@ -590,7 +612,8 @@
                 ?
             </para>
             <para>
-                <emphasis role="bold">Links: </emphasis><sbr/>
+                <emphasis role="bold">Links: </emphasis>
+                <sbr/>
                 <itemizedlist>
                     <listitem>
                         <link xlink:href="http://blog.cloudera.com/blog/2012/10/sneak-peek-into-skybox-imagings-cloudera-powered-satellite-system/">Case Study @ Cloudera</link>  (Oct 2012),
@@ -630,7 +653,8 @@
                 ?
             </para>
             <para>
-                <emphasis role="bold">Links: </emphasis><sbr/>
+                <emphasis role="bold">Links: </emphasis>
+                <sbr/>
                 <itemizedlist>
                     <listitem>
                         <link xlink:href="http://strataconf.com/stratany2013/public/schedule/detail/30915">Talk at Strata 2013</link>  (Oct 2013),
@@ -671,7 +695,8 @@
                 ?
             </para>
             <para>
-                <emphasis role="bold">Links: </emphasis><sbr/>
+                <emphasis role="bold">Links: </emphasis>
+                <sbr/>
                 <itemizedlist>
                     <listitem>
                         <link xlink:href="http://www.cloudera.com/content/cloudera/en/resources/library/video/gravity-creates-a-personalized-web-experience.html">Cloudera case study</link>
